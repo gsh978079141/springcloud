@@ -1,0 +1,13 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: java-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/douban
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
