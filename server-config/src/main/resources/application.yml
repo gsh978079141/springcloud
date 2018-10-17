@@ -1,0 +1,66 @@
+server:
+  port: 8088
+
+spring:
+  #应用服务名
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #配置文件所在目录
+          search-paths: /**
+          #配置文件仓库地址
+          uri: https://github.com/gsh978079141/configServerFiles.git
+          #配置仓库的分支
+          default-label: master
+          #用户名与密码
+          username:
+          password:
+    #  开启消息跟踪
+    bus:
+      trace:
+        enabled: true
+      refresh:
+        enabled: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8
+    username: root
+    password: 123
+  #rabbitmq配置
+  rabbitmq:
+    password: admin
+    username: admin
+    host: 127.0.0.1
+    port: 5672
+    #监听配置
+    listener:
+      simple:
+        #签收模式  manual手工签收 auto自动签收
+        acknowledge-mode: manual
+        #并发数
+        concurrency: 5
+        #最大并发数
+        max-concurrency: 15
+        #限流 一次最多几个消息被消费完之后消息才可被消费
+        prefetch: 5
+#注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+#springboot2.0 更新部分
+#是否需要权限拉去，默认是true,如果不false就不允许你去拉取配置中心Server更新的内容
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+#****热加载配置*****#
+devtools:
+  restart:
+    enabled: false
+  profiles:
+    active: dev

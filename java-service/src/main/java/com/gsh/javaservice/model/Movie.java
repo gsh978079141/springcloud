@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
     * @Title: Movie
-    * @Package com.gsh.javaservice.model
+    * @Package com.gsh.javaservice.entiy
     * @Description:  电影实体类
     * @author gsh
     * @date 2018/7/25 16:19

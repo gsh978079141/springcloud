@@ -1,6 +1,6 @@
 //package com.gsh.javaservice.service;
 //
-//import com.gsh.javaservice.model.Movie;
+//import com.gsh.javaservice.entiy.Movie;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.data.mongodb.core.MongoTemplate;
 //import org.springframework.stereotype.Service;

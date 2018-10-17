@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.gsh</groupId>
+	<artifactId>server-config</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>server-config</name>
+	<description>配置中心服务端</description>
+
+	<parent>
+		<groupId>com.gsh.springcloud</groupId>
+		<artifactId>eureka</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<properties>
+		<common.core.version>0.0.1-SNAPSHOT</common.core.version>
+	</properties>
+	<dependencies>
+		<!--S 分布式配置中心-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+		<!--E 分布式配置中心-->
+		<!--S 消息总线-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+		<!--E 消息总线-->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.cloud</groupId>-->
+			<!--<artifactId>spring-cloud-config-monitor</artifactId>-->
+		<!--</dependency>-->
+		<dependency>
+			<groupId>com.gsh.springcloud</groupId>
+			<artifactId>common-core</artifactId>
+			<version>${common.core.version}</version>
+		</dependency>
+		<!--S elk-->
+		<!--tcp方式-->
+		<!--<dependency>-->
+		<!--<groupId>net.logstash.logback</groupId>-->
+		<!--<artifactId>logstash-logback-encoder</artifactId>-->
+		<!--<version>4.11</version>-->
+		<!--</dependency>-->
+		<!--redis方式-->
+		<dependency>
+			<groupId>com.cwbase</groupId>
+			<artifactId>logback-redis-appender</artifactId>
+			<version>1.1.5</version>
+		</dependency>
+		<!--E  elk-->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

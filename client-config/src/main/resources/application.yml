@@ -1,0 +1,5 @@
+spring:
+  rabbitmq:
+    #采用消息确认模式
+    publisher-confirms: true
+    publisher-returns: true

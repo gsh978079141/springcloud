@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gsh.springcloud</groupId>
+    <artifactId>service-order</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>service-order</name>
+    <description>Demo project for Spring Boot</description>
+
+    <parent>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>eureka</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <properties>
+        <spring-cloud-starter-ribbon.version>1.2.6.RELEASE</spring-cloud-starter-ribbon.version>
+        <spring-cloud-starter-feign.version>1.4.4.RELEASE</spring-cloud-starter-feign.version>
+        <common-core.version>0.0.1-SNAPSHOT</common-core.version>
+    </properties>
+    <dependencies>
+        <!--S 服务消费者ribbon-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+            <version>${spring-cloud-starter-ribbon.version}</version>
+        </dependency>
+        <!--E 服务消费者ribbon-->
+        <!--S fegin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>${spring-cloud-starter-feign.version}</version>
+        </dependency>
+        <!--E fegin-->
+        <dependency>
+            <groupId>com.gsh.springcloud</groupId>
+            <artifactId>common-core</artifactId>
+            <version>${common-core.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
