@@ -22,6 +22,13 @@
         <common-core.version>0.0.1-SNAPSHOT</common-core.version>
     </properties>
     <dependencies>
+        <!--S 公共-->
+        <dependency>
+            <groupId>com.gsh.springcloud</groupId>
+            <artifactId>common-core</artifactId>
+            <version>${common-core.version}</version>
+        </dependency>
+        <!--E 公共-->
         <!--S 服务消费者ribbon-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -36,11 +43,7 @@
             <version>${spring-cloud-starter-feign.version}</version>
         </dependency>
         <!--E fegin-->
-        <dependency>
-            <groupId>com.gsh.springcloud</groupId>
-            <artifactId>common-core</artifactId>
-            <version>${common-core.version}</version>
-        </dependency>
+
     </dependencies>
 
     <build>

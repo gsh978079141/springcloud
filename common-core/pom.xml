@@ -11,25 +11,29 @@
     <description>public core</description>
     <!--S 版本控制-->
     <properties>
-        <mybatis-plus.version>2.1.8</mybatis-plus.version>
         <druid.version>1.1.6</druid.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <mysql-connector.version>5.1.46</mysql-connector.version>
-        <mybatisplus-spring-boot.version>1.0.5</mybatisplus-spring-boot.version>
+        <mybatis-plus-boot-starter.version>3.0.5</mybatis-plus-boot-starter.version>
+        <velocity-engine-core.version>2.0</velocity-engine-core.version>
         <spring-boot-devtools.version>1.5.10.RELEASE</spring-boot-devtools.version>
+        <lombok.version>1.16.18</lombok.version>
+        <lcn.last.version>4.1.0</lcn.last.version>
     </properties>
     <!--E 版本控制-->
     <dependencies>
         <!--mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatisplus-spring-boot-starter</artifactId>
-            <version>${mybatisplus-spring-boot.version}</version>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
         </dependency>
+        <!-- velocity 模板引擎, 默认 -->
+        <!--MP 3.0.3 之后移除了自动模板引擎依赖，需要手动添加对应引擎的依赖：-->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>${mybatis-plus.version}</version>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>${velocity-engine-core.version}</version>
         </dependency>
         <!--mysql-->
         <dependency>
@@ -45,13 +49,34 @@
             <version>${druid.version}</version>
         </dependency>
         <!--E druid阿里巴巴数据库连接池 -->
-        <!--热加载-->
+        <!--S lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <!--E lombok-->
+        <!-- S 热加载-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
             <version>${spring-boot-devtools.version}</version>
         </dependency>
+        <!-- E 热加载-->
+        <!--S 分布式事务-->
+        <dependency>
+            <groupId>com.codingapi</groupId>
+            <artifactId>transaction-springcloud</artifactId>
+            <version>${lcn.last.version}</version>
+        </dependency>
+        <!--E 分布式事务-->
+        <dependency>
+            <groupId>com.codingapi</groupId>
+            <artifactId>tx-plugins-db</artifactId>
+            <version>${lcn.last.version}</version>
+        </dependency>
+
 
     </dependencies>
     <build>
