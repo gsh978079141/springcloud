@@ -43,6 +43,24 @@
             <version>${spring-cloud-starter-feign.version}</version>
         </dependency>
         <!--E fegin-->
+        <!--S LCN额外依赖-->
+        <dependency>
+            <groupId>com.github.1991wangliang</groupId>
+            <artifactId>lorne_core</artifactId>
+            <version>1.0.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-handler</artifactId>
+            <version>4.1.25.Final</version>
+        </dependency>
+        <!--E LCN额外依赖-->
 
     </dependencies>
 

@@ -28,6 +28,7 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis-plus-boot-starter.version}</version>
         </dependency>
+
         <!-- velocity 模板引擎, 默认 -->
         <!--MP 3.0.3 之后移除了自动模板引擎依赖，需要手动添加对应引擎的依赖：-->
         <dependency>
@@ -64,20 +65,31 @@
             <version>${spring-boot-devtools.version}</version>
         </dependency>
         <!-- E 热加载-->
-        <!--S 分布式事务-->
+        <!-- S fastjson -->
         <dependency>
-            <groupId>com.codingapi</groupId>
-            <artifactId>transaction-springcloud</artifactId>
-            <version>${lcn.last.version}</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.47</version>
         </dependency>
-        <!--E 分布式事务-->
+        <!-- E fastjson -->
+        <!--S LCN额外依赖-->
         <dependency>
-            <groupId>com.codingapi</groupId>
-            <artifactId>tx-plugins-db</artifactId>
-            <version>${lcn.last.version}</version>
+            <groupId>com.github.1991wangliang</groupId>
+            <artifactId>lorne_core</artifactId>
+            <version>1.0.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
-
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-handler</artifactId>
+            <version>4.1.25.Final</version>
+        </dependency>
+        <!--E LCN额外依赖-->
     </dependencies>
     <build>
         <plugins>

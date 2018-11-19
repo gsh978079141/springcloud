@@ -1,6 +1,6 @@
 package com.gsh.springcloud.serverconfig.service;
 
-import com.gsh.springcloud.serviceorder.entity.User;
+import com.gsh.springcloud.common.entity.User;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.rabbit.annotation.*;
 import org.springframework.amqp.support.AmqpHeaders;

@@ -1,7 +1,7 @@
 package com.gsh.springcloud.clientconfig.controller;
 
 import com.gsh.springcloud.clientconfig.service.RabbitmqService;
-import com.gsh.springcloud.serviceorder.entity.User;
+import com.gsh.springcloud.common.entity.User;
 import org.springframework.amqp.core.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
