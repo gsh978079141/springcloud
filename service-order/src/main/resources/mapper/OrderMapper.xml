@@ -7,11 +7,11 @@
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="num" property="num" />
-        <result column="userid" property="userid" />
+        <result column="userId" property="userId" />
     </resultMap>
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, num, userid
+        id, name, num, userId
     </sql>
     <insert id="insertTest"  parameterType="com.gsh.springcloud.common.entity.Order">
         insert into orders values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}} )

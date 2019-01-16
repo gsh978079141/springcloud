@@ -29,7 +29,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public int mpLcnTest() {
         User user = new User();
-        user.setUsername("lcnTest");
+        user.setUserName("lcnTest");
         user.setIntegral(20);
         userMapper.insert(user);
         int a = 1 / 0 ;
@@ -41,7 +41,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public int mpLocalTest() {
         User user = new User();
-        user.setUsername("lcnTest");
+        user.setUserName("lcnTest");
         user.setIntegral(20);
         userMapper.updateById(user);
         userMapper.insert(user);

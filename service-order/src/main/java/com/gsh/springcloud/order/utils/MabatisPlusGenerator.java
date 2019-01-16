@@ -1,4 +1,4 @@
-package com.gsh.springcloud.serviceorder.utils;
+package com.gsh.springcloud.order.utils;
 /**
  * Copyright (c) 2011-2016, hubin (jobob@qq.com).
  * <p>
@@ -28,6 +28,7 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 
 import java.io.File;
+import java.net.URISyntaxException;
 import java.util.*;
 
 /**
@@ -47,7 +48,7 @@ public class MabatisPlusGenerator {
     /**
      * 单个表名
      */
-    private static String oneTable = "order";
+    private static String oneTable = "";
 
     /*E 数据库连接信息*/
 
@@ -71,11 +72,11 @@ public class MabatisPlusGenerator {
      */
 //    private static String path = "/Users/gdd/Desktop/WorkSpaces/Github_Projects/springcloud/service-good";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws URISyntaxException {
         String[] tableNames = new String[1];
         //如果不是单个表
         if (oneTable.equals("")) {
-            List<String> listTableNames = DatabaseUtil.getTableNames();
+            List<String> listTableNames = com.gsh.springcloud.serviceorder.utils.DatabaseUtil.getTableNames();
             tableNames = listTableNames.toArray(new String[listTableNames.size()]);
         } else {
             tableNames[0] = oneTable;
@@ -165,12 +166,12 @@ public class MabatisPlusGenerator {
                         .setEntityLombokModel(true)
                 // Boolean类型字段是否移除is前缀处理
                 // .setEntityBooleanColumnRemoveIsPrefix(true)
-                // .setRestControllerStyle(true)
+//                 .setRestControllerStyle(true)
                 // .setControllerMappingHyphenStyle(true)
         ).setPackageInfo(
                 // 包配置
                 new PackageConfig()
-                        //.setModuleName("User")
+                        .setModuleName("Order")
                         // 自定义包路径
                         .setParent("com.gsh.springcloud.serviceorder")
                         // 这里是控制器包名，默认 web

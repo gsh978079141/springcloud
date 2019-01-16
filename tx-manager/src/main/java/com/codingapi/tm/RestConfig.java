@@ -13,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
 @EnableAutoConfiguration
 public class RestConfig {
 
-
     @Bean
     public RestTemplate getRestTemplate() {
         RestTemplate restTemplate = new RestTemplate();

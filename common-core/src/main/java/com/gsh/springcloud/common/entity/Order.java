@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @author gsh
  * @since 2018-11-14
  */
-@TableName("orders")
+@TableName("order")
 public class Order extends Model<Order> {
 
     private static final long serialVersionUID = 1L;
@@ -39,7 +39,7 @@ public class Order extends Model<Order> {
     /**
      * 用户id
      */
-    private Integer userid;
+    private Integer userId;
 
 
     @Override
@@ -72,11 +72,11 @@ public class Order extends Model<Order> {
         this.num = num;
     }
 
-    public Integer getUserid() {
-        return userid;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }

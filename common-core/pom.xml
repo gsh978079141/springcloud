@@ -6,7 +6,6 @@
     <groupId>com.gsh.springcloud</groupId>
     <artifactId>common-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
     <name>commmon-core</name>
     <description>public core</description>
     <!--S 版本控制-->
@@ -16,9 +15,9 @@
         <mysql-connector.version>5.1.46</mysql-connector.version>
         <mybatis-plus-boot-starter.version>3.0.5</mybatis-plus-boot-starter.version>
         <velocity-engine-core.version>2.0</velocity-engine-core.version>
-        <spring-boot-devtools.version>1.5.10.RELEASE</spring-boot-devtools.version>
         <lombok.version>1.16.18</lombok.version>
         <lcn.last.version>4.1.0</lcn.last.version>
+        <fasthson.version>1.2.47</fasthson.version>
     </properties>
     <!--E 版本控制-->
     <dependencies>
@@ -57,19 +56,12 @@
             <version>${lombok.version}</version>
         </dependency>
         <!--E lombok-->
-        <!-- S 热加载-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-            <version>${spring-boot-devtools.version}</version>
-        </dependency>
-        <!-- E 热加载-->
+
         <!-- S fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
+            <version>${fasthson.version}</version>
         </dependency>
         <!-- E fastjson -->
         <!--S LCN额外依赖-->
@@ -98,6 +90,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
+                    <fork>true</fork>
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>utf8</encoding>

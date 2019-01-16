@@ -1,6 +1,5 @@
 package com.gsh.springcloud.order.serviceImpl;
 
-import com.codingapi.tx.annotation.TxTransaction;
 import com.gsh.springcloud.common.entity.Order;
 import com.gsh.springcloud.order.dao.OrderMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -38,7 +37,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     public String lcn() {
         Order order = new Order();
         order.setNum("lcnTest");
-        order.setUserid(1);
+        order.setUserId(1);
         order.setId(2);
         orderMapper.insert(order);
         orderFeginClient.lcnTest();

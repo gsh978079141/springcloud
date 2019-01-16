@@ -44,6 +44,17 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     #       合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
+    #****热加载配置*****#
+  devtools:
+    restart:
+      enabled: true
+    profiles:
+      active: debug
+#  mongodb 配置
+#  集群配置：mongodb://user:pwd@ip1:port1,ip2:port2/database
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
 #mybatis
 mybatis-plus:
   # xml
@@ -77,12 +88,6 @@ mybatis-plus:
     cache-enabled: false
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-#****热加载配置*****#
-devtools:
-  restart:
-    enable: false
-  profiles:
-    active: debug
 # 分布式事务
 #txmanager地址
 tm:

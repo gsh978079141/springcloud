@@ -24,11 +24,13 @@ public class LocalServiceImpl implements LocalService {
     public boolean lcn() {
         Order order = new Order();
         order.setNum("lcnTest");
-        order.setUserid(1);
+        order.setUserId(1);
         order.setId(2);
         orderMapper.insert(order);
         orderFeginClient.lcnTest();
         int a = 1/0;
         return true;
     }
+
+
 }

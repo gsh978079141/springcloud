@@ -28,7 +28,7 @@ public class User extends Model<User> {
     /**
      * 用户名
      */
-    private String username;
+    private String userName;
     /**
      * 密码
      */
@@ -50,12 +50,12 @@ public class User extends Model<User> {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -91,7 +91,7 @@ public class User extends Model<User> {
     public String toString() {
         return "User{" +
         ", id=" + id +
-        ", username=" + username +
+        ", username=" + userName +
         ", password=" + password +
         ", age=" + age +
         "}";

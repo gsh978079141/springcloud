@@ -47,7 +47,8 @@ public class MessageLog extends Model<MessageLog> {
     /**
      * 消息投递状态0投递中，1投递成功，2投递失败
      */
-    private String msgstatus;
+    @TableField("msg_status")
+    private Integer msgStatus;
     /**
      * 重试次数
      */
@@ -114,12 +115,12 @@ public class MessageLog extends Model<MessageLog> {
         this.receiver = receiver;
     }
 
-    public String getMsgstatus() {
-        return msgstatus;
+    public Integer getMsgStatus() {
+        return msgStatus;
     }
 
-    public void setMsgstatus(String msgstatus) {
-        this.msgstatus = msgstatus;
+    public void setMsgStatus(Integer msgStatus) {
+        this.msgStatus = msgStatus;
     }
 
     public Integer getTryCount() {
@@ -175,7 +176,7 @@ public class MessageLog extends Model<MessageLog> {
         ", message=" + message +
         ", sender=" + sender +
         ", receiver=" + receiver +
-        ", msgstatus=" + msgstatus +
+        ", msgStatus=" + msgStatus +
         ", tryCount=" + tryCount +
         ", nextRetry=" + nextRetry +
         ", createTime=" + createTime +
