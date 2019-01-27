@@ -1,11 +1,23 @@
 server:
-  port: 8088
+  port: 8091
 
 spring:
   #应用服务名
   application:
-    name: config-server
+    name: service-config-server
+
   cloud:
+#    服务注册
+    consul:
+      host: 39.108.137.231
+      port: 8500
+      discovery:
+        heartbeat:
+          enabled: true
+        health-check-path: /health
+        instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+        serviceName: ${spring.application.name}
+#    注册中心
     config:
       server:
         git:
@@ -16,14 +28,15 @@ spring:
           #配置仓库的分支
           default-label: master
           #用户名与密码
-          username:
-          password:
+          username: 978079141@qq.com
+          password: Wddgsh520.
     #  开启消息跟踪
     bus:
       trace:
         enabled: true
       refresh:
         enabled: true
+#  数据库配置
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8
     username: root
@@ -45,11 +58,6 @@ spring:
         max-concurrency: 15
         #限流 一次最多几个消息被消费完之后消息才可被消费
         prefetch: 5
-#注册中心
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8888/eureka/
 #springboot2.0 更新部分
 #是否需要权限拉去，默认是true,如果不false就不允许你去拉取配置中心Server更新的内容
 management:

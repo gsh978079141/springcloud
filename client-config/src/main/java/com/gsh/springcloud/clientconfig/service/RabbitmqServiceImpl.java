@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
     * @date 2018/9/12 11:14
     */
 @Service
-
 public class RabbitmqServiceImpl implements RabbitmqService {
 
     @Autowired

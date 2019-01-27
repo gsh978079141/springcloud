@@ -1,18 +1,11 @@
 #端口号
 server:
   port: 8763
-
-#注册中心
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8888/eureka/
-
 #应用名
 spring:
   application:
     name: service-member
-#  数据源配置
+  #  数据源配置
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8
     username: root
@@ -55,6 +48,16 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/test
+  cloud:
+    consul:
+      host: 39.108.137.231
+      port: 8500
+      discovery:
+        heartbeat:
+          enabled: true
+        health-check-path: /health
+        instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+        serviceName: ${spring.application.name}
 #mybatis
 mybatis-plus:
   # xml
@@ -90,6 +93,6 @@ mybatis-plus:
 
 # 分布式事务
 #txmanager地址
-tm:
-  manager:
-    url: http://127.0.0.1:7000/tx/manager/
+#tm:
+#  manager:
+#    url: http://127.0.0.1:7000/tx/manager/

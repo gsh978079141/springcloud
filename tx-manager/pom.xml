@@ -53,22 +53,29 @@
             <version>4.1.12.Final</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.google.guava</groupId>
-                    <artifactId>guava</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-
         <!--<dependency>-->
             <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>-->
+            <!--<artifactId>spring-cloud-starter-eureka-server</artifactId>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>com.google.guava</groupId>-->
+                    <!--<artifactId>guava</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
         <!--</dependency>-->
+
+
+        <!-- consul依赖的核心包 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-all</artifactId>
+            <version>1.2.3.RELEASE</version>
+        </dependency>
+        <!--健康检查依赖于此包 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

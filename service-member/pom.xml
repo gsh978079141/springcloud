@@ -13,45 +13,45 @@
 
 	<parent>
 		<groupId>com.gsh.springcloud</groupId>
-		<artifactId>eureka</artifactId>
+		<artifactId>consul</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	<!--S 版本控制-->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<spring-cloud-starter-feign.version>1.4.4.RELEASE</spring-cloud-starter-feign.version>
+		<lcn.last.version>4.1.0</lcn.last.version>
+		<common-core.version>0.0.1-SNAPSHOT</common-core.version>
+	</properties>
+	<!--S 版本控制-->
 	<dependencies>
 		<!--S  公共包-->
 		<dependency>
 			<groupId>com.gsh.springcloud</groupId>
 			<artifactId>common-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${common-core.version}</version>
 		</dependency>
+		<!--E  公共包-->
+
+		<!--S  feign-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
-			<version>1.4.4.RELEASE</version>
+			<version>${spring-cloud-starter-feign.version}</version>
 		</dependency>
+		<!--S  feign-->
 
+		<!--S mongodb-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
+		<!--E mongodb-->
 
-		<!-- S 热加载-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<optional>true</optional>
-			<version>${spring-boot-devtools.version}</version>
-		</dependency>
-		<!-- E 热加载-->
 	</dependencies>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
-		<lcn.last.version>4.1.0</lcn.last.version>
-		<spring-boot-devtools.version>2.0.0.RELEASE</spring-boot-devtools.version>
-	</properties>
 	<build>
 		<plugins>
 			<plugin>

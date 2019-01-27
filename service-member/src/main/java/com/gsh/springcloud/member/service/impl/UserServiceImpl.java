@@ -1,7 +1,6 @@
 package com.gsh.springcloud.member.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.codingapi.tx.annotation.TxTransaction;
 import com.gsh.springcloud.member.dao.UserMapper;
 import com.gsh.springcloud.common.entity.User;
 import com.gsh.springcloud.member.service.UserService;
@@ -24,7 +23,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Autowired
     UserMapper userMapper;
 
-    @TxTransaction
+//    @TxTransaction
     @Transactional
     @Override
     public int mpLcnTest() {

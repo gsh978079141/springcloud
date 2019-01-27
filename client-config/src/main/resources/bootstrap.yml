@@ -1,12 +1,5 @@
 server:
-  port: 8089
-#eureka
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:8888/eureka/
+  port: 8092
 
 #  完成了这些准备工作之后，我们就可以通过浏览器、POSTMAN或CURL等工具直接来访问我们的配置内容了。访问配置信息的URL与配置文件的映射关系如下所示：
 #
@@ -18,22 +11,31 @@ eureka:
 spring:
   #服务名
   application:
-    name: config-test
+    name: service-config-client
   #cloud
   cloud:
     config:
       #对应配置文件规则中的{application} 部分。在这里也就是application
       name: application
       #配置中心config-server的地址。在这里就是http://localhost:8088/
-      uri: http://localhost:8088
+      uri: http://localhost:8091
       #对应配置文件规则中的 {profile} 部分。在这里也就是dev
       profile: local
       #分支
       #对应配置文件规则中的 {label} 部分。在这里就是master
       label: master
       discovery:
-        enabled: true
-        service-id: config-server
+#        enabled: true
+        service-id: service-config-server
+    consul:
+      host: 39.108.137.231
+      port: 8500
+      discovery:
+        heartbeat:
+          enabled: true
+        health-check-path: /health
+        instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+        serviceName: ${spring.application.name}
     #开启消息跟踪
 #    bus:
 #      trace:
@@ -54,10 +56,5 @@ management:
       exposure:
         include: bus-refresh
 
-#****热加载配置*****#
-devtools:
-  restart:
-    enabled: false
-  profiles:
-    active: dev
+
 

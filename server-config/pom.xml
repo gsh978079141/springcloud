@@ -11,14 +11,17 @@
 	<name>server-config</name>
 	<description>配置中心服务端</description>
 
-	<parent>
-		<groupId>com.gsh.springcloud</groupId>
-		<artifactId>eureka</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
 	<properties>
 		<common.core.version>0.0.1-SNAPSHOT</common.core.version>
+		<logback-redis-appender.version>1.1.5</logback-redis-appender.version>
 	</properties>
+
+	<parent>
+		<groupId>com.gsh.springcloud</groupId>
+		<artifactId>consul</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
 	<dependencies>
 		<!--S 分布式配置中心-->
 		<dependency>
@@ -36,6 +39,10 @@
 			<!--<groupId>org.springframework.cloud</groupId>-->
 			<!--<artifactId>spring-cloud-config-monitor</artifactId>-->
 		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-security</artifactId>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>com.gsh.springcloud</groupId>
 			<artifactId>common-core</artifactId>
@@ -52,7 +59,7 @@
 		<dependency>
 			<groupId>com.cwbase</groupId>
 			<artifactId>logback-redis-appender</artifactId>
-			<version>1.1.5</version>
+			<version>${logback-redis-appender.version}</version>
 		</dependency>
 		<!--E  elk-->
 	</dependencies>

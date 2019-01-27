@@ -1,6 +1,5 @@
 package com.gsh.springcloud.member.service.impl;
 
-import com.codingapi.tx.annotation.TxTransaction;
 import com.gsh.springcloud.common.entity.User;
 import com.gsh.springcloud.member.dao.UserMapper;
 import com.gsh.springcloud.member.service.TestService;
@@ -14,7 +13,7 @@ public class TestServiceImpl implements TestService {
     @Autowired
     UserMapper userMapper;
 
-    @TxTransaction
+//    @TxTransaction
     @Transactional
     @Override
     public int lcnTest()  {

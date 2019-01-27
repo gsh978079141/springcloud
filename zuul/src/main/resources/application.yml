@@ -1,0 +1,38 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: service-zuul
+  cloud:
+#    consul服务注册中心
+    consul:
+      host: 39.108.137.231
+      port: 8500
+      discovery:
+        heartbeat:
+          enabled: true
+        health-check-path: /health
+        instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+        service-name: ${spring.application.name}
+#    配置中心配置
+    config:
+      #对应配置文件规则中的{application} 部分。在这里也就是application
+      name: application
+      #配置中心config-server的地址。在这里就是http://localhost:8088/
+      uri: http://localhost:8091
+      #对应配置文件规则中的 {profile} 部分。在这里也就是dev
+      profile: local
+      #分支
+      #对应配置文件规则中的 {label} 部分。在这里就是master
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+      fail-fast: true
+      username:
+      password:
+zuul:
+  routes:
+#    url别名映射/member访问consul服务中的/service-member
+    service-member: /member/**
+    service-config-server: /config/**

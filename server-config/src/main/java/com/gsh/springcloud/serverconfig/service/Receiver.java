@@ -4,6 +4,7 @@ import com.gsh.springcloud.common.entity.User;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.rabbit.annotation.*;
 import org.springframework.amqp.support.AmqpHeaders;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.messaging.handler.annotation.Headers;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
@@ -96,6 +97,7 @@ public class Receiver {
     @RabbitHandler
     public void smsend(@Payload User user, @Headers Map<String, Object> headers, Channel channel) throws IOException {
         System.out.println(("smsend 接收消息=====》》》》》{}" + user));
+//        ((Receiver)AopContext.currentProxy()).
         //S 手工签收调用
         //注释掉则rabbitmq控制台queue中unack就不会自动清除
         //一般业务中手动签收

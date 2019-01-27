@@ -83,7 +83,7 @@ public class MabatisPlusGenerator {
         }
         System.out.println(path);
         // 自定义需要填充的字段
-        List<TableFill> tableFillList = new ArrayList<>();
+        List<TableFill> tableFillList = new ArrayList<TableFill>();
         tableFillList.add(new TableFill("ASDD_SS", FieldFill.INSERT_UPDATE));
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator().setGlobalConfig(
@@ -186,7 +186,7 @@ public class MabatisPlusGenerator {
                 new InjectionConfig() {
                     @Override
                     public void initMap() {
-                        Map<String, Object> map = new HashMap<>();
+                        Map<String, Object> map = new HashMap<String, Object>();
                         map.put("", this.getConfig().getGlobalConfig().getAuthor() + "-gsh");
                         this.setMap(map);
                     }

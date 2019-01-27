@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RefreshScope
 @RestController
+@RequestMapping("/config-client")
 public class ConfigController {
 
     @Autowired

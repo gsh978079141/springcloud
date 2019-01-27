@@ -2,17 +2,22 @@
 server:
   port: 8777
 
-#注册中心
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8888/eureka/
 
 #应用名
 spring:
   application:
     name: service-good
-#  数据源配置
+  cloud:
+    consul:
+      host: 39.108.137.231
+      port: 8500
+      discovery:
+        heartbeat:
+          enabled: true
+        health-check-path: /health
+        instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+  #  数据源配置
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8
     username: root
