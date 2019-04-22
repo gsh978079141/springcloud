@@ -15,7 +15,7 @@ spring:
       profile:
       #分支
       #对应配置文件规则中的 {label} 部分。在这里就是master
-      label: master
+      label: gsh
       discovery:
         # enabled: true
         service-id: service-config-server

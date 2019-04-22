@@ -22,14 +22,15 @@ spring:
       server:
         git:
           #配置文件所在目录
-          search-paths: /**
+          search-paths: /config-files/
           #配置文件仓库地址
-          uri: https://github.com/gsh978079141/configServerFiles.git
+          uri: https://github.com/gsh978079141/springcloud.git
           #配置仓库的分支
-          default-label: master
+          default-label: gsh
           #用户名与密码
           username:
           password:
+          force-pull: true
     #  开启消息跟踪
     bus:
       trace:

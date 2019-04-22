@@ -40,7 +40,7 @@ spring:
     publisher-returns: true
     password: guest
     username: guest
-    host: 127.0.0.1
+    host: rabbit.com
     port: 5672
       #监听配置
     listener:
