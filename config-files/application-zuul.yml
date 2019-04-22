@@ -1,0 +1,10 @@
+#网关配置
+zuul:
+  routes:
+    #    url别名映射/member访问consul服务中的/service-member
+    service-member: /user/**
+    service-config-server: /config-server/**
+    service-config-client: /config-client/**
+  sensitive-headers:      #设置忽略的头信息，设置为空能解决会话保持问题
+  add-host-header: true   #设为true才能保持Host头信息处理正确
+
