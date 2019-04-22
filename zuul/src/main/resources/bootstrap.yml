@@ -1,0 +1,21 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: service-zuul
+  cloud:
+    #  S 配置中心
+    config:
+      #对应配置文件规则中的{application} 部分。在这里也就是application
+      name: application
+      #配置中心config-server的地址。在这里就是http://localhost:8088/
+      uri: http://localhost:8091
+      #对应配置文件规则中的 {profile} 部分。在这里也就是dev
+      profile: zuul,local
+      #分支
+      #对应配置文件规则中的 {label} 部分。在这里就是master
+      label: master
+      discovery:
+        # enabled: true
+        service-id: service-config-server
+    #  E 配置中心

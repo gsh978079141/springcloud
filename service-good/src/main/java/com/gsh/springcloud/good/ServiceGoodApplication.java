@@ -1,4 +1,4 @@
-package com.gsh.springcloud.member;
+package com.gsh.springcloud.user;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

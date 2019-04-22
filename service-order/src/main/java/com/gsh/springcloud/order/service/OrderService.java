@@ -1,6 +1,6 @@
 package com.gsh.springcloud.order.service;
 
-import com.gsh.springcloud.common.entity.Order;
+import entity.Order;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

@@ -11,14 +11,14 @@
 
 	<parent>
 		<groupId>com.gsh.springcloud</groupId>
-		<artifactId>consul</artifactId>
+		<artifactId>parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<dependencies>
 		<!--S  公共包-->
 		<dependency>
 			<groupId>com.gsh.springcloud</groupId>
-			<artifactId>common-core</artifactId>
+			<artifactId>cloud-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!--E  公共包-->

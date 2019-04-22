@@ -5,73 +5,54 @@
 
     <groupId>com.gsh.springcloud</groupId>
     <artifactId>service-order</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>service-order</name>
-    <description>Demo project for Spring Boot</description>
+    <description>订单服务</description>
 
     <parent>
         <groupId>com.gsh.springcloud</groupId>
-        <artifactId>consul</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>cloud-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <properties>
-        <spring-cloud-starter-ribbon.version>1.2.6.RELEASE</spring-cloud-starter-ribbon.version>
-        <spring-cloud-starter-feign.version>1.4.4.RELEASE</spring-cloud-starter-feign.version>
-        <common-core.version>0.0.1-SNAPSHOT</common-core.version>
     </properties>
     <dependencies>
-        <!--S 公共-->
-        <dependency>
-            <groupId>com.gsh.springcloud</groupId>
-            <artifactId>common-core</artifactId>
-            <version>${common-core.version}</version>
-        </dependency>
-        <!--E 公共-->
-        <!--S 服务消费者ribbon-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
-            <version>${spring-cloud-starter-ribbon.version}</version>
-        </dependency>
-        <!--E 服务消费者ribbon-->
-        <!--S fegin-->
+        <!--feign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
-            <version>${spring-cloud-starter-feign.version}</version>
         </dependency>
-        <!--E fegin-->
+        <!--S 公共-->
+        <dependency>
+            <groupId>com.gsh.springcloud</groupId>
+            <artifactId>cloud-common</artifactId>
+        </dependency>
+        <!--E 公共-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
         <!--S LCN额外依赖-->
-        <dependency>
-            <groupId>com.github.1991wangliang</groupId>
-            <artifactId>lorne_core</artifactId>
-            <version>1.0.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-handler</artifactId>
-            <version>4.1.25.Final</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.github.1991wangliang</groupId>-->
+            <!--<artifactId>lorne_core</artifactId>-->
+            <!--<version>1.0.0</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.slf4j</groupId>-->
+                    <!--<artifactId>*</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.netty</groupId>-->
+            <!--<artifactId>netty-handler</artifactId>-->
+            <!--<version>4.1.25.Final</version>-->
+        <!--</dependency>-->
         <!--E LCN额外依赖-->
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 
 </project>

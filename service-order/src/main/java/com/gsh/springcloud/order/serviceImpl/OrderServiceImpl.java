@@ -1,6 +1,7 @@
 package com.gsh.springcloud.order.serviceImpl;
 
-import com.gsh.springcloud.common.entity.Order;
+import com.codingapi.tx.annotation.TxTransaction;
+import entity.Order;
 import com.gsh.springcloud.order.dao.OrderMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.gsh.springcloud.order.service.OrderFeginClient;
@@ -31,7 +32,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
      * @param
      * @return
      */
-//    @TxTransaction(isStart = true)
+    @TxTransaction(isStart = true)
     @Transactional
     @Override
     public String lcn() {

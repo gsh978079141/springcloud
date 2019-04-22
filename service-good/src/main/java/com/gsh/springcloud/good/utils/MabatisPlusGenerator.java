@@ -1,4 +1,4 @@
-package com.gsh.springcloud.member.utils;
+package com.gsh.springcloud.user.utils;
 /**
  * Copyright (c) 2011-2016, hubin (jobob@qq.com).
  * <p>
@@ -34,7 +34,7 @@ import java.util.*;
 /**
  * @author gsh
  * @Title: MysqlGenerator
- * @Package com.gsh.springcloud.servicemember.utils
+ * @Package com.gsh.springcloud.serviceuser.utils
  * @Description:
  * @date 2018/9/6 16:44
  */
@@ -173,7 +173,7 @@ public class MabatisPlusGenerator {
                 new PackageConfig()
                         //.setModuleName("User")
                         // 自定义包路径
-                        .setParent("com.gsh.springcloud.servicemember")
+                        .setParent("com.gsh.springcloud.serviceuser")
                         // 这里是控制器包名，默认 web
                         .setController("controller")
                         .setEntity("entity")

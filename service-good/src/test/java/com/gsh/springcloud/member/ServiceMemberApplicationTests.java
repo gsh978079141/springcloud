@@ -1,4 +1,4 @@
-package com.gsh.springcloud.member;
+package com.gsh.springcloud.user;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ServiceMemberApplicationTests {
+public class ServiceuserApplicationTests {
 
 	@Test
 	public void contextLoads() {

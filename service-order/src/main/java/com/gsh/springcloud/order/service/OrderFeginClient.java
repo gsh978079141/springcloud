@@ -1,6 +1,6 @@
 package com.gsh.springcloud.order.service;
 
-import com.gsh.springcloud.common.entity.User;
+import entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -8,17 +8,17 @@ import java.util.List;
 /**
     * @Title: OrderFeginClient
     * @Package com.gsh.springcloud.service
-    * @Description: service-member 为已存在的服务名
+    * @Description: service-user 为已存在的服务名
     * @author gsh
     * @date 2018/9/21 10:18
     */
-@FeignClient("service-member")
+@FeignClient("service-user")
 public interface OrderFeginClient {
     /**例
      *获取列表
      * @return
      */
-    @GetMapping("/member/getList.do")
+    @GetMapping("/user/getList.do")
     List<String> getInfo();
 
     /**例

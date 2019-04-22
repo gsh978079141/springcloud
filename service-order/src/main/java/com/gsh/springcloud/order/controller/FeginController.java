@@ -1,7 +1,7 @@
 package com.gsh.springcloud.order.controller;
 
 
-import com.gsh.springcloud.common.entity.User;
+import entity.User;
 import com.gsh.springcloud.order.service.OrderFeginClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

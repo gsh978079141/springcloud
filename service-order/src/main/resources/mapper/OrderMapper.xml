@@ -3,7 +3,7 @@
 <mapper namespace="com.gsh.springcloud.order.dao.OrderMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.gsh.springcloud.common.entity.Order">
+    <resultMap id="BaseResultMap" type="entity.Order">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="num" property="num" />
@@ -13,7 +13,7 @@
     <sql id="Base_Column_List">
         id, name, num, userId
     </sql>
-    <insert id="insertTest"  parameterType="com.gsh.springcloud.common.entity.Order">
+    <insert id="insertTest"  parameterType="entity.Order">
         insert into orders values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}} )
     </insert>
 

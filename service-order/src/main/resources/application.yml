@@ -36,21 +36,13 @@ spring:
     #       合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8888/eureka/
+
 # 分布式事务
 #txmanager地址
-tm:
-  manager:
-    url: http://127.0.0.1:7000/tx/manager/
-#****热加载配置*****#
-devtools:
-  restart:
-    enabled: false
-  profiles:
-    active: dev
+#tm:
+#  manager:
+#    url: http://127.0.0.1:7000/tx/manager/
+
 
 
 

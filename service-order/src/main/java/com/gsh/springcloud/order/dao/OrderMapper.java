@@ -1,6 +1,6 @@
 package com.gsh.springcloud.order.dao;
 
-import com.gsh.springcloud.common.entity.Order;
+import entity.Order;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
