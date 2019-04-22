@@ -50,6 +50,23 @@ spring:
         health-check-path: /health
         instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
         serviceName: ${spring.application.name}
+  #rabbitmq配置
+  rabbitmq:
+    password: guest
+    username: guest
+    host: rabbit.com
+    port: 5672
+    #监听配置
+    listener:
+      simple:
+        #签收模式  manual手工签收 auto自动签收
+        acknowledge-mode: manual
+        #并发数
+        concurrency: 5
+        #最大并发数
+        max-concurrency: 15
+        #限流 一次最多几个消息被消费完之后消息才可被消费
+        prefetch: 5
 #mybatis
 mybatis-plus:
   # xml

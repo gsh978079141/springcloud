@@ -8,11 +8,11 @@ spring:
   cloud:
     config:
       #对应配置文件规则中的{application} 部分。在这里也就是application
-      name: service-user-application
+      name: application
       #配置中心config-server的地址。在这里就是http://localhost:8088/
       uri: http://service-config.com:8091
       #对应配置文件规则中的 {profile} 部分。在这里也就是dev
-      profile:
+      profile: user
       #分支
       #对应配置文件规则中的 {label} 部分。在这里就是master
       label: gsh
