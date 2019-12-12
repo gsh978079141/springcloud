@@ -5,9 +5,18 @@ spring:
     name: service-order
   #  数据源配置
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8
-    username: root
-    password: 123
+    master:
+      url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8
+      username: root
+      password: 123
+    slave1:
+      url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8
+      username: root
+      password: 123
+    slave2:
+      url: jdbc:mysql://127.0.0.1:3306/springcloud?characterEncoding=UTF-8
+      username: root
+      password: 123
     #Druid连接池配置
     driverClassName: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource

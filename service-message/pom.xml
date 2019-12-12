@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -8,23 +7,41 @@
         <artifactId>cloud-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.gsh.springcloud</groupId>
-    <artifactId>message</artifactId>
-    <version>1.0-SNAPSHOT</version>
 
-    <!--S 版本控制-->
+    <groupId>com.gsh</groupId>
+    <artifactId>service-message</artifactId>
+    <packaging>jar</packaging>
+    <name>service-message</name>
+    <description>消息服务中心</description>
+
     <properties>
-        <spring-boot-starter-data-mongodb.version>2.0.3.RELEASE</spring-boot-starter-data-mongodb.version>
-        <cloud-common.version>1.0-SNAPSHOT</cloud-common.version>
     </properties>
-    <!--E 版本控制-->
+
     <dependencies>
         <!--S  公共包-->
         <dependency>
             <groupId>com.gsh.springcloud</groupId>
             <artifactId>cloud-common</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>mybatis-plus-boot-starter</artifactId>
+                </exclusion>
+
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-        <!--E  公共包-->
     </dependencies>
 
 </project>

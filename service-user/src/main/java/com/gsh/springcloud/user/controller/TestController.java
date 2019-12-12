@@ -1,6 +1,8 @@
 package com.gsh.springcloud.user.controller;
 
+import com.gsh.springcloud.user.model.QueueMessage;
 import com.gsh.springcloud.user.service.RabbitmqService;
+import com.rabbitmq.client.AMQP;
 import entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,10 +31,19 @@ public class TestController {
      * @param routingKey  路由
      * @param message 信息体
      */
-    @RequestMapping("/send")
+    @RequestMapping("/sendFanout")
     public void send(String exchange, String routingKey, @RequestBody User message){
         System.out.println("gsh  sending " + message);
-        rabbitmqService.send(exchange, routingKey, message);
+        rabbitmqService.sendFanout(exchange, routingKey, message);
+    }
+    /**
+     * 信息发送
+     * @param message 信息体
+     */
+    @RequestMapping("/send2")
+    public void send2(@RequestBody QueueMessage<User> message){
+        System.out.println("gsh  sending " + message);
+        rabbitmqService.sendFanout(message.getExchange(), message.getRoutingKey(), message.getMessage());
     }
 
     /**
@@ -47,4 +58,6 @@ public class TestController {
         System.out.println(message.toString());
         return  message.getBody().toString();
     }
+
+
 }

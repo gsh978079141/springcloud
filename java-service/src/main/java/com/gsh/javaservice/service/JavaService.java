@@ -10,6 +10,4 @@ public class JavaService {
     public String getPython(){
         return  restTemplate.getForEntity("http://py-sidecar/getUser", String.class).getBody();
     }
-
-
 }

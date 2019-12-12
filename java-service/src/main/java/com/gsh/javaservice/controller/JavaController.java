@@ -15,8 +15,8 @@ public class JavaController {
     @Autowired
     JavaService javaService;
 
-    @Autowired
-    MovieRepository movieRepository;
+//    @Autowired
+//    MovieRepository movieRepository;
 
     @Autowired
     MongoTemplate mongoTemplate;
@@ -29,13 +29,13 @@ public class JavaController {
         return  javaService.getPython();
     }
 
-    @RequestMapping("/getMovieList")
-    public List<Movie> getMovieList(){
-        return mongoTemplate.findAll(Movie.class); }
-    @RequestMapping("/getMovieByName")
-    public Movie getMovieByName(String movieName){
-        System.out.println(movieName);
-        return movieRepository.findByMovieName(movieName);
-    }
+//    @RequestMapping("/getMovieList")
+//    public List<Movie> getMovieList(){
+//        return mongoTemplate.findAll(Movie.class); }
+//    @RequestMapping("/getMovieByName")
+//    public Movie getMovieByName(String movieName){
+//        System.out.println(movieName);
+//        return movieRepository.findByMovieName(movieName);
+//    }
 
 }
