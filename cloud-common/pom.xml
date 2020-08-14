@@ -2,20 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
+  <parent>
+    <artifactId>spring-cloud-gsh</artifactId>
     <groupId>com.gsh.springcloud</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+
+  <packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
     <artifactId>cloud-common</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!--S 版本控制-->
     <properties>
-        <mybatis-plus.version>3.0.7.1</mybatis-plus.version>
         <velocity-engine-core.version>2.0</velocity-engine-core.version>
-        <lombok.version>1.18.10</lombok.version>
-        <mybatis-plus-boot-starter.version>3.0.7.1</mybatis-plus-boot-starter.version>
-        <mysql-connector.version>5.1.46</mysql-connector.version>
-
     </properties>
     <!--E 版本控制-->
 
@@ -24,14 +25,11 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector.version}</version>
-            <scope>runtime</scope>
         </dependency>
         <!--S mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${mybatis-plus-boot-starter.version}</version>
         </dependency>
         <!--MP 3.0.3 之后移除了自动模板引擎依赖，需要手动添加对应引擎的依赖：-->
         <dependency>
@@ -42,22 +40,18 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
-            <version>${mybatis-plus-boot-starter.version}</version>
         </dependency>
         <!--E mybatis-plus-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <optional>true</optional>
         </dependency>
-    </dependencies>
 
+    </dependencies>
     <build>
         <plugins>
             <plugin>

@@ -1,0 +1,19 @@
+#
+##rabbitmq
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1:5672
+####  cloud:
+####   stream-rabbitmq
+####    stream:
+####      bindings:
+####        read-order:
+####          # 负载均衡，多个service-user实例，属于同一组 只有一个实例消费消息（默认轮询）
+####          group: service-user-group
+####          # destination对应rabbitmq中exchange
+####          destination: destination_exchange
+####        send-order:
+####          destination: destination_exchange
+###
+###
+###

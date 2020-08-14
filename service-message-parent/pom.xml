@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.gsh.springcloud</groupId>
+    <artifactId>spring-cloud-gsh</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>service-message-parent</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>service-message-client</module>
+    <module>service-message</module>
+  </modules>
+
+
+  <!--  版本控制-->
+  <properties>
+
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <!--    其他服务依赖-->
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>service-user-client</artifactId>
+        <version>${version.service-user-client}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>service-message-client</artifactId>
+        <version>${version.service-message-client}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>service-base</artifactId>
+        <version>${version.service-base}</version>
+      </dependency>
+      <!--stream-rabbit-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        <version>${spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <version>${spring-boot.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <!-- spring-cloud-nacos-->
+      <!--        <dependency>-->
+      <!--            <groupId>org.springframework.cloud</groupId>-->
+      <!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+      <!--        </dependency>-->
+    </dependencies>
+
+  </dependencyManagement>
+
+</project>

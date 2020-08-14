@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gsh.springcloud.order.dao.OrderMapper">
+
+  <!-- 通用查询映射结果 -->
+  <resultMap id="BaseResultMap" type="com.gsh.springcloud.order.model.Order">
+    <id column="id" property="id"/>
+    <result column="name" property="name"/>
+    <result column="num" property="num"/>
+    <result column="userId" property="userId"/>
+    <result column="price" property="price"/>
+    <result column="orderNo" property="orderNo"/>
+  </resultMap>
+  <!-- 通用查询结果列 -->
+  <sql id="Base_Column_List">
+        id, name, num,orderNo,price, userId
+    </sql>
+  <insert id="insertTest" parameterType="com.gsh.springcloud.order.model.Order">
+        insert into orders values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}} )
+    </insert>
+
+</mapper>
