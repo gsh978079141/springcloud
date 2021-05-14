@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * keycloak 缓存管理接口
  *
- * @author jun
+ * @author gsh
  */
 public interface KeycloakCacheManager {
 

@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
 import java.util.Set;
 
 /**
- * @author jun
+ * @author gsh
  */
 @Data
 @ApiModel(description = "导出的权限数据请求")

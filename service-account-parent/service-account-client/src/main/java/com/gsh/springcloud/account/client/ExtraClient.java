@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import javax.validation.Valid;
 
 /**
- * @author jun
+ * @author gsh
  */
 @FeignClient(url = "${feign.url.service-account}", path = "/extra", name = "extraClient")
 @Api(tags = "Extra API")

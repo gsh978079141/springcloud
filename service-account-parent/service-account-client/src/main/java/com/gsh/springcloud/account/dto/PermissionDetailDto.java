@@ -7,7 +7,7 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @author jun
+ * @author gsh
  */
 @Data
 @ApiModel(description = "权限详情信息")

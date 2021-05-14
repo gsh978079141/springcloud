@@ -1,7 +1,7 @@
 package com.gsh.springcloud.account.constant;
 
 /**
- * @author jun
+ * @author gsh
  */
 
 public enum ClientEnum {

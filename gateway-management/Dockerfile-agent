@@ -1,0 +1,11 @@
+FROM core.harbor.cz.shenlan.com/dbp-edu/jdk8-skywalking-agent:8.5.0
+MAINTAINER deepblue-edu
+WORKDIR /opt/app
+ENV SW_AGENT_NAME gateway-management
+ENV SW_AGENT_COLLECTOR_BACKEND_SERVICES skywalking-oap-server-address:11800
+
+ADD target/gateway-management.jar app.jar
+RUN touch app.jar
+
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -javaagent:/usr/skywalking/agent/skywalking-agent.jar -Djava.security.egd=file:/dev/./urandom -jar app.jar" ]
+EXPOSE 8002

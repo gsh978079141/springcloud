@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author jun
+ * @author gsh
  */
 @Data
 @ApiModel(description = "client权限认证数据")

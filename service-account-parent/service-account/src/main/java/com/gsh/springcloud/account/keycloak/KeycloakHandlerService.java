@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * 封装keycloak的一系列操作
  *
- * @author jun
+ * @author gsh
  */
 public interface KeycloakHandlerService {
 

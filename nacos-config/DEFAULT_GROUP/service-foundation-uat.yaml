@@ -32,7 +32,7 @@ swagger:
 
 mapper:
   mappers:
-    - com.deepblueai.edu.starter.mysql.tk.CommonMapper
+    - com.gsh.springcloud.starter.mysql.tk.CommonMapper
     - tk.mybatis.mapper.common.special.InsertListMapper
     - tk.mybatis.mapper.common.IdsMapper
   identity: MYSQL
@@ -44,7 +44,7 @@ mapper:
   check-example-entity-class: true
   use-simple-type: false
 mybatis:
-  type-aliases-package: com.deepblueai.edu.foundation.domain.model
+  type-aliases-package: com.gsh.springcloud.foundation.domain.model
   mapper-locations:
     - classpath*:mapper/*.xml
 #  configuration:

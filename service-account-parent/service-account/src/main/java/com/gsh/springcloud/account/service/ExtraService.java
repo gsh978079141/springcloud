@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * 附加服务
  *
- * @author jun
+ * @author gsh
  */
 public interface ExtraService {
 

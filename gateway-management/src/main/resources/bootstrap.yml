@@ -1,0 +1,47 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: gateway-management
+  profiles:
+    active: ${env_profile:uat}
+  main:
+    allow-bean-definition-overriding: true
+  messages:
+    encoding: UTF-8
+  mvc:
+    throw-exception-if-no-handler-found: true
+  cloud:
+    nacos:
+      config:
+        server-addr: ${nacos_server_addr:127.0.0.1:8848}
+        namespace: gsh-cloud-${spring.profiles.active}
+        username: ${nacos_username:nacos}
+        password: ${nacos_password:nacos}
+        file-extension: yaml
+        extension-configs[0]:
+          # 通用配置
+          data-id: application-common-${spring.profiles.active}.yaml
+          group: PUBLIC
+          # 配置修改后是否自动更新
+          refresh: true
+        extension-configs[1]:
+          data-id: url-permission-map.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        extension-configs[2]:
+          data-id: redis-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+        extension-configs[3]:
+          data-id: rabbitmq-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+        extension-configs[4]:
+          # keycloak相关配置
+          data-id: keycloak-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+logging:
+  file:
+    path: ${log_dir:/var/log/edu}/${spring.application.name}

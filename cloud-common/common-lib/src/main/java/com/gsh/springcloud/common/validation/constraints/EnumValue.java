@@ -12,7 +12,7 @@ import java.lang.reflect.Field;
 import java.util.Objects;
 
 /**
- * @author jun
+ * @author gsh
  */
 @Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)

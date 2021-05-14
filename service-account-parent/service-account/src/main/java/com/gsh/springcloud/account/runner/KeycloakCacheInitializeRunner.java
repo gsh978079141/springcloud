@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 /**
  * keycloak cache初始化
  *
- * @author jun
+ * @author gsh
  */
 @Component
 @Slf4j

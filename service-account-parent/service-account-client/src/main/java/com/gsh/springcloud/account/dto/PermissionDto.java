@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * 权限基础数据
  *
- * @author jun
+ * @author gsh
  */
 @Data
 @ApiModel(description = "权限基础数据")

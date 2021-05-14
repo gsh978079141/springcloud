@@ -47,6 +47,7 @@
     <version.mapstruct>1.2.0.Final</version.mapstruct>
     <version.commons-collections>3.2.2</version.commons-collections>
     <version.commons-lang3>3.11</version.commons-lang3>
+    <version.testcontainers>1.15.2</version.testcontainers>
     <!--    其他模块依赖-->
     <version.common-lib>1.0-SNAPSHOT</version.common-lib>
     <version.service-base>1.0-SNAPSHOT</version.service-base>
@@ -368,6 +369,17 @@
         <artifactId>fastjson</artifactId>
         <version>${version.ali-fastjson}</version>
       </dependency>
+      <!--testcontainers -->
+      <dependency>
+        <groupId>org.testcontainers</groupId>
+        <artifactId>testcontainers</artifactId>
+        <version>${version.testcontainers}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.testcontainers</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>${version.testcontainers}</version>
+      </dependency>
       <!--commons-collections -->
       <dependency>
         <groupId>commons-collections</groupId>
@@ -462,6 +474,8 @@
   <!-- S  子项目-->
   <modules>
     <module>cloud-common</module>
+    <module>gateway-api</module>
+    <module>gateway-management</module>
     <module>service-user-parent</module>
     <module>service-order-parent</module>
     <module>service-message-parent</module>
