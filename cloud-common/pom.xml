@@ -2,56 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>spring-cloud-gsh</artifactId>
     <groupId>com.gsh.springcloud</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
+  <packaging>pom</packaging>
+  <artifactId>cloud-common</artifactId>
+  <version>1.0-SNAPSHOT</version>
 
 
-  <packaging>jar</packaging>
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>cloud-common</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <!--S 版本控制-->
-    <properties>
-        <velocity-engine-core.version>2.0</velocity-engine-core.version>
-    </properties>
-    <!--E 版本控制-->
-
-    <dependencies>
-        <!--mysql-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <!--S mybatis-plus-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <!--MP 3.0.3 之后移除了自动模板引擎依赖，需要手动添加对应引擎的依赖：-->
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-engine-core</artifactId>
-            <version>${velocity-engine-core.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-        </dependency>
-        <!--E mybatis-plus-->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
-    </dependencies>
+  <modules>
+    <module>common-lib</module>
+    <module>gsh-cloud-starter</module>
+  </modules>
     <build>
         <plugins>
             <plugin>

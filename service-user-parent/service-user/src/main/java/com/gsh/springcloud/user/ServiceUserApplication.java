@@ -7,12 +7,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.gsh.springcloud.user"})
 //@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@EnableDiscoveryClient
-@MapperScan("com.gsh.springcloud.user.dao")
-@EnableFeignClients("com.gsh.springcloud.*.client")
+@MapperScan("com.gsh.springcloud.user.domain.mapper")
+@EnableFeignClients("com.gsh.springcloud.**.client")
 @EnableTransactionManagement
+@EnableDiscoveryClient
 public class ServiceUserApplication {
 
   public static void main(String[] args) {

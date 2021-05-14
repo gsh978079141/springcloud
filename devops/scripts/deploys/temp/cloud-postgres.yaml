@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  namespace: education
+  labels:
+    app: postgres
+    type: cloud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+      type: cloud
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: postgres
+        type: cloud
+    spec:
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      containers:
+        - name: postgres
+          image: postgres:13.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: tcp-essential
+              containerPort: 5432
+              protocol: TCP
+          env:
+            - name: POSTGRES_DB
+              value: keycloak
+            - name: POSTGRES_USER
+              value: keycloak
+            - name: POSTGRES_PASSWORD
+              value: pssade348
+          volumeMounts:                        #挂载容器中的目录到pvc nfs中的目录
+            - name: psd
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: psd
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/postgresql
+
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: postgres
+  namespace: education  #必须
+  labels:
+    service: postgres
+    type: cloud
+spec:                   #必须
+  selector:            #必须
+    app: postgres
+    type: cloud     #必须
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 5432
+      targetPort: 5432

@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: edge-conf
+data:
+  env: "dev"
+
+  # 云端
+  # bffStudentIotUrl: "https://dev-edu-iot-student.deepblueai.com"
+  # bffTeacherIotUrl: "https://dev-edu-iot-teacher.deepblueai.com"
+  bffStudentIotUrl: "http://10.16.32.201:30011"
+  bffTeacherIotUrl: "http://10.16.32.201:30012"
+  serviceFoundationUrl: "http://10.16.32.201:30005"
+  serviceExamUrl: "http://10.16.32.201:30006"
+  serviceTeachUrl: "http://10.16.32.201:30008"
+  # 边缘端
+  edgeHostIp: "192.168.40.111"
+  rabbitmqPort: "5672"
+  rabbitmqUsername: "edu"
+  rabbitmqPassword: "deepblue"
+  datasourceUsername: "edu"
+  datasourcePassword: "123456"
+  edgeName: "gezhi"
+  nodeName: "edge.node3"
+  # 边缘端-服务url  
+  # 流媒体服务录制文件的远程访问url
+  edgeMediaBaseUrl: "http://192.168.40.111:9203"
+  edgeServiceAlgorithmDispatchUrl: "http://192.168.40.111:9101"
+  edgeServiceFileManagerUrl: "http://192.168.40.111:9003"
+  edgeServiceVideoProcessUrl: "http://192.168.40.111:9004"
+  edgeServiceBizUrl: "http://192.168.40.111:9005"
+  edgeServiceMediaUrl: "http://192.168.40.111:9006"
+
+  keycloakUrl: "https://edu-auth-internel.deepblueai.com/auth"
+  keycloakRealm: "dev"
+
+  filePreviewUrl: "https://dev-edu-file-preview.deepblueai.com"
+  awsAccessKey: "9HW9I7SJBRUPAMSD83K3"
+  awsSecretKey: "WcQNDnpd2jbYCsiCsAs7ZixKPRhJo5PXXq9AbkyH"
+  awsEndpoint: "10.16.138.26"
+  ftpHost: "10.16.32.184"
+  ftpAccount: "deepblueftp"
+  ftpCredential: "deepblue"
+  nginxHost: "10.16.32.184"
+  nginxPort: "8989"
+  mediaJavaOpts: "-Xms2048m -Xmx2048m -Duser.timezone=GMT+08 -Dkms.url=ws://192.168.40.111:8888/kurento"

@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-terminal-student-#EDGENAME#
+  namespace: education
+  labels:
+    app: terminal-student
+    type: edge
+    edge: #EDGENAME#
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: terminal-student
+      type: edge
+      edge: #EDGENAME#
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: terminal-student
+        type: edge
+        edge: #EDGENAME#
+    spec:
+      nodeName: "#NODENAME#" #选择需要部署的边缘节点
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: terminal-student
+          image: core.harbor.cz.shenlan.com/dbp-edu/terminal-student:latest
+          env:
+            - name: KEYCLOAK_URL
+              value: 'https://edu-auth-internel.deepblueai.com/auth'
+            - name: ENV
+              value: #EVN#
+            - name: KEYCLOAK_REALM
+              value: dev
+          ports:
+            - name: tcp-essential
+              containerPort: 9201
+              protocol: TCP

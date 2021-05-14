@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: bff-teacher-iot
+  namespace: edu-cloud
+  annotations:
+    kubernetes.io/ingress.class: kong
+spec:
+  rules:
+    - host: test-edu-teacher-iot.deepblueai.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: bff-teacher-iot
+              servicePort: 7102

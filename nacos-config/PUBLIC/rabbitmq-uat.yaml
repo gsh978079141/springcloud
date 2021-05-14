@@ -1,0 +1,7 @@
+spring:
+  rabbitmq:
+    host: 10.16.32.191
+    port: 5672
+    username: edu_uat
+    password: DeepblueEdu222
+    virtual-host: edu_uat

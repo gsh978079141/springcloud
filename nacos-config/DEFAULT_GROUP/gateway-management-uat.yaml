@@ -1,0 +1,86 @@
+###actuator监控点 start####
+endpoints:
+  health:
+    sensitive: false
+    enabled: true
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+logging:
+  file:
+    path: ${log_dir:/var/log/edu}/${spring.application.name}
+  level:
+    root: INFO
+  config: classpath:logback-spring.xml
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: false
+
+keycloak:
+  enabled: true
+  auth-server-url: https://edu-auth-internel.deepblueai.com/auth
+  #auth-server-url: http://10.16.32.151:31091/auth/
+  #auth-server-url: https://accounts-internal.deepblueai.com/auth
+
+keycloak-admin:
+  params:
+    server-url: ${keycloak.auth-server-url}
+    login-username: admin
+    #login-password: flyhorse@123
+    login-password: Pa55w0rd
+    login-client-id: admin-cli
+    managed-realm: ${spring.profiles.active}
+    managed-client-id: edu-management-bff
+    min-token-validity: 21600
+
+gateway:
+  ignoredPath:
+    - /doc.html
+    - /webjars/
+    - /v2/api-docs
+    - /manager/refreah
+  ignoredPermissionPath:
+    - /resources/current
+    - /resources/all
+    - /dicts/all
+    - /dicts/dict-type/all
+    - /teaching-staffs/info
+    - /teaching-staffs/login
+    - /ai-experiments
+
+#网关转发规则
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: service-manage-bff-route
+          uri: http://10.16.32.187:30013
+          predicates:
+            - Path=/**
+          filters:
+            ## 截取路径位数
+            - StripPrefix=0
+
+rabbit-mq:
+  auth-data-exchange: exchange.auth-data-change
+  auth-data-queue: gateway-management-queue.auth-data-change.edu-management-bff
+  auth-data-routing: auth-data-change.edu-management-bff

@@ -1,0 +1,85 @@
+server:
+  port: 6001
+
+spring:
+  application:
+    name: service-account
+  profiles:
+    active: ${env_profile:uat}
+  cloud:
+    nacos:
+      config:
+        server-addr: ${nacos_server_addr:127.0.0.1:8848}
+        namespace: edu-${spring.profiles.active}
+        username: ${nacos_username:nacos}
+        password: ${nacos_password:nacos}
+        file-extension: yaml
+        extension-configs[0]:
+          # 通用配置
+          data-id: application-common-${spring.profiles.active}.yaml
+          group: PUBLIC
+          # 配置修改后是否自动更新
+          refresh: true
+        extension-configs[1]:
+          # feign相关配置
+          data-id: feign-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+        extension-configs[2]:
+          # redis相关配置
+          data-id: redis-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+        extension-configs[3]:
+          # rabbitmq相关配置
+          data-id: rabbitmq-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+        extension-configs[4]:
+          # keycloak相关配置
+          data-id: keycloak-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    # virtual-host: edu_uat
+    username: guest
+    password: guest
+#logging:
+#  level:
+#    org.apache.http: debug
+#    sun.rmi: debug
+logging:
+  file:
+    path: ${log_dir:/var/log/edu}/${spring.application.name}
+
+swagger:
+  api:
+    title: guansh-springcloud-api-docs
+    description: 用户服务
+    version: '1.0'
+    contact:
+      name: guanshenghui
+      url: http://${swagger.host}/exam/v1/api-docs
+      email: 978079141@qq.com
+    enabled: true
+
+keycloak:
+  enabled: true
+  auth-server-url: https://127.0.0.1:8888/auth
+  # auth-server-url: http://10.16.32.151:31091/auth
+
+keycloak-admin:
+  params:
+    server-url: ${keycloak.auth-server-url}
+    login-username: admin
+    login-password: admin
+    login-client-id: admin-cli
+    managed-realm: ${spring.profiles.active}
+    min-token-validity: 21600
+
+
+rabbit-mq:
+  auth-data-exchange: exchange.auth-data-change
+  auth-data-routing-prefix: auth-data-change.

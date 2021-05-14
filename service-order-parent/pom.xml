@@ -7,6 +7,7 @@
     <groupId>com.gsh.springcloud</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
+
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>service-order-parent</artifactId>
@@ -14,23 +15,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>service-order-client</module>
+    <module>service-order</module>
   </modules>
-  <properties>
-  </properties>
-  <dependencyManagement>
-    <dependencies>
-      <!--    其他服务依赖-->
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-user-client</artifactId>
-        <version>${version.service-user-client}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-order-client</artifactId>
-        <version>${version.service-order-client}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
 
 </project>

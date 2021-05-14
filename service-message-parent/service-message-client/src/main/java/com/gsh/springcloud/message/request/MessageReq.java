@@ -16,11 +16,11 @@ public class MessageReq {
   /**
    * 用户id
    */
-  private Integer userId;
+  private Long userId;
   /**
    * 积分变化值
    */
-  private Integer integral;
+  private Double integral;
   /**
    * 订单id
    */

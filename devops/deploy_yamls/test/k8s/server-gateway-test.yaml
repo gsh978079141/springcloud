@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-gateway-test
+  namespace: education-test
+  labels:
+    app: server-gateway
+    release: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server-gateway
+      release: test
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: server-gateway
+        release: test
+    spec:
+      nodeSelector:
+        education: "true"
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: server-gateway
+          env:
+            - name: config_server_url
+              value: http://server-config:8888
+            - name: env_profile
+              value: test
+            - name: JAVA_OPTS
+              value: '-Xms1024m -Xmx1024m -Duser.timezone=GMT+08'
+            - name: log_dir
+              value: /var/log/edu
+            - name: opentracing.jaeger.enabled
+              value: 'false'
+          resources:
+            limits:
+              cpu: 500m
+              memory: 2G
+          image: core.harbor.cz.shenlan.com/dbp-edu/server-gateway:latest
+          ports:
+            - name: tcp-essential
+              containerPort: 8001
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              port: tcp-essential
+              path: /actuator/health
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: server-gateway
+  namespace: education-test        #必须
+  labels:
+    service: server-gateway
+spec:                   #必须
+  selector:            #必须
+    app: server-gateway
+    release: test      #必须
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 8001
+      targetPort: 8001

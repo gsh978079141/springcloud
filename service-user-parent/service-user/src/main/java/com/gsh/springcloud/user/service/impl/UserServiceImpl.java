@@ -4,10 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.gsh.springcloud.message.client.MessageClient;
 import com.gsh.springcloud.message.request.MessageReq;
-import com.gsh.springcloud.user.dao.UserMapper;
-import com.gsh.springcloud.user.model.User;
+import com.gsh.springcloud.user.domain.entity.User;
+import com.gsh.springcloud.user.domain.mapper.UserMapper;
 import com.gsh.springcloud.user.service.UserService;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -19,11 +19,11 @@ import javax.annotation.Resource;
  * @create: 2019-12-13 16:03
  **/
 @Service
-@Log4j2
+@Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
   @Resource
-  MessageClient messageClient;
+  private MessageClient messageClient;
 
 //  @StreamListener(value = Queues.REGISTER_ISSUE_COUPONS, condition = "headers['index']=='1'")
 //  public void receiveByHeader(Message msg) {

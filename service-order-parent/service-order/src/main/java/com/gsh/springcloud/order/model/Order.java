@@ -56,7 +56,7 @@ public class Order extends Model<Order> implements Serializable {
   /**
    * 用户id
    */
-  private Integer userId;
+  private Long userId;
 
   /**
    * 下单时间

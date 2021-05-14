@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-foundation-uat
+  namespace: education-uat
+  labels:
+    app: service-foundation
+    release: uat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-foundation
+      release: uat
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: service-foundation
+        release: uat
+    spec:
+      imagePullSecrets:
+        - name: harbor-secret-cz
+      containers:
+        - name: service-foundation
+          env:
+            - name: config_server_url
+              value: http://server-config:8888
+            - name: env_profile
+              value: uat
+            - name: JAVA_OPTS
+              value: '-Xms1024m -Xmx1024m -Duser.timezone=GMT+08'
+            - name: log_dir
+              value: /var/log/edu
+            - name: opentracing.jaeger.enabled
+              value: 'false'
+          resources:
+            limits:
+              cpu: 500m
+              memory: 2G
+          image: harbor-cz.deepblueai.com/dbp-edu/service-foundation
+          ports:
+            - name: tcp-essential
+              containerPort: 7001
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              port: tcp-essential
+              path: /actuator/health
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: service-foundation
+  namespace: education-uat        #必须
+  labels:
+    service: service-foundation
+spec:                   #必须
+  selector:            #必须
+    app: service-foundation
+    release: uat      #必须
+  type: ClusterIP        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 7001
+      targetPort: 7001

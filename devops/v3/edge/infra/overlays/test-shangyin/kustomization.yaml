@@ -1,0 +1,14 @@
+nameSuffix: "-shangyin"
+
+commonLabels:
+  release: test
+  edge: "shangyin"
+
+bases:
+  - ../../base
+
+resources:
+  - edge-mysql.yaml
+
+patchesStrategicmerge:
+  - node-selector.yaml

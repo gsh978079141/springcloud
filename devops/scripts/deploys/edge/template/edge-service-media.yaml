@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-media-#EDGENAME#
+  namespace: education
+  labels:
+    app: edge-service-media
+    type: edge
+    edge: #EDGENAME#
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-service-media
+      type: edge
+      edge: #EDGENAME#
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-service-media
+        type: edge
+        edge: #EDGENAME#
+    spec:
+      nodeName: "#NODENAME#" #选择需要部署的边缘节点
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: edge-service-media
+          env:
+            - name: env_profile
+              value: #EVN#
+            - name: JAVA_OPTS
+              value: '-Xms2048m -Xmx2048m -Duser.timezone=GMT+08 -Dkms.url=ws://localhost:8888/kurento'
+            - name: log_dir
+              value: /var/log/edu
+            - name: opentracing.jaeger.enabled
+              value: 'false'
+            - name: video_url_prefix
+              value: http://localhost:9203/
+          image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-media
+          ports:
+            - name: tcp-essential
+              containerPort: 9006
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              port: tcp-essential
+              path: /actuator/health
+          volumeMounts:
+            - mountPath: /var/log/edu
+              name: persistent-log-storage
+            - mountPath: /storage
+              name: persistent-storage
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+      volumes:
+        - name: persistent-log-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /root/log/edu
+        - name: persistent-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /storage

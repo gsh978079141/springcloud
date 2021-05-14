@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-teach-test
+  namespace: education-test
+  labels:
+    app: service-teach
+    release: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-teach
+      release: test
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: service-teach
+        release: test
+    spec:
+      nodeSelector:
+        education: "true"
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: service-teach
+          image: core.harbor.cz.shenlan.com/dbp-edu/service-teach:latest
+          env:
+            - name: config_server_url
+              value: http://server-config:8888
+            - name: env_profile
+              value: test
+            - name: JAVA_OPTS
+              value: '-Xms1536m -Xmx1536m -Duser.timezone=GMT+08'
+            - name: log_dir
+              value: /var/log/edu
+            - name: opentracing.jaeger.enabled
+              value: 'false'
+          ports:
+            - name: tcp-essential
+              containerPort: 7004
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              port: tcp-essential
+              path: /actuator/health
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+          volumeMounts:
+            - mountPath: /storage
+              name: vol
+      volumes:
+        - name: vol
+          persistentVolumeClaim:
+            claimName: edu-test-oss-pvc
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: service-teach
+  namespace: education-test        #必须
+  labels:
+    service: service-teach
+spec:                   #必须
+  selector:            #必须
+    app: service-teach
+    release: test      #必须
+  type: ClusterIP        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 7004
+      targetPort: 7004

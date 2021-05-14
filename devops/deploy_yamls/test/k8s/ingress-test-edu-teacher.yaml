@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-test-edu-teacher
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
+    ingress.kubernetes.io/cache-enable: "false"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      rewrite /apis(.*) /$1 break;
+
+spec:
+  tls:
+    - hosts:
+        - test-edu-teacher.deepblueai.com
+      secretName: deepblueai-tls
+  rules:
+    - host: test-edu-teacher.deepblueai.com
+      http:
+        paths:
+          - path: /apis
+            backend:
+              serviceName: server-gateway
+              servicePort: 8001
+          - path: /
+            backend:
+              serviceName: terminal-teacher
+              servicePort: 8000

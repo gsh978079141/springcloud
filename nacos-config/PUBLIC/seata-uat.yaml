@@ -1,0 +1,24 @@
+seata:
+  enabled: true
+  # Seata 应用名称，默认使用 ${spring.application.name}
+  application-id: ${spring.application.name}
+  # Seata 事务组, 高版本没找到相关配置, 是否可配置未知 选用默认default
+  tx-service-group: my_test_tx_group
+  config:
+    type: nacos
+    nacos:
+      #      命名空间ID
+      namespace: '48cf4b69-1eee-47c0-b703-cd135f8e6669'
+      serverAddr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      userName: ""
+      password: ""
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 127.0.0.1:8848
+      #      命名空间ID
+      namespace:
+      userName: ""
+      password: ""

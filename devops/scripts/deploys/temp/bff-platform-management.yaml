@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bff-platform-management
+  namespace: education
+  labels:
+    app: bff-platform-management
+    type: cloud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bff-platform-management
+      type: cloud
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: bff-platform-management
+        type: cloud
+    spec:
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: bff-platform-management
+          env:
+            - name: port
+              value: "7103"
+            - name: GATEWAY_URL
+              value: "http://server-gateway:8001"
+          resources:
+            limits:
+              cpu: 500m
+              memory: 2G
+          image: core.harbor.cz.shenlan.com/dbp-edu/bff-platform-management
+          ports:
+            - name: tcp-essential
+              containerPort: 7103
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              port: tcp-essential
+              path: /actuator/health
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: bff-platform-management
+  namespace: education       #必须
+  labels:
+    service: bff-platform-management
+    type: cloud
+spec:                   #必须
+  selector:            #必须
+    app: bff-platform-management
+    type: cloud
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 7103
+      targetPort: 7103

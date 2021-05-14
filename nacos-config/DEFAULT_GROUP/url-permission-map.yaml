@@ -1,0 +1,327 @@
+#pemission与url的对应关系
+gateway-permission:
+  url-permission:
+    - url: /classes
+      scope-permission:
+        - scope: POST
+          permission: perm.post.foundation.classes
+    - url: /classes/list
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.classes
+    - url: /classes/templates
+      scope-permission:
+        - scope: GET
+          permission: perm.post.foundation.classes-import
+    - url: /classes/\d+
+      scope-permission:
+        - scope: DELETE
+          permission: perm.delete.foundation.classes
+        - scope: PUT
+          permission: perm.put.foundation.classes
+        - scope: GET
+          permission: perm.get.foundation.classes
+    - url: /classes/exports
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.classes-export
+    - url: /classes/all
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.classes
+    - url: /classes/imports
+      scope-permission:
+        - scope: POST
+          permission: perm.post.foundation.classes-import
+    - url: /students
+      scope-permission:
+        - scope: POST
+          permission: perm.post.foundation.students
+    - url: /students/list
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.students
+    - url: /students/all
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.students
+    - url: /students/templates
+      scope-permission:
+        - scope: GET
+          permission: perm.post.foundation.students-import
+    - url: /students/imports
+      scope-permission:
+        - scope: POST
+          permission: perm.post.foundation.students-import
+    - url: /students/\d+
+      scope-permission:
+        - scope: DELETE
+          permission: perm.delete.foundation.students
+        - scope: PUT
+          permission: perm.put.foundation.students
+        - scope: GET
+          permission: perm.get.foundation.students
+    - url: /students/exports
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.students-export
+    - url: /experiment-rooms
+      scope-permission:
+        - scope: POST
+          permission: perm.post.foundation.experiment-rooms
+    - url: /experiment-rooms/list
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.experiment-rooms
+    - url: /experiment-rooms/id-and-name
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.experiment-rooms
+    - url: /experiment-rooms/rooms/schedules/all
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.experiment-rooms
+        - scope: POST
+          permission: perm.post.foundation.experiment-rooms
+    - url: /experiment-rooms/tables/templates
+      scope-permission:
+        - scope: GET
+          permission: perm.post.foundation.experiment-rooms
+    - url: /experiment-rooms/\d+/tables
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.experiment-rooms
+    - url: /experiment-rooms/\d+
+      scope-permission:
+        - scope: DELETE
+          permission: perm.delete.foundation.experiment-rooms
+        - scope: PUT
+          permission: perm.put.foundation.experiment-rooms
+        - scope: GET
+          permission: perm.get.foundation.experiment-rooms
+    - url: /ai-experiments/experiments/list
+      scope-permission:
+        - scope: GET
+          permission: perm.get.teach.experiment
+    - url: /ai-experiments/operations/scores
+      scope-permission:
+        - scope: GET
+          permission: perm.get.teach.experiment
+    - url: /teaching-staffs
+      scope-permission:
+        - scope: POST
+          permission: perm.post.foundation.staffs
+        - scope: GET
+          permission: perm.get.foundation.staffs
+    - url: /exams/teachers/\d+/exist-tasks
+      scope-permission:
+        - scope: GET
+          permission: perm.post.foundation.staffs
+    - url: /teaching-staffs/templates
+      scope-permission:
+        - scope: GET
+          permission: perm.post.foundation.staffs
+    - url: /teaching-staffs/\d+
+      scope-permission:
+        - scope: DELETE
+          permission: perm.delete.foundation.staffs
+        - scope: PUT
+          permission: perm.put.foundation.staffs
+        - scope: GET
+          permission: perm.get.foundation.staffs
+    - url: /teachers
+      scope-permission:
+        - scope: POST
+          permission: perm.post.foundation.teachers
+    - url: /teachers/list/\d+
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.teachers
+    - url: /teachers/imports
+      scope-permission:
+        - scope: POST
+          permission: perm.post.foundation.teachers-import
+    - url: /teachers/\d+
+      scope-permission:
+        - scope: DELETE
+          permission: perm.delete.foundation.teachers
+        - scope: PUT
+          permission: perm.put.foundation.teachers
+        - scope: GET
+          permission: perm.get.foundation.teachers
+    - url: /teachers/exports
+      scope-permission:
+        - scope: GET
+          permission: perm.get.foundation.teachers-export
+    - url: /questions/listWithPagination
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.questions
+    - url: /questions/list
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.questions
+    - url: /questions/\d+
+      scope-permission:
+        - scope: DELETE
+          permission: perm.delete.exam.questions
+        - scope: PUT
+          permission: perm.put.exam.questions
+        - scope: GET
+          permission: perm.get.exam.questions
+    - url: /questions/\d+/details
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.questions
+    - url: /questions/\d+/review/fail
+      scope-permission:
+        - scope: POST
+          permission: perm.post.exam.questions
+    - url: /questions/\d+/review/pass
+      scope-permission:
+        - scope: POST
+          permission: perm.post.exam.questions
+    - url: /scores/exams
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.grades
+    - url: /scores/examinees
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.review.scores
+    - url: /scores/markings/\d+
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.review.scores
+    - url: /scores/submit/\d+
+      scope-permission:
+        - scope: PUT
+          permission: perm.put.exam.scores
+    - url: /grades/examinees
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.review.inquiry
+    - url: /grades
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.review.inquiry
+    - url: /grades/record/\d+
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.review.inquiry
+    - url: /grades/exports
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.grades.exports
+    - url: /exams
+      scope-permission:
+        - scope: POST
+          permission: perm.post.exam.exams
+    - url: /exams/questions/distribution
+      scope-permission:
+        - scope: POST
+          permission: perm.post.exam.exams
+    - url: /exams/personnels/assigneds
+      scope-permission:
+        - scope: POST
+          permission: perm.post.exam.exams
+    - url: /exams/\d+/status/issued
+      scope-permission:
+        - scope: POST
+          permission: perm.post.exam.exams
+    - url: /exams/\d+/classes
+      scope-permission:
+        - scope: GET
+          permission: perm.post.exam.exams
+    - url: /exams/list
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.exams
+    - url: /exams/times/\d+/examinees
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.exams
+    - url: /exams/check/name-existence
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.exams
+    - url: /questions
+      scope-permission:
+        - scope: POST
+          permission: perm.post.exam.questions
+    - url: /exams/\d+
+      scope-permission:
+        - scope: PUT
+          permission: perm.put.exam.exams
+        - scope: GET
+          permission: perm.get.exam.exams
+        - scope: DELETE
+          permission: perm.delete.exam.exams
+    - url: /exams/\d+/times
+      scope-permission:
+        - scope: GET
+          permission: perm.get.exam.exams
+    - url: /courses/list
+      scope-permission:
+        - scope: POST
+          permission: perm.get.teach.classSchedule
+    - url: /courses/\d+
+      scope-permission:
+        - scope: POST
+          permission: perm.get.teach.classSchedule
+    - url: /courses/school-timetables
+      scope-permission:
+        - scope: POST
+          permission: perm.get.teach.classSchedule
+    - url: /coursewares/list
+      scope-permission:
+        - scope: GET
+          permission: perm.get.teach.coursewares
+    - url: /teaching-experiment/page
+      scope-permission:
+        - scope: POST
+          permission: perm.get.teach.experiment
+    - url: /teaching-experiment/list
+      scope-permission:
+        - scope: POST
+          permission: perm.get.teach.experiment
+    - url: /course-records/list
+      scope-permission:
+        - scope: GET
+          permission: perm.get.teach.teachingRecord
+    - url: /course-records/\d+/table-student
+      scope-permission:
+        - scope: GET
+          permission: perm.get.teach.teachingRecord
+    - url: /roles/all
+      scope-permission:
+        - scope: GET
+          permission: perm.get.system.roles
+    - url: /roles/\S+
+      scope-permission:
+        - scope: DELETE
+          permission: perm.delete.system.roles
+        - scope: GET
+          permission: perm.get.system.roles
+        - scope: PUT
+          permission: perm.put.system.roles
+    - url: /roles
+      scope-permission:
+        - scope: POST
+          permission: perm.post.system.roles
+    - url: /roles/search
+      scope-permission:
+        - scope: GET
+          permission: perm.get.system.roles
+    - url: /teaching-staffs/info/\d+
+      scope-permission:
+        - scope: GET
+          permission: perm.get.user.detail
+    - url: /teaching-staffs/personals/\d+
+      scope-permission:
+        - scope: PUT
+          permission: perm.put.user.modifyInfo
+    - url: /personals/update-passwords/\d+
+      scope-permission:
+        - scope: POST
+          permission: perm.put.user.modifyPwd

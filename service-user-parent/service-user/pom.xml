@@ -10,15 +10,44 @@
   </parent>
 
   <artifactId>service-user</artifactId>
-  <version>${parent.version}</version>
-  <name>service-user</name>
   <description>用户服务</description>
 
-  <properties>
-
-  </properties>
-
   <dependencies>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>gsh-cloud-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>gsh-cloud-starter-swagger-keycloak</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>gsh-cloud-starter-mysql-mybatis-plus</artifactId>
+    </dependency>
+    <!--  nacos 配置中心  -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+    </dependency>
+    <!--    <dependency>-->
+    <!--      <groupId>org.springframework.boot</groupId>-->
+    <!--      <artifactId>spring-boot-starter-actuator</artifactId>-->
+    <!--    </dependency>-->
+    <!--  feign  -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <!--其他服务client依赖-->
     <dependency>
       <groupId>com.gsh.springcloud</groupId>
       <artifactId>service-message-client</artifactId>
@@ -27,15 +56,34 @@
       <groupId>com.gsh.springcloud</groupId>
       <artifactId>service-user-client</artifactId>
     </dependency>
+    <!--三方包-->
     <dependency>
-      <groupId>com.gsh.springcloud</groupId>
-      <artifactId>service-base</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <!--    实体映射    -->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-jdk8</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+    </dependency>
+
   </dependencies>
 
 </project>

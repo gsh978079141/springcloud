@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloud-conf
+  namespace: edu-cloud-dev
+data:
+  keycloakUrl: "https://edu-auth-internel.deepblueai.com/auth"
+  keycloakRealm: "dev"
+  filePreviewUrl: "https://dev-edu-file-preview.deepblueai.com"
+  env: "dev"

@@ -1,0 +1,41 @@
+feign:
+  url:
+    server-config: http://server-config:8888
+    service-account: http://service-account:6001
+    service-dict: http://service-dict:6002
+    service-foundation: http://service-foundation:7001
+    service-exam: http://service-exam:7003
+    service-teach: http://service-teach:7004
+    service-job: http://service-job:7005
+    service-media: http://service-media:7006
+    service-file-manager: http://service-file-manager:9003
+    bff-student-iot: http://bff-student-iot:7101
+    bff-teacher-iot: http://bff-teacher-iot:7102
+  httpclient:
+    enabled: true
+
+spring:
+  redis:
+    host: redis-server
+    database: 1
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 50
+        max-idle: 20
+        max-wait: 1000ms
+        min-idle: 10
+
+swagger:
+  host:
+  global-parameters:
+    - name: X-Accept-Locale
+      description: Language
+      default-value: zh_CN
+      param-type: header
+      data-type: String
+      required: false
+
+logstash:
+  host: service-elk.default.svc.cluster.local
+  port: 5044

@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-nginx-proxy
+  namespace: education
+  labels:
+    app: edge-nginx-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-nginx-proxy
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-nginx-proxy
+    spec:
+      tolerations:
+        - key: "edge"
+          operator: "Equal"
+          value: "true"
+          effect: "NoSchedule"
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: edge-nginx-proxy
+          image: core.harbor.cz.shenlan.com/dbp-edu/edge-nginx-proxy:v1
+          ports:
+            - name: tcp-essential
+              containerPort: 9203
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /storage
+              name: persistent-storage
+      volumes:
+        - name: persistent-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /storage

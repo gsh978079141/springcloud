@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-rabbitmq
+  namespace: edu-edge
+  labels:
+    app: edge-rabbitmq
+    namespace: edu-edge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-rabbitmq
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-rabbitmq
+    spec:
+      hostNetwork: true
+      containers:
+        - name: edge-rabbitmq
+          image: 'rabbitmq:3.8-management'
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5672
+            - containerPort: 15672
+          env:
+            - name: RABBITMQ_DEFAULT_USER
+              value: "edu"
+            - name: RABBITMQ_DEFAULT_PASS
+              value: "deepblue"
+          volumeMounts:                        #挂载容器中的目录到pvc nfs中的目录
+            - name: data-volume
+              mountPath: /var/lib/rabbitmq
+            - name: log-volume
+              mountPath: /var/log/rabbitmq
+      volumes:
+        - name: data-volume
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/rabbitmq/lib
+        - name: log-volume
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/rabbitmq/log
+

@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-job-dev
+  namespace: education-dev
+  labels:
+    app: service-job
+    release: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-job
+      release: dev
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: service-job
+        release: dev
+    spec:
+      nodeSelector:
+        education: "true"
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: service-job
+          image: core.harbor.cz.shenlan.com/dbp-edu/service-job:latest
+          env:
+            - name: config_server_url
+              value: http://server-config:8888
+            - name: env_profile
+              value: dev
+            - name: JAVA_OPTS
+              value: '-Xms1024m -Xmx1024m -Duser.timezone=GMT+08'
+            - name: log_dir
+              value: /var/log/edu
+            - name: opentracing.jaeger.enabled
+              value: 'false'
+          ports:
+            - name: tcp-essential
+              containerPort: 7005
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              port: tcp-essential
+              path: /actuator/health
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: service-job
+  namespace: education-dev        #必须
+  labels:
+    service: service-job
+spec:                   #必须
+  selector:            #必须
+    app: service-job
+    release: dev      #必须
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 7005
+      targetPort: 7005

@@ -122,3 +122,12 @@ mybatis-plus:
     cache-enabled: false
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+swagger:
+  host:
+  global-parameters:
+    - name: X-Accept-Locale
+      description: Language
+      default-value: zh_CN
+      param-type: header
+      data-type: String
+      required: false

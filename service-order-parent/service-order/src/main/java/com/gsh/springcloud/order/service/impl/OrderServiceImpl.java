@@ -48,7 +48,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     UserReq u = new UserReq();
     u.setId(order.getUserId());
     u.setUserName(method);
-    int integral = Integer.parseInt(new DecimalFormat("0").format(order.getPrice() / 10));
+    double integral = Double.parseDouble(new DecimalFormat("0").format(order.getPrice() / 10));
     u.setIntegral(integral);
     log.info("{}：开始  更新用户", method);
     userClient.updateById(u);
@@ -85,7 +85,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     UserReq u = new UserReq();
     u.setId(order.getUserId());
     u.setUserName(method);
-    int integral = Integer.parseInt(new DecimalFormat("0").format(order.getPrice() / 10));
+    double integral = Double.parseDouble(new DecimalFormat("0").format(order.getPrice() / 10));
     u.setIntegral(integral);
     log.info("{}：开始  更新用户", method);
     userClient.updateById(u);

@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-mysql
+  namespace: edu-edge
+  labels:
+    app: edge-mysql
+    namespace: edu-edge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-mysql
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-mysql
+    spec:
+      hostNetwork: true
+      containers:
+        - name: edge-mysql
+          image: 'core.harbor.cz.shenlan.com/dbp-edu/edu-edge-mysql:V3.4.1'
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3306
+          env:
+            - name: TZ
+              value: "Asia/Shanghai"
+            - name: MYSQL_ROOT_PASSWORD
+              value: "123456"
+          volumeMounts:                        #挂载容器中的目录到pvc nfs中的目录
+            - name: data-volume
+              mountPath: /var/lib/mysql
+            - name: conf-volume
+              mountPath: /etc/mysql
+            - name: log-volume
+              mountPath: /logs
+      volumes:
+        - name: data-volume
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/mysql/data
+        - name: conf-volume
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/mysql/conf
+        - name: log-volume
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/mysql/log

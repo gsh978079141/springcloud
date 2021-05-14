@@ -1,0 +1,37 @@
+feign:
+  #替换掉JDK默认HttpURLConnection实现的 Http Client
+  httpclient:
+    enabled: true
+  client:
+    config:
+      default:
+        #连接超时时间
+        connectTimeout: 5000
+        #读取超时时间
+        readTimeout: 5000
+  url:
+    server-config: http://server-config:8888
+    service-dict: http://service-dict:6002
+    service-account: http://service-account:6001
+    service-foundation: http://service-foundation:7001
+    service-exam: http://service-exam:7003
+    service-teach: http://service-teach:7004
+    service-job: http://service-job:7005
+    service-file-manager: http://service-file-manager:9003
+    bff-student-iot: http://bff-student-iot:7101
+    bff-teacher-iot: http://bff-teacher-iot:7102
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: false
+

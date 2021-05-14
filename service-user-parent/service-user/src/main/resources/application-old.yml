@@ -1,0 +1,184 @@
+seata:
+  enabled: true
+  # Seata 应用名称，默认使用 ${spring.application.name}
+  application-id: ${spring.application.name}
+  # Seata 事务组, 高版本没找到相关配置, 是否可配置未知 选用默认default
+  tx-service-group: my_test_tx_group
+  config:
+    type: nacos
+    nacos:
+      #      命名空间ID
+      namespace: '48cf4b69-1eee-47c0-b703-cd135f8e6669'
+      serverAddr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      userName: ""
+      password: ""
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 127.0.0.1:8848
+      #      命名空间ID
+      namespace:
+      userName: ""
+      password: ""
+#应用名
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  rabbitmq:
+    addresses: 127.0.0.1:5672
+  #  数据源配置
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/user?characterEncoding=UTF-8&useSSL=false&useUnicode=true
+    username: root
+    password: 123
+    #Druid连接池配置
+    driverClassName: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    #    　　下面为连接池的补充设置，应用到上面所有数据源中
+    #    　　初始化大小，最小，最大
+    initialSize: 1
+    minIdle: 3
+    maxActive: 20
+    #    　　配置获取连接等待超时的时间
+    maxWait: 60000
+    #    　　配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    #    　　配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    #    　　打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    #    　　配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    # filters: stat,wall,slf4j
+    #    　　通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    #       合并多个DruidDataSource的监控数据
+    useGlobalDataSourceStat: true
+
+  #  mongodb 配置
+  #  集群配置：mongodb://user:pwd@ip1:port1,ip2:port2/database
+  #  data:
+  #    mongodb:
+  #      uri: mongodb://localhost:27017/test
+  #  cloud:
+  #    #    服务注册
+  #    nacos:
+  #      discovery:
+  #        server-addr: 127.0.0.1:8848
+  # stream-rabbitmq
+#    stream:
+#      bindings:
+#        read-order:
+#          # 负载均衡，多个service-user实例，属于同一组 只有一个实例消费消息（默认轮询）
+#          group: service-user-group
+#          # destination对应rabbitmq中exchange
+#          destination: destination_exchange
+#        send-order:
+#          destination: destination_exchange
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
+          jwk-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
+      client:
+        provider:
+          keycloak:
+            issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
+            token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
+            authorization-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/auth
+            user-info-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/userinfo
+            jwk-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
+            user-info-authentication-method: header
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: ${keycloak.resource}
+            client-secret: ${keycloak.credentials.secret}
+            client-name: ${spring.application.name}
+            provider: keycloak
+            authorization-grant-type: authorization_code
+            client-authentication-method: basic
+            scope:
+              - openid
+#mybatis
+mybatis-plus:
+  # xml
+  mapper-locations: classpath:mapper/*Mapper.xml
+  # 实体扫描，多个package用逗号或者分号分隔
+  #  type-aliases-package: com.gsh.springcloud.user.entiy
+  # 扫描枚举类 # 支持统配符 * 或者 ; 分割
+  #  type-enums-package: com.fengwenyi.mp3demo.enums
+  global-config:
+    #刷新mapper 调试神器
+    db-config:
+      #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+      id-type: ID_WORKER
+      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+      field-strategy: NOT_EMPTY
+      #驼峰下划线转换
+      #column-underline: true
+      #数据库大写下划线转换
+      #capital-mode: true
+      #逻辑删除配置
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      db-type: mysql
+    refresh: true
+    #自定义填充策略接口实现
+    #meta-object-handler: com.baomidou.springboot.xxx
+    #自定义SQL注入器
+    #sql-injector: com.baomidou.springboot.xxx
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+swagger:
+  host:
+  global-parameters:
+    - name: X-Accept-Locale
+      description: Language
+      default-value: zh_CN
+      param-type: header
+      data-type: String
+      required: false
+
+
+keycloak:
+  enabled: false
+  #  realm: ${spring.profiles.active}
+  realm: Dev
+  principal-attribute: preferred_username
+  cors: true
+  cors-allowed-methods: POST,PUT,DELETE,GET,OPTIONS,PATCH
+  cors-allowed-headers: Authorization, Origin, X-Requested-With, Content-Type
+  bearer-only: true
+  auth-server-url: http://127.0.0.1:8088/auth
+  ssl-required: external
+  resource: gsh-cloud
+  public-client: false
+  credentials:
+    secret: 826520ba-9d7b-436b-96a1-f9cd0cd53296
+  use-resource-role-mappings: true
+  token-minimum-time-to-live: 3600
+security:
+  oauth2:
+    client:
+      client-id: ${keycloak.resource}
+      client-secret: ${keycloak.credentials.secret}
+      user-authorization-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/auth
+      access-token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
+      scope: openid
+      grant-type: client_credentials
+    resource:
+      user-info-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/userinfo
+      jwk.key-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
+

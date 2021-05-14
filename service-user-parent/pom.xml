@@ -7,41 +7,15 @@
     <groupId>com.gsh.springcloud</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
+
   <modelVersion>4.0.0</modelVersion>
   <version>1.0-SNAPSHOT</version>
   <artifactId>service-user-parent</artifactId>
   <packaging>pom</packaging>
+
   <modules>
     <module>service-user-client</module>
     <module>service-user</module>
   </modules>
-
-  <properties>
-    <service-base.version>1.0-SNAPSHOT</service-base.version>
-    <version.service-user-client>1.0-SNAPSHOT</version.service-user-client>
-    <version.service-message-client>1.0-SNAPSHOT</version.service-message-client>
-  </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <!--    其他服务依赖-->
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-user-client</artifactId>
-        <version>${version.service-user-client}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-message-client</artifactId>
-        <version>${version.service-message-client}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-base</artifactId>
-        <version>${service-base.version}</version>
-      </dependency>
-    </dependencies>
-
-  </dependencyManagement>
 
 </project>

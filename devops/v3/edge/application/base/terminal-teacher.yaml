@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terminal-teacher
+  namespace: education
+  labels:
+    app: terminal-teacher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: terminal-teacher
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: terminal-teacher
+    spec:
+      tolerations:
+        - key: "edge"
+          operator: "Equal"
+          value: "true"
+          effect: "NoSchedule"
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: terminal-teacher
+          image: core.harbor.cz.shenlan.com/dbp-edu/terminal-teacher:latest
+          imagePullPolicy: Always
+          env:
+            - name: KEYCLOAK_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: keycloakUrl
+            - name: KEYCLOAK_REALM
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: keycloakRealm
+            - name: ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: env
+          ports:
+            - name: tcp-essential
+              containerPort: 9202
+              protocol: TCP

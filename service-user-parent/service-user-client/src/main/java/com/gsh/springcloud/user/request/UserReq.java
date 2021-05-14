@@ -19,7 +19,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class UserReq {
 
-  private Integer id;
+  private Long id;
 
   private String userName;
 
@@ -27,7 +27,7 @@ public class UserReq {
 
   private Integer age;
 
-  private Integer integral;
+  private Double integral;
 
   private Date updateTime;
 

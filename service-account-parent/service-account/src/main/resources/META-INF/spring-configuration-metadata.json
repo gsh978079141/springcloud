@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "name": "keycloak-admin.params",
+      "type": "io.deepblueai.sso.sample.admin.config.support.KeycloakAdminProperties",
+      "sourceType": "io.deepblueai.sso.sample.admin.config.support.KeycloakAdminProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "keycloak-admin.params.server-url",
+      "type": "java.lang.String",
+      "sourceType": "io.deepblueai.sso.sample.admin.config.support.KeycloakAdminProperties"
+    },
+    {
+      "name": "keycloak-admin.params.login-username",
+      "type": "java.lang.String",
+      "sourceType": "io.deepblueai.sso.sample.admin.config.support.KeycloakAdminProperties"
+    },
+    {
+      "name": "keycloak-admin.params.login-password",
+      "type": "java.lang.String",
+      "sourceType": "io.deepblueai.sso.sample.admin.config.support.KeycloakAdminProperties"
+    },
+    {
+      "name": "keycloak-admin.params.login-client-id",
+      "type": "java.lang.String",
+      "sourceType": "io.deepblueai.sso.sample.admin.config.support.KeycloakAdminProperties"
+    },
+    {
+      "name": "keycloak-admin.params.managed-realm",
+      "type": "java.lang.String",
+      "sourceType": "io.deepblueai.sso.sample.admin.config.support.KeycloakAdminProperties"
+    }
+  ],
+  "hints": [
+  ]
+}

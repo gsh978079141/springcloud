@@ -1,0 +1,302 @@
+# 所有deployment 指定节点，必须满足:  type=edge, edge=gezhi
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-algorithm-dispatch
+spec:
+  template:
+    spec:
+      nodeName: "edge.shangyin" #选择需要部署的边缘节点
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-biz
+spec:
+  template:
+    spec:
+      nodeName: "edge.shangyin" #选择需要部署的边缘节点
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-file-manager
+spec:
+  template:
+    spec:
+      nodeName: "edge.shangyin" #选择需要部署的边缘节点
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-media
+spec:
+  template:
+    spec:
+      nodeName: "edge.shangyin" #选择需要部署的边缘节点
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-student-iot
+spec:
+  template:
+    spec:
+      nodeName: "edge.shangyin" #选择需要部署的边缘节点
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-teacher-iot
+spec:
+  template:
+    spec:
+      nodeName: "edge.shangyin" #选择需要部署的边缘节点
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-video-process
+spec:
+  template:
+    spec:
+      nodeName: "edge.shangyin" #选择需要部署的边缘节点
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terminal-student
+spec:
+  template:
+    spec:
+      nodeName: "edge.shangyin" #选择需要部署的边缘节点
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terminal-teacher
+spec:
+  template:
+    spec:
+      nodeName: "edge.shangyin" #选择需要部署的边缘节点
+
+
+
+
+# 所有deployment 指定节点，必须满足:  type=edge, edge=gezhi
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: edge-service-algorithm-dispatch
+# spec:
+#   template:
+#     spec:
+#       affinity:
+#         nodeAffinity:
+#           requiredDuringSchedulingIgnoredDuringExecution:
+#             nodeSelectorTerms:
+#             - matchExpressions:
+#               - key: type
+#                 operator: In
+#                 values:
+#                 - edge
+#             - matchExpressions:
+#               - key: edge
+#                 operator: In
+#                 values:
+#                 - gezhi
+
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: edge-service-biz
+# spec:
+#   template:
+#     spec:
+#       affinity:
+#         nodeAffinity:
+#           requiredDuringSchedulingIgnoredDuringExecution:
+#             nodeSelectorTerms:
+#             - matchExpressions:
+#               - key: type
+#                 operator: In
+#                 values:
+#                 - edge
+#             - matchExpressions:
+#               - key: edge
+#                 operator: In
+#                 values:
+#                 - gezhi
+
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: edge-service-file-manager
+# spec:
+#   template:
+#     spec:
+#       affinity:
+#         nodeAffinity:
+#           requiredDuringSchedulingIgnoredDuringExecution:
+#             nodeSelectorTerms:
+#             - matchExpressions:
+#               - key: type
+#                 operator: In
+#                 values:
+#                 - edge
+#             - matchExpressions:
+#               - key: edge
+#                 operator: In
+#                 values:
+#                 - gezhi
+
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: edge-service-media
+# spec:
+#   template:
+#     spec:
+#       affinity:
+#         nodeAffinity:
+#           requiredDuringSchedulingIgnoredDuringExecution:
+#             nodeSelectorTerms:
+#             - matchExpressions:
+#               - key: type
+#                 operator: In
+#                 values:
+#                 - edge
+#             - matchExpressions:
+#               - key: edge
+#                 operator: In
+#                 values:
+#                 - gezhi
+
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: edge-service-student-iot
+# spec:
+#   template:
+#     spec:
+#       affinity:
+#         nodeAffinity:
+#           requiredDuringSchedulingIgnoredDuringExecution:
+#             nodeSelectorTerms:
+#             - matchExpressions:
+#               - key: type
+#                 operator: In
+#                 values:
+#                 - edge
+#             - matchExpressions:
+#               - key: edge
+#                 operator: In
+#                 values:
+#                 - gezhi
+
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: edge-service-teacher-iot
+# spec:
+#   template:
+#     spec:
+#       affinity:
+#         nodeAffinity:
+#           requiredDuringSchedulingIgnoredDuringExecution:
+#             nodeSelectorTerms:
+#             - matchExpressions:
+#               - key: type
+#                 operator: In
+#                 values:
+#                 - edge
+#             - matchExpressions:
+#               - key: edge
+#                 operator: In
+#                 values:
+#                 - gezhi
+
+
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: edge-service-video-process
+# spec:
+#   template:
+#     spec:
+#       affinity:
+#         nodeAffinity:
+#           requiredDuringSchedulingIgnoredDuringExecution:
+#             nodeSelectorTerms:
+#             - matchExpressions:
+#               - key: type
+#                 operator: In
+#                 values:
+#                 - edge
+#             - matchExpressions:
+#               - key: edge
+#                 operator: In
+#                 values:
+#                 - gezhi
+
+# ###
+# ---
+#   apiVersion: apps/v1
+#   kind: Deployment
+#   metadata:
+#     name: terminal-student
+#   spec:
+#     template:
+#       spec:
+#         affinity:
+#           nodeAffinity:
+#             requiredDuringSchedulingIgnoredDuringExecution:
+#               nodeSelectorTerms:
+#               - matchExpressions:
+#                 - key: type
+#                   operator: In
+#                   values:
+#                   - edge
+#               - matchExpressions:
+#                 - key: edge
+#                   operator: In
+#                   values:
+#                   - gezhi
+
+# ---
+#   apiVersion: apps/v1
+#   kind: Deployment
+#   metadata:
+#     name: terminal-teacher
+#   spec:
+#     template:
+#       spec:
+#         affinity:
+#           nodeAffinity:
+#             requiredDuringSchedulingIgnoredDuringExecution:
+#               nodeSelectorTerms:
+#               - matchExpressions:
+#                 - key: type
+#                   operator: In
+#                   values:
+#                   - edge
+#               - matchExpressions:
+#                 - key: edge
+#                   operator: In
+#                   values:
+#                   - gezhi

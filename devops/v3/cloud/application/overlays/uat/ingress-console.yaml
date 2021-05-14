@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: platform-management-ingress
+  namespace: edu-cloud
+  annotations:
+    # ingress.kubernetes.io/ssl-redirect: "true"
+    ingress.kubernetes.io/cache-enable: "false"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
+    # nginx.ingress.kubernetes.io/configuration-snippet: |
+    # rewrite /apis(.*) /$1 break;
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  # tls:
+  #   - hosts:
+  #     - dev-edu-console.deepblueai.com
+  #     secretName: deepblueai-tls
+  rules:
+    - host: uat-edu-console.deepblueai.com
+      http:
+        paths:
+          - path: /apis/(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: gateway-management
+                port:
+                  number: 8002
+          - path: /(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: platform-management
+                port:
+                  number: 8000

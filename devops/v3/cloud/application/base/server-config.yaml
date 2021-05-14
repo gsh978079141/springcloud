@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-config
+  namespace: edu-cloud
+  labels:
+    app: server-config
+    type: cloud
+    k8s.kuboard.cn/layer: svc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server-config
+      type: cloud
+  template:
+    metadata:
+      labels:
+        app: server-config
+        type: cloud
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: type
+                    operator: In
+                    values:
+                      - cloud
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: server-config
+          image: core.harbor.cz.shenlan.com/dbp-edu/server-config:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: env_mode
+              value: native
+            - name: env_profile
+              valueFrom:
+                configMapKeyRef:
+                  name: cloud-conf
+                  key: env
+            - name: JAVA_OPTS
+              value: '-Xms1024m -Xmx1024m -Duser.timezone=GMT+08'
+            - name: log_dir
+              value: /var/log/edu
+            - name: opentracing.jaeger.enabled
+              value: 'false'
+          ports:
+            - name: tcp-essential
+              containerPort: 8888
+              protocol: TCP
+
+
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: server-config
+  namespace: edu-cloud     #必须
+  labels:
+    app: server-config
+    type: cloud
+spec:                   #必须
+  selector:            #必须
+    app: server-config
+    type: cloud      #必须
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 8888
+      targetPort: 8888
+      nodePort: 30002

@@ -3,10 +3,11 @@ package com.gsh.springcloud.message.controller;
 import com.gsh.springcloud.message.client.MessageClient;
 import com.gsh.springcloud.message.request.MessageReq;
 import com.gsh.springcloud.message.service.MessageService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @program: springcloud
@@ -16,8 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController("/message")
 public class MessageController implements MessageClient {
-  @Autowired
-  MessageService messageService;
+
+  @Resource
+  private MessageService messageService;
 
   /**
    * 用户 登录加积分

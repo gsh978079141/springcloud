@@ -1,6 +1,63 @@
 #
 ##rabbitmq
 spring:
+  datasource:
+    #   数据源基本配置
+    url: jdbc:mysql://${datasource_ip:127.0.0.1}:3306/deepblue_k12_uat?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: ${datasource_username:root}
+    password: ${datasource_password:123}
+    driverClassName: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    #   数据源其他配置
+    druid:
+      #初始化时建立物理连接的个数
+      initial-size: 5
+      #最小连接池数量
+      min-idle: 5
+      #最大连接池数量 maxIdle已经不再使用
+      max-active: 20
+      #获取连接时最大等待时间，单位毫秒
+      max-wait: 3000
+      #既作为检测的间隔时间又作为testWhileIdle执行的依据
+      time-between-eviction-runs-millis: 60000
+      #销毁线程时检测当前连接的最后活动时间和当前时间差大于该值时，关闭当前连接
+      min-evictable-idle-time-millis: 30000
+      #用来检测连接是否有效的sql 必须是一个查询语句
+      validation-query: select 'x'
+      #申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+      test-while-idle: true
+      #申请连接时会执行validationQuery检测连接是否有效,开启会降低性能,默认为true
+      test-on-borrow: false
+      #归还连接时会执行validationQuery检测连接是否有效,开启会降低性能,默认为true
+      test-on-return: false
+      # 是否缓存preparedStatement
+      pool-prepared-statements: true
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      #配置监拉统计挡成的filters. stat: 监控统计、Log4j:日志记录、waLL: 防御sqL注入
+      filters: stat,wall,slf4j
+      max-pool-prepared-statement-per-connection-size: 20
+      use-global-data-source-stat: true
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=2000
+      filter:
+        stat:
+          enabled: true
+          db-type: mysql
+          log-slow-sql: true
+          slow-sql-millis: 2000
+        # 配置DruidStatViewServlet
+      stat-view-servlet:
+        enabled: true
+        url-pattern: "/druid/*"
+        # IP白名单(没有配置或者为空，则允许所有访问)
+        #        allow: 127.0.0.1
+        # IP黑名单 (存在共同时，deny优先于allow)
+        #        deny: 192.168.1.73
+        #  禁用HTML页面上的“Reset All”功能
+        reset-enable: false
+        # 登录名
+        login-username: edu
+        # 登录密码
+        login-password: deepblue
   rabbitmq:
     addresses: 127.0.0.1:5672
 ####  cloud:

@@ -16,7 +16,6 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-openfeign-core</artifactId>
-      <version>${spring-boot.version}</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>

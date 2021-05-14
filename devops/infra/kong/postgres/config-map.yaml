@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kong-conf
+  namespace: kong
+data:
+  KONG_PG_HOST: "10.16.32.182"
+  KONG_PG_PORT: "5432"
+  KONG_DATABASE: "kong"
+  KONG_PG_USER: "kong"
+  KONG_PG_PASSWORD: "kong"
+  KONGA_DATABASE: "konga"
+  KONGA_PG_USER: "konga"
+  KONGA_PG_PASSWORD: "konga"
+  KONG_NGINX_WORKER_PROCESSES: "8"

@@ -3,11 +3,11 @@ package com.gsh.springcloud.message.service.impl;
 import com.gsh.springcloud.message.listener.MessageChannelClient;
 import com.gsh.springcloud.message.request.MessageReq;
 import com.gsh.springcloud.message.service.MessageService;
-import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @program: springcloud
@@ -17,10 +17,9 @@ import org.springframework.stereotype.Service;
  **/
 @Service
 @EnableBinding(MessageChannelClient.class)
-@Log4j2
 public class MessageServiceImpl implements MessageService {
 
-  @Autowired
+  @Resource
   private MessageChannelClient messageChannelClient;
 
   @Override

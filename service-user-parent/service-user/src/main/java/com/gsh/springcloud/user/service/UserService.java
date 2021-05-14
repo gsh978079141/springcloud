@@ -1,7 +1,7 @@
 package com.gsh.springcloud.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.gsh.springcloud.user.model.User;
+import com.gsh.springcloud.user.domain.entity.User;
 
 public interface UserService extends IService<User> {
   /**

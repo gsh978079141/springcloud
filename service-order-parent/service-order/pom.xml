@@ -11,38 +11,50 @@
 
   <artifactId>service-order</artifactId>
   <packaging>jar</packaging>
-  <version>${parent.version}</version>
-  <name>service-order</name>
+
   <description>订单服务</description>
 
   <properties>
-    <service-base.version>1.0-SNAPSHOT</service-base.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.gsh.springcloud</groupId>
+      <artifactId>gsh-cloud-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>gsh-cloud-starter-swagger-keycloak</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>gsh-cloud-starter-mysql-mybatis-plus</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>service-message-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
       <artifactId>service-user-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.gsh.springcloud</groupId>
-      <artifactId>service-order-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.gsh.springcloud</groupId>
-      <artifactId>service-base</artifactId>
-      <version>${service-base.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
     </dependency>
-    <!--test-->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-alibaba-seata</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.seata</groupId>
+      <artifactId>seata-spring-boot-starter</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
     </dependency>
+
   </dependencies>
 
 </project>

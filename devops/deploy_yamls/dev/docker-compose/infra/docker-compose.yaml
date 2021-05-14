@@ -1,0 +1,25 @@
+version: '3'
+services:
+  # emqttd 设备消息队列
+  mqtt:
+    image: registry.cn-hangzhou.aliyuncs.com/synbop/emqttd:2.3.6
+    restart: always
+    container_name: emqtt-server
+    network_mode: host
+  # 流媒体服务器
+  kms:
+    image: kurento/kurento-media-server:latest
+    container_name: kurento-media-server
+    restart: always
+    network_mode: host
+    volumes:
+      - /storage/videos:/tmp
+  # 文件在线预览服务器
+  kkfileview:
+    image: keking/kkfileview:latest
+    container_name: kkfileview
+    restart: always
+    network_mode: host
+    environment:
+      - server.port=8012
+      - server.context-path=kkfileview

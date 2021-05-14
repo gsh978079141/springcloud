@@ -1,0 +1,31 @@
+nameSuffix: "-gezhi"
+commonLabels:
+  release: uat
+  edge: gezhi
+bases:
+  - ../../base
+patchesStrategicmerge:
+  - configMap.yaml
+  - node-selector.yaml
+
+
+
+images:
+  - name: core.harbor.cz.shenlan.com/dbp-edu/terminal-student # match images with this name
+    newTag: "latest" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/terminal-teacher # match images with this name
+    newTag: "latest" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/edge-service-algorithm-dispatch # match images with this name
+    newTag: "1756" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/edge-service-biz # match images with this name
+    newTag: "1756" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/edge-service-file-manager # match images with this name
+    newTag: "1756" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/edge-service-media # match images with this name
+    newTag: "1756" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/edge-service-student-iot # match images with this name
+    newTag: "1756" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/edge-service-teacher-iot # match images with this name
+    newTag: "1756" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/edge-service-video-process # match images with this name
+    newTag: "1756" # override the tag

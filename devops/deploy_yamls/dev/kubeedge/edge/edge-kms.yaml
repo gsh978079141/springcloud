@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-kms-shangyin
+  namespace: education
+  labels:
+    app: edge-kms
+    type: edge
+    edge: shangyin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-kms
+      type: edge
+      edge: shangyin
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-kms
+        type: edge
+        edge: shangyin
+    spec:
+      nodeName: "edge.node3" #选择需要部署的边缘节点
+      hostNetwork: true
+      containers:
+        - name: edge-kms
+          image: kurento/kurento-media-server:latest
+          ports:
+            - name: tcp-essential
+              containerPort: 8888
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /storage
+              name: persistent-storage
+      volumes:
+        - name: persistent-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /storage

@@ -1,0 +1,14 @@
+nameSuffix: "-gezhi"
+
+commonLabels:
+  release: dev
+  edge: "gezhi"
+
+bases:
+  - ../../base
+
+  # resources:
+  # - edge-mysql.yaml
+
+patchesStrategicmerge:
+  - node-selector.yaml

@@ -1,0 +1,50 @@
+namespace: "edu-cloud"
+
+commonLabels:
+  release: uat
+
+bases:
+  - ../../base
+patchesStrategicmerge:
+  - replicas.yaml
+
+
+images:
+  - name: core.harbor.cz.shenlan.com/dbp-edu/platform-management # match images with this name
+    newTag: "913" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/bff-management # match images with this name
+    newTag: "1202-1" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/gateway-management
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/bff-student-iot
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/bff-teacher-iot
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-config
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-gateway
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-account
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-dict
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-exam
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-foundation
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-job
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-oss
+    newTag: "1761"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-teach
+    newTag: "1761"
+
+resources:
+  - ingress-op.yaml
+  - ingress-console.yaml
+  - ingress-student-iot.yaml
+  - ingress-teacher-iot.yaml
+  - ingress-file-preview.yaml
+
+patchesStrategicmerge:
+  - configMap.yaml

@@ -26,3 +26,14 @@ spring:
     alibaba:
       seata:
         tx-service-group: ${spring.application.name}
+
+swagger:
+  enabled: true
+  api:
+    title: 深兰AI数字教育平台API文档
+    description: 边缘端通用业务处理服务
+    version: '1.0'
+    contact:
+      name: yuyue
+      url: http://${swagger.host}/exam/v2/api-docs
+      email: developer@deepblueai.com

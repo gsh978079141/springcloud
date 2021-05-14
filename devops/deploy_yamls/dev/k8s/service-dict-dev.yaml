@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-dict-dev
+  namespace: education-dev
+  labels:
+    app: service-dict
+    release: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-dict
+      release: dev
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: service-dict
+        release: dev
+    spec:
+      nodeSelector:
+        education: "true"
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: service-dict
+          image: core.harbor.cz.shenlan.com/dbp-edu/service-dict:latest
+          env:
+            - name: config_server_url
+              value: http://server-config:8888
+            - name: env_profile
+              value: dev
+            - name: JAVA_OPTS
+              value: '-Xms1024m -Xmx1024m -Duser.timezone=GMT+08'
+            - name: log_dir
+              value: /var/log/edu
+            - name: opentracing.jaeger.enabled
+              value: 'false'
+          resources:
+            limits:
+              cpu: 500m
+              memory: 2G
+
+          ports:
+            - name: tcp-essential
+              containerPort: 6002
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              port: tcp-essential
+              path: /actuator/health
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: service-dict
+  namespace: education-dev        #必须
+  labels:
+    service: service-dict
+spec:                   #必须
+  selector:            #必须
+    app: service-dict
+    release: dev      #必须
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 6002
+      targetPort: 6002

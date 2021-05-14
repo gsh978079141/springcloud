@@ -1,0 +1,45 @@
+namespace: "edu-cloud-dev"
+
+commonLabels:
+  release: dev
+
+bases:
+  - ../../base
+
+
+images:
+  - name: core.harbor.cz.shenlan.com/dbp-edu/platform-management # match images with this name
+    newTag: "898" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/bff-management # match images with this name
+    newTag: "1202-1" # override the tag
+  - name: core.harbor.cz.shenlan.com/dbp-edu/bff-student-iot
+    newTag: "1705"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/bff-teacher-iot
+    newTag: "1705"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-config
+    newTag: "1705"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-gateway
+    newTag: "1705"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-account
+    newTag: "1705"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-dict
+    newTag: "1705"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-exam
+    newTag: "1705"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-foundation
+    newTag: "1709"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-job
+    newTag: "1705"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-oss
+    newTag: "1705"
+  - name: core.harbor.cz.shenlan.com/dbp-edu/service-teach
+    newTag: "1705"
+
+resources:
+  - ingress-console.yaml
+  - ingress-student-iot.yaml
+  - ingress-teacher-iot.yaml
+  - ingress-file-preview.yaml
+
+patchesStrategicmerge:
+  - configMap.yaml

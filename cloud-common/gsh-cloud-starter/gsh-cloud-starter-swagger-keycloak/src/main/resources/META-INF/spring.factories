@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.gsh.springcloud.starter.swagger.keycloak.Swagger3KeycloakAutoConfiguration,\
+  com.gsh.springcloud.starter.swagger.keycloak.WebSecurityConfiguration

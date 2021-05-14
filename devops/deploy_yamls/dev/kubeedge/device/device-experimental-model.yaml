@@ -1,0 +1,37 @@
+apiVersion: devices.kubeedge.io/v1alpha2
+kind: DeviceModel
+metadata:
+  name: device-experimental-model
+  namespace: default
+spec:
+  properties:
+    - name: online
+      description: the device online status ,values is ONLINE/OFFLINE
+      type:
+        string:
+          accessMode: ReadOnly
+          defaultValue: 'OFFLINE'
+    - name: power
+      description: the device power control ,values is ON/OFF
+      type:
+        string:
+          accessMode: ReadWrite
+          defaultValue: 'OFF'
+    - name: deviceMode
+      description: the device mode,values is TEACHING/EXAM/STANDBY/STUDY/EXPERIMENT
+      type:
+        string:
+          accessMode: ReadWrite
+          defaultValue: 'STUDY'
+    - name: lifterStatus
+      description: the device lifter status 1/2/3
+      type:
+        string:
+          accessMode: ReadWrite
+          defaultValue: "0"
+    - name: terminalUploadData
+      description: the device upload data
+      type:
+        string:
+          accessMode: ReadOnly
+          defaultValue: "0"
