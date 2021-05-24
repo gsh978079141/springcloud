@@ -11,6 +11,10 @@
 
   <artifactId>service-user</artifactId>
   <description>用户服务</description>
+  <packaging>jar</packaging>
+  <properties>
+    <start-class>com.gsh.springcloud.user.ServiceUserApplication</start-class>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -19,7 +23,11 @@
     </dependency>
     <dependency>
       <groupId>com.gsh.springcloud</groupId>
-      <artifactId>gsh-cloud-starter-swagger-keycloak</artifactId>
+      <artifactId>gsh-cloud-starter-mq</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>gsh-cloud-starter-swagger</artifactId>
     </dependency>
     <dependency>
       <groupId>com.gsh.springcloud</groupId>
@@ -30,19 +38,35 @@
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
     </dependency>
+    <!--  nacos 服务注册  -->
     <dependency>
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
+    <!--  seata  -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-alibaba-seata</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.seata</groupId>
+      <artifactId>seata-spring-boot-starter</artifactId>
+    </dependency>
     <!--    <dependency>-->
-    <!--      <groupId>org.springframework.boot</groupId>-->
-    <!--      <artifactId>spring-boot-starter-actuator</artifactId>-->
+    <!--      <groupId>io.seata</groupId>-->
+    <!--      <artifactId>seata-all</artifactId>-->
     <!--    </dependency>-->
     <!--  feign  -->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-openfeign</artifactId>
     </dependency>
+    <!--  ribbon  -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+    </dependency>
+    <!--  test  -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -85,5 +109,26 @@
     </dependency>
 
   </dependencies>
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${version.spring-boot}</version>
+        <configuration>
+          <finalName>${project.name}</finalName>
+          <mainClass>${start-class}</mainClass>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

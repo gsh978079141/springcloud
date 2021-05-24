@@ -12,21 +12,9 @@
   <packaging>jar</packaging>
   <description>消息服务中心</description>
   <properties>
-    <start-class>com.gsh.springcloud.account.AccountApplication</start-class>
+    <start-class>com.gsh.springcloud.message.ServiceMessageApplication</start-class>
   </properties>
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.gsh.springcloud</groupId>
-      <artifactId>service-message-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.gsh.springcloud</groupId>
-      <artifactId>service-user-client</artifactId>
-    </dependency>
     <!--stream-rabbit-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
@@ -34,10 +22,14 @@
     </dependency>
     <!-- nacos -->
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
+      <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
-
+    <!--  nacos 配置中心  -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+    </dependency>
     <!--cloud-common-->
     <dependency>
       <groupId>com.gsh.springcloud</groupId>
@@ -55,18 +47,31 @@
       </exclusions>
     </dependency>
     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <!--starter-->
+    <dependency>
       <groupId>com.gsh.springcloud</groupId>
       <artifactId>gsh-cloud-starter-swagger</artifactId>
     </dependency>
     <dependency>
       <groupId>com.gsh.springcloud</groupId>
+      <artifactId>gsh-cloud-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
       <artifactId>gsh-cloud-starter-mysql-mybatis-plus</artifactId>
     </dependency>
-    <!-- spring-cloud-nacos-->
-    <!--        <dependency>-->
-    <!--            <groupId>org.springframework.cloud</groupId>-->
-    <!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-    <!--        </dependency>-->
+    <!--client-->
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>service-message-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>service-user-client</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

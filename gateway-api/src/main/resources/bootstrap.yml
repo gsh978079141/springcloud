@@ -33,10 +33,10 @@ spring:
     throw-exception-if-no-handler-found: true
   cloud:
     gateway:
-      #      discovery:
-      #        locator:
-      #          #          enabled: true
-      #          lowerCaseServiceId: true
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
       routes:
         #        - id: service-account
         #          uri: http://service-account:6001
@@ -64,11 +64,15 @@ spring:
         #            - StripPrefix=1
         - id: service-user
           #          uri: http://service-user:7003
-          uri: http://127.0.0.1:7003
+          # lb代表从注册中心获取服务
+          uri: lb://service-user
           predicates:
-            - Path=/user-apis/**
-          filters:
-            - StripPrefix=1
+            #            - Path=/user-apis/**
+            - Path=/users/**
+            # http://127.0.0.1:8001/users/users/deleteById?id=1
+            # filters.StripPrefix=1:过滤掉前面设置的Path:/user-apis->真实的请求路径为：/users/deleteById?id=1
+#          filters:
+#            - StripPrefix=1
 
 logging:
   file:

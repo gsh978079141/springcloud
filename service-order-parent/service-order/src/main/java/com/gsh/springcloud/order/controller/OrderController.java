@@ -1,13 +1,13 @@
 package com.gsh.springcloud.order.controller;
 
-import com.gsh.springcloud.order.model.Order;
+import com.gsh.springcloud.order.domain.entity.Order;
 import com.gsh.springcloud.order.service.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
@@ -21,11 +21,10 @@ import java.net.URLEncoder;
  */
 @RestController
 @RequestMapping("/order")
-//@RefreshScope
 public class OrderController {
 
-  @Autowired
-  OrderService orderService;
+  @Resource
+  private OrderService orderService;
 
   @PostMapping("/placeOrder")
   public void placeOrder(@RequestBody Order order) {

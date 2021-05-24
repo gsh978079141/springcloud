@@ -1,4 +1,4 @@
-package com.gsh.springcloud.order.model;
+package com.gsh.springcloud.order.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

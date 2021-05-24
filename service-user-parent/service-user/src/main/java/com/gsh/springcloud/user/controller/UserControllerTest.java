@@ -1,6 +1,7 @@
 package com.gsh.springcloud.user.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.gsh.springcloud.starter.mq.config.MqttPushClient;
 import com.gsh.springcloud.user.client.UserClient;
 import com.gsh.springcloud.user.domain.converter.UserConverter;
 import com.gsh.springcloud.user.domain.entity.User;
@@ -28,6 +29,9 @@ public class UserControllerTest implements UserClient {
   @Resource
   private UserConverter userConverter;
 
+  @Resource
+  private MqttPushClient mqttPushClient;
+
   /**
    * 测试 登录发放优惠卷
    *
@@ -40,6 +44,7 @@ public class UserControllerTest implements UserClient {
 
   @Override
   public UserResp find(UserReq userReq) {
+    mqttPushClient.publish(0, false, "test", "message");
     return userConverter.convert2resp(userService.getOne(new QueryWrapper<User>(userConverter.convert2entity(userReq))));
   }
 

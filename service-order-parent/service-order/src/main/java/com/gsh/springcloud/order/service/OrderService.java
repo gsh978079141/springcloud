@@ -1,7 +1,7 @@
 package com.gsh.springcloud.order.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.gsh.springcloud.order.model.Order;
+import com.gsh.springcloud.order.domain.entity.Order;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;

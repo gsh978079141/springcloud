@@ -17,6 +17,7 @@
     <module>gsh-cloud-starter-datebase</module>
     <module>gsh-cloud-starter-web</module>
     <module>gsh-cloud-starter-swagger-keycloak</module>
+    <module>gsh-cloud-starter-mq</module>
   </modules>
 
 </project>

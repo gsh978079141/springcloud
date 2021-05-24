@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 /**
  * 消息中心-client
  */
-@FeignClient(name = "messageClient")
+//@FeignClient(name = "messageClient")
+@FeignClient(name = "service-message", path = "message")
 public interface MessageClient {
 
   /**

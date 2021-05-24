@@ -3,7 +3,7 @@ package com.gsh.springcloud.order.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.gsh.springcloud.order.dao.OrderMapper;
-import com.gsh.springcloud.order.model.Order;
+import com.gsh.springcloud.order.domain.entity.Order;
 import com.gsh.springcloud.order.service.OrderService;
 import com.gsh.springcloud.user.client.UserClient;
 import com.gsh.springcloud.user.request.UserReq;
@@ -30,10 +30,10 @@ import java.util.List;
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements OrderService {
 
   @Resource
-  OrderMapper orderMapper;
+  private OrderMapper orderMapper;
 
   @Resource
-  UserClient userClient;
+  private UserClient userClient;
 
   @GlobalTransactional
   @Transactional(rollbackFor = Exception.class)

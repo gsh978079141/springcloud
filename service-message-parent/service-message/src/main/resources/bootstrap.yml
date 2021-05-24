@@ -1,39 +1,42 @@
 #端口号
 server:
-  port: 8083
-  servlet:
-    context-path: /message
+  port: 17004
+#  servlet:
+#    context-path: /message
 spring:
   application:
     name: service-message
-  #  profiles:
-  #    active: dev
-  #cloud
+  profiles:
+    active: ${env_profile:uat}
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: ${nacos_server_addr:127.0.0.1:8848}
       config:
-        server-addr: 127.0.0.1:8848
-        #！注意！默认命名空间此处不需要填写，其他填空间ID
-        #        namespace: 6b865777-10f9-4977-8044-eeffd8415af1
-        #指定配置群组 --如果是Public命名空间 则可以省略群组配置
-        #        group: DEFAULT_GROUP
-        #文件名 -- 如果没有配置则默认为 ${spring.appliction.name}
-        prefix: ${spring.application.name}
-        #指定文件后缀
-        file-extension: yml
+        server-addr: ${nacos_server_addr:127.0.0.1:8848}
+        namespace: gsh-cloud-${spring.profiles.active}
+        username: ${nacos_username:nacos}
+        password: ${nacos_password:nacos}
+        file-extension: yaml
+        extension-configs[0]:
+          # 通用配置
+          data-id: application-common-${spring.profiles.active}.yaml
+          group: PUBLIC
+          # 配置修改后是否自动更新
+          refresh: true
+        extension-configs[1]:
+          # feign相关配置
+          data-id: feign-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+        extension-configs[2]:
+          # rabbit
+          data-id: rabbit-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+  main:
+    allow-bean-definition-overriding: true
+
     alibaba:
       seata:
         tx-service-group: ${spring.application.name}
-
-swagger:
-  enabled: true
-  api:
-    title: 深兰AI数字教育平台API文档
-    description: 边缘端通用业务处理服务
-    version: '1.0'
-    contact:
-      name: yuyue
-      url: http://${swagger.host}/exam/v2/api-docs
-      email: developer@deepblueai.com

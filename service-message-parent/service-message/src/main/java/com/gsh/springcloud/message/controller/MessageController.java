@@ -3,8 +3,8 @@ package com.gsh.springcloud.message.controller;
 import com.gsh.springcloud.message.client.MessageClient;
 import com.gsh.springcloud.message.request.MessageReq;
 import com.gsh.springcloud.message.service.MessageService;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -15,7 +15,8 @@ import javax.annotation.Resource;
  * @author: Gsh
  * @create: 2019-12-18 15:06
  **/
-@RestController("/message")
+@RestController
+@RequestMapping("/message")
 public class MessageController implements MessageClient {
 
   @Resource
@@ -26,7 +27,6 @@ public class MessageController implements MessageClient {
    *
    * @param messageReq 消息体
    */
-  @PostMapping("/userLoginAddIntegralSend")
   @Override
   public void userLoginAddIntegralSend(@RequestBody MessageReq messageReq) {
     messageService.userLoginAddIntegralSend(messageReq);
@@ -38,7 +38,6 @@ public class MessageController implements MessageClient {
    *
    * @param messageReq 消息体
    */
-  @PostMapping("/userRegisterIssueCouponsSend")
   @Override
   public void userRegisterIssueCouponsSend(MessageReq messageReq) {
     messageService.userRegisterIssueCouponsSend(messageReq);
@@ -50,7 +49,6 @@ public class MessageController implements MessageClient {
    *
    * @param messageReq 消息体
    */
-  @PostMapping("/orderCompleteDecreaseInventorySend")
   @Override
   public void orderCompleteDecreaseInventorySend(MessageReq messageReq) {
     messageService.orderCompleteDecreaseInventorySend(messageReq);

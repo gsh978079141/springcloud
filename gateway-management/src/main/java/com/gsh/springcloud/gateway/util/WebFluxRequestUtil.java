@@ -7,34 +7,13 @@ import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.util.Assert;
 
 import java.util.Optional;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
- * @author wh008
+ * @author gsh
  */
 @Slf4j
 public class WebFluxRequestUtil {
   public static final String UNKNOWN = "unknown";
-
-  private static final String IP_LOCAL = "127.0.0.1";
-  private static final String IPV6_LOCAL = "0:0:0:0:0:0:0:1";
-
-
-  /**
-   * 去掉空格,换行和制表符
-   *
-   * @param str
-   * @return
-   */
-  private static String formatStr(String str) {
-    if (str != null && str.length() > 0) {
-      Pattern p = Pattern.compile("\\s*|\t|\r|\n");
-      Matcher m = p.matcher(str);
-      return m.replaceAll("");
-    }
-    return str;
-  }
 
   public static String getIp(ServerHttpRequest request) {
     Assert.notNull(request, "HttpServletRequest is null");

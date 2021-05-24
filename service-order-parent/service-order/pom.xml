@@ -24,7 +24,7 @@
     </dependency>
     <dependency>
       <groupId>com.gsh.springcloud</groupId>
-      <artifactId>gsh-cloud-starter-swagger-keycloak</artifactId>
+      <artifactId>gsh-cloud-starter-swagger</artifactId>
     </dependency>
     <dependency>
       <groupId>com.gsh.springcloud</groupId>
@@ -38,13 +38,37 @@
       <groupId>com.gsh.springcloud</groupId>
       <artifactId>service-user-client</artifactId>
     </dependency>
+    <!--    <dependency>-->
+    <!--      <groupId>org.springframework.boot</groupId>-->
+    <!--      <artifactId>spring-boot-starter-data-elasticsearch</artifactId>-->
+    <!--    </dependency>-->
+    <!--  nacos 配置中心  -->
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+    </dependency>
+    <!--  nacos 服务注册  -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
     <dependency>
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-alibaba-seata</artifactId>
+    </dependency>
+    <!--  feign  -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+    <!--  ribbon  -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>service-user-client</artifactId>
     </dependency>
     <dependency>
       <groupId>io.seata</groupId>

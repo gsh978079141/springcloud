@@ -16,13 +16,12 @@
     <!-- spring -->
     <version.spring-boot>2.3.10.RELEASE</version.spring-boot>
     <version.spring-plugin>2.0.0.RELEASE</version.spring-plugin>
-    <version.spring-cloud>Hoxton.SR5</version.spring-cloud>
+    <!--    <version.spring-cloud>Hoxton.SR5</version.spring-cloud>-->
+    <version.spring-cloud>Hoxton.SR11</version.spring-cloud>
     <version.spring.cloud.alibaba>2.2.1.RELEASE</version.spring.cloud.alibaba>
+    <version.spring.cloud.alibaba.seata>2.1.0.RELEASE</version.spring.cloud.alibaba.seata>
+    <version.seata>1.4.2</version.seata>
     <version.spring-cloud-openfeign>2.2.1.RELEASE</version.spring-cloud-openfeign>
-    <version.spring-cloud-nacos-discovery>0.2.2.RELEASE</version.spring-cloud-nacos-discovery>
-    <!-- seata -->
-    <version.alibaba-seata>2.1.1.RELEASE</version.alibaba-seata>
-    <version.seata-all>1.0.0</version.seata-all>
     <!-- swagger -->
     <version.swagger>3.0.0</version.swagger>
     <version.swagger-models>1.6.2</version.swagger-models>
@@ -33,6 +32,7 @@
     <!-- db -->
     <version.druid>1.1.6</version.druid>
     <version.mysql-connector>5.1.46</version.mysql-connector>
+    <!--    <version.mysql-connector>8.0.17</version.mysql-connector>-->
     <version.pagehelper>1.2.12</version.pagehelper>
     <version.mybatis-plus>3.3.2</version.mybatis-plus>
     <version.mybatis-plus-boot-starter>3.0.7.1</version.mybatis-plus-boot-starter>
@@ -48,6 +48,7 @@
     <version.commons-collections>3.2.2</version.commons-collections>
     <version.commons-lang3>3.11</version.commons-lang3>
     <version.testcontainers>1.15.2</version.testcontainers>
+    <version.hutool>5.5.1</version.hutool>
     <!--    其他模块依赖-->
     <version.common-lib>1.0-SNAPSHOT</version.common-lib>
     <version.service-base>1.0-SNAPSHOT</version.service-base>
@@ -59,7 +60,7 @@
 
   <dependencyManagement>
     <dependencies>
-      <!--spring boot-->
+      <!-- ****S springboot  ****-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
@@ -74,6 +75,7 @@
         <version>${version.spring-boot}</version>
         <scope>test</scope>
       </dependency>
+      <!--amqp-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-amqp</artifactId>
@@ -85,17 +87,20 @@
         <artifactId>spring-boot-starter-actuator</artifactId>
         <version>${version.spring-boot}</version>
       </dependency>
+      <!--热加载-->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+        <scope>true</scope>
+      </dependency>
+      <!--security-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-security</artifactId>
         <version>${version.spring-boot}</version>
-        <!--        <exclusions>-->
-        <!--          <exclusion>-->
-        <!--            <groupId>org.springframework.cloud</groupId>-->
-        <!--            <artifactId>spring-cloud-starter-security</artifactId>-->
-        <!--          </exclusion>-->
-        <!--        </exclusions>-->
       </dependency>
+      <!--oauth2-->
       <dependency>
         <groupId>org.springframework.security.oauth.boot</groupId>
         <artifactId>spring-security-oauth2-autoconfigure</artifactId>
@@ -106,6 +111,7 @@
         <artifactId>spring-boot-starter-oauth2-client</artifactId>
         <version>${version.spring-boot}</version>
       </dependency>
+      <!--spring-plugin-->
       <dependency>
         <groupId>org.springframework.plugin</groupId>
         <artifactId>spring-plugin-core</artifactId>
@@ -116,7 +122,10 @@
         <artifactId>spring-plugin-metadata</artifactId>
         <version>${version.spring-plugin}</version>
       </dependency>
-      <!--S springcloud-->
+      <!-- ****E springboot  ****-->
+
+      <!-- ****S springcloud ****-->
+      <!-- springcloud-->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
@@ -124,6 +133,7 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <!-- springcloud alibaba-->
       <dependency>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-dependencies</artifactId>
@@ -131,18 +141,7 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!-- spring-cloud-nacos-discovery -->
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        <version>${version.spring-cloud-nacos-discovery}</version>
-      </dependency>
-      <!--消息总线-->
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-      </dependency>
-      <!--feign-->
+      <!-- springcloud openfeign-->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-openfeign</artifactId>
@@ -150,41 +149,105 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-openfeign</artifactId>
-        <version>2.2.1.RELEASE</version>
-      </dependency>
       <!--seata-->
       <dependency>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-seata</artifactId>
-        <version>2.2.0.RELEASE</version>
+        <version>${version.spring.cloud.alibaba.seata}</version>
         <exclusions>
           <exclusion>
             <groupId>io.seata</groupId>
-            <artifactId>seata-spring-boot-starter</artifactId>
+            <artifactId>seata-all</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
+      <!--      <dependency>-->
+      <!--        <groupId>io.seata</groupId>-->
+      <!--        <artifactId>seata-all</artifactId>-->
+      <!--        <version>${version.seata-all}</version>-->
+      <!--      </dependency>-->
       <dependency>
         <groupId>io.seata</groupId>
         <artifactId>seata-spring-boot-starter</artifactId>
-        <version>1.2.0</version>
-        <exclusions>
-          <exclusion>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-          </exclusion>
-        </exclusions>
+        <version>${version.seata}</version>
       </dependency>
-      <!--E springcloud-->
+
+      <!-- ****E springcloud ****-->
+
+      <!-- ****S 其他子模块client ****-->
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>cloud-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>common-lib</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>gsh-cloud-starter-web</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>gsh-cloud-starter-swagger</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>gsh-cloud-starter-swagger-keycloak</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>gsh-cloud-starter-mysql-mybatis-plus</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>gsh-cloud-starter-mysql-tk</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>gsh-cloud-starter-redis</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>gsh-cloud-starter-mq</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>service-user-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>service-message-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>service-order-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gsh.springcloud</groupId>
+        <artifactId>service-account-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <!-- ****E 其他子模块client ****-->
+
+      <!-- ****S 三方/工具包 ****-->
       <!--mysql-->
       <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>${version.mysql-connector}</version>
-        <scope>runtime</scope>
       </dependency>
       <!--druid阿里巴巴数据库连接池 -->
       <dependency>
@@ -196,21 +259,6 @@
       <dependency>
         <groupId>com.baomidou</groupId>
         <artifactId>mybatis-plus-boot-starter</artifactId>
-        <version>${version.mybatis-plus}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.baomidou</groupId>
-        <artifactId>mybatis-plus-annotation</artifactId>
-        <version>${version.mybatis-plus}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.baomidou</groupId>
-        <artifactId>mybatis-plus-generator</artifactId>
-        <version>${version.mybatis-plus}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.baomidou</groupId>
-        <artifactId>mybatis-plus-extension</artifactId>
         <version>${version.mybatis-plus}</version>
       </dependency>
       <dependency>
@@ -242,6 +290,7 @@
         <artifactId>logback-redis-appender</artifactId>
         <version>${version.logback-redis-appender}</version>
       </dependency>
+      <!--redisson-->
       <dependency>
         <groupId>org.redisson</groupId>
         <artifactId>redisson</artifactId>
@@ -263,19 +312,19 @@
         <artifactId>lombok</artifactId>
         <version>${version.lombok}</version>
       </dependency>
+      <!--hutool 工具集合引入-->
+      <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-all</artifactId>
+        <version>${version.hutool}</version>
+      </dependency>
       <!--guava -->
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>${version.guava}</version>
       </dependency>
-      <!--热加载-->
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-devtools</artifactId>
-        <optional>true</optional>
-        <scope>true</scope>
-      </dependency>
+
       <!--实体映射-->
       <dependency>
         <artifactId>mapstruct-jdk8</artifactId>
@@ -392,68 +441,7 @@
         <artifactId>commons-lang3</artifactId>
         <version>${version.commons-lang3}</version>
       </dependency>
-
-      <!-- 其他子模块-->
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>cloud-common</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>common-lib</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>gsh-cloud-starter-web</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>gsh-cloud-starter-swagger</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>gsh-cloud-starter-swagger-keycloak</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>gsh-cloud-starter-mysql-mybatis-plus</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>gsh-cloud-starter-mysql-tk</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>gsh-cloud-starter-redis</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-user-client</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-message-client</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-order-client</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-account-client</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+      <!-- ****E 三方/工具包 ****-->
 
     </dependencies>
   </dependencyManagement>

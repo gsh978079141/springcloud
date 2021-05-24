@@ -1,5 +1,6 @@
 server:
   port: 8002
+
 spring:
   application:
     name: gateway-management
@@ -42,6 +43,26 @@ spring:
           data-id: keycloak-${spring.profiles.active}.yaml
           group: PUBLIC
           refresh: true
+
+endpoints:
+  health:
+    sensitive: false
+    enabled: true
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+    gateway:
+      enabled: true
+
 logging:
   file:
     path: ${log_dir:/var/log/edu}/${spring.application.name}

@@ -35,7 +35,7 @@ import java.util.Map;
 import java.util.Optional;
 
 /**
- * 请求url权限校验
+ * 请求url权限校验(旧版本)：与AccessAuthGatewayFilter比较取其中一个
  *
  * @author gsh
  */

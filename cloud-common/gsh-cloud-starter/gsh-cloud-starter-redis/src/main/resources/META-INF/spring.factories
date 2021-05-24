@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.gsh.springcloud.starter.redis.RedisConfiguration
+  com.gsh.springcloud.starter.mq.MqttConfiguration

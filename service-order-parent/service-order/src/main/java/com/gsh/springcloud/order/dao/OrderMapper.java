@@ -1,7 +1,7 @@
 package com.gsh.springcloud.order.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.gsh.springcloud.order.model.Order;
+import com.gsh.springcloud.order.domain.entity.Order;
 
 /**
  * <p>
@@ -12,5 +12,4 @@ import com.gsh.springcloud.order.model.Order;
  * @since 2018-11-14
  */
 public interface OrderMapper extends BaseMapper<Order> {
-  boolean insertTest(Order order);
 }

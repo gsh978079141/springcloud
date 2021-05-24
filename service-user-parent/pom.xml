@@ -14,8 +14,8 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>service-user-client</module>
     <module>service-user</module>
+    <module>service-user-client</module>
   </modules>
 
 </project>
