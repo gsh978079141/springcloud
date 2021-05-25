@@ -1,8 +1,0 @@
-bases:
-  - ./../base
-resources:
-  - config-map.yaml
-  - migration.yaml
-  - konga.yaml
-patchesStrategicMerge:
-  - kong-ingress-postgres.yaml

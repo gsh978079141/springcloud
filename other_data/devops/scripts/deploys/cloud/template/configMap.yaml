@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: cloud-conf
-  namespace: education
-data:
-  KEYCLOAK_URL: 
-  

@@ -1,7 +1,0 @@
-namespace: "edu-edge"
-
-resources:
-  - edge-kms.yaml
-  - edge-nginx-proxy.yaml
-  - edge-mysql.yaml
-  - edge-rabbitmq.yaml
