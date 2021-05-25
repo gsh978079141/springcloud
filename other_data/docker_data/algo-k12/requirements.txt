@@ -1,0 +1,4 @@
+paho-mqtt
+PyMysql 
+pkuseg 
+opencv-python==4.1.2.30

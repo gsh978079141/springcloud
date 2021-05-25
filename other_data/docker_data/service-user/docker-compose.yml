@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  service-user:
+    container_name: service-user
+    image: service-user:1.0
+    restart: always
+    ports:
+      - 7003:7003
+    environment:
+      JAVA_OPTS: "-Xms512m -Xmx512m"
+      nacos_server_addr: "192.168.112.88:8848"
+      datasource_host: "192.168.112.88"
+      mqtt_host: "192.168.112.88"
+      auth_server_url: "http://192.168.112.88:8888/auth"
+      env_profile: uat

@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  # 算法K12服务
+  algo-k12:
+    container_name: algo-k12
+    image: algo-k12:v1.0
+    restart: always
+    user: root
+    volumes:
+      - /home/dp/algorithm/core:/datav/k12/core
+      - /datav/docker_datav/k12/fs:/datav/k12/fs
+    network_mode: "host"
+

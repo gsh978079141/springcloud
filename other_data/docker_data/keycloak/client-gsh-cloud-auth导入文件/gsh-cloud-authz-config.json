@@ -1,0 +1,136 @@
+{
+  "allowRemoteResourceManagement": true,
+  "policyEnforcementMode": "ENFORCING",
+  "resources": [
+    {
+      "name": "Default Resource",
+      "type": "urn:gsh-cloud:resources:default",
+      "ownerManagedAccess": false,
+      "attributes": {},
+      "_id": "0eddd1c8-3141-4f13-9185-8da0fbf34a7a",
+      "uris": [
+        "/*"
+      ]
+    },
+    {
+      "name": "res.user.users",
+      "type": "api-access",
+      "ownerManagedAccess": false,
+      "displayName": "user manage",
+      "attributes": {
+        "menuLevelTwo": [
+          "userManagements"
+        ],
+        "menuLevelTwoOrder": [
+          "2"
+        ],
+        "menuLevelOneOrder": [
+          "2"
+        ],
+        "menuLevelOne": [
+          "userManagement"
+        ]
+      },
+      "_id": "3bde9620-4ec2-476c-b65c-5441849f39f6",
+      "uris": [
+        "/user/users/*"
+      ],
+      "scopes": [
+        {
+          "name": "IMPORT"
+        },
+        {
+          "name": "DELETE"
+        },
+        {
+          "name": "GET"
+        },
+        {
+          "name": "POST"
+        },
+        {
+          "name": "EXPORT"
+        },
+        {
+          "name": "PUT"
+        }
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "id": "820eae08-c78f-4e4e-950d-d656b7f3e0a4",
+      "name": "pol.role.admin",
+      "description": "角色[admin]专用策略",
+      "type": "role",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "roles": "[{\"id\":\"default-roles-uat\",\"required\":false},{\"id\":\"gsh-cloud/admin\",\"required\":false}]"
+      }
+    },
+    {
+      "id": "9a71ffae-11ab-480a-becd-a42090b49851",
+      "name": "Default Policy",
+      "description": "A policy that grants access only for users within this realm",
+      "type": "js",
+      "logic": "POSITIVE",
+      "decisionStrategy": "AFFIRMATIVE",
+      "config": {
+        "code": "// by default, grants any permission associated with this policy\n$evaluation.grant();\n"
+      }
+    },
+    {
+      "id": "b7059951-c4d7-4600-a803-513c0c8cca2f",
+      "name": "Default Permission",
+      "description": "A permission that applies to the default resource type",
+      "type": "resource",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "defaultResourceType": "urn:gsh-cloud:resources:default",
+        "applyPolicies": "[\"Default Policy\"]"
+      }
+    },
+    {
+      "id": "f103737d-3bb0-4f8c-962a-bcc2a075a1d7",
+      "name": "perm.post.user.users",
+      "description": "创建&添加用户信息",
+      "type": "scope",
+      "logic": "POSITIVE",
+      "decisionStrategy": "UNANIMOUS",
+      "config": {
+        "resources": "[\"res.user.users\"]",
+        "scopes": "[\"POST\"]",
+        "applyPolicies": "[\"pol.role.admin\"]"
+      }
+    }
+  ],
+  "scopes": [
+    {
+      "id": "23b81edc-4ec9-4c50-82b7-dd1b1f5bb6c2",
+      "name": "EXPORT"
+    },
+    {
+      "id": "55113035-f1d3-4089-8ce4-d2fcb588a5ee",
+      "name": "PUT"
+    },
+    {
+      "id": "56213711-d73a-4deb-a729-3c3442c84fd9",
+      "name": "POST"
+    },
+    {
+      "id": "77cb0c5e-1ffc-4233-9d4a-d3b9d6ea0d98",
+      "name": "GET"
+    },
+    {
+      "id": "907b3abf-d92e-4ef2-88a5-b1a6d071e373",
+      "name": "DELETE"
+    },
+    {
+      "id": "ff292660-4ae6-4d50-9fb0-e34dd40057b2",
+      "name": "IMPORT"
+    }
+  ],
+  "decisionStrategy": "UNANIMOUS"
+}

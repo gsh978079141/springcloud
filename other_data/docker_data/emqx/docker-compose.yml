@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  emqx:
+    image: emqx/emqx:v4.0.0
+    restart: always
+    container_name: emqx
+    # user: root
+    # privileged: true
+    environment:
+      - EMQX_NAME=mqtt
+      - EMQX_HOST=127.0.0.1
+      - TZ=Aisa/Shanghai
+      # volumes:
+      # - ./data:/opt/emqx/data
+      # - ./log:/opt/emqx/log
+      # - ./etc:/opt/emqx/etc
+      # - ./lib:/opt/emqx/lib
+      # - ./opt/emqx:/opt/emqx
+
+    ports:
+      - 18083:18083
+      - 1883:1883
+      - 8083:8083
+      - 14369:4369
+      # network_mode: host

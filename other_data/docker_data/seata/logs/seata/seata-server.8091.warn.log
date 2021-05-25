@@ -1,0 +1,14 @@
+2021-05-20 09:25:16.058  WARN --- [                          main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found
+2021-05-20 09:25:21.061  WARN --- [                          main] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-20 09:26:43.861  WARN --- [                          main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found
+2021-05-20 09:26:48.865  WARN --- [                          main] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-20 09:31:41.511  WARN --- [                          main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found
+2021-05-20 09:31:46.514  WARN --- [                          main] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-20 09:34:15.280  WARN --- [                          main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found
+2021-05-20 09:34:20.283  WARN --- [                          main] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-20 09:34:33.365  WARN --- [                          main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found
+2021-05-20 09:34:38.368  WARN --- [                          main] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-20 09:36:56.186  WARN --- [                          main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found
+2021-05-20 09:37:01.190  WARN --- [                          main] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-20 09:39:19.169  WARN --- [                          main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found
+2021-05-20 09:39:24.172  WARN --- [                          main] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1

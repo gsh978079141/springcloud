@@ -1,0 +1,10 @@
+2021-05-25 09:28:10,975 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, taskKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP++false+null
+
+2021-05-25 09:28:11,039 WARN [dump-ignore] ignore to save cache file. groupKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, md5=c21f969b5f03d33d43e04f8f136e7682, lastModifiedOld=1621824393899, lastModifiedNew=1621906090775
+
+2021-05-25 09:29:12,151 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP+gsh-cloud-uat, taskKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP+gsh-cloud-uat+false+null
+
+2021-05-25 09:40:28,671 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order_group+SEATA_GROUP, taskKey=service.vgroupMapping.service-order_group+SEATA_GROUP++false+null
+
+2021-05-25 09:41:55,535 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order_group+SEATA_GROUP+gsh-cloud-uat, taskKey=service.vgroupMapping.service-order_group+SEATA_GROUP+gsh-cloud-uat+false+null
+

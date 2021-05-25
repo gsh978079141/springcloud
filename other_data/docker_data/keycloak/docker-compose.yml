@@ -1,0 +1,22 @@
+version: '2'
+services:
+  keycloak:
+    container_name: keycloak
+    image: jboss/keycloak:latest
+    volumes:
+      - ./realm-config:/opt/jboss/keycloak/realm-config
+    environment:
+      - PROXY_ADDRESS_FORWARDING=true
+      - JAVA_TOOL_OPTIONS=-Dkeycloak.profile.feature.scripts=enabled -Dkeycloak.profile.feature.upload_scripts=enabled
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - DB_VENDOR=MYSQL
+      - DB_ADDR=192.168.112.88
+      - DB_PORT=3306
+      - DB_DATABASE=keycloak
+      - DB_USER=root
+      - DB_PASSWORD=123
+    ports:
+      - 8888:8080
+    # network_mode: host
+

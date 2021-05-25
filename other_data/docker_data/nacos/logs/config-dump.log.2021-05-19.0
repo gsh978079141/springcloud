@@ -1,0 +1,344 @@
+2021-05-19 11:11:41,163 INFO [dump-task] add task. groupKey=seata-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=seata-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,163 INFO [dump-task] add task. groupKey=seata-local+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=seata-local+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,232 INFO [dump-task] add task. groupKey=mysql-common-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=mysql-common-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,232 INFO [dump-task] add task. groupKey=service-teach-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=service-teach-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,244 INFO [dump-task] add task. groupKey=service-dict-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=service-dict-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,245 INFO [dump-task] add task. groupKey=service-job-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=service-job-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,250 INFO [dump-task] add task. groupKey=url-permission-map.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=url-permission-map.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,251 INFO [dump-task] add task. groupKey=bff-student-iot-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=bff-student-iot-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,261 INFO [dump-task] add task. groupKey=service-account-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=service-account-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,262 INFO [dump-task] add task. groupKey=service-iot-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=service-iot-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,267 INFO [dump-task] add task. groupKey=rabbitmq-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=rabbitmq-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,267 INFO [dump-task] add task. groupKey=service-foundation-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=service-foundation-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,280 INFO [dump-task] add task. groupKey=service-exam-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=service-exam-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,280 INFO [dump-task] add task. groupKey=keycloak-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=keycloak-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,285 INFO [dump-task] add task. groupKey=bff-teacher-iot-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=bff-teacher-iot-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,285 INFO [dump-task] add task. groupKey=feign-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=feign-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,298 INFO [dump-task] add task. groupKey=service-oss-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=service-oss-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,298 INFO [dump-task] add task. groupKey=redis-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=redis-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,304 INFO [dump-task] add task. groupKey=gateway-management-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=gateway-management-uat.yaml+DEFAULT_GROUP+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,304 INFO [dump-task] add task. groupKey=feign-local.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=feign-local.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 11:11:41,315 INFO [dump-task] add task. groupKey=application-common-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc, taskKey=application-common-uat.yaml+PUBLIC+00e17ae5-8ee3-486e-91dd-4e88e459bffc+false+null
+
+2021-05-19 14:43:52,006 INFO [dump-task] add task. groupKey=seata-local+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=seata-local+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,006 INFO [dump-task] add task. groupKey=gateway-management-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=gateway-management-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,113 INFO [dump-task] add task. groupKey=bff-teacher-iot-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=bff-teacher-iot-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,113 INFO [dump-task] add task. groupKey=service-account-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-account-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,121 INFO [dump-task] add task. groupKey=service-exam-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-exam-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,121 INFO [dump-task] add task. groupKey=service-foundation-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-foundation-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,134 INFO [dump-task] add task. groupKey=feign-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=feign-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,134 INFO [dump-task] add task. groupKey=feign-local.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=feign-local.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,144 INFO [dump-task] add task. groupKey=url-permission-map.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=url-permission-map.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,146 INFO [dump-task] add task. groupKey=application-common-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=application-common-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,154 INFO [dump-task] add task. groupKey=service-job-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-job-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,154 INFO [dump-task] add task. groupKey=keycloak-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=keycloak-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,180 INFO [dump-task] add task. groupKey=service-teach-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-teach-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,181 INFO [dump-task] add task. groupKey=service-oss-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-oss-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,200 INFO [dump-task] add task. groupKey=seata-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=seata-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,203 INFO [dump-task] add task. groupKey=service-iot-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-iot-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,216 INFO [dump-task] add task. groupKey=bff-student-iot-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=bff-student-iot-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,222 INFO [dump-task] add task. groupKey=rabbitmq-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=rabbitmq-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,233 INFO [dump-task] add task. groupKey=service-dict-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-dict-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,247 INFO [dump-task] add task. groupKey=mysql-common-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=mysql-common-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:43:52,251 INFO [dump-task] add task. groupKey=redis-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=redis-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:44:19,589 INFO [dump-task] add task. groupKey=rabbitmq-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=rabbitmq-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:45:54,811 INFO [dump-task] add task. groupKey=keycloak-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=keycloak-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:49:48,441 INFO [dump-task] add task. groupKey=seata-local+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=seata-local+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:51:13,211 INFO [dump-task] add task. groupKey=url-permission-map.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=url-permission-map.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:52:21,631 INFO [dump-task] add task. groupKey=gateway-management-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=gateway-management-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:53:08,679 INFO [dump-task] add task. groupKey=application-common-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=application-common-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:55:58,137 INFO [dump-task] add task. groupKey=service-iot-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-iot-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:55:58,142 INFO [dump-task] add task. groupKey=service-foundation-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-foundation-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:55:58,149 INFO [dump-task] add task. groupKey=service-job-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-job-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:55:58,149 INFO [dump-task] add task. groupKey=service-dict-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-dict-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:55:58,154 INFO [dump-task] add task. groupKey=service-teach-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-teach-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:56:53,534 INFO [dump-task] add task. groupKey=mysql-common-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=mysql-common-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:57:33,841 INFO [dump-task] add task. groupKey=feign-local.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=feign-local.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 14:58:20,698 INFO [dump-task] add task. groupKey=service-account-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-account-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:01:48,566 INFO [dump-task] add task. groupKey=redis-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=redis-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:02:15,285 INFO [dump-task] add task. groupKey=redis-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=redis-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:02:15,397 WARN [dump-ignore] ignore to save cache file. groupKey=redis-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, md5=8e03753524de74b43a62a4f0b1ee724d, lastModifiedOld=1621407708359, lastModifiedNew=1621407735167
+
+2021-05-19 15:12:16,005 INFO [dump-task] add task. groupKey=service-user-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-user-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:13:40,916 INFO [dump-task] add task. groupKey=rabbitmq-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=rabbitmq-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:16:00,855 INFO [dump-task] add task. groupKey=mqtt-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=mqtt-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:17:14,915 INFO [dump-task] add task. groupKey=mqtt-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=mqtt-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:17:37,661 INFO [dump-task] add task. groupKey=mqtt-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=mqtt-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:18:28,956 INFO [dump-task] add task. groupKey=seata-uat+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=seata-uat+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:19:05,782 INFO [dump-task] add task. groupKey=seata-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=seata-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:19:05,784 INFO [dump-task] add task. groupKey=seata-uat+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=seata-uat+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:19:22,249 INFO [dump-task] add task. groupKey=seata-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=seata-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:22:40,563 INFO [dump-task] add task. groupKey=service-user-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-user-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:39:24,551 INFO [dump-task] add task. groupKey=service-user-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-user-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:39:30,518 INFO [dump-task] add task. groupKey=service-user-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-user-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 15:39:30,573 WARN [dump-ignore] ignore to save cache file. groupKey=service-user-uat.yaml+DEFAULT_GROUP+cc878e97-6dc8-4807-8b5e-7e742107f01b, md5=6fefe5adaa2c6a4ede58f8d9ea916ac3, lastModifiedOld=1621409964334, lastModifiedNew=1621409970364
+
+2021-05-19 15:59:56,272 INFO [dump-task] add task. groupKey=url-permission-map.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=url-permission-map.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,272 INFO [dump-task] add task. groupKey=redis-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=redis-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,276 INFO [dump-task] add task. groupKey=rabbitmq-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=rabbitmq-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,278 INFO [dump-task] add task. groupKey=mysql-common-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=mysql-common-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,282 INFO [dump-task] add task. groupKey=feign-local.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=feign-local.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,282 INFO [dump-task] add task. groupKey=application-common-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=application-common-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,285 INFO [dump-task] add task. groupKey=service-oss-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=service-oss-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,285 INFO [dump-task] add task. groupKey=service-foundation-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=service-foundation-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,288 INFO [dump-task] add task. groupKey=service-dict-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=service-dict-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,288 INFO [dump-task] add task. groupKey=service-iot-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=service-iot-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,292 INFO [dump-task] add task. groupKey=service-exam-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=service-exam-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,292 INFO [dump-task] add task. groupKey=service-account-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=service-account-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,295 INFO [dump-task] add task. groupKey=service-teach-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=service-teach-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,295 INFO [dump-task] add task. groupKey=service-job-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=service-job-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,299 INFO [dump-task] add task. groupKey=bff-student-iot-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=bff-student-iot-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,299 INFO [dump-task] add task. groupKey=bff-teacher-iot-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=bff-teacher-iot-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,303 INFO [dump-task] add task. groupKey=feign-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=feign-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,303 INFO [dump-task] add task. groupKey=gateway-management-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=gateway-management-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,307 INFO [dump-task] add task. groupKey=seata-local+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=seata-local+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,307 INFO [dump-task] add task. groupKey=keycloak-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=keycloak-uat.yaml+PUBLIC+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 15:59:56,314 INFO [dump-task] add task. groupKey=seata-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e, taskKey=seata-uat.yaml+DEFAULT_GROUP+8ad6484e-fee8-4c5d-9df7-5d25f32c8d5e+false+null
+
+2021-05-19 16:01:05,275 INFO [dump-task] add task. groupKey=service-user-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b, taskKey=service-user-uat.yaml+PUBLIC+cc878e97-6dc8-4807-8b5e-7e742107f01b+false+null
+
+2021-05-19 16:08:47,475 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621407073000, length=18382, md5=280bdc125c98c63ad4ae23df6a8e3abd
+
+2021-05-19 16:08:47,476 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621407735000, length=566, md5=8e03753524de74b43a62a4f0b1ee724d
+
+2021-05-19 16:08:47,477 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621408421000, length=342, md5=02c186f8e37ee2b73fdec186baf9546e
+
+2021-05-19 16:08:47,477 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621407413000, length=2067, md5=edbb22b747a20d4c7c67add092e04ed2
+
+2021-05-19 16:08:47,478 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621407453000, length=1115, md5=612043e70c713d3875f091e3a2e05159
+
+2021-05-19 16:08:47,479 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621407188000, length=892, md5=cb41c6a0b692c674a220f2fcee825ffc
+
+2021-05-19 16:08:47,479 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
+
+2021-05-19 16:08:47,480 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
+
+2021-05-19 16:08:47,481 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621407499000, length=810, md5=44f335d27472e54fa243fd03e787835c
+
+2021-05-19 16:08:47,481 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
+
+2021-05-19 16:08:47,482 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
+
+2021-05-19 16:08:47,482 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621406631000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+
+2021-05-19 16:08:47,483 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621407142000, length=1806, md5=bc09ac88af01e6bb4f740cb1741815cf
+
+2021-05-19 16:08:47,483 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621406755000, length=2484, md5=fac41de36fc58ef412ba63ab2e831dba
+
+2021-05-19 16:08:47,484 INFO [dump-all-ok] service-user-uat.yaml+DEFAULT_GROUP, 1621409970000, length=1682, md5=6fefe5adaa2c6a4ede58f8d9ea916ac3
+
+2021-05-19 16:08:47,485 INFO [dump-all-ok] mqtt-uat.yaml+PUBLIC, 1621408658000, length=262, md5=b385cb55451783d6e1632a47e59ca830
+
+2021-05-19 16:08:47,485 INFO [dump-all-ok] seata-uat.yaml+PUBLIC, 1621408762000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+
+2021-05-19 16:08:47,487 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621411194000, length=17864, md5=130e67df90e8f44b55f9f8b91ea25cf5
+
+2021-05-19 16:08:47,487 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621411194000, length=498, md5=8dc011ccca7b37b975a837f5a1e7da7c
+
+2021-05-19 16:08:47,488 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621411194000, length=134, md5=1f4c5aea54655c560fc4416e967a8f39
+
+2021-05-19 16:08:47,489 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621411194000, length=1983, md5=1efd850c345e4ff6ff9c5d3925bea2ee
+
+2021-05-19 16:08:47,490 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+
+2021-05-19 16:08:47,490 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621411194000, length=878, md5=16f5080e76925b7e2666e58fdc9ef35e
+
+2021-05-19 16:08:47,491 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
+
+2021-05-19 16:08:47,492 INFO [dump-all-ok] service-foundation-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1638, md5=cea8aa91c5429c2317d5fe662ca1b5ff
+
+2021-05-19 16:08:47,492 INFO [dump-all-ok] service-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=766, md5=89774fd62d09ce0765300aa118f6e2d8
+
+2021-05-19 16:08:47,493 INFO [dump-all-ok] service-dict-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1635, md5=743cff8de206207e1a742243466354d2
+
+2021-05-19 16:08:47,494 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
+
+2021-05-19 16:08:47,494 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621411194000, length=832, md5=08361d753b3af42b73a038f1573287c8
+
+2021-05-19 16:08:47,495 INFO [dump-all-ok] service-job-uat.yaml+DEFAULT_GROUP, 1621411194000, length=85, md5=8b962e6ba595041d2832f22ffc1fa2a9
+
+2021-05-19 16:08:47,496 INFO [dump-all-ok] service-teach-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1627, md5=3ebcf44203ab4dee987c30ea2540a39d
+
+2021-05-19 16:08:47,496 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
+
+2021-05-19 16:08:47,497 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
+
+2021-05-19 16:08:47,498 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+
+2021-05-19 16:08:47,499 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621411194000, length=2378, md5=08e2b107ef5c66b7ac699b015d52372c
+
+2021-05-19 16:08:47,500 INFO [dump-all-ok] seata-local+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+
+2021-05-19 16:08:47,501 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621411194000, length=2521, md5=0fbf13d85f5e73a9b1e6a7770df50586
+
+2021-05-19 16:08:47,501 INFO [dump-all-ok] seata-uat.yaml+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+
+2021-05-19 16:08:47,502 INFO [dump-all-ok] service-user-uat.yaml+PUBLIC, 1621411265000, length=1738, md5=f2867f028577ef8181f85d8724dd83eb
+
+2021-05-19 16:40:44,855 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621407073000, length=18382, md5=280bdc125c98c63ad4ae23df6a8e3abd
+
+2021-05-19 16:40:44,856 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621407735000, length=566, md5=8e03753524de74b43a62a4f0b1ee724d
+
+2021-05-19 16:40:44,856 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621408421000, length=342, md5=02c186f8e37ee2b73fdec186baf9546e
+
+2021-05-19 16:40:44,857 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621407413000, length=2067, md5=edbb22b747a20d4c7c67add092e04ed2
+
+2021-05-19 16:40:44,858 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621407453000, length=1115, md5=612043e70c713d3875f091e3a2e05159
+
+2021-05-19 16:40:44,858 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621407188000, length=892, md5=cb41c6a0b692c674a220f2fcee825ffc
+
+2021-05-19 16:40:44,859 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
+
+2021-05-19 16:40:44,860 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
+
+2021-05-19 16:40:44,860 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621407499000, length=810, md5=44f335d27472e54fa243fd03e787835c
+
+2021-05-19 16:40:44,861 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
+
+2021-05-19 16:40:44,861 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
+
+2021-05-19 16:40:44,862 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621406631000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+
+2021-05-19 16:40:44,863 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621407142000, length=1806, md5=bc09ac88af01e6bb4f740cb1741815cf
+
+2021-05-19 16:40:44,864 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621406755000, length=2484, md5=fac41de36fc58ef412ba63ab2e831dba
+
+2021-05-19 16:40:44,864 INFO [dump-all-ok] service-user-uat.yaml+DEFAULT_GROUP, 1621409970000, length=1682, md5=6fefe5adaa2c6a4ede58f8d9ea916ac3
+
+2021-05-19 16:40:44,865 INFO [dump-all-ok] mqtt-uat.yaml+PUBLIC, 1621408658000, length=262, md5=b385cb55451783d6e1632a47e59ca830
+
+2021-05-19 16:40:44,866 INFO [dump-all-ok] seata-uat.yaml+PUBLIC, 1621408762000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+
+2021-05-19 16:40:44,867 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621411194000, length=17864, md5=130e67df90e8f44b55f9f8b91ea25cf5
+
+2021-05-19 16:40:44,867 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621411194000, length=498, md5=8dc011ccca7b37b975a837f5a1e7da7c
+
+2021-05-19 16:40:44,868 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621411194000, length=134, md5=1f4c5aea54655c560fc4416e967a8f39
+
+2021-05-19 16:40:44,868 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621411194000, length=1983, md5=1efd850c345e4ff6ff9c5d3925bea2ee
+
+2021-05-19 16:40:44,869 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+
+2021-05-19 16:40:44,869 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621411194000, length=878, md5=16f5080e76925b7e2666e58fdc9ef35e
+
+2021-05-19 16:40:44,870 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
+
+2021-05-19 16:40:44,870 INFO [dump-all-ok] service-foundation-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1638, md5=cea8aa91c5429c2317d5fe662ca1b5ff
+
+2021-05-19 16:40:44,870 INFO [dump-all-ok] service-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=766, md5=89774fd62d09ce0765300aa118f6e2d8
+
+2021-05-19 16:40:44,871 INFO [dump-all-ok] service-dict-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1635, md5=743cff8de206207e1a742243466354d2
+
+2021-05-19 16:40:44,871 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
+
+2021-05-19 16:40:44,872 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621411194000, length=832, md5=08361d753b3af42b73a038f1573287c8
+
+2021-05-19 16:40:44,872 INFO [dump-all-ok] service-job-uat.yaml+DEFAULT_GROUP, 1621411194000, length=85, md5=8b962e6ba595041d2832f22ffc1fa2a9
+
+2021-05-19 16:40:44,873 INFO [dump-all-ok] service-teach-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1627, md5=3ebcf44203ab4dee987c30ea2540a39d
+
+2021-05-19 16:40:44,873 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
+
+2021-05-19 16:40:44,874 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
+
+2021-05-19 16:40:44,874 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+
+2021-05-19 16:40:44,875 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621411194000, length=2378, md5=08e2b107ef5c66b7ac699b015d52372c
+
+2021-05-19 16:40:44,875 INFO [dump-all-ok] seata-local+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+
+2021-05-19 16:40:44,876 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621411194000, length=2521, md5=0fbf13d85f5e73a9b1e6a7770df50586
+
+2021-05-19 16:40:44,876 INFO [dump-all-ok] seata-uat.yaml+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+
+2021-05-19 16:40:44,877 INFO [dump-all-ok] service-user-uat.yaml+PUBLIC, 1621411265000, length=1738, md5=f2867f028577ef8181f85d8724dd83eb
+

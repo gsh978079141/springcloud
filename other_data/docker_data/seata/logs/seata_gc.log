@@ -1,0 +1,21 @@
+OpenJDK 64-Bit Server VM (25.275-b01) for linux-amd64 JRE (1.8.0_275-8u275-b01-1~deb9u1-b01), built on Dec  2 2020 10:15:53 by "buildd" with gcc 6.3.0 20170516
+Memory: 4k page, physical 12966860k(8748144k free), swap 4194304k(4194304k free)
+CommandLine flags: -XX:CMSInitiatingOccupancyFraction=75 -XX:+CMSParallelRemarkEnabled -XX:CompressedClassSpaceSize=260046848 -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/seata_heapdump.hprof -XX:InitialHeapSize=207469760 -XX:MaxDirectMemorySize=1073741824 -XX:MaxHeapSize=3319516160 -XX:MaxMetaspaceSize=268435456 -XX:MetaspaceSize=134217728 -XX:-OmitStackTraceInFastThrow -XX:+PrintGC -XX:+PrintGCTimeStamps -XX:SurvivorRatio=10 -XX:ThreadStackSize=512 -XX:+UnlockExperimentalVMOptions -XX:-UseAdaptiveSizePolicy -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseContainerSupport -XX:+UseParallelGC 
+1.359: [GC (Allocation Failure)  56320K->6101K(197120K), 0.0262599 secs]
+4.063: [GC (Allocation Failure)  62421K->8613K(197120K), 0.0087073 secs]
+826.106: [GC (Allocation Failure)  64933K->10331K(197120K), 0.0098250 secs]
+2898.681: [GC (Allocation Failure)  66651K->11066K(197120K), 0.0064926 secs]
+5082.108: [GC (Allocation Failure)  67386K->13898K(197120K), 0.0087911 secs]
+7601.137: [GC (Allocation Failure)  70218K->13906K(197120K), 0.0097218 secs]
+10272.943: [GC (Allocation Failure)  70226K->13922K(197120K), 0.0078411 secs]
+12995.961: [GC (Allocation Failure)  70242K->13946K(197120K), 0.0128563 secs]
+15724.659: [GC (Allocation Failure)  70266K->13946K(197120K), 0.0084190 secs]
+18442.875: [GC (Allocation Failure)  70266K->14332K(197120K), 0.0062989 secs]
+21181.028: [GC (Allocation Failure)  70652K->14884K(197120K), 0.1258276 secs]
+23925.639: [GC (Allocation Failure)  71204K->15404K(197120K), 0.0078384 secs]
+26711.898: [GC (Allocation Failure)  71724K->15652K(197120K), 0.0210096 secs]
+29451.996: [GC (Allocation Failure)  71972K->15752K(197120K), 0.0294514 secs]
+32282.671: [GC (Allocation Failure)  72072K->15856K(197120K), 0.1449367 secs]
+35046.299: [GC (Allocation Failure)  72176K->16176K(197120K), 0.0684312 secs]
+37555.962: [GC (Allocation Failure)  72496K->16636K(197120K), 0.1118126 secs]
+40327.914: [GC (Allocation Failure)  72956K->16249K(197120K), 0.6674979 secs]

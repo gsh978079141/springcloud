@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  emqx:
+    #image: emqx/emqx:v4.0.0
+    image: core.harbor.cz.shenlan.com/dbp-edu/emqx:latest
+    restart: always
+    container_name: emqx
+    user: 'root'
+
+    environment:
+      EMQX_NAME: algo_emqx
+      EMQX_HOST: 127.0.0.1
+    volumes:
+      - /datav/docker_datav/emqx/data:/opt/emqx/data
+      - /datav/docker_datav/emqx/etc:/opt/emqx/etc
+      - /datav/docker_datav/emqx/log:/opt/emqx/log
+    network_mode: host

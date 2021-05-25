@@ -1,0 +1,42 @@
+2021-05-19 09:03:18,032 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2021-05-19 09:03:18,065 WARN [serverlist] updated to : [Member{ip='172.20.0.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-19 09:43:03,902 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2021-05-19 09:43:03,908 WARN [serverlist] updated to : [Member{ip='172.20.0.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-19 09:43:07,296 INFO This node is ready to provide external services
+
+2021-05-19 13:21:15,224 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2021-05-19 13:21:15,233 WARN [serverlist] updated to : [Member{ip='172.20.0.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-19 13:44:54,252 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2021-05-19 13:44:54,258 WARN [serverlist] updated to : [Member{ip='172.20.0.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-19 13:46:20,105 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2021-05-19 13:46:20,110 WARN [serverlist] updated to : [Member{ip='172.20.0.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-19 13:46:23,039 INFO This node is ready to provide external services
+
+2021-05-19 14:04:07,155 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2021-05-19 14:04:07,160 WARN [serverlist] updated to : [Member{ip='172.23.0.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-19 14:04:10,212 INFO This node is ready to provide external services
+
+2021-05-19 16:08:46,467 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2021-05-19 16:08:46,472 WARN [serverlist] updated to : [Member{ip='172.23.0.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-19 16:08:49,344 INFO This node is ready to provide external services
+
+2021-05-19 16:40:43,562 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2021-05-19 16:40:43,568 WARN [serverlist] updated to : [Member{ip='192.168.32.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-19 16:40:47,982 INFO This node is ready to provide external services
+

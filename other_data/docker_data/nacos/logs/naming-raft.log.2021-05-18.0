@@ -1,0 +1,92 @@
+2021-05-18 10:33:26,130 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@service-user
+
+2021-05-18 10:34:35,681 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-user
+
+2021-05-18 11:08:57,798 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-message
+
+2021-05-18 14:55:27,366 INFO raft peers changed: [Member{ip='172.20.0.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-18 14:55:27,400 INFO initializing Raft sub-system
+
+2021-05-18 14:55:27,401 INFO finish loading all datums, size: 0 cost 1 ms.
+
+2021-05-18 14:55:27,403 INFO cache loaded, datum count: 0, current term: 0
+
+2021-05-18 14:55:27,403 INFO finish to load data from disk, cost: 3 ms.
+
+2021-05-18 14:55:27,407 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-05-18 14:55:28,758 INFO leader timeout, start voting,leader: {"ip":"172.20.0.2:8848","term":0,"leaderDueMs":15712,"heartbeatDueMs":4500,"state":"FOLLOWER"}, term: 0
+
+2021-05-18 14:55:29,288 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-05-18 14:55:29,330 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2021-05-18 14:55:32,348 WARN start to close old raft protocol!!!
+
+2021-05-18 14:55:32,348 WARN stop old raft protocol task for notifier
+
+2021-05-18 14:55:32,348 WARN stop old raft protocol task for master task
+
+2021-05-18 14:55:32,348 WARN stop old raft protocol task for heartbeat task
+
+2021-05-18 14:55:32,348 WARN clean old cache datum for old raft
+
+2021-05-18 14:55:32,348 WARN start to close old raft protocol!!!
+
+2021-05-18 14:55:32,348 WARN stop old raft protocol task for notifier
+
+2021-05-18 14:55:32,348 WARN stop old raft protocol task for master task
+
+2021-05-18 14:55:32,348 WARN stop old raft protocol task for heartbeat task
+
+2021-05-18 14:55:32,348 WARN clean old cache datum for old raft
+
+2021-05-18 14:55:32,349 WARN start to move old raft protocol metadata
+
+2021-05-18 14:55:32,349 WARN start to move old raft protocol metadata
+
+2021-05-18 15:03:59,088 INFO raft peers changed: [Member{ip='172.20.0.2', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2021-05-18 15:03:59,123 INFO initializing Raft sub-system
+
+2021-05-18 15:03:59,123 INFO finish loading all datums, size: 0 cost 0 ms.
+
+2021-05-18 15:03:59,125 INFO cache loaded, datum count: 0, current term: 0
+
+2021-05-18 15:03:59,126 INFO finish to load data from disk, cost: 3 ms.
+
+2021-05-18 15:03:59,130 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-05-18 15:03:59,877 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-05-18 15:03:59,898 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2021-05-18 15:04:03,670 INFO leader timeout, start voting,leader: {"ip":"172.20.0.2:8848","term":0,"leaderDueMs":18359,"heartbeatDueMs":4500,"state":"FOLLOWER"}, term: 0
+
+2021-05-18 15:04:04,073 WARN start to close old raft protocol!!!
+
+2021-05-18 15:04:04,073 WARN stop old raft protocol task for notifier
+
+2021-05-18 15:04:04,073 WARN stop old raft protocol task for master task
+
+2021-05-18 15:04:04,073 WARN stop old raft protocol task for heartbeat task
+
+2021-05-18 15:04:04,073 WARN clean old cache datum for old raft
+
+2021-05-18 15:04:04,073 WARN start to close old raft protocol!!!
+
+2021-05-18 15:04:04,073 WARN stop old raft protocol task for notifier
+
+2021-05-18 15:04:04,073 WARN stop old raft protocol task for master task
+
+2021-05-18 15:04:04,073 WARN stop old raft protocol task for heartbeat task
+
+2021-05-18 15:04:04,073 WARN clean old cache datum for old raft
+
+2021-05-18 15:04:04,073 WARN start to move old raft protocol metadata
+
+2021-05-18 15:04:04,077 WARN start to move old raft protocol metadata
+
+2021-05-18 15:04:04,080 INFO raft peers changed: [Member{ip='172.20.0.2', port=8848, state=UP, extendInfo={lastRefreshTime=1621321444077, raftPort=7848, version=1.4.2}}]
+

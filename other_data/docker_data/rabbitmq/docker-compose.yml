@@ -1,0 +1,17 @@
+version: '3'
+services:
+  rabbitmq-v38:
+    container_name: rabbitmq-v38
+    image: rabbitmq:3.8.16-management
+    hostname: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+    restart: always
+    volumes:
+      - ./data:/var/lib/rabbitmq
+      - ./log:/var/log/rabbitmq/log
+    ports:
+      - 15672:15672
+      - 5672:5672
+    # network_mode: host

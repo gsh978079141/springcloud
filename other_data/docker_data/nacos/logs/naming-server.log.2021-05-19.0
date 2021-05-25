@@ -1,0 +1,72 @@
+2021-05-19 09:03:18,194 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-05-19 09:03:19,369 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-05-19 09:03:19,370 INFO listen for service meta change
+
+2021-05-19 09:43:03,975 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-05-19 09:43:04,826 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-05-19 09:43:04,828 INFO listen for service meta change
+
+2021-05-19 09:43:08,950 INFO [NACOS-DISTRO] healthy server list changed, old: [172.20.0.2:8848], new: [172.20.0.2:8848]
+
+2021-05-19 13:21:15,325 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-05-19 13:21:16,685 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-05-19 13:21:16,697 INFO listen for service meta change
+
+2021-05-19 13:44:54,328 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-05-19 13:44:55,016 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-05-19 13:44:55,018 INFO listen for service meta change
+
+2021-05-19 13:46:20,173 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-05-19 13:46:20,913 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-05-19 13:46:20,914 INFO listen for service meta change
+
+2021-05-19 13:46:25,149 INFO [NACOS-DISTRO] healthy server list changed, old: [172.20.0.2:8848], new: [172.20.0.2:8848]
+
+2021-05-19 14:04:07,220 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-05-19 14:04:08,086 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-05-19 14:04:08,091 INFO listen for service meta change
+
+2021-05-19 14:04:12,203 INFO [NACOS-DISTRO] healthy server list changed, old: [172.23.0.2:8848], new: [172.23.0.2:8848]
+
+2021-05-19 15:44:41,900 INFO creating empty service public:DEFAULT_GROUP@@service-user
+
+2021-05-19 15:44:42,047 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@service-user","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1621410281901,"checksum":"9f5ad5e9c912f1451e8f654e365b6b7c","clusterMap":{},"empty":true}
+
+2021-05-19 15:44:42,053 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.112.88#17003#DEFAULT#DEFAULT_GROUP@@service-user","ip":"192.168.112.88","port":17003,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@service-user","metadata":{"management.endpoints.web.base-path":"/actuator","preserved.register.source":"SPRING_CLOUD"},"lastBeat":1621410281899,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+
+2021-05-19 15:44:42,060 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@service-user, value: {"instanceList":[{"instanceId":"192.168.112.88#17003#DEFAULT#DEFAULT_GROUP@@service-user","ip":"192.168.112.88","port":17003,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@service-user","metadata":{"management.endpoints.web.base-path":"/actuator","preserved.register.source":"SPRING_CLOUD"},"lastBeat":1621410281899,"marked":false,"app":"unknown","instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+
+2021-05-19 15:45:26,861 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@service-user, value: {"instanceList":[]}
+
+2021-05-19 15:47:28,088 WARN namespace : public, [DEFAULT_GROUP@@service-user] services are automatically cleaned
+
+2021-05-19 15:47:28,098 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@service-user","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":5,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1621410326861,"checksum":"7fd1b442516105018b8001cb06b108a2","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@service-user","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"defIPPort":80,"empty":true}},"empty":true}
+
+2021-05-19 16:08:46,540 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-05-19 16:08:47,245 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-05-19 16:08:47,246 INFO listen for service meta change
+
+2021-05-19 16:08:51,520 INFO [NACOS-DISTRO] healthy server list changed, old: [172.23.0.2:8848], new: [172.23.0.2:8848]
+
+2021-05-19 16:40:43,652 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-05-19 16:40:44,607 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-05-19 16:40:44,608 INFO listen for service meta change
+
+2021-05-19 16:40:48,619 INFO [NACOS-DISTRO] healthy server list changed, old: [192.168.32.2:8848], new: [192.168.32.2:8848]
+

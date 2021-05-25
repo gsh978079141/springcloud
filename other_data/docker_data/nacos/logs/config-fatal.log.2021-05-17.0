@@ -1,0 +1,67 @@
+2021-05-17 09:12:51,729 WARN [master-db] jdbc:mysql://192.168.112.88:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&&useSSL=false
+
+2021-05-17 09:12:55,198 WARN isQuickStart:false
+
+2021-05-17 10:26:47,573 ERROR [db-error]
+
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 51012ms.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:612)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:763)
+	at com.alibaba.nacos.config.server.service.capacity.GroupCapacityPersistService.getCapacityList4CorrectUsage(GroupCapacityPersistService.java:327)
+	at com.alibaba.nacos.config.server.service.capacity.CapacityService.correctGroupUsage(CapacityService.java:97)
+	at com.alibaba.nacos.config.server.service.capacity.CapacityService.correctUsage(CapacityService.java:85)
+	at com.alibaba.nacos.config.server.service.capacity.CapacityService$1.run(CapacityService.java:77)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 51012ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:689)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:196)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:161)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	... 16 common frames omitted
+2021-05-17 11:28:32,579 ERROR [master-db] master db not found.
+
+2021-05-17 11:28:37,631 ERROR [db-error] master db 192.168.112.88 down.
+
+2021-05-17 11:28:39,158 WARN isQuickStart:false
+
+2021-05-17 11:28:39,185 ERROR Nacos Server did not start because dumpservice bean construction failure :
+java.lang.IllegalStateException: No DataSource set
+
+2021-05-17 11:28:52,679 ERROR [db-error] master db 192.168.112.88 down.
+
+2021-05-17 11:31:25,359 ERROR [master-db] master db not found.
+
+2021-05-17 11:31:30,403 ERROR [db-error] master db 192.168.112.88 down.
+
+2021-05-17 11:31:32,178 WARN isQuickStart:false
+
+2021-05-17 11:31:32,184 ERROR Nacos Server did not start because dumpservice bean construction failure :
+java.lang.IllegalStateException: No DataSource set
+
+2021-05-17 11:31:45,037 ERROR [db-error] master db 192.168.112.88 down.
+
+2021-05-17 13:21:54,811 WARN [master-db] jdbc:mysql://192.168.112.88:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&&useSSL=false
+
+2021-05-17 13:21:56,440 WARN isQuickStart:false
+
+2021-05-17 13:22:40,857 WARN [master-db] jdbc:mysql://192.168.112.88:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&&useSSL=false
+
+2021-05-17 13:22:42,314 WARN isQuickStart:false
+
+2021-05-17 14:18:45,447 WARN [master-db] jdbc:mysql://192.168.112.88:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&&useSSL=false
+
+2021-05-17 14:18:47,269 WARN isQuickStart:false
+

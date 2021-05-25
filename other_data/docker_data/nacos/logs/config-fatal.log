@@ -1,0 +1,6 @@
+2021-05-24 09:43:24,521 WARN [master-db] jdbc:mysql://192.168.112.88:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&&useSSL=false
+
+2021-05-24 09:43:27,973 WARN isQuickStart:false
+
+2021-05-24 19:02:07,272 ERROR [db-error] master db 192.168.112.88 down.
+
