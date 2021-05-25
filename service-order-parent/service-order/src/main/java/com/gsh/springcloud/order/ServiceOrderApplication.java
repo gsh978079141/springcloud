@@ -7,13 +7,13 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.gsh.springcloud.order"})
 //多数据源打开注释
 //@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@EnableDiscoveryClient
-@MapperScan("com.gsh.springcloud.order.dao")
+@MapperScan("com.gsh.springcloud.order.domain.mapper")
 @EnableFeignClients("com.gsh.springcloud.*.client")
 @EnableTransactionManagement
+@EnableDiscoveryClient
 //@EnableElasticsearchRepositories("com.gsh.springcloud.order.service.es")
 public class ServiceOrderApplication {
   public static void main(String[] args) {

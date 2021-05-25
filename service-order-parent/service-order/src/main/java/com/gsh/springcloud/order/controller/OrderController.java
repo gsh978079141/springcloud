@@ -1,9 +1,9 @@
 package com.gsh.springcloud.order.controller;
 
-import com.gsh.springcloud.order.domain.entity.Order;
+import com.gsh.springcloud.order.client.OrderClient;
+import com.gsh.springcloud.order.domain.converter.OrderConverter;
+import com.gsh.springcloud.order.dto.OrderDto;
 import com.gsh.springcloud.order.service.OrderService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,32 +20,40 @@ import java.net.URLEncoder;
  * @since 2018-11-14
  */
 @RestController
-@RequestMapping("/order")
-public class OrderController {
+@RequestMapping("/orders")
+public class OrderController implements OrderClient {
 
   @Resource
   private OrderService orderService;
 
-  @PostMapping("/placeOrder")
-  public void placeOrder(@RequestBody Order order) {
-    orderService.placeOrder(order);
+  @Resource
+  private OrderConverter orderConverter;
+
+  @Override
+  public void placeOrder(OrderDto orderDto) {
+    orderService.placeOrder(orderConverter.dto2entity(orderDto));
   }
 
-  @PostMapping("/localTransaction")
-  public void localTransaction(@RequestBody Order order) {
-    orderService.localTransaction(order);
+  @Override
+  public void localTransaction(OrderDto orderDto) {
+    orderService.localTransaction(orderConverter.dto2entity(orderDto));
   }
 
-  @PostMapping("/localTransactionDistributed")
-  public void localTransactionDistributed(@RequestBody Order order) {
-    orderService.localTransactionDistributed(order);
+  @Override
+  public void localTransactionDistributed(OrderDto orderDto) {
+    orderService.localTransactionDistributed(orderConverter.dto2entity(orderDto));
   }
 
-  @RequestMapping("/getHeader")
+  @Override
   public String getHeader() throws UnsupportedEncodingException {
     String token = URLEncoder.encode("管", "UTF-8");
     System.out.println("加密  encode  " + token);
     return orderService.getHeader(token);
+  }
+
+  @Override
+  public String test() {
+    return "success";
   }
 
 }

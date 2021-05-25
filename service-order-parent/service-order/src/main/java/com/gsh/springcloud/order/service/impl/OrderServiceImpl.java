@@ -2,8 +2,8 @@ package com.gsh.springcloud.order.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.gsh.springcloud.order.dao.OrderMapper;
 import com.gsh.springcloud.order.domain.entity.Order;
+import com.gsh.springcloud.order.domain.mapper.OrderMapper;
 import com.gsh.springcloud.order.service.OrderService;
 import com.gsh.springcloud.user.client.UserClient;
 import com.gsh.springcloud.user.request.UserReq;
@@ -35,7 +35,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
   @Resource
   private UserClient userClient;
 
-  @GlobalTransactional
+  @GlobalTransactional(timeoutMills = 300000, name = "dubbo-gts-seata-example")
   @Transactional(rollbackFor = Exception.class)
   @Override
   public void placeOrder(Order order) {

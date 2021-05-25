@@ -1,15 +1,15 @@
-package com.gsh.springcloud.order.dao;
+package com.gsh.springcloud.order.domain.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.gsh.springcloud.order.domain.entity.Order;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
- * <p>
- * 订单表 Mapper 接口
- * </p>
+ * (Order)表数据库访问层
  *
- * @author gsh
- * @since 2018-11-14
+ * @author EasyCode
  */
+@Mapper
 public interface OrderMapper extends BaseMapper<Order> {
+
 }

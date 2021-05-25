@@ -8,6 +8,7 @@ import org.springframework.cloud.gateway.support.NameUtils;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import springfox.documentation.oas.annotations.EnableOpenApi;
 import springfox.documentation.swagger.web.SwaggerResource;
 import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 
@@ -22,6 +23,7 @@ import java.util.List;
 @Primary
 @AllArgsConstructor
 @Configuration
+@EnableOpenApi
 public class SwaggerResourceConfig implements SwaggerResourcesProvider {
 
   private final RouteLocator routeLocator;
@@ -41,7 +43,6 @@ public class SwaggerResourceConfig implements SwaggerResourcesProvider {
                       predicateDefinition.getArgs().get(NameUtils.GENERATED_NAME_PREFIX + "0")
                               .replace("**", "v3/api-docs"))));
     });
-
     return resources;
   }
 

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+  <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+  <contextName>config</contextName>
+
+  <springProperty name="LOG_PATH" scope="context" source="logging.file.path" defaultValue="/var/log/edu"/>
+  <springProperty name="SERVICE_NAME" scope="context" source="spring.application.name"/>
+  <springProperty name="ENV" scope="context" source="spring.profiles.active"/>
+  <springProperty name="LOG_STASH_HOST" scope="context" source="logstash.host" defaultValue="localhost"/>
+  <springProperty name="LOG_STASH_PORT" scope="context" source="logstash.port" defaultValue="5044"/>
+
+  <appender class="ch.qos.logback.core.rolling.RollingFileAppender" name="FILE">
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_PATH}/${SERVICE_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender class="ch.qos.logback.core.ConsoleAppender" name="CONSOLE">
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="SOCKET" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+    <destination>${LOG_STASH_HOST}:${LOG_STASH_PORT}</destination>
+    <encoder charset="UTF-8" class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+      <providers>
+        <timestamp>
+          <timeZone>Asia/Shanghai</timeZone>
+        </timestamp>
+        <pattern>
+          <pattern>
+            {
+            "project": "education",
+            "appname":"education",
+            "env": "${ENV:-}",
+            "level": "%level",
+            "service": "${SERVICE_NAME:-}",
+            "platform": "Java",
+            "cloud":"true",
+            "thread": "%thread",
+            "class": "%logger",
+            "message": "%message",
+            "stack_trace": "%exception{20}"
+            }
+          </pattern>
+        </pattern>
+      </providers>
+    </encoder>
+  </appender>
+
+  <springProfile name="test,uat,prod">
+    <logger level="INFO" name="org.springframework"/>
+    <logger level="DEBUG" name="com.gsh.springcloud"/>
+    <root level="INFO">
+      <appender-ref ref="CONSOLE"/>
+      <appender-ref ref="FILE"/>
+      <appender-ref ref="SOCKET"/>
+    </root>
+  </springProfile>
+
+  <springProfile name="dev">
+    <logger level="DEBUG" name="com.gsh.springcloud"/>
+    <logger level="INFO" name="org.springframework"/>
+    <root level="INFO">
+      <appender-ref ref="CONSOLE"/>
+      <appender-ref ref="FILE"/>
+      <appender-ref ref="SOCKET"/>
+    </root>
+  </springProfile>
+
+</configuration>

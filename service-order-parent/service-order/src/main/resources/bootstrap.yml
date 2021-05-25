@@ -1,41 +1,22 @@
 server:
   port: 17004
-
-seata:
-  enabled: true
-  # Seata 应用名称，默认使用 ${spring.application.name}
-  application-id: ${spring.application.name}
-  # Seata 事务组, 高版本没找到相关配置, 是否可配置未知 选用默认default
-  #  tx-service-group: my_test_tx_group
-  tx-service-group: ${spring.application.name}_group
-  config:
-    type: nacos
-    nacos:
-      #      命名空间ID
-      namespace:
-      #      namespace: 'gsh-cloud-uat'
-      serverAddr: 127.0.0.1:8848
-      group: SEATA_GROUP
-      userName: ""
-      password: ""
-  registry:
-    type: nacos
-    nacos:
-      application: seata-server
-      server-addr: 127.0.0.1:8848
-      #      命名空间ID
-      namespace:
-      userName: ""
-      password: ""
-
+  servlet:
+    context-path: /order
 
 spring:
   application:
     name: service-order
   profiles:
     active: ${env_profile:uat}
+  main:
+    allow-bean-definition-overriding: true
   cloud:
+    alibaba:
+      seata:
+        tx-service-group: ${spring.application.name}_group
     nacos:
+      discovery:
+        server-addr: ${nacos_server_addr:127.0.0.1:8848}
       config:
         server-addr: ${nacos_server_addr:127.0.0.1:8848}
         namespace: gsh-cloud-${spring.profiles.active}
@@ -63,10 +44,12 @@ spring:
           data-id: mqtt-${spring.profiles.active}.yaml
           group: PUBLIC
           refresh: true
-      discovery:
-        server-addr: ${nacos_server_addr:127.0.0.1:8848}
-  main:
-    allow-bean-definition-overriding: true
+        extension-configs[4]:
+          # seata相关配置
+          data-id: seata-${spring.profiles.active}.yaml
+          group: PUBLIC
+          refresh: true
+
 mqtt:
   enabled: true
 

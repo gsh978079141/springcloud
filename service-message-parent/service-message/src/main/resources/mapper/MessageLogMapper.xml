@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gsh.springcloud.message.domain.mapper.MessageLogMapper">
+
+  <resultMap type="com.gsh.springcloud.message.domain.entity.MessageLog" id="MessageLogResultMap">
+    <result property="id" column="id" jdbcType="BIGINT"/>
+    <result property="uuid" column="uuid" jdbcType="VARCHAR"/>
+    <result property="msg" column="msg" jdbcType="VARCHAR"/>
+    <result property="targetTopic" column="target_topic" jdbcType="VARCHAR"/>
+    <result property="status" column="status" jdbcType="VARCHAR"/>
+    <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    <result property="senderName" column="sender_name" jdbcType="VARCHAR"/>
+    <result property="sendTime" column="send_time" jdbcType="TIMESTAMP"/>
+    <result property="receiverName" column="receiver_name" jdbcType="VARCHAR"/>
+    <result property="receiveTime" column="receive_time" jdbcType="TIMESTAMP"/>
+    <result property="compensateIntervalTime" column="compensate_interval_time" jdbcType="INTEGER"/>
+    <result property="maxRetryCount" column="max_retry_count" jdbcType="INTEGER"/>
+    <result property="actualRetryCount" column="actual_retry_count" jdbcType="INTEGER"/>
+    <result property="lastRetryTime" column="last_retry_time" jdbcType="TIMESTAMP"/>
+  </resultMap>
+
+  <update id="updateRetryInfoByUuid">
+      UPDATE
+      message_log
+      SET
+      actual_retry_count = (actual_retry_count +1 ),
+      last_retry_time = NOW()
+      WHERE actual_retry_count &lt; max_retry_count AND uuid = #{uuid}
+  </update>
+</mapper>

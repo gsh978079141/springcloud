@@ -32,46 +32,51 @@ spring:
   mvc:
     throw-exception-if-no-handler-found: true
   cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos_server_addr:127.0.0.1:8848}
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: false #让gateway可以发现nacos中的微服务 开启后会自动去掉一层路径,且routes会失效
+          #如果完全注释routes,knife4j会失效
           lowerCaseServiceId: true
       routes:
+        # 路由数组  指当请求满足什么样的条件的时候，转发到哪个微服务上
+        #        - id: netsadcloud-shop #当前路由标识，要求唯一 （默认值uuid，一般不用，需要自定义）
+        #          uri: lb://netsadcloud-shop #请求最终要被转发的地址   lb指的是从nacos中按照名称获取微服务,并遵循负载均衡策略
+        #          predicates: #断言 判断条件，返回值是boolean 转发请求要返回的条件 （可以写多个）
+        #            - Path=/netsadcloud-shop/** #当请求路径满足path指定的规则时，此路由信息才会正常转发
+        #          filters: #过滤器（在请求传递过程中，对请求做一些手脚）
+        #            - StripPrefix=1 # 在请求转发之前去掉一层路径
         #        - id: service-account
         #          uri: http://service-account:6001
         #          predicates:
         #            - Path=/account-apis/**
         #          filters:
         #            - StripPrefix=1
-        #        - id: service-dict
-        #          uri: http://service-dict:6002
-        #          predicates:
-        #            - Path=/dict-apis/**
-        #          filters:
-        #            - StripPrefix=1
-        #        - id: service-oss
-        #          uri: http://service-oss:6004
-        #          predicates:
-        #            - Path=/oss-apis/**
-        #          filters:
-        #            - StripPrefix=1
-        #        - id: service-foundation
-        #          uri: http://service-foundation:7001
-        #          predicates:
-        #            - Path=/foundation-apis/**
-        #          filters:
-        #            - StripPrefix=1
+        - id: service-order
+          uri: lb://service-order
+          predicates:
+            - Path=/order/**
+
         - id: service-user
-          #          uri: http://service-user:7003
           # lb代表从注册中心获取服务
           uri: lb://service-user
           predicates:
-            #            - Path=/user-apis/**
-            - Path=/users/**
+            - Path=/user/**
             # http://127.0.0.1:8001/users/users/deleteById?id=1
-            # filters.StripPrefix=1:过滤掉前面设置的Path:/user-apis->真实的请求路径为：/users/deleteById?id=1
+            # 当uri:不是lb模式时启用，filters.StripPrefix=1:过滤掉前面设置的Path:/user-apis->真实的请求路径为：/users/deleteById?id=1
 #          filters:
+#            - name: RequestRateLimiter
+#              args:
+#              # 使用SpEL按名称引用bean
+#              #key-resolver: '#{@remoteAddrKeyResolver}'
+#              # 允许用户每秒处理多少个请求
+#                redis-rate-limiter.replenishRate: 10
+#              # 允许在一秒钟内完成的最大请求数
+#                redis-rate-limiter.burstCapacity: 20
+#            - SwaggerHeaderFilter
 #            - StripPrefix=1
 
 logging:

@@ -30,14 +30,7 @@
       <groupId>com.gsh.springcloud</groupId>
       <artifactId>gsh-cloud-starter-mysql-mybatis-plus</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.gsh.springcloud</groupId>
-      <artifactId>service-message-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.gsh.springcloud</groupId>
-      <artifactId>service-user-client</artifactId>
-    </dependency>
+
     <!--    <dependency>-->
     <!--      <groupId>org.springframework.boot</groupId>-->
     <!--      <artifactId>spring-boot-starter-data-elasticsearch</artifactId>-->
@@ -52,10 +45,6 @@
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.alibaba.cloud</groupId>
-      <artifactId>spring-cloud-alibaba-seata</artifactId>
-    </dependency>
     <!--  feign  -->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
@@ -66,17 +55,45 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
     </dependency>
+    <!--  test  -->
     <dependency>
-      <groupId>com.gsh.springcloud</groupId>
-      <artifactId>service-user-client</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <!--  seata  -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-alibaba-seata</artifactId>
     </dependency>
     <dependency>
       <groupId>io.seata</groupId>
       <artifactId>seata-spring-boot-starter</artifactId>
     </dependency>
+    <!--    实体映射    -->
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-jdk8</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+    </dependency>
+    <!--其他服务client依赖-->
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>service-message-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>service-user-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>service-order-client</artifactId>
     </dependency>
 
   </dependencies>

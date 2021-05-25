@@ -17,71 +17,45 @@
   </properties>
 
   <dependencies>
+    <!--    <dependency>-->
+    <!--      <groupId>com.gsh.springcloud</groupId>-->
+    <!--      <artifactId>common-lib</artifactId>-->
+    <!--    </dependency>-->
+    <!--  nacos 服务注册  -->
     <dependency>
-      <groupId>com.gsh.springcloud</groupId>
-      <artifactId>common-lib</artifactId>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
     <!--gateway 网关依赖,内置webflux 依赖 与starter-web冲突-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-gateway</artifactId>
     </dependency>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-logging</artifactId>
     </dependency>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
-
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-boot-starter</artifactId>
-    </dependency>
-
-
-    <dependency>
-      <groupId>com.github.xiaoymin</groupId>
-      <artifactId>knife4j-spring-boot-starter</artifactId>
-    </dependency>
-
     <dependency>
       <artifactId>lombok</artifactId>
       <groupId>org.projectlombok</groupId>
-      <optional>true</optional>
     </dependency>
-
+    <dependency>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>gsh-cloud-starter-swagger</artifactId>
+    </dependency>
     <!--hutool 工具集合引入-->
     <dependency>
       <groupId>cn.hutool</groupId>
       <artifactId>hutool-all</artifactId>
-      <version>5.5.1</version>
     </dependency>
-
     <!--    <dependency>-->
     <!--      <groupId>com.alibaba.cloud</groupId>-->
     <!--      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
     <!--    </dependency>-->
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.junit.vintage</groupId>
-          <artifactId>junit-vintage-engine</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-    </dependency>
-
   </dependencies>
 
 
