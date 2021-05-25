@@ -1,16 +1,16 @@
 version: "3"
 services:
   seata-server:
-    container_name: seata-server
+    container_name: seata-server-v_1_4
     image: seataio/seata-server:1.4.2
     hostname: seata-server
     environment:
-      - SEATA_IP=192.168.112.88
+      - SEATA_IP=192.168.112.88 #此处不建议用127.0.0.1项目启动有时会报错
       - SEATA_PORT=8091
-      - STORE_MODE=file
+      - STORE_MODE=db #db模式下，seata会去nacos获取数据库相关配置
       - SEATA_CONFIG_NAME=file:/seata-server/my_config/registry
     volumes:
-      # - ./resources:/seata-server/resources
+      #      - ./resources:/seata-server/resources
       - ./config:/seata-server/my_config
       - ./logs:/var/log
       - ./logs/seata:/root/logs/seata

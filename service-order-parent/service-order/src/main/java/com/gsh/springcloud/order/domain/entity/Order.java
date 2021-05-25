@@ -18,7 +18,7 @@ import java.util.Date;
  */
 @Data
 @SuperBuilder
-@TableName("order")
+@TableName("orders")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order implements Serializable {

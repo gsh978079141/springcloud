@@ -14,7 +14,7 @@ services:
       - MYSQL_SERVICE_DB_PARAM=characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&&useSSL=false
     volumes:
       - ./logs/:/home/nacos/logs
-      - ./init.d/:/home/nacos/init.d
+      - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
     ports:
       - 8848:8848
     # network_mode: host

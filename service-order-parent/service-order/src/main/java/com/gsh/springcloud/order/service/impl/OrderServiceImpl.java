@@ -35,7 +35,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
   @Resource
   private UserClient userClient;
 
-  @GlobalTransactional(timeoutMills = 300000, name = "dubbo-gts-seata-example")
+  @GlobalTransactional(timeoutMills = 300000, name = "gsh-cloud-seata-example")
   @Transactional(rollbackFor = Exception.class)
   @Override
   public void placeOrder(Order order) {

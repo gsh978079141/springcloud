@@ -64,6 +64,8 @@ spring:
           # lb代表从注册中心获取服务
           uri: lb://service-user
           predicates:
+            # TODO 待优化
+            # 此处前缀/user 与service-user服务[server.servlet.context-path: /user] 需保持一致，feign-client:UUserClient:path = "/user/users" 也需要加/user前缀
             - Path=/user/**
             # http://127.0.0.1:8001/users/users/deleteById?id=1
             # 当uri:不是lb模式时启用，filters.StripPrefix=1:过滤掉前面设置的Path:/user-apis->真实的请求路径为：/users/deleteById?id=1

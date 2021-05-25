@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(tags = "UserAPI", value = "用户管理API")
 //@FeignClient(url = "${feign.url.service-user:http://127.0.0.1:7003}", path = "/users", name = "userClient")
-@FeignClient(name = "service-user", path = "/users")
+@FeignClient(name = "service-user", path = "/user/users")
 public interface UserClient {
 
   @ApiOperation("测试 登录发放优惠卷")

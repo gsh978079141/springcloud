@@ -31,8 +31,8 @@
     <version.resteasy>3.6.3.Final</version.resteasy>
     <!-- db -->
     <version.druid>1.1.6</version.druid>
-    <version.mysql-connector>5.1.46</version.mysql-connector>
-    <!--    <version.mysql-connector>8.0.17</version.mysql-connector>-->
+    <!--    <version.mysql-connector>5.1.46</version.mysql-connector>-->
+    <version.mysql-connector>8.0.17</version.mysql-connector>
     <version.pagehelper>1.2.12</version.pagehelper>
     <version.mybatis-plus>3.3.2</version.mybatis-plus>
     <version.mybatis-plus-boot-starter>3.0.7.1</version.mybatis-plus-boot-starter>
@@ -162,11 +162,6 @@
           </exclusion>
         </exclusions>
       </dependency>
-      <!--      <dependency>-->
-      <!--        <groupId>io.seata</groupId>-->
-      <!--        <artifactId>seata-all</artifactId>-->
-      <!--        <version>${version.seata-all}</version>-->
-      <!--      </dependency>-->
       <dependency>
         <groupId>io.seata</groupId>
         <artifactId>seata-spring-boot-starter</artifactId>
