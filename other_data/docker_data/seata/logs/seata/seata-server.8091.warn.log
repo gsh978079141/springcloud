@@ -1,4 +1,20 @@
-2021-05-25 05:40:57.225  WARN --- [                          main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found
-2021-05-25 05:41:02.264  WARN --- [                          main] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
-2021-05-25 05:42:04.678  WARN --- [                          main] i.s.s.s.db.store.LogStoreDataBaseDAO     : global_table table or TRANSACTION_NAME column not found
-2021-05-25 05:42:09.684  WARN --- [                          main] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:10.627  WARN --- [            TxTimeoutCheck_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:10.749  WARN --- [           AsyncCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:10.755  WARN --- [          RetryRollbacking_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:10.748  WARN --- [           RetryCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:21.106  WARN --- [           AsyncCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:21.106  WARN --- [            TxTimeoutCheck_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:21.107  WARN --- [          RetryRollbacking_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:21.107  WARN --- [           RetryCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:31.116  WARN --- [           RetryCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:31.117  WARN --- [          RetryRollbacking_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:31.117  WARN --- [            TxTimeoutCheck_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:31.116  WARN --- [           AsyncCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:41.123  WARN --- [            TxTimeoutCheck_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:41.123  WARN --- [          RetryRollbacking_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:41.123  WARN --- [           AsyncCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:41.131  WARN --- [           RetryCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:51.161  WARN --- [            TxTimeoutCheck_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:51.172  WARN --- [          RetryRollbacking_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:51.173  WARN --- [           AsyncCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1
+2021-05-26 06:28:51.173  WARN --- [           RetryCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : get connection timeout retry : 1

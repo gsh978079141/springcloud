@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  # jira8.13服务
+  jira-v8-13:
+    container_name: jira-v8-13
+    # image: atlassian/jira-software:8.13-ubuntu
+    image: myjira:v1
+    restart: always
+    #    environment:
+    #      - MYSQL_ROOT_PASSWORD=123
+    #      - TZ=Asia/Shanghai
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 200M
+    ports:
+      - 28080:8080
+    volumes:
+      - ./data:/var/atlassian/jira
+      - ./init/jar/mysql-connector-java-5.1.49.jar:/opt/atlassian/jira/atlassian-jira/WEB-INF/lib/mysql-connector-java-5.1.49.jar
+      - ./init/jar/atlassian-extras-3.2.jar:/opt/atlassian/confluence/confluence/WEB-INF/lib/atlassian-extras-3.2.jar
+      - ./init/config/dbconfig.xml:/var/atlassian/application-data/jira/dbconfig.xml
+    # network_mode: "host"
+

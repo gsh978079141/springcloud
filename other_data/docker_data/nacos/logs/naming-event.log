@@ -1,144 +1,68 @@
-2021-05-25 08:51:20,872 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:17003@DEFAULT@DEFAULT_GROUP@@service-user, region: unknown, msg: client timeout after 15000, last beat: 1621854130479
+2021-05-25 19:01:25,540 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:17004@DEFAULT@DEFAULT_GROUP@@service-order, region: unknown, msg: client timeout after 15000, last beat: 1621940455736
 
-2021-05-25 08:51:20,873 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8001@DEFAULT@DEFAULT_GROUP@@gateway-api, region: unknown, msg: client timeout after 15000, last beat: 1621854130479
+2021-05-25 19:01:25,898 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8001@DEFAULT@DEFAULT_GROUP@@gateway-api, region: unknown, msg: client timeout after 15000, last beat: 1621940455778
 
-2021-05-25 08:51:20,873 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:17004@DEFAULT@DEFAULT_GROUP@@service-order, region: unknown, msg: client timeout after 15000, last beat: 1621854130142
+2021-05-25 19:01:25,973 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:17003@DEFAULT@DEFAULT_GROUP@@service-user, region: unknown, msg: client timeout after 15000, last beat: 1621940455738
 
-2021-05-25 08:51:20,944 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_false_false_DEFAULT]
+2021-05-26 08:51:10,772 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8091@default@SEATA_GROUP@@seata-server, region: unknown, msg: client timeout after 15000, last beat: 1621940452558
 
-2021-05-25 08:51:20,944 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 
+2021-05-26 08:51:11,333 INFO service: DEFAULT_GROUP@@service-order {POS} {IP-ENABLED} valid: 192.168.112.88:17004@DEFAULT, region: unknown, msg: client beat ok
 
-2021-05-25 08:51:21,065 INFO service: DEFAULT_GROUP@@service-order {POS} {IP-ENABLED} valid: 192.168.112.88:17004@DEFAULT, region: unknown, msg: client beat ok
+2021-05-26 08:51:11,333 INFO service: DEFAULT_GROUP@@service-user {POS} {IP-ENABLED} valid: 192.168.112.88:17003@DEFAULT, region: unknown, msg: client beat ok
 
-2021-05-25 08:51:21,065 INFO DEFAULT_GROUP@@gateway-api {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:8001:unknown:DEFAULT_1.0_false_false_DEFAULT]
+2021-05-26 08:51:11,333 INFO service: DEFAULT_GROUP@@gateway-api {POS} {IP-ENABLED} valid: 192.168.112.88:8001@DEFAULT, region: unknown, msg: client beat ok
 
-2021-05-25 08:51:21,065 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway-api, ips: 
+2021-05-26 08:51:11,468 INFO service: SEATA_GROUP@@seata-server {POS} {IP-ENABLED} valid: 192.168.112.88:8091@default, region: unknown, msg: client beat ok
 
-2021-05-25 08:51:21,089 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 08:51:12,347 INFO SEATA_GROUP@@seata-server {SYNC} {IP-DEAD} cluster: default, dead ips size: 1, content: [192.168.112.88:8091:unknown:default_1.0_true_false_default]
 
-2021-05-25 08:51:21,089 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
+2021-05-26 08:51:12,347 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 
 
-2021-05-25 08:51:21,245 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 08:51:12,421 INFO DEFAULT_GROUP@@gateway-api {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
 
-2021-05-25 08:51:21,245 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 192.168.112.88:17003_true,
+2021-05-26 08:51:12,421 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway-api, ips: 
 
-2021-05-25 08:51:21,249 INFO DEFAULT_GROUP@@gateway-api {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 08:51:13,301 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
 
-2021-05-25 08:51:21,249 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway-api, ips: 192.168.112.88:8001_true,
+2021-05-26 08:51:13,301 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
 
-2021-05-25 08:51:26,074 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 08:51:16,919 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_true_false_DEFAULT]
 
-2021-05-25 08:51:26,074 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
+2021-05-26 08:51:16,919 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 
 
-2021-05-25 09:20:40,336 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 08:51:16,986 INFO DEFAULT_GROUP@@gateway-api {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
 
-2021-05-25 09:20:40,336 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
+2021-05-26 08:51:16,986 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway-api, ips: 192.168.112.88:8001_true,
 
-2021-05-25 09:21:02,202 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 08:51:17,217 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_true_false_DEFAULT]
 
-2021-05-25 09:21:02,202 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
+2021-05-26 08:51:17,217 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 192.168.112.88:17003_true,
 
-2021-05-25 09:22:51,307 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 08:51:17,224 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
 
-2021-05-25 09:22:51,307 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
+2021-05-26 08:51:17,224 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
 
-2021-05-25 09:23:16,169 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 08:51:19,720 INFO SEATA_GROUP@@seata-server {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [192.168.112.88:8091:unknown:default_1.0_true_false_default]
 
-2021-05-25 09:23:16,169 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
+2021-05-26 08:51:19,720 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 192.168.112.88:8091_true,
 
-2021-05-25 09:24:24,192 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 14:01:40,217 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
 
-2021-05-25 09:24:24,193 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
+2021-05-26 14:01:41,212 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
 
-2021-05-25 09:25:08,865 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 14:02:13,391 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8001@DEFAULT@DEFAULT_GROUP@@gateway-api, region: unknown, msg: client timeout after 15000, last beat: 1622008914901
 
-2021-05-25 09:25:08,865 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
+2021-05-26 14:02:13,391 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:17003@DEFAULT@DEFAULT_GROUP@@service-user, region: unknown, msg: client timeout after 15000, last beat: 1622008916230
 
-2021-05-25 09:25:43,505 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 14:02:31,826 INFO DEFAULT_GROUP@@gateway-api {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:8001:unknown:DEFAULT_1.0_false_false_DEFAULT]
 
-2021-05-25 09:25:43,505 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
+2021-05-26 14:02:31,826 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway-api, ips: 
 
-2021-05-25 09:26:05,223 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 14:02:31,839 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_false_false_DEFAULT]
 
-2021-05-25 09:26:05,223 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
+2021-05-26 14:02:31,839 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 
 
-2021-05-25 09:27:27,084 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
+2021-05-26 15:54:07,405 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8091@default@SEATA_GROUP@@seata-server, region: unknown, msg: client timeout after 15000, last beat: 1622015628304
 
-2021-05-25 09:27:27,084 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-25 09:27:44,819 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:27:44,820 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
-
-2021-05-25 09:28:46,855 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:28:46,856 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-25 09:29:06,933 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:29:06,933 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
-
-2021-05-25 09:29:58,165 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:29:58,165 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-25 09:30:16,699 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:30:16,699 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
-
-2021-05-25 09:30:46,291 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:30:46,291 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-25 09:31:26,574 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:31:26,574 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
-
-2021-05-25 09:32:52,288 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:32:52,289 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 
-
-2021-05-25 09:32:57,818 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:32:57,818 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-25 09:33:20,345 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:33:20,345 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 192.168.112.88:17003_true,
-
-2021-05-25 09:33:21,033 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:33:21,033 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
-
-2021-05-25 09:34:03,266 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:34:03,266 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-25 09:34:21,602 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:34:21,602 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
-
-2021-05-25 09:39:40,801 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:39:40,801 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-25 09:41:08,495 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:41:08,495 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
-
-2021-05-25 09:43:57,512 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:43:57,512 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-25 09:45:46,888 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:45:46,888 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
-
-2021-05-25 09:50:51,450 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:50:51,451 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-25 09:51:10,946 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-25 09:51:10,946 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
+2021-05-26 15:54:08,437 INFO service: SEATA_GROUP@@seata-server {POS} {IP-ENABLED} valid: 192.168.112.88:8091@default, region: unknown, msg: client beat ok
 

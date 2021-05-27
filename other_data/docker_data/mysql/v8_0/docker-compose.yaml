@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  # mysql8.0服务
+  mysql-v80:
+    container_name: mysql-v80
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+      - TZ=Asia/Shanghai
+    ports:
+      - 23306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./conf:/etc/mysql
+      - ./logs:/logs
+
+    # network_mode: "host"
+
