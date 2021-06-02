@@ -1,343 +1,120 @@
-2021-05-26 08:51:12,422 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@33a88182 (The last packet successfully received from the server was 49,818,948 milliseconds ago. The last packet sent successfully to the server was 49,818,963 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+2021-05-31 15:00:22,145 INFO Starting Nacos v1.4.2 on d5b21db31621 with PID 31 (/home/nacos/target/nacos-server.jar started by root in /home/nacos)
 
-2021-05-26 08:51:16,549 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3d8edc2 (The last packet successfully received from the server was 49,822,908 milliseconds ago. The last packet sent successfully to the server was 49,822,911 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+2021-05-31 15:00:22,573 INFO The following profiles are active: standalone
 
-2021-05-26 08:51:13,148 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1664738f (The last packet successfully received from the server was 49,819,586 milliseconds ago. The last packet sent successfully to the server was 49,819,593 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+2021-05-31 15:00:32,420 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1fb19a0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
-2021-05-26 08:59:27,303 INFO [capacityManagement] start correct usage
+2021-05-31 15:00:32,440 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
-2021-05-26 08:59:27,322 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 15:00:34,645 INFO Tomcat initialized with port(s): 8848 (http)
 
-2021-05-26 08:59:27,773 WARN clearConfigHistory start
+2021-05-31 15:00:34,804 INFO Starting service [Tomcat]
 
-2021-05-26 09:09:27,323 INFO [capacityManagement] start correct usage
+2021-05-31 15:00:35,064 INFO Starting Servlet engine: [Apache Tomcat/9.0.38]
 
-2021-05-26 09:09:27,344 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 15:00:36,120 INFO At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
 
-2021-05-26 09:09:27,780 WARN clearConfigHistory start
+2021-05-31 15:00:36,367 INFO Initializing Spring embedded WebApplicationContext
 
-2021-05-26 09:19:27,345 INFO [capacityManagement] start correct usage
+2021-05-31 15:00:36,404 INFO Root WebApplicationContext: initialization completed in 13596 ms
 
-2021-05-26 09:19:27,394 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 15:00:37,390 INFO HikariPool-1 - Starting...
 
-2021-05-26 09:19:27,787 WARN clearConfigHistory start
+2021-05-31 15:00:39,321 INFO HikariPool-1 - Start completed.
 
-2021-05-26 09:29:27,396 INFO [capacityManagement] start correct usage
+2021-05-31 15:00:41,871 INFO Nacos-related cluster resource initialization
 
-2021-05-26 09:29:27,427 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 15:00:42,215 INFO The cluster resource is initialized
 
-2021-05-26 09:29:27,794 WARN clearConfigHistory start
+2021-05-31 15:00:44,103 INFO Reflections took 165 ms to scan 1 urls, producing 4 keys and 6 values 
 
-2021-05-26 09:39:27,427 INFO [capacityManagement] start correct usage
+2021-05-31 15:00:44,445 INFO Reflections took 35 ms to scan 1 urls, producing 6 keys and 26 values 
 
-2021-05-26 09:39:27,441 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 15:00:44,993 INFO Reflections took 54 ms to scan 1 urls, producing 3 keys and 15 values 
 
-2021-05-26 09:39:27,798 WARN clearConfigHistory start
+2021-05-31 15:00:45,130 INFO Reflections took 5 ms to scan 1 urls, producing 2 keys and 12 values 
 
-2021-05-26 09:49:27,442 INFO [capacityManagement] start correct usage
+2021-05-31 15:00:48,772 INFO Initializing ExecutorService 'applicationTaskExecutor'
 
-2021-05-26 09:49:27,461 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 15:00:49,221 INFO Adding welcome page: class path resource [static/index.html]
 
-2021-05-26 09:49:27,802 WARN clearConfigHistory start
+2021-05-31 15:00:50,590 INFO Creating filter chain: Ant [pattern='/**'], []
 
-2021-05-26 09:59:27,462 INFO [capacityManagement] start correct usage
+2021-05-31 15:00:50,882 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fff25f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@13006998, org.springframework.security.web.header.HeaderWriterFilter@4d411036, org.springframework.security.web.csrf.CsrfFilter@35293c05, org.springframework.security.web.authentication.logout.LogoutFilter@54afd745, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@352c308, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5dda6f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c00fff0, org.springframework.security.web.session.SessionManagementFilter@41beb473, org.springframework.security.web.access.ExceptionTranslationFilter@2db2dd9d]
 
-2021-05-26 09:59:27,472 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 15:00:51,925 INFO Initializing ExecutorService 'taskScheduler'
 
-2021-05-26 09:59:27,806 WARN clearConfigHistory start
+2021-05-31 15:00:52,084 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
 
-2021-05-26 10:09:27,473 INFO [capacityManagement] start correct usage
+2021-05-31 15:00:52,297 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
 
-2021-05-26 10:09:27,482 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 15:00:52,305 INFO Started Nacos in 39.353 seconds (JVM running for 42.092)
 
-2021-05-26 10:09:27,815 WARN clearConfigHistory start
+2021-05-31 15:00:52,306 INFO Nacos started successfully in stand alone mode. use external storage
 
-2021-05-26 10:19:27,483 INFO [capacityManagement] start correct usage
+2021-05-31 15:01:57,409 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@449e7b4b (Communications link failure
 
-2021-05-26 10:19:27,497 INFO [capacityManagement] end correct usage, cost: 0s
+The last packet successfully received from the server was 7,079 milliseconds ago. The last packet sent successfully to the server was 7,091 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
 
-2021-05-26 10:19:27,819 WARN clearConfigHistory start
+2021-05-31 15:01:57,417 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@486a02b9 (Communications link failure
 
-2021-05-26 10:29:27,498 INFO [capacityManagement] start correct usage
+The last packet successfully received from the server was 77,875 milliseconds ago. The last packet sent successfully to the server was 77,878 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
 
-2021-05-26 10:29:27,510 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 15:01:57,422 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f197cdc (Communications link failure
 
-2021-05-26 10:29:27,827 WARN clearConfigHistory start
+The last packet successfully received from the server was 77,815 milliseconds ago. The last packet sent successfully to the server was 77,819 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
 
-2021-05-26 10:39:27,510 INFO [capacityManagement] start correct usage
+2021-05-31 16:15:50,138 INFO Starting Nacos v1.4.2 on d5b21db31621 with PID 31 (/home/nacos/target/nacos-server.jar started by root in /home/nacos)
 
-2021-05-26 10:39:27,527 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 16:15:50,256 INFO The following profiles are active: standalone
 
-2021-05-26 10:39:27,835 WARN clearConfigHistory start
+2021-05-31 16:15:57,250 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1fb19a0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
-2021-05-26 10:49:27,528 INFO [capacityManagement] start correct usage
+2021-05-31 16:15:57,281 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
-2021-05-26 10:49:27,554 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 16:15:58,211 INFO Tomcat initialized with port(s): 8848 (http)
 
-2021-05-26 10:49:27,839 WARN clearConfigHistory start
+2021-05-31 16:15:58,689 INFO Starting service [Tomcat]
 
-2021-05-26 10:59:27,555 INFO [capacityManagement] start correct usage
+2021-05-31 16:15:58,691 INFO Starting Servlet engine: [Apache Tomcat/9.0.38]
 
-2021-05-26 10:59:27,567 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 16:15:59,477 INFO At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
 
-2021-05-26 10:59:27,843 WARN clearConfigHistory start
+2021-05-31 16:15:59,663 INFO Initializing Spring embedded WebApplicationContext
 
-2021-05-26 11:09:27,568 INFO [capacityManagement] start correct usage
+2021-05-31 16:15:59,671 INFO Root WebApplicationContext: initialization completed in 9325 ms
 
-2021-05-26 11:09:27,585 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 16:16:00,371 INFO HikariPool-1 - Starting...
 
-2021-05-26 11:09:27,848 WARN clearConfigHistory start
+2021-05-31 16:16:01,200 INFO HikariPool-1 - Start completed.
 
-2021-05-26 11:19:27,585 INFO [capacityManagement] start correct usage
+2021-05-31 16:16:04,393 INFO Nacos-related cluster resource initialization
 
-2021-05-26 11:19:27,609 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 16:16:04,449 INFO The cluster resource is initialized
 
-2021-05-26 11:19:27,854 WARN clearConfigHistory start
+2021-05-31 16:16:05,578 INFO Reflections took 68 ms to scan 1 urls, producing 4 keys and 6 values 
 
-2021-05-26 11:29:27,610 INFO [capacityManagement] start correct usage
+2021-05-31 16:16:06,128 INFO Reflections took 9 ms to scan 1 urls, producing 6 keys and 26 values 
 
-2021-05-26 11:29:27,624 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 16:16:06,195 INFO Reflections took 8 ms to scan 1 urls, producing 3 keys and 15 values 
 
-2021-05-26 11:29:27,859 WARN clearConfigHistory start
+2021-05-31 16:16:06,428 INFO Reflections took 4 ms to scan 1 urls, producing 2 keys and 12 values 
 
-2021-05-26 11:39:27,625 INFO [capacityManagement] start correct usage
+2021-05-31 16:16:13,034 INFO Initializing ExecutorService 'applicationTaskExecutor'
 
-2021-05-26 11:39:27,634 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 16:16:13,674 INFO Adding welcome page: class path resource [static/index.html]
 
-2021-05-26 11:39:27,879 WARN clearConfigHistory start
+2021-05-31 16:16:15,358 INFO Creating filter chain: Ant [pattern='/**'], []
 
-2021-05-26 11:49:27,634 INFO [capacityManagement] start correct usage
+2021-05-31 16:16:15,534 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3174cb09, org.springframework.security.web.context.SecurityContextPersistenceFilter@f713686, org.springframework.security.web.header.HeaderWriterFilter@2c5d601e, org.springframework.security.web.csrf.CsrfFilter@2d72f75e, org.springframework.security.web.authentication.logout.LogoutFilter@620aa4ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b4dd216, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1051817b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d411036, org.springframework.security.web.session.SessionManagementFilter@23c388c2, org.springframework.security.web.access.ExceptionTranslationFilter@5aa0dbf4]
 
-2021-05-26 11:49:27,653 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 16:16:16,221 INFO Initializing ExecutorService 'taskScheduler'
 
-2021-05-26 11:49:27,884 WARN clearConfigHistory start
+2021-05-31 16:16:16,428 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
 
-2021-05-26 11:59:27,654 INFO [capacityManagement] start correct usage
+2021-05-31 16:16:16,821 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
 
-2021-05-26 11:59:27,675 INFO [capacityManagement] end correct usage, cost: 0s
+2021-05-31 16:16:17,041 INFO Started Nacos in 36.155 seconds (JVM running for 37.722)
 
-2021-05-26 11:59:27,891 WARN clearConfigHistory start
-
-2021-05-26 12:09:27,676 INFO [capacityManagement] start correct usage
-
-2021-05-26 12:09:27,688 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 12:09:27,907 WARN clearConfigHistory start
-
-2021-05-26 12:19:27,689 INFO [capacityManagement] start correct usage
-
-2021-05-26 12:19:27,710 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 12:19:27,921 WARN clearConfigHistory start
-
-2021-05-26 12:29:27,711 INFO [capacityManagement] start correct usage
-
-2021-05-26 12:29:27,730 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 12:29:27,927 WARN clearConfigHistory start
-
-2021-05-26 12:39:27,730 INFO [capacityManagement] start correct usage
-
-2021-05-26 12:39:27,742 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 12:39:27,934 WARN clearConfigHistory start
-
-2021-05-26 12:49:27,742 INFO [capacityManagement] start correct usage
-
-2021-05-26 12:49:27,763 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 12:49:27,939 WARN clearConfigHistory start
-
-2021-05-26 12:59:27,763 INFO [capacityManagement] start correct usage
-
-2021-05-26 12:59:27,772 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 12:59:27,944 WARN clearConfigHistory start
-
-2021-05-26 13:09:27,773 INFO [capacityManagement] start correct usage
-
-2021-05-26 13:09:27,790 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 13:09:27,949 WARN clearConfigHistory start
-
-2021-05-26 13:19:27,791 INFO [capacityManagement] start correct usage
-
-2021-05-26 13:19:27,808 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 13:19:27,956 WARN clearConfigHistory start
-
-2021-05-26 13:29:27,808 INFO [capacityManagement] start correct usage
-
-2021-05-26 13:29:27,821 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 13:29:27,961 WARN clearConfigHistory start
-
-2021-05-26 13:39:27,822 INFO [capacityManagement] start correct usage
-
-2021-05-26 13:39:27,834 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 13:39:27,965 WARN clearConfigHistory start
-
-2021-05-26 13:49:27,835 INFO [capacityManagement] start correct usage
-
-2021-05-26 13:49:27,970 WARN clearConfigHistory start
-
-2021-05-26 13:49:28,244 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 13:59:28,230 WARN clearConfigHistory start
-
-2021-05-26 13:59:28,244 INFO [capacityManagement] start correct usage
-
-2021-05-26 13:59:28,259 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 14:09:28,260 INFO [capacityManagement] start correct usage
-
-2021-05-26 14:09:28,273 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 14:09:28,561 WARN clearConfigHistory start
-
-2021-05-26 14:19:28,274 INFO [capacityManagement] start correct usage
-
-2021-05-26 14:19:28,307 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 14:19:28,569 WARN clearConfigHistory start
-
-2021-05-26 14:28:03,745 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@265183d9 (Communications link failure
-
-The last packet successfully received from the server was 185 milliseconds ago. The last packet sent successfully to the server was 185 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-05-26 14:28:06,813 WARN HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@49bd4be6 marked as broken because of SQLSTATE(08S01), ErrorCode(0)
-
-com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet successfully received from the server was 13 milliseconds ago. The last packet sent successfully to the server was 18 milliseconds ago.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)
-	at com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.executeQuery(HikariProxyStatement.java)
-	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:439)
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:376)
-	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:452)
-	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:462)
-	at com.alibaba.nacos.config.server.service.datasource.ExternalDataSourceServiceImpl$CheckDbHealthTask.run(ExternalDataSourceServiceImpl.java:246)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet successfully received from the server was 13 milliseconds ago. The last packet sent successfully to the server was 18 milliseconds ago.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:538)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:702)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:641)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:940)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:886)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1168)
-	... 14 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:532)
-	... 20 common frames omitted
-2021-05-26 14:29:28,308 INFO [capacityManagement] start correct usage
-
-2021-05-26 14:29:28,333 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 14:29:28,576 WARN clearConfigHistory start
-
-2021-05-26 14:39:28,334 INFO [capacityManagement] start correct usage
-
-2021-05-26 14:39:28,346 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 14:39:28,586 WARN clearConfigHistory start
-
-2021-05-26 14:49:28,347 INFO [capacityManagement] start correct usage
-
-2021-05-26 14:49:28,358 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 14:49:28,593 WARN clearConfigHistory start
-
-2021-05-26 14:59:28,358 INFO [capacityManagement] start correct usage
-
-2021-05-26 14:59:28,372 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 14:59:28,597 WARN clearConfigHistory start
-
-2021-05-26 15:09:28,373 INFO [capacityManagement] start correct usage
-
-2021-05-26 15:09:28,382 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 15:09:28,603 WARN clearConfigHistory start
-
-2021-05-26 15:19:28,382 INFO [capacityManagement] start correct usage
-
-2021-05-26 15:19:28,471 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 15:19:28,611 WARN clearConfigHistory start
-
-2021-05-26 15:29:28,471 INFO [capacityManagement] start correct usage
-
-2021-05-26 15:29:28,491 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 15:29:28,756 WARN clearConfigHistory start
-
-2021-05-26 15:39:28,492 INFO [capacityManagement] start correct usage
-
-2021-05-26 15:39:28,541 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 15:39:28,765 WARN clearConfigHistory start
-
-2021-05-26 15:49:28,542 INFO [capacityManagement] start correct usage
-
-2021-05-26 15:49:28,556 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 15:49:28,769 WARN clearConfigHistory start
-
-2021-05-26 15:59:28,557 INFO [capacityManagement] start correct usage
-
-2021-05-26 15:59:28,569 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 15:59:28,892 WARN clearConfigHistory start
-
-2021-05-26 16:09:28,569 INFO [capacityManagement] start correct usage
-
-2021-05-26 16:09:28,580 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 16:09:28,895 WARN clearConfigHistory start
-
-2021-05-26 16:19:28,580 INFO [capacityManagement] start correct usage
-
-2021-05-26 16:19:28,593 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 16:19:28,912 WARN clearConfigHistory start
-
-2021-05-26 16:29:28,594 INFO [capacityManagement] start correct usage
-
-2021-05-26 16:29:28,608 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 16:29:28,917 WARN clearConfigHistory start
-
-2021-05-26 16:39:28,609 INFO [capacityManagement] start correct usage
-
-2021-05-26 16:39:28,627 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-05-26 16:39:28,929 WARN clearConfigHistory start
+2021-05-31 16:16:17,148 INFO Nacos started successfully in stand alone mode. use external storage
 

@@ -1,178 +1,304 @@
-2021-05-25 09:28:10,975 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, taskKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP++false+null
+2021-05-31 15:00:46,229 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621407073000, length=18382, md5=280bdc125c98c63ad4ae23df6a8e3abd
 
-2021-05-25 09:28:11,039 WARN [dump-ignore] ignore to save cache file. groupKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, md5=c21f969b5f03d33d43e04f8f136e7682, lastModifiedOld=1621824393899, lastModifiedNew=1621906090775
+2021-05-31 15:00:46,418 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621407735000, length=566, md5=8e03753524de74b43a62a4f0b1ee724d
 
-2021-05-25 09:29:12,151 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP+gsh-cloud-uat, taskKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP+gsh-cloud-uat+false+null
+2021-05-31 15:00:46,420 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621408421000, length=342, md5=02c186f8e37ee2b73fdec186baf9546e
 
-2021-05-25 09:40:28,671 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order_group+SEATA_GROUP, taskKey=service.vgroupMapping.service-order_group+SEATA_GROUP++false+null
+2021-05-31 15:00:46,422 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621407413000, length=2067, md5=edbb22b747a20d4c7c67add092e04ed2
 
-2021-05-25 09:41:55,535 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order_group+SEATA_GROUP+gsh-cloud-uat, taskKey=service.vgroupMapping.service-order_group+SEATA_GROUP+gsh-cloud-uat+false+null
+2021-05-31 15:00:46,423 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621407453000, length=1115, md5=612043e70c713d3875f091e3a2e05159
 
-2021-05-25 13:29:36,875 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621407073000, length=18382, md5=280bdc125c98c63ad4ae23df6a8e3abd
+2021-05-31 15:00:46,427 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621407188000, length=892, md5=cb41c6a0b692c674a220f2fcee825ffc
 
-2021-05-25 13:29:36,904 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621407735000, length=566, md5=8e03753524de74b43a62a4f0b1ee724d
+2021-05-31 15:00:46,428 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
 
-2021-05-25 13:29:36,921 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621408421000, length=342, md5=02c186f8e37ee2b73fdec186baf9546e
+2021-05-31 15:00:46,430 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
 
-2021-05-25 13:29:36,922 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621407413000, length=2067, md5=edbb22b747a20d4c7c67add092e04ed2
+2021-05-31 15:00:46,431 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621407499000, length=810, md5=44f335d27472e54fa243fd03e787835c
 
-2021-05-25 13:29:36,923 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621407453000, length=1115, md5=612043e70c713d3875f091e3a2e05159
+2021-05-31 15:00:46,433 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
 
-2021-05-25 13:29:36,924 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621407188000, length=892, md5=cb41c6a0b692c674a220f2fcee825ffc
+2021-05-31 15:00:46,435 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
 
-2021-05-25 13:29:36,932 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
+2021-05-31 15:00:46,436 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621406631000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
 
-2021-05-25 13:29:36,933 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
+2021-05-31 15:00:46,438 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621407142000, length=1806, md5=bc09ac88af01e6bb4f740cb1741815cf
 
-2021-05-25 13:29:36,934 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621407499000, length=810, md5=44f335d27472e54fa243fd03e787835c
+2021-05-31 15:00:46,439 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621406755000, length=2484, md5=fac41de36fc58ef412ba63ab2e831dba
 
-2021-05-25 13:29:36,935 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
+2021-05-31 15:00:46,440 INFO [dump-all-ok] service-user-uat.yaml+DEFAULT_GROUP, 1621479024000, length=1635, md5=7198712ffc4177bfa175fbe5a55e3f0e
 
-2021-05-25 13:29:36,936 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
+2021-05-31 15:00:46,441 INFO [dump-all-ok] mqtt-uat.yaml+PUBLIC, 1621408658000, length=262, md5=b385cb55451783d6e1632a47e59ca830
 
-2021-05-25 13:29:36,942 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621406631000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+2021-05-31 15:00:46,442 INFO [dump-all-ok] seata-uat.yaml+PUBLIC, 1621408762000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
 
-2021-05-25 13:29:36,946 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621407142000, length=1806, md5=bc09ac88af01e6bb4f740cb1741815cf
+2021-05-31 15:00:46,446 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621411194000, length=17864, md5=130e67df90e8f44b55f9f8b91ea25cf5
 
-2021-05-25 13:29:36,947 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621406755000, length=2484, md5=fac41de36fc58ef412ba63ab2e831dba
+2021-05-31 15:00:46,448 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621411194000, length=498, md5=8dc011ccca7b37b975a837f5a1e7da7c
 
-2021-05-25 13:29:36,948 INFO [dump-all-ok] service-user-uat.yaml+DEFAULT_GROUP, 1621479024000, length=1635, md5=7198712ffc4177bfa175fbe5a55e3f0e
+2021-05-31 15:00:46,450 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621411194000, length=134, md5=1f4c5aea54655c560fc4416e967a8f39
 
-2021-05-25 13:29:36,949 INFO [dump-all-ok] mqtt-uat.yaml+PUBLIC, 1621408658000, length=262, md5=b385cb55451783d6e1632a47e59ca830
+2021-05-31 15:00:46,451 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621411194000, length=1983, md5=1efd850c345e4ff6ff9c5d3925bea2ee
 
-2021-05-25 13:29:36,963 INFO [dump-all-ok] seata-uat.yaml+PUBLIC, 1621408762000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+2021-05-31 15:00:46,452 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
 
-2021-05-25 13:29:36,965 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621411194000, length=17864, md5=130e67df90e8f44b55f9f8b91ea25cf5
+2021-05-31 15:00:46,453 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621411194000, length=878, md5=16f5080e76925b7e2666e58fdc9ef35e
 
-2021-05-25 13:29:36,966 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621411194000, length=498, md5=8dc011ccca7b37b975a837f5a1e7da7c
+2021-05-31 15:00:46,455 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
 
-2021-05-25 13:29:36,966 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621411194000, length=134, md5=1f4c5aea54655c560fc4416e967a8f39
+2021-05-31 15:00:46,456 INFO [dump-all-ok] service-foundation-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1638, md5=cea8aa91c5429c2317d5fe662ca1b5ff
 
-2021-05-25 13:29:36,976 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621411194000, length=1983, md5=1efd850c345e4ff6ff9c5d3925bea2ee
+2021-05-31 15:00:46,459 INFO [dump-all-ok] service-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=766, md5=89774fd62d09ce0765300aa118f6e2d8
 
-2021-05-25 13:29:36,977 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+2021-05-31 15:00:46,460 INFO [dump-all-ok] service-dict-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1635, md5=743cff8de206207e1a742243466354d2
 
-2021-05-25 13:29:36,978 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621411194000, length=878, md5=16f5080e76925b7e2666e58fdc9ef35e
+2021-05-31 15:00:46,462 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
 
-2021-05-25 13:29:36,978 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
+2021-05-31 15:00:46,462 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621411194000, length=832, md5=08361d753b3af42b73a038f1573287c8
 
-2021-05-25 13:29:36,988 INFO [dump-all-ok] service-foundation-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1638, md5=cea8aa91c5429c2317d5fe662ca1b5ff
+2021-05-31 15:00:46,463 INFO [dump-all-ok] service-job-uat.yaml+DEFAULT_GROUP, 1621411194000, length=85, md5=8b962e6ba595041d2832f22ffc1fa2a9
 
-2021-05-25 13:29:36,989 INFO [dump-all-ok] service-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=766, md5=89774fd62d09ce0765300aa118f6e2d8
+2021-05-31 15:00:46,464 INFO [dump-all-ok] service-teach-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1627, md5=3ebcf44203ab4dee987c30ea2540a39d
 
-2021-05-25 13:29:36,991 INFO [dump-all-ok] service-dict-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1635, md5=743cff8de206207e1a742243466354d2
+2021-05-31 15:00:46,465 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
 
-2021-05-25 13:29:36,992 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
+2021-05-31 15:00:46,466 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
 
-2021-05-25 13:29:36,992 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621411194000, length=832, md5=08361d753b3af42b73a038f1573287c8
+2021-05-31 15:00:46,470 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
 
-2021-05-25 13:29:37,003 INFO [dump-all-ok] service-job-uat.yaml+DEFAULT_GROUP, 1621411194000, length=85, md5=8b962e6ba595041d2832f22ffc1fa2a9
+2021-05-31 15:00:46,471 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621411194000, length=2378, md5=08e2b107ef5c66b7ac699b015d52372c
 
-2021-05-25 13:29:37,004 INFO [dump-all-ok] service-teach-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1627, md5=3ebcf44203ab4dee987c30ea2540a39d
+2021-05-31 15:00:46,472 INFO [dump-all-ok] seata-local+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
 
-2021-05-25 13:29:37,019 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
+2021-05-31 15:00:46,473 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621411194000, length=2521, md5=0fbf13d85f5e73a9b1e6a7770df50586
 
-2021-05-25 13:29:37,021 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
+2021-05-31 15:00:46,474 INFO [dump-all-ok] seata-uat.yaml+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
 
-2021-05-25 13:29:37,022 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+2021-05-31 15:00:46,699 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621479220000, length=18382, md5=280bdc125c98c63ad4ae23df6a8e3abd
 
-2021-05-25 13:29:37,023 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621411194000, length=2378, md5=08e2b107ef5c66b7ac699b015d52372c
+2021-05-31 15:00:46,701 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621479220000, length=566, md5=8e03753524de74b43a62a4f0b1ee724d
 
-2021-05-25 13:29:37,023 INFO [dump-all-ok] seata-local+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+2021-05-31 15:00:46,704 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621479220000, length=342, md5=02c186f8e37ee2b73fdec186baf9546e
 
-2021-05-25 13:29:37,024 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621411194000, length=2521, md5=0fbf13d85f5e73a9b1e6a7770df50586
+2021-05-31 15:00:46,705 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621479220000, length=2067, md5=edbb22b747a20d4c7c67add092e04ed2
 
-2021-05-25 13:29:37,026 INFO [dump-all-ok] seata-uat.yaml+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+2021-05-31 15:00:46,724 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621479220000, length=1115, md5=612043e70c713d3875f091e3a2e05159
 
-2021-05-25 13:29:37,034 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621479220000, length=18382, md5=280bdc125c98c63ad4ae23df6a8e3abd
+2021-05-31 15:00:46,747 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621479220000, length=892, md5=cb41c6a0b692c674a220f2fcee825ffc
 
-2021-05-25 13:29:37,036 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621479220000, length=566, md5=8e03753524de74b43a62a4f0b1ee724d
+2021-05-31 15:00:46,748 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621479220000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
 
-2021-05-25 13:29:37,037 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621479220000, length=342, md5=02c186f8e37ee2b73fdec186baf9546e
+2021-05-31 15:00:46,749 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621479220000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
 
-2021-05-25 13:29:37,038 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621479220000, length=2067, md5=edbb22b747a20d4c7c67add092e04ed2
+2021-05-31 15:00:46,751 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621479220000, length=810, md5=44f335d27472e54fa243fd03e787835c
 
-2021-05-25 13:29:37,039 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621479220000, length=1115, md5=612043e70c713d3875f091e3a2e05159
+2021-05-31 15:00:46,752 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621479220000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
 
-2021-05-25 13:29:37,052 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621479220000, length=892, md5=cb41c6a0b692c674a220f2fcee825ffc
+2021-05-31 15:00:46,754 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621479220000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
 
-2021-05-25 13:29:37,058 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621479220000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
+2021-05-31 15:00:46,756 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621479220000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
 
-2021-05-25 13:29:37,060 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621479220000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
+2021-05-31 15:00:46,757 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621479220000, length=1806, md5=bc09ac88af01e6bb4f740cb1741815cf
 
-2021-05-25 13:29:37,070 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621479220000, length=810, md5=44f335d27472e54fa243fd03e787835c
+2021-05-31 15:00:46,764 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621846637000, length=2468, md5=546e598ab3d5f4bbabcc3680a749e3d2
 
-2021-05-25 13:29:37,076 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621479220000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
+2021-05-31 15:00:46,766 INFO [dump-all-ok] service-user-uat.yaml+DEFAULT_GROUP, 1622095799000, length=1646, md5=9e4a9c8fae9d7d75e04b0ec29865c52f
 
-2021-05-25 13:29:37,083 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621479220000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
+2021-05-31 15:00:46,768 INFO [dump-all-ok] mqtt-uat.yaml+PUBLIC, 1621479220000, length=262, md5=b385cb55451783d6e1632a47e59ca830
 
-2021-05-25 13:29:37,099 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621479220000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+2021-05-31 15:00:46,769 INFO [dump-all-ok] seata-uat.yaml+PUBLIC, 1621825065000, length=686, md5=85ae39373a98cef6857f7d89545f6dae
 
-2021-05-25 13:29:37,100 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621479220000, length=1806, md5=bc09ac88af01e6bb4f740cb1741815cf
+2021-05-31 15:00:46,770 INFO [dump-all-ok] service.enableDegrade+SEATA_GROUP, 1621823804000, length=5, md5=68934a3e9455fa72420237eb05902327
 
-2021-05-25 13:29:37,102 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621846637000, length=2468, md5=546e598ab3d5f4bbabcc3680a749e3d2
+2021-05-31 15:00:46,771 INFO [dump-all-ok] service.disableGlobalTransaction+SEATA_GROUP, 1621823804000, length=5, md5=68934a3e9455fa72420237eb05902327
 
-2021-05-25 13:29:37,102 INFO [dump-all-ok] service-user-uat.yaml+DEFAULT_GROUP, 1621479627000, length=1643, md5=9e5e03f1b902f1003564c7f16cfc076d
+2021-05-31 15:00:46,772 INFO [dump-all-ok] store.mode+SEATA_GROUP, 1621823805000, length=2, md5=d77d5e503ad1439f585ac494268b351b
 
-2021-05-25 13:29:37,103 INFO [dump-all-ok] mqtt-uat.yaml+PUBLIC, 1621479220000, length=262, md5=b385cb55451783d6e1632a47e59ca830
+2021-05-31 15:00:46,774 INFO [dump-all-ok] store.db.datasource+SEATA_GROUP, 1621823805000, length=5, md5=3d650fb8a5df01600281d48c47c9fa60
 
-2021-05-25 13:29:37,104 INFO [dump-all-ok] seata-uat.yaml+PUBLIC, 1621825065000, length=686, md5=85ae39373a98cef6857f7d89545f6dae
+2021-05-31 15:00:46,776 INFO [dump-all-ok] store.db.dbType+SEATA_GROUP, 1621823805000, length=5, md5=81c3b080dad537de7e10e0987a4bf52e
 
-2021-05-25 13:29:37,106 INFO [dump-all-ok] service.enableDegrade+SEATA_GROUP, 1621823804000, length=5, md5=68934a3e9455fa72420237eb05902327
+2021-05-31 15:00:46,776 INFO [dump-all-ok] store.db.driverClassName+SEATA_GROUP, 1621823806000, length=21, md5=683cf0c3a5a56cec94dfac94ca16d760
 
-2021-05-25 13:29:37,106 INFO [dump-all-ok] service.disableGlobalTransaction+SEATA_GROUP, 1621823804000, length=5, md5=68934a3e9455fa72420237eb05902327
+2021-05-31 15:00:46,787 INFO [dump-all-ok] store.db.url+SEATA_GROUP, 1622095507000, length=54, md5=cc95245bfc12bb241eb28d8834ee4d27
 
-2021-05-25 13:29:37,107 INFO [dump-all-ok] store.mode+SEATA_GROUP, 1621823805000, length=2, md5=d77d5e503ad1439f585ac494268b351b
+2021-05-31 15:00:46,788 INFO [dump-all-ok] store.db.user+SEATA_GROUP, 1621823806000, length=4, md5=63a9f0ea7bb98050796b649e85481845
 
-2021-05-25 13:29:37,119 INFO [dump-all-ok] store.db.datasource+SEATA_GROUP, 1621823805000, length=5, md5=3d650fb8a5df01600281d48c47c9fa60
+2021-05-31 15:00:46,790 INFO [dump-all-ok] store.db.password+SEATA_GROUP, 1621823807000, length=3, md5=202cb962ac59075b964b07152d234b70
 
-2021-05-25 13:29:37,120 INFO [dump-all-ok] store.db.dbType+SEATA_GROUP, 1621823805000, length=5, md5=81c3b080dad537de7e10e0987a4bf52e
+2021-05-31 15:00:46,792 INFO [dump-all-ok] store.db.minConn+SEATA_GROUP, 1621823807000, length=1, md5=e4da3b7fbbce2345d7772b0674a318d5
 
-2021-05-25 13:29:37,131 INFO [dump-all-ok] store.db.driverClassName+SEATA_GROUP, 1621823806000, length=21, md5=683cf0c3a5a56cec94dfac94ca16d760
+2021-05-31 15:00:46,793 INFO [dump-all-ok] store.db.maxConn+SEATA_GROUP, 1621823807000, length=2, md5=34173cb38f07f89ddbebc2ac9128303f
 
-2021-05-25 13:29:37,132 INFO [dump-all-ok] store.db.url+SEATA_GROUP, 1621823806000, length=49, md5=cbb3bd573704f125fb4f2489208abaec
+2021-05-31 15:00:46,800 INFO [dump-all-ok] store.db.globalTable+SEATA_GROUP, 1621823808000, length=12, md5=8b28fb6bb4c4f984df2709381f8eba2b
 
-2021-05-25 13:29:37,133 INFO [dump-all-ok] store.db.user+SEATA_GROUP, 1621823806000, length=4, md5=63a9f0ea7bb98050796b649e85481845
+2021-05-31 15:00:46,803 INFO [dump-all-ok] store.db.branchTable+SEATA_GROUP, 1621823808000, length=12, md5=54bcdac38cf62e103fe115bcf46a660c
 
-2021-05-25 13:29:37,140 INFO [dump-all-ok] store.db.password+SEATA_GROUP, 1621823807000, length=3, md5=202cb962ac59075b964b07152d234b70
+2021-05-31 15:00:46,804 INFO [dump-all-ok] store.db.queryLimit+SEATA_GROUP, 1621823808000, length=3, md5=f899139df5e1059396431415e770c6dd
 
-2021-05-25 13:29:37,142 INFO [dump-all-ok] store.db.minConn+SEATA_GROUP, 1621823807000, length=1, md5=e4da3b7fbbce2345d7772b0674a318d5
+2021-05-31 15:00:46,805 INFO [dump-all-ok] store.db.lockTable+SEATA_GROUP, 1621823809000, length=10, md5=55e0cae3b6dc6696b768db90098b8f2f
 
-2021-05-25 13:29:37,142 INFO [dump-all-ok] store.db.maxConn+SEATA_GROUP, 1621823807000, length=2, md5=34173cb38f07f89ddbebc2ac9128303f
+2021-05-31 15:00:46,807 INFO [dump-all-ok] store.db.maxWait+SEATA_GROUP, 1621823809000, length=4, md5=a35fe7f7fe8217b4369a0af4244d1fca
 
-2021-05-25 13:29:37,143 INFO [dump-all-ok] store.db.globalTable+SEATA_GROUP, 1621823808000, length=12, md5=8b28fb6bb4c4f984df2709381f8eba2b
+2021-05-31 15:00:46,809 INFO [dump-all-ok] service-order-uat.yaml+DEFAULT_GROUP, 1622095782000, length=1647, md5=288ee422148fa4b728827053c94cd161
 
-2021-05-25 13:29:37,144 INFO [dump-all-ok] store.db.branchTable+SEATA_GROUP, 1621823808000, length=12, md5=54bcdac38cf62e103fe115bcf46a660c
+2021-05-31 15:00:46,812 INFO [dump-all-ok] service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, 1621906152000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
 
-2021-05-25 13:29:37,145 INFO [dump-all-ok] store.db.queryLimit+SEATA_GROUP, 1621823808000, length=3, md5=f899139df5e1059396431415e770c6dd
+2021-05-31 15:00:46,814 INFO [dump-all-ok] service.vgroupMapping.service-order_group+SEATA_GROUP, 1621906828000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
 
-2021-05-25 13:29:37,146 INFO [dump-all-ok] store.db.lockTable+SEATA_GROUP, 1621823809000, length=10, md5=55e0cae3b6dc6696b768db90098b8f2f
+2021-05-31 15:00:46,816 INFO [dump-all-ok] service.vgroupMapping.service-order_group+SEATA_GROUP, 1621906915000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
 
-2021-05-25 13:29:37,147 INFO [dump-all-ok] store.db.maxWait+SEATA_GROUP, 1621823809000, length=4, md5=a35fe7f7fe8217b4369a0af4244d1fca
+2021-05-31 15:00:46,818 INFO [dump-all-ok] service.vgroupMapping.service-user_group+SEATA_GROUP, 1622095712000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
 
-2021-05-25 13:29:37,148 INFO [dump-all-ok] service-order-uat.yaml+DEFAULT_GROUP, 1621590392000, length=1699, md5=3813010e0fdf9dee20983d12cc6d4c7d
+2021-05-31 16:16:07,839 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621407073000, length=18382, md5=280bdc125c98c63ad4ae23df6a8e3abd
 
-2021-05-25 13:29:37,163 INFO [dump-all-ok] service.vgroupMapping.service-user-fescar-service-group+SEATA_GROUP, 1621824305000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
+2021-05-31 16:16:08,023 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621407735000, length=566, md5=8e03753524de74b43a62a4f0b1ee724d
 
-2021-05-25 13:29:37,164 INFO [dump-all-ok] service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, 1621906091000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
+2021-05-31 16:16:08,027 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621408421000, length=342, md5=02c186f8e37ee2b73fdec186baf9546e
 
-2021-05-25 13:29:37,166 INFO [dump-all-ok] service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, 1621906152000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
+2021-05-31 16:16:08,029 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621407413000, length=2067, md5=edbb22b747a20d4c7c67add092e04ed2
 
-2021-05-25 13:29:37,167 INFO [dump-all-ok] service.vgroupMapping.service-order_group+SEATA_GROUP, 1621906828000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
+2021-05-31 16:16:08,034 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621407453000, length=1115, md5=612043e70c713d3875f091e3a2e05159
 
-2021-05-25 13:29:37,168 INFO [dump-all-ok] service.vgroupMapping.service-order_group+SEATA_GROUP, 1621906915000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
+2021-05-31 16:16:08,041 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621407188000, length=892, md5=cb41c6a0b692c674a220f2fcee825ffc
 
-2021-05-25 13:30:02,763 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP+gsh-cloud-uat, taskKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP+gsh-cloud-uat+false+null
+2021-05-31 16:16:08,045 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
 
-2021-05-25 14:01:31,330 INFO [dump-task] add task. groupKey=store.db.url+SEATA_GROUP, taskKey=store.db.url+SEATA_GROUP++false+null
+2021-05-31 16:16:08,048 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621406631000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
 
-2021-05-25 14:02:24,404 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-user_group+SEATA_GROUP, taskKey=service.vgroupMapping.service-user_group+SEATA_GROUP++false+null
+2021-05-31 16:16:08,050 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621407499000, length=810, md5=44f335d27472e54fa243fd03e787835c
 
-2021-05-25 14:02:38,208 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-user-fescar-service-group+SEATA_GROUP, taskKey=service.vgroupMapping.service-user-fescar-service-group+SEATA_GROUP++false+null
+2021-05-31 16:16:08,052 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
 
-2021-05-25 14:02:38,211 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, taskKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP++false+null
+2021-05-31 16:16:08,054 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621406631000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
 
-2021-05-25 14:30:53,342 INFO [dump-task] add task. groupKey=service-order-uat.yaml+DEFAULT_GROUP+gsh-cloud-uat, taskKey=service-order-uat.yaml+DEFAULT_GROUP+gsh-cloud-uat+false+null
+2021-05-31 16:16:08,056 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621406631000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
 
-2021-05-25 14:31:38,293 INFO [dump-task] add task. groupKey=service-user-uat.yaml+DEFAULT_GROUP+gsh-cloud-uat, taskKey=service-user-uat.yaml+DEFAULT_GROUP+gsh-cloud-uat+false+null
+2021-05-31 16:16:08,057 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621407142000, length=1806, md5=bc09ac88af01e6bb4f740cb1741815cf
+
+2021-05-31 16:16:08,148 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621406755000, length=2484, md5=fac41de36fc58ef412ba63ab2e831dba
+
+2021-05-31 16:16:08,171 INFO [dump-all-ok] service-user-uat.yaml+DEFAULT_GROUP, 1621479024000, length=1635, md5=7198712ffc4177bfa175fbe5a55e3f0e
+
+2021-05-31 16:16:08,173 INFO [dump-all-ok] mqtt-uat.yaml+PUBLIC, 1621408658000, length=262, md5=b385cb55451783d6e1632a47e59ca830
+
+2021-05-31 16:16:08,175 INFO [dump-all-ok] seata-uat.yaml+PUBLIC, 1621408762000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+
+2021-05-31 16:16:08,177 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621411194000, length=17864, md5=130e67df90e8f44b55f9f8b91ea25cf5
+
+2021-05-31 16:16:08,179 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621411194000, length=498, md5=8dc011ccca7b37b975a837f5a1e7da7c
+
+2021-05-31 16:16:08,180 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621411194000, length=134, md5=1f4c5aea54655c560fc4416e967a8f39
+
+2021-05-31 16:16:08,181 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621411194000, length=1983, md5=1efd850c345e4ff6ff9c5d3925bea2ee
+
+2021-05-31 16:16:08,183 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+
+2021-05-31 16:16:08,185 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621411194000, length=878, md5=16f5080e76925b7e2666e58fdc9ef35e
+
+2021-05-31 16:16:08,186 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
+
+2021-05-31 16:16:08,207 INFO [dump-all-ok] service-foundation-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1638, md5=cea8aa91c5429c2317d5fe662ca1b5ff
+
+2021-05-31 16:16:08,209 INFO [dump-all-ok] service-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=766, md5=89774fd62d09ce0765300aa118f6e2d8
+
+2021-05-31 16:16:08,210 INFO [dump-all-ok] service-dict-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1635, md5=743cff8de206207e1a742243466354d2
+
+2021-05-31 16:16:08,211 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
+
+2021-05-31 16:16:08,212 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621411194000, length=832, md5=08361d753b3af42b73a038f1573287c8
+
+2021-05-31 16:16:08,213 INFO [dump-all-ok] service-job-uat.yaml+DEFAULT_GROUP, 1621411194000, length=85, md5=8b962e6ba595041d2832f22ffc1fa2a9
+
+2021-05-31 16:16:08,214 INFO [dump-all-ok] service-teach-uat.yaml+DEFAULT_GROUP, 1621411194000, length=1627, md5=3ebcf44203ab4dee987c30ea2540a39d
+
+2021-05-31 16:16:08,282 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
+
+2021-05-31 16:16:08,317 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621411194000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
+
+2021-05-31 16:16:08,319 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621411194000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+
+2021-05-31 16:16:08,321 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621411194000, length=2378, md5=08e2b107ef5c66b7ac699b015d52372c
+
+2021-05-31 16:16:08,323 INFO [dump-all-ok] seata-local+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+
+2021-05-31 16:16:08,324 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621411194000, length=2521, md5=0fbf13d85f5e73a9b1e6a7770df50586
+
+2021-05-31 16:16:08,325 INFO [dump-all-ok] seata-uat.yaml+DEFAULT_GROUP, 1621411194000, length=610, md5=05b53d81c8b183e97a6b5896041ba884
+
+2021-05-31 16:16:08,328 INFO [dump-all-ok] url-permission-map.yaml+DEFAULT_GROUP, 1621479220000, length=18382, md5=280bdc125c98c63ad4ae23df6a8e3abd
+
+2021-05-31 16:16:08,332 INFO [dump-all-ok] redis-uat.yaml+PUBLIC, 1621479220000, length=566, md5=8e03753524de74b43a62a4f0b1ee724d
+
+2021-05-31 16:16:08,333 INFO [dump-all-ok] rabbitmq-uat.yaml+PUBLIC, 1621479220000, length=342, md5=02c186f8e37ee2b73fdec186baf9546e
+
+2021-05-31 16:16:08,336 INFO [dump-all-ok] mysql-common-uat.yaml+PUBLIC, 1621479220000, length=2067, md5=edbb22b747a20d4c7c67add092e04ed2
+
+2021-05-31 16:16:08,338 INFO [dump-all-ok] feign-local.yaml+PUBLIC, 1621479220000, length=1115, md5=612043e70c713d3875f091e3a2e05159
+
+2021-05-31 16:16:08,343 INFO [dump-all-ok] application-common-uat.yaml+PUBLIC, 1621479220000, length=892, md5=cb41c6a0b692c674a220f2fcee825ffc
+
+2021-05-31 16:16:08,344 INFO [dump-all-ok] service-oss-uat.yaml+DEFAULT_GROUP, 1621479220000, length=1044, md5=96a858c3a38e874ef3c018dc935185de
+
+2021-05-31 16:16:08,348 INFO [dump-all-ok] service-exam-uat.yaml+DEFAULT_GROUP, 1621479220000, length=1624, md5=c318a636890d90bfbb4dcd3473447b4d
+
+2021-05-31 16:16:08,349 INFO [dump-all-ok] service-account-uat.yaml+DEFAULT_GROUP, 1621479220000, length=810, md5=44f335d27472e54fa243fd03e787835c
+
+2021-05-31 16:16:08,351 INFO [dump-all-ok] bff-student-iot-uat.yaml+DEFAULT_GROUP, 1621479220000, length=232, md5=b0b21c085e16e4fc6162cd7aed88ddc6
+
+2021-05-31 16:16:08,352 INFO [dump-all-ok] bff-teacher-iot-uat.yaml+DEFAULT_GROUP, 1621479220000, length=294, md5=63799a10355b1aec73b2c3a46024d8cd
+
+2021-05-31 16:16:08,353 INFO [dump-all-ok] feign-uat.yaml+PUBLIC, 1621479220000, length=1205, md5=5bad47d0f481982d177d41e00218b9d8
+
+2021-05-31 16:16:08,355 INFO [dump-all-ok] gateway-management-uat.yaml+DEFAULT_GROUP, 1621479220000, length=1806, md5=bc09ac88af01e6bb4f740cb1741815cf
+
+2021-05-31 16:16:08,356 INFO [dump-all-ok] keycloak-uat.yaml+PUBLIC, 1621846637000, length=2468, md5=546e598ab3d5f4bbabcc3680a749e3d2
+
+2021-05-31 16:16:08,358 INFO [dump-all-ok] service-user-uat.yaml+DEFAULT_GROUP, 1622095799000, length=1646, md5=9e4a9c8fae9d7d75e04b0ec29865c52f
+
+2021-05-31 16:16:08,359 INFO [dump-all-ok] mqtt-uat.yaml+PUBLIC, 1621479220000, length=262, md5=b385cb55451783d6e1632a47e59ca830
+
+2021-05-31 16:16:08,360 INFO [dump-all-ok] seata-uat.yaml+PUBLIC, 1621825065000, length=686, md5=85ae39373a98cef6857f7d89545f6dae
+
+2021-05-31 16:16:08,385 INFO [dump-all-ok] service.enableDegrade+SEATA_GROUP, 1621823804000, length=5, md5=68934a3e9455fa72420237eb05902327
+
+2021-05-31 16:16:08,397 INFO [dump-all-ok] service.disableGlobalTransaction+SEATA_GROUP, 1621823804000, length=5, md5=68934a3e9455fa72420237eb05902327
+
+2021-05-31 16:16:08,398 INFO [dump-all-ok] store.mode+SEATA_GROUP, 1621823805000, length=2, md5=d77d5e503ad1439f585ac494268b351b
+
+2021-05-31 16:16:08,401 INFO [dump-all-ok] store.db.datasource+SEATA_GROUP, 1621823805000, length=5, md5=3d650fb8a5df01600281d48c47c9fa60
+
+2021-05-31 16:16:08,402 INFO [dump-all-ok] store.db.dbType+SEATA_GROUP, 1621823805000, length=5, md5=81c3b080dad537de7e10e0987a4bf52e
+
+2021-05-31 16:16:08,599 INFO [dump-all-ok] store.db.driverClassName+SEATA_GROUP, 1621823806000, length=21, md5=683cf0c3a5a56cec94dfac94ca16d760
+
+2021-05-31 16:16:08,771 INFO [dump-all-ok] store.db.url+SEATA_GROUP, 1622095507000, length=54, md5=cc95245bfc12bb241eb28d8834ee4d27
+
+2021-05-31 16:16:08,773 INFO [dump-all-ok] store.db.user+SEATA_GROUP, 1621823806000, length=4, md5=63a9f0ea7bb98050796b649e85481845
+
+2021-05-31 16:16:08,775 INFO [dump-all-ok] store.db.password+SEATA_GROUP, 1621823807000, length=3, md5=202cb962ac59075b964b07152d234b70
+
+2021-05-31 16:16:08,822 INFO [dump-all-ok] store.db.minConn+SEATA_GROUP, 1621823807000, length=1, md5=e4da3b7fbbce2345d7772b0674a318d5
+
+2021-05-31 16:16:08,824 INFO [dump-all-ok] store.db.maxConn+SEATA_GROUP, 1621823807000, length=2, md5=34173cb38f07f89ddbebc2ac9128303f
+
+2021-05-31 16:16:08,825 INFO [dump-all-ok] store.db.globalTable+SEATA_GROUP, 1621823808000, length=12, md5=8b28fb6bb4c4f984df2709381f8eba2b
+
+2021-05-31 16:16:08,827 INFO [dump-all-ok] store.db.branchTable+SEATA_GROUP, 1621823808000, length=12, md5=54bcdac38cf62e103fe115bcf46a660c
+
+2021-05-31 16:16:08,828 INFO [dump-all-ok] store.db.queryLimit+SEATA_GROUP, 1621823808000, length=3, md5=f899139df5e1059396431415e770c6dd
+
+2021-05-31 16:16:08,829 INFO [dump-all-ok] store.db.lockTable+SEATA_GROUP, 1621823809000, length=10, md5=55e0cae3b6dc6696b768db90098b8f2f
+
+2021-05-31 16:16:08,830 INFO [dump-all-ok] store.db.maxWait+SEATA_GROUP, 1621823809000, length=4, md5=a35fe7f7fe8217b4369a0af4244d1fca
+
+2021-05-31 16:16:08,831 INFO [dump-all-ok] service-order-uat.yaml+DEFAULT_GROUP, 1622095782000, length=1647, md5=288ee422148fa4b728827053c94cd161
+
+2021-05-31 16:16:08,834 INFO [dump-all-ok] service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, 1621906152000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
+
+2021-05-31 16:16:08,835 INFO [dump-all-ok] service.vgroupMapping.service-order_group+SEATA_GROUP, 1621906828000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
+
+2021-05-31 16:16:08,846 INFO [dump-all-ok] service.vgroupMapping.service-order_group+SEATA_GROUP, 1621906915000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
+
+2021-05-31 16:16:08,847 INFO [dump-all-ok] service.vgroupMapping.service-user_group+SEATA_GROUP, 1622095712000, length=7, md5=c21f969b5f03d33d43e04f8f136e7682
 

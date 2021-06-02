@@ -1,36 +1,68 @@
-2021-05-25 13:29:16,109 INFO notifyConnectTimeout:200
+2021-05-31 15:00:21,653 INFO notifyConnectTimeout:200
 
-2021-05-25 13:29:16,150 INFO notifySocketTimeout:8000
+2021-05-31 15:00:22,093 INFO notifySocketTimeout:8000
 
-2021-05-25 13:29:16,151 INFO isHealthCheck:true
+2021-05-31 15:00:22,095 INFO isHealthCheck:true
 
-2021-05-25 13:29:16,151 INFO maxHealthCheckFailCount:12
+2021-05-31 15:00:22,097 INFO maxHealthCheckFailCount:12
 
-2021-05-25 13:29:16,151 INFO maxContent:10485760
+2021-05-31 15:00:22,098 INFO maxContent:10485760
 
-2021-05-25 13:29:16,153 INFO spring.datasource.platform:mysql
+2021-05-31 15:00:22,105 INFO spring.datasource.platform:mysql
 
-2021-05-25 13:29:36,499 WARN DumpService start
+2021-05-31 15:00:46,020 WARN DumpService start
 
-2021-05-25 13:29:36,501 INFO start clear all config-info.
+2021-05-31 15:00:46,032 INFO start clear all config-info.
 
-2021-05-25 13:29:36,503 WARN clear all config-info failed.
+2021-05-31 15:00:46,037 WARN clear all config-info failed.
 
-2021-05-25 13:29:36,505 WARN clear all config-info-tenant failed.
+2021-05-31 15:00:46,038 WARN clear all config-info-tenant failed.
 
-2021-05-25 13:29:37,168 INFO [all-dump] 137 / 137
+2021-05-31 15:00:46,818 INFO [all-dump] 139 / 139
 
-2021-05-25 13:29:37,169 INFO start clear all config-info-beta.
+2021-05-31 15:00:46,820 INFO start clear all config-info-beta.
 
-2021-05-25 13:29:37,170 WARN clear all config-info-beta failed.
+2021-05-31 15:00:46,821 WARN clear all config-info-beta failed.
 
-2021-05-25 13:29:37,171 WARN clear all config-info-beta-tenant failed.
+2021-05-31 15:00:46,824 WARN clear all config-info-beta-tenant failed.
 
-2021-05-25 13:29:37,199 INFO start clear all config-info-tag.
+2021-05-31 15:00:47,380 INFO start clear all config-info-tag.
 
-2021-05-25 13:29:37,199 WARN clear all config-info-tag failed.
+2021-05-31 15:00:47,381 WARN clear all config-info-tag failed.
 
-2021-05-25 13:29:37,200 WARN clear all config-info-tag-tenant failed.
+2021-05-31 15:00:47,381 WARN clear all config-info-tag-tenant failed.
 
-2021-05-25 14:01:11,055 WARN The task in ip: Member{ip='172.19.0.2', port=8848, state=UP, extendInfo={lastRefreshTime=1621920579283, raftPort=7848, version=1.4.2}}  did not completed in 1000ms 
+2021-05-31 16:15:49,676 INFO notifyConnectTimeout:200
+
+2021-05-31 16:15:50,115 INFO notifySocketTimeout:8000
+
+2021-05-31 16:15:50,117 INFO isHealthCheck:true
+
+2021-05-31 16:15:50,119 INFO maxHealthCheckFailCount:12
+
+2021-05-31 16:15:50,122 INFO maxContent:10485760
+
+2021-05-31 16:15:50,124 INFO spring.datasource.platform:mysql
+
+2021-05-31 16:16:06,848 WARN DumpService start
+
+2021-05-31 16:16:07,411 INFO start clear all config-info.
+
+2021-05-31 16:16:07,430 INFO clear all config-info success.
+
+2021-05-31 16:16:07,441 INFO clear all config-info-tenant success.
+
+2021-05-31 16:16:08,848 INFO [all-dump] 139 / 139
+
+2021-05-31 16:16:08,850 INFO start clear all config-info-beta.
+
+2021-05-31 16:16:08,870 WARN clear all config-info-beta failed.
+
+2021-05-31 16:16:08,871 WARN clear all config-info-beta-tenant failed.
+
+2021-05-31 16:16:08,891 INFO start clear all config-info-tag.
+
+2021-05-31 16:16:08,892 WARN clear all config-info-tag failed.
+
+2021-05-31 16:16:08,894 WARN clear all config-info-tag-tenant failed.
 

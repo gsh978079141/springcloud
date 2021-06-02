@@ -1,68 +1,10 @@
-2021-05-25 19:01:25,540 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:17004@DEFAULT@DEFAULT_GROUP@@service-order, region: unknown, msg: client timeout after 15000, last beat: 1621940455736
+2021-05-28 09:01:31,017 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8091@default@SEATA_GROUP@@seata-server, region: unknown, msg: client timeout after 15000, last beat: 1622109635621
 
-2021-05-25 19:01:25,898 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8001@DEFAULT@DEFAULT_GROUP@@gateway-api, region: unknown, msg: client timeout after 15000, last beat: 1621940455778
+2021-05-28 09:01:31,573 INFO SEATA_GROUP@@seata-server {SYNC} {IP-DEAD} cluster: default, dead ips size: 1, content: [192.168.112.88:8091:unknown:default_1.0_false_false_default]
 
-2021-05-25 19:01:25,973 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:17003@DEFAULT@DEFAULT_GROUP@@service-user, region: unknown, msg: client timeout after 15000, last beat: 1621940455738
+2021-05-28 09:01:31,573 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 
 
-2021-05-26 08:51:10,772 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8091@default@SEATA_GROUP@@seata-server, region: unknown, msg: client timeout after 15000, last beat: 1621940452558
+2021-05-28 09:01:32,303 INFO SEATA_GROUP@@seata-server {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [192.168.112.88:8091:unknown:default_1.0_true_false_default]
 
-2021-05-26 08:51:11,333 INFO service: DEFAULT_GROUP@@service-order {POS} {IP-ENABLED} valid: 192.168.112.88:17004@DEFAULT, region: unknown, msg: client beat ok
-
-2021-05-26 08:51:11,333 INFO service: DEFAULT_GROUP@@service-user {POS} {IP-ENABLED} valid: 192.168.112.88:17003@DEFAULT, region: unknown, msg: client beat ok
-
-2021-05-26 08:51:11,333 INFO service: DEFAULT_GROUP@@gateway-api {POS} {IP-ENABLED} valid: 192.168.112.88:8001@DEFAULT, region: unknown, msg: client beat ok
-
-2021-05-26 08:51:11,468 INFO service: SEATA_GROUP@@seata-server {POS} {IP-ENABLED} valid: 192.168.112.88:8091@default, region: unknown, msg: client beat ok
-
-2021-05-26 08:51:12,347 INFO SEATA_GROUP@@seata-server {SYNC} {IP-DEAD} cluster: default, dead ips size: 1, content: [192.168.112.88:8091:unknown:default_1.0_true_false_default]
-
-2021-05-26 08:51:12,347 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 
-
-2021-05-26 08:51:12,421 INFO DEFAULT_GROUP@@gateway-api {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-26 08:51:12,421 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway-api, ips: 
-
-2021-05-26 08:51:13,301 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-26 08:51:13,301 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-26 08:51:16,919 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-26 08:51:16,919 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 
-
-2021-05-26 08:51:16,986 INFO DEFAULT_GROUP@@gateway-api {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:8001:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-26 08:51:16,986 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway-api, ips: 192.168.112.88:8001_true,
-
-2021-05-26 08:51:17,217 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-26 08:51:17,217 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 192.168.112.88:17003_true,
-
-2021-05-26 08:51:17,224 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-26 08:51:17,224 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 192.168.112.88:17004_true,
-
-2021-05-26 08:51:19,720 INFO SEATA_GROUP@@seata-server {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [192.168.112.88:8091:unknown:default_1.0_true_false_default]
-
-2021-05-26 08:51:19,720 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 192.168.112.88:8091_true,
-
-2021-05-26 14:01:40,217 INFO DEFAULT_GROUP@@service-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17004:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-05-26 14:01:41,212 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-order, ips: 
-
-2021-05-26 14:02:13,391 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8001@DEFAULT@DEFAULT_GROUP@@gateway-api, region: unknown, msg: client timeout after 15000, last beat: 1622008914901
-
-2021-05-26 14:02:13,391 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:17003@DEFAULT@DEFAULT_GROUP@@service-user, region: unknown, msg: client timeout after 15000, last beat: 1622008916230
-
-2021-05-26 14:02:31,826 INFO DEFAULT_GROUP@@gateway-api {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:8001:unknown:DEFAULT_1.0_false_false_DEFAULT]
-
-2021-05-26 14:02:31,826 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway-api, ips: 
-
-2021-05-26 14:02:31,839 INFO DEFAULT_GROUP@@service-user {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.112.88:17003:unknown:DEFAULT_1.0_false_false_DEFAULT]
-
-2021-05-26 14:02:31,839 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-user, ips: 
-
-2021-05-26 15:54:07,405 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8091@default@SEATA_GROUP@@seata-server, region: unknown, msg: client timeout after 15000, last beat: 1622015628304
-
-2021-05-26 15:54:08,437 INFO service: SEATA_GROUP@@seata-server {POS} {IP-ENABLED} valid: 192.168.112.88:8091@default, region: unknown, msg: client beat ok
+2021-05-28 09:01:32,303 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 192.168.112.88:8091_true,
 

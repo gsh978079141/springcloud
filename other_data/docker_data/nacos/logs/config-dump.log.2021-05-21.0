@@ -1,6 +1,0 @@
-2021-05-21 17:46:33,218 INFO [dump-task] add task. groupKey=service-order-uat.yaml+DEFAULT_GROUP+gsh-cloud-uat, taskKey=service-order-uat.yaml+DEFAULT_GROUP+gsh-cloud-uat+false+null
-
-2021-05-21 17:50:17,077 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order_group+SEATA_GROUP, taskKey=service.vgroupMapping.service-order_group+SEATA_GROUP++false+null
-
-2021-05-21 17:56:14,508 INFO [dump-task] add task. groupKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP, taskKey=service.vgroupMapping.service-order-fescar-service-group+SEATA_GROUP++false+null
-
