@@ -1,0 +1,30 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:1
+    container_name: mysql
+    build: ./build
+    volumes:
+      - /data/mysql:/var/lib/mysql
+      - ./build/init:/docker-entrypoint-initdb.d/
+    environment:
+      - MYSQL_ROOT_PASSWORD=deepblue
+      - MYSQL_USER=edu
+      - MYSQL_PASSWORD=deepblue
+      - TZ=Asia/Shanghai
+    ports:
+      - "3306:3306"
+    restart: always
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    networks:
+      - edu-network
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4g
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

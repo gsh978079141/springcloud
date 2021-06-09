@@ -1,0 +1,21 @@
+##导入宏定义
+$!define
+
+#setTableSuffix("")
+##保存文件（宏定义）
+#save("/domain/mapper", "Mapper.java")
+
+##包路径（宏定义）
+#setPackageSuffix("domain.mapper")
+
+##设置表后缀（宏定义）
+$!autoImport
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper; $!{tableInfo.savePackageName}.domain.entity.$!tableInfo.name;
+
+##表注释（宏定义）
+#tableComment("表数据库访问层")
+@Mapper
+public interface $!{tableName}Mapper extends BaseMapper<$!{tableName}> {
+
+}

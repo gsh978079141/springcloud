@@ -1,0 +1,12 @@
+nameSuffix: "-shangyin-dev"
+namespace: "edu-edge-dev"
+commonLabels:
+  release: dev
+  edge: "shangyin-dev"
+
+
+bases:
+  - ../../base
+
+patchesStrategicmerge:
+  - node-selector.yaml

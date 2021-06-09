@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-promtail
+  namespace: edu-edge
+  labels:
+    app: edge-promtail
+    namespace: edu-edge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-promtail
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-promtail
+    spec:
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0
+      tolerations:
+        - key: "edge"
+          operator: "Equal"
+          value: "true"
+          effect: "NoSchedule"
+      hostNetwork: true
+      containers:
+        - name: edge-promtail
+          image: "grafana/promtail:2.0.0"
+          imagePullPolicy: IfNotPresent
+          # ports:
+          #   - containerPort: 3000
+          # env:
+          volumeMounts:
+            - name: app-log
+              readOnly: true
+              mountPath: /data/log/edu
+            - name: journal-log
+              readOnly: true
+              mountPath: /run/log/journal
+            - name: conf
+              mountPath: /etc/promtail
+      volumes:
+        - name: app-log
+          hostPath:
+            type: DirectoryOrCreate
+            path: /root/log/edu
+        - name: journal-log
+          hostPath:
+            type: DirectoryOrCreate
+            path: /run/log/journal
+        - name: conf
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/promtail/conf
+
+  

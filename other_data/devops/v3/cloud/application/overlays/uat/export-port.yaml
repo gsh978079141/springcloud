@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: platform-management
+spec:
+  replicas: 1
+
+
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: gateway-management
+spec:                   #必须
+  ports:
+    - name: tcp-essential
+      port: 8002
+      nodePort: 31002
+
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: gateway-api
+spec:                   #必须
+  ports:
+    - name: tcp-essential
+      port: 8001
+      nodePort: 31001

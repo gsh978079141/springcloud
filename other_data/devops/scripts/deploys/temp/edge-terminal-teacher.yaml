@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terminal-teacher-shangyin
+  namespace: education
+  labels:
+    app: terminal-teacher
+    type: edge
+    edge: shangyin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: terminal-teacher
+      type: edge
+      edge: shangyin
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: terminal-teacher
+        type: edge
+        edge: shangyin
+    spec:
+      nodeName: "#NODENAME#" #选择需要部署的边缘节点
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: terminal-teacher
+          image: core.harbor.cz.shenlan.com/dbp-edu/terminal-teacher:latest
+          env:
+            - name: KEYCLOAK_URL
+              value: '#KEYCLOAKURL#/auth'
+            - name: ENV
+              value: #EVN#
+            - name: KEYCLOAK_REALM
+              value: #KEYCLOAKREALM#
+          ports:
+            - name: tcp-essential
+              containerPort: 9202
+              protocol: TCP

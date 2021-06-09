@@ -1,0 +1,249 @@
+version: '3'
+services:
+  # 算法调度服务
+  edge-service-algorithm-dispatch:
+    container_name: edge-service-algorithm-dispatch
+    image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-algorithm-dispatch:v3.5.3
+    environment:
+      edge_name: edge.deepblue
+      node_name: deepblue
+      env_profile: prod
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+      stand-alone-mode: "false"
+      rabbitmq_host: rabbitmq
+      rabbitmq_port: 5672
+      rabbitmq_username: edu
+      rabbitmq_password: deepblue
+      sys_file_address_ip: 192.168.40.244
+      edge_service_biz_url_ip: 192.168.40.244
+      datasource_ip: 192.168.40.244
+      datasource_username: edu
+      datasource_password: deepblue
+    ports:
+      - 9101:9101
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+
+  #  学生端API服务
+  edge-service-student-iot:
+    container_name: edge-service-student-iot
+    image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-student-iot:v3.5.3
+    environment:
+      edge_name: edge.deepblue
+      node_name: deepblue
+      env_profile: prod
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+
+      bff_student_iot_url: http://bff-student-iot:7101
+      edge_service_media_url: http://edge-service-media:9006
+      edge_service_biz_url: http://edge-service-biz:9005
+      edge_service_video_process_url: http://edge-service-video-process:9004
+    ports:
+      - 9001:9001
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  # 教师端API服务
+  edge-service-teacher-iot:
+    container_name: edge-service-teacher-iot
+    image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-teacher-iot:v3.5.3
+    environment:
+      edge_name: edge.deepblue
+      node_name: deepblue
+      env_profile: prod
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+
+      bff_teacher_iot_url: http://bff-teacher-iot:7102
+      edge_service_media_url: http://edge-service-media:9006
+      edge_service_biz_url: http://edge-service-biz:9005
+      # service_foundation_url: http://service-foundation:7001
+      # service_exam_url: http://service-exam:7003
+      # service_teach_url: http://service-teach:7004
+      # edge_service_file_manager_url: http://edge-service-file-manager:9003
+      # edge_service_algorithm_dispatch_url: http://edge-service-algorithm-dispatch:9101
+      # edge_service_video_process_url: http://edge-service-video-process:9004
+    ports:
+      - 9002:9002
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  # 文件管理服务
+  edge-service-file-manager:
+    container_name: edge-service-file-manager
+    image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-file-manager:v3.5.3
+    environment:
+      edge_name: edge.deepblue
+      node_name: deepblue
+      datasource_ip: 192.168.40.244
+      datasource_username: edu
+      datasource_password: deepblue
+      env_profile: prod
+      storage_engine: standalone
+      standalone_base_url: http://192.168.40.244:9203
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms2048m -Xmx2048m -Duser.timezone=GMT+08'
+    ports:
+      - 9003:9003
+    volumes:
+      - /data/app/log:/var/log/edu
+      - /data/videos:/data/videos
+      - /data/evidence:/data/evidence
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4g
+
+  # 视频处理服务
+  edge-service-video-process:
+    container_name: edge-service-video-process
+    image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-video-process:v3.5.3
+    environment:
+      edge_name: edge.deepblue
+      node_name: deepblue
+      env_profile: prod
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08 -Djava.library.path=/usr/local/opencv3/share/OpenCV/java'
+      datasource_ip: 192.168.40.244
+      datasource_username: edu
+      datasource_password: deepblue
+      file-root-dir: /data
+      stand-alone-mode: "true"
+      stand-alone-base-url: http://192.168.40.244:9203/live_videos
+      stand-alone-live-video-dir-path: /data/live_videos
+      # storage_engine: xx
+      # aws_base_url: xx
+      # aws_basebucket: xx
+      # aws_access_key: xx
+      # aws_secret_key: xx
+      # aws_endpoint: xx
+      # ftp_host: xx
+      # ftp_account: xx
+      # ftp_credential: xx
+      # nginx_host: xx
+      # nginx_port: xx
+      # bff_teacher_iot_url: http://bff-teacher-iot:7102
+      # edge_service_media_url: http://edge-service-media:9006
+      # edge_service_biz_url: http://edge-service-biz:9005
+      # service_foundation_url: http://service-foundation:7001
+      # service_exam_url: http://service-exam:7003
+      # service_teach_url: http://service-teach:7004
+      # edge_service_file_manager_url: http://edge-service-file-manager:9003
+      # edge_service_algorithm_dispatch_url: http://edge-service-algorithm-dispatch:9101
+      # edge_service_video_process_url: http://edge-service-video-process:9004
+    ports:
+      - 9004:9004
+    volumes:
+      - /data/app/log:/var/log/edu
+      - /data/videos:/data/videos
+      - /data/videoout:/data/videoout
+      - /data/live_videos:/data/live_videos
+      - /data/uploadcache:/data/uploadcache
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '8.0'
+          memory: 16g
+
+
+  #  通用业务处理服务
+  edge-service-biz:
+    container_name: edge-service-biz
+    image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-biz:v3.5.3
+    environment:
+      edge_name: edge.deepblue
+      node_name: deepblue
+      env_profile: prod
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+      sys_file_address_ip: 192.168.40.244
+      edge_service_biz_url_ip: 192.168.40.244
+      datasource_ip: 192.168.40.244
+      datasource_username: edu
+      datasource_password: deepblue
+      service_foundation_url: http://service-foundation:7001
+      service_exam_url: http://service-exam:7003
+      service_teach_url: http://service-teach:7004
+      edge_service_file_manager_url: http://edge-service-file-manager:9003
+      edge_service_algorithm_dispatch_url: http://edge-service-algorithm-dispatch:9101
+      edge_service_video_process_url: http://edge-service-video-process:9004
+    ports:
+      - 9005:9005
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  #  流媒体服务
+  edge-service-media:
+    container_name: edge-service-media
+    image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-media:v3.5.3
+    environment:
+      edge_name: edge.deepblue
+      node_name: deepblue
+      env_profile: prod
+      datasource_ip: 192.168.40.244
+      datasource_username: edu
+      datasource_password: deepblue
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms2048m -Xmx2048m -Duser.timezone=GMT+08 -Dkms.url=ws://192.168.40.244:8888/kurento'
+      video_url_prefix: http://192.168.40.244:9203
+    ports:
+      - 9006:9006
+    volumes:
+      - /data/app/log:/var/log/edu
+      - /data/videos:/data/videos
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4g
+
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

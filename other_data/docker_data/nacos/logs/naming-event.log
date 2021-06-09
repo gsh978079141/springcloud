@@ -1,10 +1,2 @@
-2021-05-28 09:01:31,017 INFO {POS} {IP-DISABLED} valid: 192.168.112.88:8091@default@SEATA_GROUP@@seata-server, region: unknown, msg: client timeout after 15000, last beat: 1622109635621
-
-2021-05-28 09:01:31,573 INFO SEATA_GROUP@@seata-server {SYNC} {IP-DEAD} cluster: default, dead ips size: 1, content: [192.168.112.88:8091:unknown:default_1.0_false_false_default]
-
-2021-05-28 09:01:31,573 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 
-
-2021-05-28 09:01:32,303 INFO SEATA_GROUP@@seata-server {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [192.168.112.88:8091:unknown:default_1.0_true_false_default]
-
-2021-05-28 09:01:32,303 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 192.168.112.88:8091_true,
+2021-06-03 15:47:30,345 ERROR [UPDATE-DOMAIN] Exception while taking item from LinkedBlockingDeque.
 

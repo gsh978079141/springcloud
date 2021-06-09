@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-server-dev
+  namespace: education-dev
+  labels:
+    app: redis-server
+    release: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-server
+      release: dev
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: redis-server
+        release: dev
+    spec:
+      nodeSelector:
+        education: "true"
+      containers:
+        - name: redis-server
+          image: redis:latest
+          ports:
+            - name: tcp-essential
+              containerPort: 6379
+              protocol: TCP
+
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: redis-server
+  namespace: education-dev  #必须
+  labels:
+    service: redis-server
+spec:                   #必须
+  selector:            #必须
+    app: redis-server
+    release: dev      #必须
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 6379
+      targetPort: 6379

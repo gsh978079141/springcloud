@@ -1,0 +1,44 @@
+version: '3'
+services:
+  platform-management:
+    image: core.harbor.cz.shenlan.com/dbp-edu/platform-management:latest
+    restart: always
+    ports:
+      - 9001:8000
+    environment:
+      - KEYCLOAK_URL=https://edu-auth-internel.deepblueai.com/auth
+      - ENV=dev
+    networks:
+      - edu-network
+  terminal-student:
+    image: core.harbor.cz.shenlan.com/dbp-edu/terminal-student:latest
+    restart: always
+    ports:
+      - 9002:8000
+    environment:
+      - KEYCLOAK_URL=https://edu-auth-internel.deepblueai.com/auth
+      - ENV=dev
+    networks:
+      - edu-network
+  terminal-teacher:
+    image: core.harbor.cz.shenlan.com/dbp-edu/terminal-teacher:latest
+    restart: always
+    ports:
+      - 9003:8000
+    environment:
+      - KEYCLOAK_URL=https://edu-auth-internel.deepblueai.com/auth
+      - ENV=dev
+    networks:
+      - edu-network
+  video-capture:
+    image: core.harbor.cz.shenlan.com/dbp-edu/video-capture:latest
+    restart: always
+    ports:
+      - 10001:8000
+    environment:
+      - ENV=dev
+    networks:
+      - edu-network
+networks:
+  edu-network:
+    external: true

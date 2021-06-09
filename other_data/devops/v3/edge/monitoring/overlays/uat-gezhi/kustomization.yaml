@@ -1,0 +1,11 @@
+nameSuffix: "-gezhi"
+
+commonLabels:
+  release: uat
+  edge: "gezhi"
+
+bases:
+  - ../../base
+
+patchesStrategicmerge:
+  - node-selector.yaml

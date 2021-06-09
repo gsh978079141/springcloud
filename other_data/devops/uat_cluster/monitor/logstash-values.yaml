@@ -1,0 +1,53 @@
+---
+replicas: 1
+
+logstashConfig:
+  logstash.yml: |
+    http.host: "0.0.0.0"
+    xpack.monitoring.enabled: true
+    xpack.monitoring.elasticsearch.hosts: [ "http://elasticsearch-es-http.monitor.svc.cluster.local:9200" ]
+    xpack.monitoring.elasticsearch.username: "elastic" 
+    xpack.monitoring.elasticsearch.password: "5g7V4qph8D4Tb02fe4d2RCo5"
+
+image: "docker.elastic.co/logstash/logstash"
+imageTag: "7.12.0"
+imagePullPolicy: "IfNotPresent"
+imagePullSecrets: []
+
+
+# Allows you to add any pipeline files in /usr/share/logstash/pipeline/
+### ***warn*** there is a hardcoded logstash.conf in the image, override it first
+logstashPipeline:
+  logstash.conf: |
+    input {
+       beats {
+         port => 5044
+       }
+     }
+     # filter {
+     #   mutate {
+     #     remove_field => ["docker", "log_type", "tag", "time", "[kubernetes][namespace_id]","[kubernetes][pod_id]","[kubernetes][master_url]", "[kubernetes][labels]","[kubernetes][container_image]","[kubernetes][host]","[kubernetes][container_image_id]","[kubernetes][namespace_labels]"]
+     #   }
+     # }
+     output {
+       elasticsearch {
+         hosts => ["http://elasticsearch-es-http.monitor.svc.cluster.local:9200"]
+         user => 'elastic'
+         password => '5g7V4qph8D4Tb02fe4d2RCo5'
+         # index => "%{[kubernetes][pod_name]}-%{+YYYY.MM.dd}"
+         index => "%{[kubernetes][pod_name]}-%{+YYYY.MM.dd}"
+       }
+     }
+
+volumeClaimTemplate:
+  accessModes: [ "ReadWriteOnce" ]
+  resources:
+    requests:
+      storage: 30Gi
+  storageClassName: logstash-storage
+
+# elasticsearch:
+#   host: elasticsearch.monitor.svc.cluster.local
+#   port: 9200
+#   username: logstash
+#   password: deepblue

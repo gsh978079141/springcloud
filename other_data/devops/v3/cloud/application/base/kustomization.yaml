@@ -1,0 +1,21 @@
+commonLabels:
+  type: cloud
+
+resources:
+  - gateway-management.yaml
+  - gateway-api.yaml
+  - bff-student-iot.yaml
+  - bff-teacher-iot.yaml
+  - bff-management.yaml
+  - bff-management2.yaml
+  - bff-op.yaml
+  - service-account.yaml
+  - service-dict.yaml
+  - service-foundation.yaml
+  - service-exam.yaml
+  - service-teach.yaml
+  - service-job.yaml
+  - service-oss.yaml
+  - platform-management.yaml
+  - file-preview.yaml
+  - configMap.yaml

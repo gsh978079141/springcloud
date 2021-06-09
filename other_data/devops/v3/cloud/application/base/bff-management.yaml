@@ -1,0 +1,91 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bff-management
+  namespace: edu-cloud
+  labels:
+    app: bff-management
+    type: cloud
+    k8s.kuboard.cn/layer: bff
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bff-management
+      type: cloud
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: bff-management
+        type: cloud
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: type
+                    operator: In
+                    values:
+                      - cloud
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: bff-management
+          image: core.harbor.cz.shenlan.com/dbp-edu/bff-management:latest
+          imagePullPolicy: Always
+          env:
+            - name: PORT
+              value: "7103"
+            - name: EGG_SERVER_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: cloud-conf
+                  key: ENV
+          resources:
+            limits:
+              cpu: 500m
+              memory: 2G
+          ports:
+            - name: tcp-essential
+              containerPort: 7103
+              protocol: TCP
+          # readinessProbe:
+          #   httpGet:
+          #     port: tcp-essential
+          #     path: /actuator/health
+          readinessProbe:
+            exec:
+              command:
+                - wget
+                - http://localhost:7103/actuator/health
+                - -O
+                - health
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: bff-management
+  namespace: edu-cloud       #必须
+  labels:
+    app: bff-management
+    type: cloud
+spec:                   #必须
+  selector:             #必须
+    app: bff-management
+    type: cloud
+  type: ClusterIP        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 7103
+      targetPort: 7103

@@ -1,0 +1,46 @@
+version: '3'
+services:
+  #
+  skywalking-oap-server:
+    image: apache/skywalking-oap-server:8.5.0-es7
+    container_name: skywalking-oap-server
+    environment:
+      - ES_JAVA_OPTS="-Xms1g -Xmx1g"
+      - SW_STORAGE=elasticsearch7
+      - SW_STORAGE_ES_CLUSTER_NODES=elasticsearch:9200
+      - SW_ES_USER=elastic
+      - SW_ES_PASSWORD=deepblue
+    # volumes:
+    ports:
+      - 11800:11800
+      - 1234:1234
+      - 12800:12800
+    networks:
+      - edu-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2g
+    restart: always
+  # 
+  skywalking-ui:
+    image: apache/skywalking-ui:8.5.0
+    container_name: skywalking-ui
+    environment:
+      - SW_OAP_ADDRESS=skywalking-oap-server:12800
+    ports:
+      - 8081:8080
+    networks:
+      - edu-network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 1g
+    restart: always
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-nginx-proxy-#EDGENAME#
+  namespace: education
+  labels:
+    app: edge-nginx-proxy
+    type: edge
+    edge: #EDGENAME#
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-nginx-proxy
+      type: edge
+      edge: #EDGENAME#
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-nginx-proxy
+        type: edge
+        edge: #EDGENAME#
+    spec:
+      nodeName: "#NODENAME#" #选择需要部署的边缘节点
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: edge-nginx-proxy
+          image: core.harbor.cz.shenlan.com/dbp-edu/edge-nginx-proxy:latest
+          ports:
+            - name: tcp-essential
+              containerPort: 9203
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /storage
+              name: persistent-storage
+      volumes:
+        - name: persistent-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /storage

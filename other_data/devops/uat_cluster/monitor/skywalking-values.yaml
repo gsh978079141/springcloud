@@ -1,0 +1,18 @@
+oap:
+  image:
+    tag: 8.5.0-es7      # Set the right tag according to the existing Elasticsearch version
+  storageType: elasticsearch7
+
+ui:
+  image:
+    tag: 8.5.0
+
+elasticsearch:
+  #  使用已有集群，不新建集群
+  enabled: false
+  config:
+    host: elasticsearch-es-http.monitor.svc.cluster.local
+    port:
+      http: 9200
+    user: elastic
+    password: 5g7V4qph8D4Tb02fe4d2RCo5

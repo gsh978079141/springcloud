@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  kms:
+    container_name: kms
+    image: kurento/kurento-media-server:6.14
+    # environment:
+    #   RABBITMQ_DEFAULT_USER: edu
+    #   RABBITMQ_DEFAULT_PASS: deepblue
+    # ports:
+    #   - 8888:8888
+    volumes:
+      - /data/videos:/data/videos
+    network_mode: "host"
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: "8.0"
+          memory: 16g
+
+# networks:
+#   edu-network:
+#     external:
+#       name: edu-network

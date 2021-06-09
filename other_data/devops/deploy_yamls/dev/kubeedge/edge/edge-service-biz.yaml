@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-biz-shangyin
+  namespace: education
+  labels:
+    app: edge-service-biz
+    type: edge
+    edge: shangyin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-service-biz
+      type: edge
+      edge: shangyin
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-service-biz
+        type: edge
+        edge: shangyin
+    spec:
+      nodeName: "edge.node3" #选择需要部署的边缘节点
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: edge-service-biz
+          image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-biz
+          env:
+            - name: env_profile
+              value: dev
+            - name: JAVA_OPTS
+              value: '-Xms1024m -Xmx1024m -Duser.timezone=GMT+08'
+            - name: log_dir
+              value: /var/log/edu
+            - name: opentracing.jaeger.enabled
+              value: 'false'
+          ports:
+            - name: tcp-essential
+              containerPort: 9005
+              protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+                - wget
+                - http://localhost:9005/actuator/health
+                - -O
+                - health
+          volumeMounts:
+            - mountPath: /var/log/edu
+              name: persistent-log-storage
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+      volumes:
+        - name: persistent-log-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /root/log/edu

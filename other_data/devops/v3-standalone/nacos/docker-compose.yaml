@@ -1,0 +1,27 @@
+version: "3"
+services:
+  nacos:
+    image: nacos/nacos-server:2.0.0
+    container_name: nacos
+    env_file:
+      - ./env/nacos-standlone-mysql.env
+    volumes:
+      - /data/nacos/logs/:/home/nacos/logs
+      - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9555:9555"
+    restart: always
+    networks:
+      - edu-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2g
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

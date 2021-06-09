@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  emqx:
+    container_name: emqx
+    image: emqx/emqx:v4.0.0
+    environment:
+      - EMQX_NAME=mqtt
+      - EMQX_HOST=127.0.0.1
+      - TZ=Aisa/Shanghai
+    ports:
+      - 18083:18083
+      - 1883:1883
+      - 8083:8083
+      - 8084:8084
+      # volumes:
+      # - /data/rabbitmq/data:/var/lib/rabbitmq
+      # - /data/rabbitmq/log:/var/log/rabbitmq
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2g
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

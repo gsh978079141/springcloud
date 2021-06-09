@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.8-management
+    environment:
+      RABBITMQ_DEFAULT_USER: edu
+      RABBITMQ_DEFAULT_PASS: deepblue
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - /data/rabbitmq/data:/var/lib/rabbitmq
+      - /data/rabbitmq/log:/var/log/rabbitmq
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2g
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

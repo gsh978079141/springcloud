@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:9.6.19
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+    volumes:
+      - /data/postgresql:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - edu-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2g
+  keycloak:
+    container_name: keycloak
+    image: core.harbor.cz.shenlan.com/infra/service-sso-themes:183
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: keycloak
+      DB_SCHEMA: public
+      DB_USER: keycloak
+      DB_PASSWORD: password
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: deepblue
+      JAVA_OPTS: "-Xms1g -Xmx1g -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m"
+    ports:
+      - 8080:8080
+    restart: always
+    networks:
+      - edu-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2g
+    depends_on:
+      - postgres
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

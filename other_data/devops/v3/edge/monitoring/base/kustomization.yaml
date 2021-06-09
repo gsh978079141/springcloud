@@ -1,0 +1,6 @@
+namespace: "edu-edge"
+
+resources:
+  - edge-grafana.yaml
+  - edge-loki.yaml
+  - edge-promtail.yaml

@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-grafana
+  namespace: edu-edge
+  labels:
+    app: edge-grafana
+    namespace: edu-edge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-grafana
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-grafana
+    spec:
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0
+      tolerations:
+        - key: "edge"
+          operator: "Equal"
+          value: "true"
+          effect: "NoSchedule"
+      hostNetwork: true
+      containers:
+        - name: edge-grafana
+          image: "grafana/grafana:latest"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          env:
+            # 插件
+            - name: GF_INSTALL_PLUGINS
+              value: "grafana-clock-panel,grafana-simple-json-datasource"
+          volumeMounts:
+            - name: data-volume
+              mountPath: /var/lib/grafana
+      volumes:
+        - name: data-volume
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/grafana/data
+
+  

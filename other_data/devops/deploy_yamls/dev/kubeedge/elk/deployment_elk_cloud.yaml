@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elk-cloud
+  namespace: default
+  labels:
+    app: elk-cloud
+    release: elk-cloud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elk-cloud
+      release: elk-cloud
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: elk-cloud
+        release: elk-cloud
+    spec:
+      #      hostNetwork: true
+      #      nodeName: "node1"
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: elk-cloud
+          image: core.harbor.cz.shenlan.com/dbp-edu/elk:v1.1
+          tty: true
+          ports:
+            - name: logstash-port
+              containerPort: 5044
+              protocol: TCP
+            - name: kibana-port
+              containerPort: 5601
+              protocol: TCP
+            - name: es-port
+              containerPort: 9200
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /var/lib/elasticsearch
+              name: persistent-storage
+      #          - mountPath: /etc/logstash/conf.d
+      #            name: persistent-logstash-confg-storage
+      volumes:
+        - name: persistent-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/elk/es-data
+#        - name: persistent-logstash-confg-storage
+#          hostPath:
+#            type: DirectoryOrCreate
+#            path: /data/elk/logstash/config
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-elk
+  namespace: default
+  labels:
+    app: elk-cloud
+    release: elk-cloud
+spec:
+  selector:
+    app: elk-cloud
+    release: elk-cloud
+  type: NodePort
+  ports:
+    - name: logstash-port
+      protocol: TCP
+      port: 5044
+      targetPort: 5044
+      nodePort: 30044
+    - name: es-port
+      protocol: TCP
+      port: 9200
+      targetPort: 9200
+      nodePort: 30092
+    - name: kibana-port
+      protocol: TCP
+      port: 5601
+      targetPort: 5601
+      nodePort: 30056

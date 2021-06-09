@@ -1,0 +1,13 @@
+commonLabels:
+  type: edge
+namespace: "edu-edge-dev"
+
+resources:
+  - edge-service-algorithm-dispatch.yaml
+  - edge-service-biz.yaml
+  - edge-service-file-manager.yaml
+  - edge-service-media.yaml
+  - edge-service-student-iot.yaml
+  - edge-service-teacher-iot.yaml
+  - edge-service-video-process.yaml
+  - configMap.yaml

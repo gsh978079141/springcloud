@@ -1,0 +1,113 @@
+version: '3.8'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=true
+      # - xpack.ml.enabled=true
+      # - xpack.license.self_generated.type=trial
+      - ELASTIC_PASSWORD=deepblue
+      # - cluster.name=edu-es-standalone
+      # - node.name=elasticsearch
+      # - bootstrap.memory_lock=true
+      - ES_JAVA_OPTS=-Xms2g -Xmx2g
+      # - discovery.seed_hosts=elasticsearch
+      # - cluster.initial_master_nodes=elasticsearch
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - /data/elasticsearch:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - edu-network
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+    restart: always
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.12.0
+    container_name: kibana
+    environment:
+      - I18N_LOCALE=zh-CN
+      - XPACK_GRAPH_ENABLED=true
+      - TIMELION_ENABLED=true
+      - XPACK_MONITORING_COLLECTION_ENABLED=true
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=deepblue
+    ports:
+      - "5601:5601"
+    networks:
+      - edu-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+    restart: always
+
+  cerebro:
+    image: lmenezes/cerebro:0.8.3
+    container_name: cerebro
+    ports:
+      - "9000:9000"
+    command:
+      - -Dhosts.0.host=http://elasticsearch:9200
+    networks:
+      - edu-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+    restart: always
+
+  # logstash
+  # logstash:
+  #   image: docker.elastic.co/logstash/logstash:7.12.0
+  #   container_name: logstash
+  #   ports:
+  #     - "5044:5044"
+  #     - "5000:5000/tcp"
+  #     - "5000:5000/udp"
+  #     - "9600:9600"
+  #   environment:
+  #     LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+  #   volumes:
+  #     - type: bind
+  #       source: ./logstash.yml
+  #       target: /usr/share/logstash/config/logstash.yml
+  #       read_only: true
+  #     - type: bind
+  #       source: ./movies.csv
+  #       target: /usr/share/logstash/movies.csv
+  #       read_only: true
+  #     - type: bind
+  #       source: ./pipeline
+  #       target: /usr/share/logstash/pipeline
+  #       read_only: true
+  #   networks:
+  #     - esnet
+  #   depends_on:
+  #     - elasticsearch
+
+# volumes:
+#   esdata:
+#     driver: local
+
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-kms
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: edge
+                    operator: In
+                    values:
+                      - shangyin
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-nginx-proxy
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: edge
+                    operator: In
+                    values:
+                      - shangyin
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-mysql
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: edge
+                    operator: In
+                    values:
+                      - shangyin
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-rabbitmq
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: edge
+                    operator: In
+                    values:
+                      - shangyin

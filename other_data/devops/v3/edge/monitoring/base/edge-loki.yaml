@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: edu-edge
+  name: edge-loki
+  labels:
+    # namespace: edu-edge
+    app: edge-loki
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-loki
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-loki
+    spec:
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0
+      tolerations:
+        - key: "edge"
+          operator: "Equal"
+          value: "true"
+          effect: "NoSchedule"
+      hostNetwork: true
+      containers:
+        - name: edge-loki
+          image: "grafana/loki:2.0.0"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3100
+          env:
+            # 插件
+            - name: GF_INSTALL_PLUGINS
+              value: "loki-clock-panel,loki-simple-json-datasource"
+          volumeMounts:
+            - name: data-volume
+              mountPath: /data/loki
+            # - name: log-volume
+            #   mountPath: /var/log/loki
+            # - name: conf-volume
+            #   mountPath: /etc/loki
+      volumes:
+        - name: data-volume
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/loki
+      # - name: log-volume
+      #   hostPath:
+      #     type: DirectoryOrCreate
+      #     path: /data/loki/log
+      # - name: conf-volume
+      #   hostPath:
+      #     type: DirectoryOrCreate
+      #     path: /data/loki/conf
+  

@@ -1,0 +1,89 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: false
+
+zuul:
+  add-host-header: true
+  ignore-security-headers: false
+  sensitive-headers:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+  ratelimit:
+    key-prefix: edu-ratelimit
+    enabled: true
+    repository: IN_MEMORY
+    behind-proxy: true
+    default-policy:
+      limit: 50
+      quota: 10
+      refresh-interval: 10
+      type:
+        - user
+        - origin
+        - url
+  routes:
+    service-foundation-route:
+      sensitive-headers: Access-Control-Allow-Origin,Access-Control-Allow-Methods,Access-Control-Allow-Credentials
+      path: /foundation/**
+      url: http://service-foundation:7001
+      stripPrefix: true
+    service-exam-route:
+      sensitive-headers: Access-Control-Allow-Origin,Access-Control-Allow-Methods,Access-Control-Allow-Credentials
+      path: /exam/**
+      url: http://service-exam:7003
+      stripPrefix: true
+    service-teach-route:
+      sensitive-headers: Access-Control-Allow-Origin,Access-Control-Allow-Methods,Access-Control-Allow-Credentials
+      path: /teach/**
+      url: http://service-teach:7004
+      stripPrefix: true
+    service-account-route:
+      sensitive-headers: Access-Control-Allow-Origin,Access-Control-Allow-Methods,Access-Control-Allow-Credentials
+      path: /account/**
+      url: http://service-account:6001
+      stripPrefix: true
+    service-dict-route:
+      sensitive-headers: Access-Control-Allow-Origin,Access-Control-Allow-Methods,Access-Control-Allow-Credentials
+      path: /dict/**
+      url: http://service-dict:6002
+      stripPrefix: true
+swagger:
+  resources:
+    - name: 基础信息管理服务
+      url: /foundation/v2/api-docs
+      swaggerVersion: 2.0
+    - name: 考试服务
+      url: /exam/v2/api-docs
+      swaggerVersion: 2.0
+    - name: 教学服务
+      url: /teach/v2/api-docs
+      swaggerVersion: 2.0
+    - name: 账号管理服务
+      url: /account/v2/api-docs
+      swaggerVersion: 2.0
+    - name: 字典服务
+      url: /dict/v2/api-docs
+      swaggerVersion: 2.0
+
+logstash:
+  # host: 192.168.41.244
+  # port: 30044
+  host: service-elk.default.svc.cluster.local
+  port: 5044

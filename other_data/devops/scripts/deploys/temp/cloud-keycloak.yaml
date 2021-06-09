@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak
+  namespace: education
+  labels:
+    app: keycloak
+    type: cloud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keycloak
+      type: cloud
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: keycloak
+        type: cloud
+    spec:
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      containers:
+        - name: keycloak
+          image: jboss/keycloak:10.0.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: tcp-essential
+              containerPort: 8080
+              protocol: TCP
+          env:
+            - name: DB_VENDOR
+              value: POSTGRES
+            - name: DB_ADDR
+              value: postgres
+            - name: DB_DATABASE
+              value: keycloak
+            - name: DB_USER
+              value: keycloak
+            - name: DB_SCHEMA
+              value: public
+            - name: DB_PASSWORD
+              value: pssade348
+            - name: KEYCLOAK_USER
+              value: admin
+            - name: KEYCLOAK_PASSWORD
+              value: Pa55w0rd
+            - name: PROXY_ADDRESS_FORWARDING
+              value: "true"
+            # - name: JAVA_TOOL_OPTIONS
+            #   value: "-Dkeycloak.profile.feature.scripts=enabled -Dkeycloak.profile.feature.upload_scripts=enabled"
+
+
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: keycloak
+  namespace: education
+  labels:
+    service: keycloak
+    type: cloud
+spec:                   #必须
+  selector:            #必须
+    app: keycloak
+    type: cloud
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 31080

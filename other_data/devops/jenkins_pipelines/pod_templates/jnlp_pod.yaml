@@ -1,0 +1,54 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    jenkins-slave: true
+spec:
+  tolerations:
+    - effect: "NoSchedule"
+      key: "node-role.kubernetes.io/master"
+      operator: "Exists"
+  imagePullSecrets:
+    - name: "harbor-secret"
+  containers:
+    - name: jnlp
+      image: core.harbor.cz.shenlan.com/dbp-edu/jenkins-slave-jdk8:v1
+      imagePullPolicy: "Always"
+      workingDir: "/home/jenkins"
+      volumeMounts:
+        - mountPath: "/opt/var/lib/docker"
+          name: "volume-4"
+          readOnly: false
+        - mountPath: "/var/lib/docker"
+          name: "volume-3"
+          readOnly: false
+        - mountPath: "/home/jenkins"
+          name: "volume-0"
+          readOnly: false
+        - mountPath: "/var/run/docker.sock"
+          name: "volume-2"
+          readOnly: false
+        - mountPath: "/usr/bin/docker"
+          name: "volume-1"
+          readOnly: false
+  volumes:
+    - name: "volume-0"
+      persistentVolumeClaim:
+      claimName: "jenkins-pvc-slave-jdk8"
+      readOnly: false
+    - hostPath:
+        path: "/var/run/docker.sock"
+      name: "volume-2"
+    - hostPath:
+        path: "/usr/bin/docker"
+      name: "volume-1"
+    - emptyDir:
+        medium: ""
+      name: "workspace-volume"
+    - hostPath:
+        path: "/opt/var/lib/docker"
+      name: "volume-4"
+    - hostPath:
+        path: "/var/lib/docker"
+      name: "volume-3"

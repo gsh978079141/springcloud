@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  redis:
+    container_name: redis
+    # image: redis
+    build: ./build
+    ports:
+      - 6379:6379
+    volumes:
+      - ./build/conf:/usr/local/etc/redis
+      - /data/redis/:/data
+      # - /data/redis/log:/opt/redis/log
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2g
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

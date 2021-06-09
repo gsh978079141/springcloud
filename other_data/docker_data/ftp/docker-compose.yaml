@@ -1,0 +1,25 @@
+version: '3'
+services:
+  ftp-server:
+    container_name: ftp-server
+    image: fauria/vsftpd
+    restart: always
+    environment:
+      - FTP_USER=gsh
+      - FTP_PASS=gsh
+      #      - PASV_ADDRESS=192.168.103.145
+      - PASV_ADDRESS=127.0.0.1
+      - PASV_MIN_PORT=21100
+      - PASV_MAX_PORT=21110
+      - PASV_ADDRESS_ENABLE=true
+      - FILE_OPEN_MODE=0755
+      - LOCAL_UMASK=022
+    ports:
+      - "21:21"
+      - "20:20"
+      - "21100-21110:21100-21110"
+    volumes:
+      - ./data:/home/vsftpd
+      - ./log/vsftpd:/var/log/vsftpd
+    # network_mode: "host"
+

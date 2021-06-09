@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: platform-management-dev
+  namespace: education-dev
+  labels:
+    app: platform-management
+    release: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: platform-management
+      release: dev
+  template:
+    metadata:
+      labels:
+        app: platform-management
+        release: dev
+    spec:
+      nodeSelector:
+        education: "true"
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: platform-management
+          image: core.harbor.cz.shenlan.com/dbp-edu/platform-management:latest
+          env:
+            - name: KEYCLOAK_URL
+              value: 'https://edu-auth-internel.deepblueai.com/auth'
+            - name: ENV
+              value: dev
+          ports:
+            - name: tcp-essential
+              containerPort: 8000
+              protocol: TCP
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: platform-management
+  namespace: education-dev        #必须
+  labels:
+    service: platform-management
+spec:                   #必须
+  selector:            #必须
+    app: platform-management
+    release: dev      #必须
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 8000
+      targetPort: 8000

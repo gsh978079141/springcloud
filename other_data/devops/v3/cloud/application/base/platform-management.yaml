@@ -1,0 +1,100 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: platform-management
+  namespace: edu-cloud
+  labels:
+    app: platform-management
+    type: cloud
+    k8s.kuboard.cn/layer: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: platform-management
+      type: cloud
+  template:
+    metadata:
+      labels:
+        app: platform-management
+        type: cloud
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: type
+                    operator: In
+                    values:
+                      - cloud
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: platform-management
+          image: core.harbor.cz.shenlan.com/dbp-edu/platform-management:latest
+          imagePullPolicy: Always
+          env:
+            - name: KEYCLOAK_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cloud-conf
+                  key: KEYCLOAK_URL
+            - name: KEYCLOAK_REALM
+              valueFrom:
+                configMapKeyRef:
+                  name: cloud-conf
+                  key: KEYCLOAK_REALM
+            - name: ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: cloud-conf
+                  key: ENV
+            - name: FILE_PREVIEW_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cloud-conf
+                  key: FILE_PREVIEW_URL
+          ports:
+            - name: tcp-essential
+              containerPort: 8000
+              protocol: TCP
+          # startupProbe:
+          #   httpGet:
+          #     path: /actuator/health
+          #     port: tcp-essential
+          #   failureThreshold: 30
+          #   periodSeconds: 10
+          # readinessProbe:
+          #   httpGet:
+          #     port: tcp-essential
+          #     path: /actuator/health
+          #   initialDelaySeconds: 30
+          # readinessProbe:
+          #   httpGet:
+          #     port: tcp-essential
+          #     path: /actuator/health
+          #   initialDelaySeconds: 30
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: platform-management
+  namespace: edu-cloud        #必须
+  labels:
+    app: platform-management
+    type: cloud
+spec:                   #必须
+  selector:            #必须
+    app: platform-management
+    type: cloud
+  type: NodePort        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 8000
+      targetPort: 8000

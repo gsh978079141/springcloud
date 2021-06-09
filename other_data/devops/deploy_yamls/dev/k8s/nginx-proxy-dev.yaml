@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-proxy-server-dev
+  namespace: education-dev
+  labels:
+    app: nginx-proxy-server
+    release: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-proxy-server
+      release: dev
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: nginx-proxy-server
+        release: dev
+    spec:
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: nginx-proxy-server
+          image: core.harbor.cz.shenlan.com/dbp-edu/edu-proxy-dev:latest
+          imagePullPolicy: Always
+          ports:
+            - name: tcp-essential
+              containerPort: 8000
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /storage
+              name: vol2
+      volumes:
+        - name: vol2
+          persistentVolumeClaim:
+            claimName: edu-dev-oss-pvc
+
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: nginx-proxy-server
+  namespace: education-dev  #必须
+  labels:
+    service: nginx-proxy-server
+spec:                   #必须
+  selector:            #必须
+    app: nginx-proxy-server
+    release: dev      #必须
+  type: ClusterIP        #必须
+  ports:
+    - name: tcp-essential
+      protocol: TCP
+      port: 8000
+      targetPort: 8000

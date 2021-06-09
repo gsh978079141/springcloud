@@ -1,0 +1,304 @@
+version: '3'
+services:
+  # 账号服务
+  service-account:
+    container_name: service-account
+    image: core.harbor.cz.shenlan.com/dbp-edu/service-account:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 6001:6001
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  service-dict:
+    container_name: service-dict
+    image: core.harbor.cz.shenlan.com/dbp-edu/service-dict:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms512m -Xmx512m -Duser.timezone=GMT+08'
+    ports:
+      - 6002:6002
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  service-foundation:
+    container_name: service-foundation
+    image: core.harbor.cz.shenlan.com/dbp-edu/service-foundation:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 7001:7001
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  service-exam:
+    container_name: service-exam
+    image: core.harbor.cz.shenlan.com/dbp-edu/service-exam:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 7003:7003
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  service-teach:
+    container_name: service-teach
+    image: core.harbor.cz.shenlan.com/dbp-edu/service-teach:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 7004:7004
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+
+  service-job:
+    container_name: service-job
+    image: core.harbor.cz.shenlan.com/dbp-edu/service-job:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 7005:7005
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  gateway-management:
+    container_name: gateway-management
+    image: core.harbor.cz.shenlan.com/dbp-edu/gateway-management:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 8002:8002
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+
+
+  bff-student-iot:
+    container_name: bff-student-iot
+    image: core.harbor.cz.shenlan.com/dbp-edu/bff-student-iot:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 7101:7101
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  bff-teacher-iot:
+    container_name: bff-teacher-iot
+    image: core.harbor.cz.shenlan.com/dbp-edu/bff-teacher-iot:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 7102:7102
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  bff-management2:
+    container_name: bff-management2
+    image: core.harbor.cz.shenlan.com/dbp-edu/bff-management2:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 7203:7103
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  bff-management:
+    container_name: bff-management
+    image: core.harbor.cz.shenlan.com/dbp-edu/bff-management:v3.5.3
+    environment:
+      EGG_SERVER_ENV: prod
+      PORT: 7103
+    ports:
+      - 7103:7103
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  bff-op:
+    container_name: bff-op
+    image: core.harbor.cz.shenlan.com/dbp-edu/bff-op:v3.5.3
+    environment:
+      env_profile: prod
+      nacos_server_addr: http://nacos:8848
+      nacos_username: nacos
+      nacos_password: nacos
+      log_dir: /var/log/edu
+      JAVA_OPTS: '-Xms1g -Xmx1g -Duser.timezone=GMT+08'
+    ports:
+      - 7104:7104
+    volumes:
+      - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+  platform-management:
+    container_name: platform-management
+    image: core.harbor.cz.shenlan.com/dbp-edu/platform-management:952
+    environment:
+      ENV: prod
+      FILE_PREVIEW_URL: http://file-preview
+      KEYCLOAK_REALM: prod
+      KEYCLOAK_URL: http://192.168.40.244:8080/auth
+    ports:
+      - 8000:8000
+    # volumes:
+    #   - /data/app/log:/var/log/edu
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2g
+
+networks:
+  edu-network:
+    external:
+      name: edu-network
+

@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:1.19
+    # environment:
+    #   RABBITMQ_DEFAULT_USER: edu
+    #   RABBITMQ_DEFAULT_PASS: deepblue
+    ports:
+      - 9203:9203
+    volumes:
+      - /data/evidence:/data/evidence
+      - /data/files:/data/files
+      - /data/videos:/data/videos
+      - /data/live_videos:/data/live_videos
+      - /data/nginx/log:/var/log/nginx
+      - ./build/nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - edu-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4g
+
+networks:
+  edu-network:
+    external:
+      name: edu-network

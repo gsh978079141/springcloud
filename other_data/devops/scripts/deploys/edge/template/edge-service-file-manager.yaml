@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-file-manager-#EDGENAME#
+  namespace: education
+  labels:
+    app: edge-service-file-manager
+    type: edge
+    edge: #EDGENAME#
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-service-file-manager
+      type: edge
+      edge: #EDGENAME#
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-service-file-manager
+        type: edge
+        edge: #EDGENAME#
+    spec:
+      nodeName: "#NODENAME#" #选择需要部署的边缘节点
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: edge-service-file-manager
+          env:
+            - name: env_profile
+              value: #EVN#
+            - name: JAVA_OPTS
+              value: '-Xms1024m -Xmx1024m -Duser.timezone=GMT+08'
+            - name: log_dir
+              value: /var/log/edu
+            - name: edge_name
+              value: #EDGENAME#
+            - name: node_name
+              value: "#NODENAME#"
+          image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-file-manager
+          ports:
+            - name: tcp-essential
+              containerPort: 9003
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              port: tcp-essential
+              path: /actuator/health
+          volumeMounts:
+            - mountPath: /var/log/edu
+              name: persistent-log-storage
+            - mountPath: /storage
+              name: persistent-storage
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+      volumes:
+        - name: persistent-log-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /root/log/edu
+        - name: persistent-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /storage

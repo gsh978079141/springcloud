@@ -1,0 +1,45 @@
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: gateway-management
+spec:                   #必须
+  ports:
+    - name: tcp-essential
+      port: 8002
+      nodePort: 30002
+
+---
+apiVersion: v1            #必须
+kind: Service             #必须
+metadata:                 #必须
+  name: gateway-api
+spec:                   #必须
+  type: NodePort
+  ports:
+    - name: tcp-essential
+      port: 8001
+      nodePort: 30001
+
+
+
+
+# ---
+# apiVersion: v1            #必须
+# kind: Service             #必须
+# metadata:                 #必须
+#   name: service-exam
+#   namespace: edu-cloud        #必须
+#   labels:
+#     app: service-exam
+#     type: cloud
+# spec:                   #必须
+#   selector:            #必须
+#     app: service-exam
+#     type: cloud      #必须
+#   type: ClusterIP     #必须
+#   ports:
+#   - name: tcp-essential
+#     protocol: TCP
+#     port: 7003
+#     targetPort: 7003

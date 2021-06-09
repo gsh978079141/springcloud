@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: edge-conf
+data:
+  edgeHostIp: "192.168.41.243"
+  rabbitmqPort: "5672"
+  rabbitmqUsername: "edu"
+  rabbitmqPassword: "deepblue"
+  env: "test"
+  edgeName: "shangyin"
+  nodeName: "edge.node1"
+
+  # 云端-服务url
+  bffStudentIotUrl: "http://bff-student-iot.edu-cloud.svc.cluster.local:7101"
+  bffTeacherIotUrl: "http://bff-teacher-iot.edu-cloud.svc.cluster.local:7102"
+  serviceFoundationUrl: "http://gateway-api.edu-cloud.svc.cluster.local:8001/foundation-apis"
+  serviceExamUrl: "http://gateway-api.edu-cloud.svc.cluster.local:8001/exam-apis"
+  serviceTeachUrl: "http://gateway-api.edu-cloud.svc.cluster.local:8001/teach-apis"
+
+  # 边缘端-服务url
+  # 流媒体服务录制文件的远程访问url
+  edgeMediaBaseUrl: "http://192.168.40.111:9203/"
+  edgeServiceAlgorithmDispatchUrl: "http://192.168.40.111:9101"
+  edgeServiceFileManagerUrl: "http://192.168.40.111:9003"
+  edgeServiceVideoProcessUrl: "http://192.168.40.111:9004"
+  edgeServiceBizUrl: "http://192.168.40.111:9005"
+  edgeServiceMediaUrl: "http://192.168.40.111:9006"
+
+  storageEngine: "aws-s3"
+  awsBaseUrl: "http://10.16.32.184:80"
+  awsBaseBucket: "edu-base"
+  filePreviewUrl: "https://dev-edu-file-preview.deepblueai.com"
+  awsAccessKey: "9HW9I7SJBRUPAMSD83K3"
+  awsSecretKey: "WcQNDnpd2jbYCsiCsAs7ZixKPRhJo5PXXq9AbkyH"
+  awsEndpoint: "10.16.138.26"
+  ftpHost: "10.16.32.184"
+  ftpAccount: "deepblueftp"
+  ftpCredential: "deepblue"
+  nginxHost: "10.16.32.184"
+  nginxPort: "8989"
+  keycloakUrl: "https://edu-auth-internel.deepblueai.com/auth"
+  keycloakRealm: "test"
+  mediaJavaOpts: "-Xms2048m -Xmx2048m -Duser.timezone=GMT+08 -Dkms.url=ws://192.168.41.69:8888/kurento"

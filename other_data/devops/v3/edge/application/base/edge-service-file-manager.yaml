@@ -1,0 +1,111 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-file-manager
+  namespace: education
+  labels:
+    app: edge-service-file-manager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-service-file-manager
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: edge-service-file-manager
+    spec:
+      tolerations:
+        - key: "edge"
+          operator: "Equal"
+          value: "true"
+          effect: "NoExecute"
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: edge-service-file-manager
+          image: core.harbor.cz.shenlan.com/dbp-edu/edge-service-file-manager:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: env_profile
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: env
+            - name: edge_name
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: edgeName
+            - name: node_name
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: nodeName
+            - name: storage_engine
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: storageEngine
+            - name: aws_base_url
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: awsBaseUrl
+            - name: aws_basebucket
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: awsBaseBucket
+            - name: JAVA_OPTS
+              value: '-Xms1024m -Xmx1024m -Duser.timezone=GMT+08'
+            - name: log_dir
+              value: /var/log/edu
+            # 数据库连接配置
+            - name: datasource_ip
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: edgeHostIp
+            - name: datasource_username
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: datasourceUsername
+            - name: datasource_password
+              valueFrom:
+                configMapKeyRef:
+                  name: edge-conf
+                  key: datasourcePassword
+          ports:
+            - name: tcp-essential
+              containerPort: 9003
+              protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+                - wget
+                - http://localhost:9003/actuator/health
+                - -O
+                - health
+          volumeMounts:
+            - mountPath: /var/log/edu
+              name: persistent-log-storage
+            - mountPath: /data
+              name: persistent-storage
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 20"]
+      volumes:
+        - name: persistent-log-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/log/edu
+        - name: persistent-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data

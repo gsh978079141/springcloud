@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana-edge-node3
+  namespace: default
+  labels:
+    app: grafana
+spec:
+  revisionHistoryLimit: 10
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: grafana
+  template:
+    metadata:
+      labels:
+        app: grafana
+    spec:
+      nodeName: "edge.node3" #修改为边缘端节点名称
+      hostNetwork: true
+      imagePullSecrets:
+        - name: harbor-secret
+      containers:
+        - name: grafana
+          image: core.harbor.cz.shenlan.com/dbp-edu/grafana:v1.3
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              name: grafana
+          env:
+            - name: GF_SECURITY_ADMIN_USER
+              value: admin
+            - name: GF_SECURITY_ADMIN_PASSWORD
+              value: Pa55w0rd
+            - name: GF_INSTALL_PLUGINS
+              value: grafana-piechart-panel
+            - name: GF_SMTP_ENABLED
+              value: "true"
+            - name: GF_SMTP_HOST
+              value: "mail.deepblueai.com:25"
+            - name: GF_SMTP_USER
+              value: "enterprise@deepblueai.com"
+            - name: GF_SMTP_PASSWORD
+              value: E2Tij7Jzr6N
+            - name: GF_SMTP_FROM_ADDRESS
+              value: "enterprise@deepblueai.com"
+            - name: GF_SMTP_SKIP_VERIFY
+              value: "true"
+          readinessProbe:
+            failureThreshold: 10
+            httpGet:
+              path: /api/health
+              port: 3000
+              scheme: HTTP
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 30
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /api/health
+              port: 3000
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 200m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 256Mi
+          volumeMounts:
+            - mountPath: /var/lib/grafana
+              name: persistent-storage
+      securityContext:
+        fsGroup: 472
+        runAsUser: 472
+      volumes:
+        - name: persistent-storage
+          hostPath:
+            type: DirectoryOrCreate
+            path: /data/grafana
