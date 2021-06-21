@@ -9,8 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>gsh-cloud-starter-mq</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>gsh-cloud-starter-file</artifactId>
 
   <dependencies>
     <dependency>
@@ -22,34 +21,32 @@
       <artifactId>spring-boot-configuration-processor</artifactId>
       <optional>true</optional>
     </dependency>
-    <!-- mqtt  -->
-    <dependency>
-      <groupId>org.springframework.integration</groupId>
-      <artifactId>spring-integration-mqtt</artifactId>
-    </dependency>
-    <!-- lombok -->
+    <!--lombok-->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <optional>true</optional>
     </dependency>
-    <!-- fastjson -->
+
     <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>cn.hutool</groupId>
-      <artifactId>hutool-all</artifactId>
+      <groupId>com.gsh.springcloud</groupId>
+      <artifactId>common-lib</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
     </dependency>
     <dependency>
-      <groupId>io.deepblueai</groupId>
-      <artifactId>ms-lib-spring-boot-starter-eda</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <groupId>com.qiniu</groupId>
+      <artifactId>qiniu-java-sdk</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun.oss</groupId>
+      <artifactId>aliyun-sdk-oss</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.5.6</version>
     </dependency>
   </dependencies>
 

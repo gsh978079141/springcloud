@@ -1,0 +1,24 @@
+version: '3'
+#  docker run \
+#  -d -p 8080:8080 -p 50000:50000 \
+#  -v /home/docker/jenkins_home/:/var/jenkins_home \
+#  -v /var/run/docker.sock:/var/run/docker.sock \
+#  -v $(which docker):/usr/bin/docker \
+#  -v $(which git):/usr/bin/git \
+#  -v ~/.ssh:/var/jenkins_home/.ssh \
+#  --name=jenkins jenkins:2.7.2
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins
+    restart: always
+    environment:
+      - FTP_USER=gsh
+    ports:
+      - 8081:8080
+      - 50000:50000
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - "C:/Users/97807/.ssh:/var/jenkins_home/.ssh"
+    # network_mode: "host"
+

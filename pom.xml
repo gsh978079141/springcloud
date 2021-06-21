@@ -40,6 +40,9 @@
     <version.tk-mybatis>4.1.5</version.tk-mybatis>
     <version.logback-redis-appender>1.1.5</version.logback-redis-appender>
     <!-- 三方包-->
+    <version.aliyun.oss>2.4.1</version.aliyun.oss>
+    <version.qiniu.sdk>7.2.11</version.qiniu.sdk>
+    <version.commons.io>2.6</version.commons.io>
     <version.guava>20.0</version.guava>
     <version.fasthson>1.2.47</version.fasthson>
     <version.ali-fastjson>1.2.75</version.ali-fastjson>
@@ -442,6 +445,21 @@
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-lang3</artifactId>
         <version>${version.commons-lang3}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.qiniu</groupId>
+        <artifactId>qiniu-java-sdk</artifactId>
+        <version>${version.qiniu.sdk}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.aliyun.oss</groupId>
+        <artifactId>aliyun-sdk-oss</artifactId>
+        <version>${version.aliyun.oss}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${version.commons.io}</version>
       </dependency>
       <!-- ****E 三方/工具包 ****-->
 

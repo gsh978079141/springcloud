@@ -1,9 +1,11 @@
 package com.gsh.springcloud.starter.mq.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 /**
@@ -12,6 +14,7 @@ import javax.annotation.Resource;
  * @Classname MqttPushClient
  */
 @Component
+@Slf4j
 public class MqttPushClient {
 
   @Resource
@@ -26,6 +29,7 @@ public class MqttPushClient {
   private static void setClient(MqttClient client) {
     MqttPushClient.client = client;
   }
+
 
   /**
    * 客户端连接
@@ -74,7 +78,7 @@ public class MqttPushClient {
     message.setPayload(pushMessage.getBytes());
     MqttTopic mTopic = MqttPushClient.getClient().getTopic(topic);
     if (null == mTopic) {
-//      log.error("topic not exist");
+      log.error("topic not exist");
     }
     MqttDeliveryToken token;
     try {
@@ -93,12 +97,17 @@ public class MqttPushClient {
    * @param qos   连接方式
    */
   public void subscribe(String topic, int qos) {
-//    log.info("subscribe: " + topic);
+    log.info("subscribe: " + topic);
     try {
       MqttPushClient.getClient().subscribe(topic, qos);
     } catch (MqttException e) {
       e.printStackTrace();
     }
+  }
+
+  @PostConstruct
+  public void init() {
+    this.connect();
   }
 
 }

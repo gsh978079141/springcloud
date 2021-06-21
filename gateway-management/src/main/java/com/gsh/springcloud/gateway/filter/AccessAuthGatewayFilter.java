@@ -1,5 +1,6 @@
 package com.gsh.springcloud.gateway.filter;
 
+import cn.hutool.core.net.URLEncoder;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -119,7 +120,8 @@ public class AccessAuthGatewayFilter extends AbstractGatewayFilterFactory<Access
       Map<String, String> userAttributes = Maps.newHashMap();
       userAttributes.put("sso_id", userId);
       userAttributes.put("username", userPrincipal.getUsername());
-      userAttributes.put("real_name", userPrincipal.getGivenName());
+//      userAttributes.put("real_name", userPrincipal.getGivenName());
+      userAttributes.put("real_name", URLEncoder.DEFAULT.encode(userPrincipal.getGivenName(), StandardCharsets.UTF_8));
       Optional<UserDto> optionalUser = authService.findUser(username);
       if (!optionalUser.isPresent()) {
         return returnFalse(exchange, String.valueOf(CommonExceptionEnum.ACCESS_DENIED.getStatus()), CommonExceptionEnum.ACCESS_DENIED.getCode(), HttpStatus.FORBIDDEN);

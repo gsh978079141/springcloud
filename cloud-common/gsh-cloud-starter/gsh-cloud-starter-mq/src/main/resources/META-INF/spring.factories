@@ -1,4 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.gsh.springcloud.starter.mq.MqttConfiguration,\
-  com.gsh.springcloud.starter.mq.config.MqttPushClient,\
-  com.gsh.springcloud.starter.mq.config.MqttPushCallback
+  com.gsh.springcloud.starter.mq.MqttConfiguration

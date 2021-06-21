@@ -18,6 +18,7 @@
     <module>gsh-cloud-starter-web</module>
     <module>gsh-cloud-starter-swagger-keycloak</module>
     <module>gsh-cloud-starter-mq</module>
+    <module>gsh-cloud-starter-file</module>
   </modules>
 
 </project>

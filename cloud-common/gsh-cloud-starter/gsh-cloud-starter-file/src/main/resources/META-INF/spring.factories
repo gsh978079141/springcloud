@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.gsh.springcloud.starter.file.FileQiniuAutoConfiguration,\
+  com.gsh.springcloud.starter.file.FileAliyunAutoConfiguration
