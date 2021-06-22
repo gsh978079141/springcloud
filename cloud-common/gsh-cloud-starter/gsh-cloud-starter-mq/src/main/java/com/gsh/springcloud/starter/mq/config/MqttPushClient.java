@@ -1,11 +1,11 @@
 package com.gsh.springcloud.starter.mq.config;
 
+import com.gsh.springcloud.starter.mq.properties.MqttProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 /**
@@ -19,6 +19,9 @@ public class MqttPushClient {
 
   @Resource
   private MqttPushCallback mqttPushCallback;
+
+  @Resource
+  private MqttProperties mqttProperties;
 
   private static MqttClient client;
 
@@ -35,16 +38,16 @@ public class MqttPushClient {
    * 客户端连接
    *
    * @param host      ip+端口
-   * @param clientID  客户端Id
+   * @param clientId  客户端Id
    * @param username  用户名
    * @param password  密码
    * @param timeout   超时时间
    * @param keepalive 保留数
    */
-  public void connect(String host, String clientID, String username, String password, int timeout, int keepalive) {
+  public void connect(String host, String clientId, String username, String password, int timeout, int keepalive) {
     MqttClient client;
     try {
-      client = new MqttClient(host, clientID, new MemoryPersistence());
+      client = new MqttClient(host, clientId, new MemoryPersistence());
       MqttConnectOptions options = new MqttConnectOptions();
       options.setCleanSession(true);
       options.setUserName(username);
@@ -105,9 +108,12 @@ public class MqttPushClient {
     }
   }
 
-  @PostConstruct
-  public void init() {
-//    this.connect();
-  }
+//  @PostConstruct
+//  public void init() {
+//    this.connect(mqttProperties.getHostUrl(),mqttProperties.getClientId(),mqttProperties.getUsername(),mqttProperties.getPassword(),mqttProperties.getTimeout(),mqttProperties.getKeepalive());
+//    this.subscribe(mqttProperties.getDefaultTopic(), 2);
+//    this.subscribe("vision-iot/device/gsh/mqtt/test1", 2);
+//    this.subscribe("vision-iot/device/gsh/mqtt/test2", 2);
+//  }
 
 }

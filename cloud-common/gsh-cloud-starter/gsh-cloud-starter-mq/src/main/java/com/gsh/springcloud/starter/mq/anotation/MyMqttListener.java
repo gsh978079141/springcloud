@@ -1,13 +1,13 @@
-package com.gsh.springcloud.starter.mq.mqtt;
+package com.gsh.springcloud.starter.mq.anotation;
 
 import java.lang.annotation.*;
 
 /**
- * @author louis
+ * @author gsh
  */
 @Target(value = ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface MyMqttTopic {
-  String value();
+public @interface MyMqttListener {
+  String topic();
 }

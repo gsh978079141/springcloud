@@ -1,5 +1,6 @@
 package com.gsh.springcloud.starter.mq.config;
 
+import com.alibaba.fastjson.JSON;
 import com.gsh.springcloud.starter.mq.mqtt.MessageHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
@@ -25,7 +26,7 @@ public class MqttPushCallback implements MqttCallback {
   @Transactional(rollbackFor = Exception.class)
   public void messageArrived(String topic, MqttMessage mqttMessage) throws Exception {
     // subscribe后得到的消息会执行到这里面
-    log.info("mqtt recv topic={} payload={}", topic, new String(mqttMessage.getPayload()));
+    log.info("mqtt recv topic={} payload={}", topic, JSON.toJSONString(mqttMessage));
     MessageHandler.handleMqttMessage(topic, mqttMessage);
   }
 

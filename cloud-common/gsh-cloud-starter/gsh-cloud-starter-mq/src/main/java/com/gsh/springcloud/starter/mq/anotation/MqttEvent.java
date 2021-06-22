@@ -1,9 +1,9 @@
-package com.gsh.springcloud.starter.mq.mqtt;
+package com.gsh.springcloud.starter.mq.anotation;
 
 import java.lang.annotation.*;
 
 /**
- * @author louis
+ * @author gsh
  */
 @Target(value = ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

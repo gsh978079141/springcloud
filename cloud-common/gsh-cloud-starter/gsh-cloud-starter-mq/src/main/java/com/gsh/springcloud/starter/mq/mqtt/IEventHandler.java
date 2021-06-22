@@ -1,6 +1,6 @@
 package com.gsh.springcloud.starter.mq.mqtt;
 
-import java.util.List;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 /**
  * 事件处理接口
@@ -8,5 +8,13 @@ import java.util.List;
  * @author gsh
  */
 public interface IEventHandler {
-  void handle(List<?> params) throws Exception;
+  /**
+   * 处理程序
+   * //   * @param params 参数
+   *
+   * @param mqttMessage 参数
+   * @throws Exception
+   */
+//  void handle(List<?> params) throws Exception;
+  void handle(MqttMessage mqttMessage) throws Exception;
 }

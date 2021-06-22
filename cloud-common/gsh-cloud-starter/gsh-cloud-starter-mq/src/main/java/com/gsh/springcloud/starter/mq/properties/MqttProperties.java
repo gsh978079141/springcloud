@@ -1,12 +1,8 @@
 package com.gsh.springcloud.starter.mq.properties;
 
-import com.gsh.springcloud.starter.mq.config.MqttPushClient;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.annotation.Resource;
 
 /**
  * @author gsh
@@ -17,9 +13,6 @@ import javax.annotation.Resource;
 @ConfigurationProperties("spring.mqtt")
 @Data
 public class MqttProperties {
-
-  @Resource
-  private MqttPushClient mqttPushClient;
 
   /**
    * 用户名
@@ -50,13 +43,9 @@ public class MqttProperties {
    */
   private int keepalive;
 
-  @Bean
-  public MqttPushClient getMqttPushClient() {
-    mqttPushClient.connect(hostUrl, clientId, username, password, timeout, keepalive);
-    // 以/#结尾表示订阅所有以test开头的主题
-    mqttPushClient.subscribe(defaultTopic, 2);
-    mqttPushClient.subscribe("vision-iot/device/gsh/mqtt/test", 2);
-    return mqttPushClient;
-  }
+  /**
+   * 自定义配置：Listener扫描的包路径
+   */
+  private String listenerPackage;
 
 }

@@ -51,5 +51,6 @@ spring:
           refresh: true
 
 mqtt:
-  enabled: true
+  topic:
+
 

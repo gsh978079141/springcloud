@@ -1,5 +1,6 @@
 package com.gsh.springcloud.starter.mq.mqtt;
 
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -21,10 +22,12 @@ public class EventEmitter {
     eventList.add(new Event(eventName, iEventHandler));
   }
 
-  public void emit(String eventName, List<Object> params) throws Exception {
+  //  public void emit(String eventName, List<Object> params) throws Exception {
+  public void emit(String eventName, MqttMessage mqttMessage) throws Exception {
     for (Event event : eventList) {
       if (event.getName().equals(eventName)) {
-        event.getHandler().handle(params);
+//        event.getHandler().handle(params);
+        event.getHandler().handle(mqttMessage);
       }
     }
   }

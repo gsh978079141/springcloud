@@ -1,11 +1,11 @@
 package com.gsh.springcloud.starter.mq.mqtt;
 
 import cn.hutool.core.util.ClassUtil;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.springframework.stereotype.Component;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -19,13 +19,16 @@ public class EventRegister {
 
   private static EventEmitter emitter = new EventEmitter();
 
-  public static void emit(String event, List<Object> params) throws Exception {
-    emitter.emit(event, params);
+//  public static void emit(String event, List<Object> params) throws Exception {
+//    emitter.emit(event, params);
+//  }
+
+  public static void emit(String event, MqttMessage mqttMessage) throws Exception {
+    emitter.emit(event, mqttMessage);
   }
 
   @SuppressWarnings("ALL")
   public static void regist(String packageName, Class methodAnnotation, Class classAnnotation) throws Exception {
-    packageName = "com.gsh.springcloud";
     // packageName例如：com.gsh.springcloud.starter.mq.mqtt
 //        URL scannedUrl = Thread.currentThread().getContextClassLoader().getResource(packageName.replace(".", "/"));
 //        if (scannedUrl == null) {
@@ -47,7 +50,7 @@ public class EventRegister {
           Annotation methodAnnoationObj = method.getAnnotation(methodAnnotation);
 
           if (methodAnnoationObj != null) {
-            Method valueMethod = methodAnnoationObj.annotationType().getDeclaredMethod("value");
+            Method valueMethod = methodAnnoationObj.annotationType().getDeclaredMethod("topic");
             String value = (String) valueMethod.invoke(methodAnnoationObj);
 
             if (value != null && !"".equals(value)) {
