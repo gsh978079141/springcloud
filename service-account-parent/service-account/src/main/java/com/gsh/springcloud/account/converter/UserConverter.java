@@ -1,7 +1,8 @@
 package com.gsh.springcloud.account.converter;
 
-
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.gsh.springcloud.account.dto.UserDetailDto;
 import com.gsh.springcloud.account.dto.UserDto;
 import com.gsh.springcloud.account.request.UserCreateReq;
 import com.gsh.springcloud.account.request.UserUpdateReq;
@@ -14,8 +15,12 @@ import org.mapstruct.Mapper;
 import javax.validation.constraints.NotNull;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * @author gsh
+ */
 @Mapper
 public class UserConverter {
 
@@ -39,35 +44,63 @@ public class UserConverter {
     entity.setCredentials(Arrays.asList(credential));
     // other fields
     entity.setRequiredActions(Lists.newArrayList());
-    entity.setAttributes(req.getAttributesMap());
-    entity.setRealmRoles(req.getInitRealmRoles());
+    Map<String, List<String>> attributes = Maps.newHashMap();
+    if (req.getAttributes() != null && req.getAttributes().size() > 0) {
+      req.getAttributes().forEach((k, v) -> attributes.put(k, Lists.newArrayList(v)));
+    }
+    entity.setAttributes(attributes);
     entity.setClientRoles(req.getInitClientRoles());
     return entity;
   }
 
   public static UserRepresentation convert2entity(@NotNull UserUpdateReq req) {
     UserRepresentation entity = new UserRepresentation();
-    entity.setUsername(req.getUserName());
     entity.setFirstName(req.getFirstName());
     entity.setLastName(req.getLastName());
     entity.setEmail(req.getEmail());
-    entity.setAttributes(req.getAttributesMap());
+    Map<String, List<String>> attributes = Maps.newHashMap();
+    if (req.getAttributes() != null && req.getAttributes().size() > 0) {
+      req.getAttributes().forEach((k, v) -> attributes.put(k, Lists.newArrayList(v)));
+    }
+    entity.setAttributes(attributes);
     entity.setClientRoles(req.getClientRolesMap());
-    entity.setRealmRoles(req.getRealmRoles());
     return entity;
   }
 
 
-  public static UserDto entity2dto(@NotNull UserRepresentation entity) {
+  public static UserDto convert2dto(@NotNull UserRepresentation entity) {
     UserDto user = new UserDto();
     user.setId(entity.getId());
     user.setFirstName(entity.getFirstName());
     user.setLastName(entity.getLastName());
     user.setUsername(entity.getUsername());
     user.setEmail(entity.getEmail());
+    Map<String, String> attributes = Maps.newHashMap();
+    if (entity.getAttributes() != null) {
+      entity.getAttributes().forEach((k, v) -> {
+        attributes.put(k, v.get(0));
+      });
+    }
+    user.setAttributes(attributes);
+    return user;
+  }
+
+  public static UserDetailDto entity2dto(@NotNull UserRepresentation entity) {
+    UserDetailDto user = new UserDetailDto();
+    user.setId(entity.getId());
+    user.setFirstName(entity.getFirstName());
+    user.setLastName(entity.getLastName());
+    user.setUsername(entity.getUsername());
+    user.setEmail(entity.getEmail());
+    Map<String, String> attributes = Maps.newHashMap();
+    if (entity.getAttributes() != null) {
+      entity.getAttributes().forEach((k, v) -> {
+        attributes.put(k, v.get(0));
+      });
+    }
+    user.setAttributes(attributes);
     user.setAttributesMap(entity.getAttributes());
     user.setClientRolesMap(entity.getClientRoles());
-    user.setRealmRoles(entity.getRealmRoles());
     return user;
   }
 
@@ -84,8 +117,9 @@ public class UserConverter {
     return resp;
   }
 
-  public static List<UserDto> entity2dto(@NotNull List<UserRepresentation> users) {
+  public static List<UserDetailDto> entity2dto(@NotNull List<UserRepresentation> users) {
     return users.stream().map(UserConverter::entity2dto)
             .collect(Collectors.toList());
   }
+
 }

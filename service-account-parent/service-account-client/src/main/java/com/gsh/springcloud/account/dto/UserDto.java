@@ -4,6 +4,7 @@ package com.gsh.springcloud.account.dto;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.List;
@@ -28,7 +29,9 @@ public class UserDto {
   @ApiModelProperty("values are the role names on the specific realm")
   private List<String> realmRoles = Lists.newArrayList();
 
+  @Builder.Default
   @ApiModelProperty("key is attribute name and values are corresponded the attribute name")
-  private Map<String, List<String>> attributesMap = Maps.newHashMap();
+  private Map<String, String> attributes = Maps.newHashMap();
+
 
 }

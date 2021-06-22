@@ -107,7 +107,7 @@ public class MqttPushClient {
 
   @PostConstruct
   public void init() {
-    this.connect();
+//    this.connect();
   }
 
 }
