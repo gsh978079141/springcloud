@@ -13,11 +13,8 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class MqttTopicProperties {
 
+  private String testTopic;
 
-  /**
-   * 用户名
-   */
-  private String username;
-
+    private String subscribeTopic;
 
 }

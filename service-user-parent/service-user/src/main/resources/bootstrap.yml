@@ -52,5 +52,7 @@ spring:
 
 mqtt:
   topic:
+    test-topic: vision-iot/gsh/test
+    subscribe-topic: vision-iot/gsh/subscribe
 
 

@@ -15,15 +15,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class MqttListener {
 
-  @MyMqttListener(topic = "vision-iot/device/gsh/mqtt/test1")
-  public void test1(MqttMessage message) {
-    //处理业务代码
-    log.info("test1！:{}", JSON.toJSONString(message));
-  }
+    //  @MyMqttListener(topic = "${mqtt.topic.test-topic}")
+    @MyMqttListener(topic = "vision-iot/gsh/test")
+    public void test(MqttMessage message) {
+        //处理业务代码
+        log.info("test！:{}", JSON.toJSONString(message));
+    }
 
-  @MyMqttListener(topic = "vision-iot/device/gsh/mqtt/test2")
-  public void test2(MqttMessage message) {
-    //处理业务代码
-    log.info("test2！:{}", JSON.toJSONString(message));
-  }
+    //  @MyMqttListener(topic = "${mqtt.topic.subscribe-topic}")
+    @MyMqttListener(topic = "vision-iot/gsh/subscribe")
+    public void subscribe(MqttMessage message) {
+        //处理业务代码
+        log.info("subscribe！:{}", JSON.toJSONString(message));
+    }
 }
