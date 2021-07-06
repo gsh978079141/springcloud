@@ -14,7 +14,7 @@
   <modules>
     <module>gsh-cloud-starter-swagger</module>
     <module>gsh-cloud-starter-redis</module>
-    <module>gsh-cloud-starter-datebase</module>
+    <module>gsh-cloud-starter-db</module>
     <module>gsh-cloud-starter-web</module>
     <module>gsh-cloud-starter-swagger-keycloak</module>
     <module>gsh-cloud-starter-mq</module>

@@ -23,15 +23,19 @@
       <optional>true</optional>
     </dependency>
     <!-- mqtt  -->
-    <dependency>
-      <groupId>org.springframework.integration</groupId>
-      <artifactId>spring-integration-mqtt</artifactId>
-    </dependency>
-    <!-- lombok -->
+      <dependency>
+          <groupId>org.springframework.integration</groupId>
+          <artifactId>spring-integration-mqtt</artifactId>
+      </dependency>
+      <!-- lombok -->
       <dependency>
           <groupId>org.projectlombok</groupId>
           <artifactId>lombok</artifactId>
           <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
       </dependency>
       <!-- fastjson -->
       <dependency>
@@ -46,11 +50,6 @@
           <groupId>org.apache.commons</groupId>
           <artifactId>commons-lang3</artifactId>
       </dependency>
-      <!--    <dependency>-->
-      <!--      <groupId>io.deepblueai</groupId>-->
-      <!--      <artifactId>ms-lib-spring-boot-starter-eda</artifactId>-->
-      <!--      <version>0.0.1-SNAPSHOT</version>-->
-      <!--    </dependency>-->
   </dependencies>
 
 </project>

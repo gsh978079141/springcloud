@@ -31,7 +31,7 @@
     </dependency>
     <dependency>
       <groupId>com.gsh.springcloud</groupId>
-      <artifactId>gsh-cloud-starter-mysql-mybatis-plus</artifactId>
+      <artifactId>gsh-cloud-starter-mysql-plus</artifactId>
     </dependency>
     <!--  nacos 配置中心  -->
     <dependency>

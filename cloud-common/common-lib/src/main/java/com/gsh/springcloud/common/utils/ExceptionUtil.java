@@ -1,19 +1,13 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package com.gsh.springcloud.common.utils;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+@Slf4j
 public class ExceptionUtil {
-  private static final Logger log = LoggerFactory.getLogger(ExceptionUtil.class);
 
   public ExceptionUtil() {
   }

@@ -1,0 +1,83 @@
+<settings>
+    <mirrors>
+        <mirror>
+            <!--Send all requests to the public group -->
+            <id>gsh-nexus</id>
+            <mirrorOf>*</mirrorOf>
+            <!--      <url>http://nexus.gshyun.com/repository/maven-public/</url>-->
+            <url>http://192.168.0.107:8081/repository/maven-public/</url>
+        </mirror>
+    </mirrors>
+
+    <activeProfiles>
+        <activeProfile>gsh-nexus</activeProfile>
+    </activeProfiles>
+    <profiles>
+
+        <!--    <profile>-->
+        <!--      <id>ossrh</id>-->
+        <!--      <activation>-->
+        <!--        <activeByDefault>true</activeByDefault>-->
+        <!--      </activation>-->
+        <!--      <properties>-->
+        <!--        <gpg.executable>gpg2</gpg.executable>-->
+        <!--        <gpg.passphrase>the_pass_phrase</gpg.passphrase>-->
+        <!--      </properties>-->
+        <!--    </profile>-->
+
+        <profile>
+            <id>gsh-nexus</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>http://192.168.0.107:8081/repository/maven-public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <!--      下载插件-->
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>http://192.168.0.107:8081/repository/maven-public/</url>
+                    <!--          <url>http://central</url>-->
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
+    </profiles>
+
+    <pluginGroups>
+        <pluginGroup>org.sonatype.plugins</pluginGroup>
+        <pluginGroup>com.spotify</pluginGroup>
+    </pluginGroups>
+
+    <!--  发布依赖配置-->
+    <servers>
+        <server>
+            <id>gsh-nexus</id>
+            <username>admin</username>
+            <password>Wddgsh520.</password>
+        </server>
+        <server>
+            <id>gsh-releases</id>
+            <username>admin</username>
+            <password>Wddgsh520.</password>
+        </server>
+        <server>
+            <id>gsh-snapshots</id>
+            <username>admin</username>
+            <password>Wddgsh520.</password>
+        </server>
+    </servers>
+</settings>

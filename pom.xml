@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.gsh.springcloud</groupId>
   <artifactId>spring-cloud-gsh</artifactId>
+  <groupId>com.gsh.springcloud</groupId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -40,6 +40,7 @@
     <version.tk-mybatis>4.1.5</version.tk-mybatis>
     <version.logback-redis-appender>1.1.5</version.logback-redis-appender>
     <!-- 三方包-->
+      <version.logback>1.2.3</version.logback>
     <version.aliyun.oss>2.4.1</version.aliyun.oss>
     <version.qiniu.sdk>7.2.11</version.qiniu.sdk>
     <version.commons.io>2.6</version.commons.io>
@@ -201,7 +202,7 @@
       </dependency>
       <dependency>
         <groupId>com.gsh.springcloud</groupId>
-        <artifactId>gsh-cloud-starter-mysql-mybatis-plus</artifactId>
+          <artifactId>gsh-cloud-starter-mysql-plus</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
@@ -232,26 +233,37 @@
       <dependency>
         <groupId>com.gsh.springcloud</groupId>
         <artifactId>service-order-client</artifactId>
-        <version>${project.version}</version>
+          <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.gsh.springcloud</groupId>
-        <artifactId>service-account-client</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <!-- ****E 其他子模块client ****-->
+        <dependency>
+            <groupId>com.gsh.springcloud</groupId>
+            <artifactId>service-account-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- ****E 其他子模块client ****-->
 
-      <!-- ****S 三方/工具包 ****-->
-      <!--mysql-->
-      <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>${version.mysql-connector}</version>
-      </dependency>
-      <!--druid阿里巴巴数据库连接池 -->
-      <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>druid</artifactId>
+        <!-- ****S 三方/工具包 ****-->
+        <!--日志-->
+        <dependency>
+            <artifactId>logback-classic</artifactId>
+            <groupId>ch.qos.logback</groupId>
+            <version>${version.logback}</version>
+        </dependency>
+        <dependency>
+            <artifactId>logback-core</artifactId>
+            <groupId>ch.qos.logback</groupId>
+            <version>${version.logback}</version>
+        </dependency>
+        <!--mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${version.mysql-connector}</version>
+        </dependency>
+        <!--druid阿里巴巴数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
         <version>${version.druid}</version>
       </dependency>
       <!--mybatis-plus-->
@@ -480,14 +492,28 @@
     </plugins>
   </build>
   <!-- S  子项目-->
-  <modules>
-    <module>cloud-common</module>
-    <module>gateway-api</module>
-    <module>gateway-management</module>
-    <module>service-user-parent</module>
-    <module>service-order-parent</module>
-    <module>service-message-parent</module>
-    <module>service-account-parent</module>
-  </modules>
-  <!-- S  子项目-->
+    <modules>
+        <module>cloud-common</module>
+        <module>gateway-api</module>
+        <module>gateway-management</module>
+        <module>service-user-parent</module>
+        <module>service-order-parent</module>
+        <module>service-message-parent</module>
+        <module>service-account-parent</module>
+    </modules>
+    <!-- S  子项目-->
+    <!-- nexus  私服配置-->
+    <distributionManagement>
+        <repository>
+            <id>gsh-releases</id>
+            <name>gsh-releases</name>
+            <!--      <url>http://nexus.gshyun.com/repository/gsh-releases/</url>-->
+            <url>http://192.168.0.107:8081/repository/gsh-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>gsh-snapshots</id>
+            <name>gsh-snapshots</name>
+            <url>http://192.168.0.107:8081/repository/gsh-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.gsh.springcloud.starter.mysql.mybatisplus.MybatisPlusConfiguration
