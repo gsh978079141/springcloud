@@ -41,3 +41,5 @@
 2021/07/12 17:28:26 [error] 25#25: *1 "/opt/dist/index.html" is not found (2: No such file or directory), client: 192.168.112.1, server: 192.168.31.202, request: "GET / HTTP/1.1", host: "192.168.0.107:8888"
 2021/07/12 17:28:27 [error] 25#25: *1 "/opt/dist/index.html" is not found (2: No such file or directory), client: 192.168.112.1, server: 192.168.31.202, request: "GET / HTTP/1.1", host: "192.168.0.107:8888"
 2021/07/12 17:28:34 [error] 25#25: *1 "/opt/dist/index.html" is not found (2: No such file or directory), client: 192.168.112.1, server: 192.168.31.202, request: "GET / HTTP/1.1", host: "192.168.0.107:8888"
+2021/07/12 17:30:08 [notice] 25#25: signal 15 (SIGTERM) received, exiting
+2021/07/12 17:30:08 [notice] 1#1: signal 15 (SIGTERM) received, exiting
