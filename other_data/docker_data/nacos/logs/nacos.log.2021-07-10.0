@@ -1,0 +1,230 @@
+2021-07-10 03:19:15,298 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@196ca723 (Communications link failure
+
+The last packet successfully received from the server was 11,701,268 milliseconds ago. The last packet sent successfully to the server was 11,701,271 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 03:19:15,312 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4bbb404 (Communications link failure
+
+The last packet successfully received from the server was 11,706,292 milliseconds ago. The last packet sent successfully to the server was 11,706,296 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 03:19:57,657 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@de567b5 (Communications link failure
+
+The last packet successfully received from the server was 10,004 milliseconds ago. The last packet sent successfully to the server was 10,029 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 03:19:57,672 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1582b18a (Communications link failure
+
+The last packet successfully received from the server was 9,987 milliseconds ago. The last packet sent successfully to the server was 9,991 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 04:02:28,873 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@632871d2 (Communications link failure
+
+The last packet successfully received from the server was 2,546,801 milliseconds ago. The last packet sent successfully to the server was 2,546,805 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 04:02:33,586 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@779d1460 (Communications link failure
+
+The last packet successfully received from the server was 19,666 milliseconds ago. The last packet sent successfully to the server was 19,671 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 07:20:26,238 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@64ce8a70 (Communications link failure
+
+The last packet successfully received from the server was 10,006 milliseconds ago. The last packet sent successfully to the server was 10,010 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 07:20:26,267 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@24b79fe (Communications link failure
+
+The last packet successfully received from the server was 11,871,051 milliseconds ago. The last packet sent successfully to the server was 11,871,056 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 07:20:26,284 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@fee000c (Communications link failure
+
+The last packet successfully received from the server was 11,871,014 milliseconds ago. The last packet sent successfully to the server was 11,871,018 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 08:15:52,508 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@15685884 (Communications link failure
+
+The last packet successfully received from the server was 5,796 milliseconds ago. The last packet sent successfully to the server was 5,800 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 08:15:52,549 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5a89b79 (Communications link failure
+
+The last packet successfully received from the server was 29,920 milliseconds ago. The last packet sent successfully to the server was 29,923 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 08:16:16,606 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74a3313d (Communications link failure
+
+The last packet successfully received from the server was 6,769 milliseconds ago. The last packet sent successfully to the server was 6,775 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 08:16:16,640 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7b95fa26 (Communications link failure
+
+The last packet successfully received from the server was 22,012 milliseconds ago. The last packet sent successfully to the server was 22,015 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 08:22:18,468 INFO [capacityManagement] start correct usage
+
+2021-07-10 08:22:18,545 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 08:22:20,894 WARN clearConfigHistory start
+
+2021-07-10 08:59:12,395 INFO [capacityManagement] start correct usage
+
+2021-07-10 08:59:12,420 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 08:59:14,777 WARN clearConfigHistory start
+
+2021-07-10 09:08:14,575 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73363da9 (Communications link failure
+
+The last packet successfully received from the server was 9,976 milliseconds ago. The last packet sent successfully to the server was 9,980 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 09:08:14,663 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56241e54 (Communications link failure
+
+The last packet successfully received from the server was 2,785,309 milliseconds ago. The last packet sent successfully to the server was 2,785,311 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 10:45:54,703 INFO [capacityManagement] start correct usage
+
+2021-07-10 10:45:54,737 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 10:45:57,076 WARN clearConfigHistory start
+
+2021-07-10 10:55:54,065 INFO [capacityManagement] start correct usage
+
+2021-07-10 10:55:54,102 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 10:55:56,416 WARN clearConfigHistory start
+
+2021-07-10 11:05:53,442 INFO [capacityManagement] start correct usage
+
+2021-07-10 11:05:53,507 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 11:05:55,798 WARN clearConfigHistory start
+
+2021-07-10 11:15:52,834 INFO [capacityManagement] start correct usage
+
+2021-07-10 11:15:52,866 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 11:15:55,148 WARN clearConfigHistory start
+
+2021-07-10 11:17:31,148 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@732d7e03 (Communications link failure
+
+The last packet successfully received from the server was 9,902 milliseconds ago. The last packet sent successfully to the server was 9,906 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 11:17:31,176 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7c2aaf41 (Communications link failure
+
+The last packet successfully received from the server was 154,545 milliseconds ago. The last packet sent successfully to the server was 154,548 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 14:46:39,727 INFO [capacityManagement] start correct usage
+
+2021-07-10 14:46:39,729 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 14:46:42,014 WARN clearConfigHistory start
+
+2021-07-10 14:56:39,098 INFO [capacityManagement] start correct usage
+
+2021-07-10 14:56:39,133 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 14:56:41,394 WARN clearConfigHistory start
+
+2021-07-10 15:06:38,463 INFO [capacityManagement] start correct usage
+
+2021-07-10 15:06:38,505 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 15:06:40,745 WARN clearConfigHistory start
+
+2021-07-10 15:16:37,844 INFO [capacityManagement] start correct usage
+
+2021-07-10 15:16:37,880 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 15:16:40,102 WARN clearConfigHistory start
+
+2021-07-10 15:36:15,478 INFO [capacityManagement] start correct usage
+
+2021-07-10 15:36:15,509 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 15:36:17,715 WARN clearConfigHistory start
+
+2021-07-10 15:46:14,840 INFO [capacityManagement] start correct usage
+
+2021-07-10 15:46:14,880 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 15:46:17,066 WARN clearConfigHistory start
+
+2021-07-10 15:56:14,216 INFO [capacityManagement] start correct usage
+
+2021-07-10 15:56:14,253 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 15:56:16,443 WARN clearConfigHistory start
+
+2021-07-10 16:06:13,589 INFO [capacityManagement] start correct usage
+
+2021-07-10 16:06:13,621 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 16:06:15,809 WARN clearConfigHistory start
+
+2021-07-10 16:22:56,336 INFO [capacityManagement] start correct usage
+
+2021-07-10 16:22:56,372 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 16:22:58,534 WARN clearConfigHistory start
+
+2021-07-10 16:32:55,716 INFO [capacityManagement] start correct usage
+
+2021-07-10 16:32:55,763 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 16:32:57,918 WARN clearConfigHistory start
+
+2021-07-10 16:42:55,093 INFO [capacityManagement] start correct usage
+
+2021-07-10 16:42:55,125 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 16:42:57,275 WARN clearConfigHistory start
+
+2021-07-10 16:52:54,463 INFO [capacityManagement] start correct usage
+
+2021-07-10 16:52:54,500 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 16:52:56,629 WARN clearConfigHistory start
+
+2021-07-10 17:02:53,842 INFO [capacityManagement] start correct usage
+
+2021-07-10 17:02:53,879 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 17:02:56,003 WARN clearConfigHistory start
+
+2021-07-10 17:12:53,209 INFO [capacityManagement] start correct usage
+
+2021-07-10 17:12:53,242 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 17:12:55,353 WARN clearConfigHistory start
+
+2021-07-10 17:22:52,583 INFO [capacityManagement] start correct usage
+
+2021-07-10 17:22:52,619 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 17:22:54,716 WARN clearConfigHistory start
+
+2021-07-10 17:32:51,960 INFO [capacityManagement] start correct usage
+
+2021-07-10 17:32:51,993 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 17:32:54,069 WARN clearConfigHistory start
+
+2021-07-10 17:42:51,322 INFO [capacityManagement] start correct usage
+
+2021-07-10 17:42:51,347 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-10 17:42:53,423 WARN clearConfigHistory start
+
+2021-07-10 17:47:29,052 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c89b293 (Communications link failure
+
+The last packet successfully received from the server was 9,995 milliseconds ago. The last packet sent successfully to the server was 9,999 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 17:47:29,067 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@27e06a92 (Communications link failure
+
+The last packet successfully received from the server was 10,021 milliseconds ago. The last packet sent successfully to the server was 10,025 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 18:01:50,579 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6998eefb (Communications link failure
+
+The last packet successfully received from the server was 10,004 milliseconds ago. The last packet sent successfully to the server was 10,008 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 18:01:50,605 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@18f12828 (Communications link failure
+
+The last packet successfully received from the server was 857,089 milliseconds ago. The last packet sent successfully to the server was 857,094 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 20:36:46,667 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@46a5f21 (Communications link failure
+
+The last packet successfully received from the server was 10,007 milliseconds ago. The last packet sent successfully to the server was 10,011 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-10 20:36:46,680 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53de33e8 (Communications link failure
+
+The last packet successfully received from the server was 14,992 milliseconds ago. The last packet sent successfully to the server was 14,995 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+

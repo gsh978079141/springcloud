@@ -1,2 +1,150 @@
-2021-07-07 16:50:21,964 ERROR [UPDATE-DOMAIN] Exception while taking item from LinkedBlockingDeque.
+2021-07-08 16:01:05,787 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: None, new ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:01:05,894 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:01:05,906 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:01:10,870 INFO serviceName: DEFAULT_GROUP@@python-service {POS} {IP-DISABLED} invalid-now: 192.168.0.204:8081@None, region: unknown, msg: tcp:unable2connect:Connection refused
+
+2021-07-08 16:01:20,779 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,
+
+2021-07-08 16:06:41,919 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,
+
+2021-07-08 16:08:48,786 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,
+
+2021-07-08 16:08:50,888 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:08:50,888 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,192.168.0.204:8081_true,
+
+2021-07-08 16:08:57,075 INFO serviceName: DEFAULT_GROUP@@python-service {POS} {IP-DISABLED} invalid-now: 192.168.0.204:8081@DEFAULT, region: unknown, msg: tcp:unable2connect:Connection refused
+
+2021-07-08 16:10:40,614 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: None, new ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:10:40,615 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:10:42,696 INFO serviceName: DEFAULT_GROUP@@python-service {POS} {IP-DISABLED} invalid-now: 192.168.0.204:8081@None, region: unknown, msg: tcp:unable2connect:Connection refused
+
+2021-07-08 16:10:42,707 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:10:42,709 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,192.168.0.204:8081_true,
+
+2021-07-08 16:10:44,817 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:10:44,817 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:10:47,601 INFO serviceName: DEFAULT_GROUP@@python-service {POS} {IP-DISABLED} invalid-now: 192.168.0.204:8081@DEFAULT, region: unknown, msg: tcp:unable2connect:Connection refused
+
+2021-07-08 16:14:19,887 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,
+
+2021-07-08 16:14:22,428 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,
+
+2021-07-08 16:16:01,372 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: None, new ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:16:01,372 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,192.168.0.204:8081_false,
+
+2021-07-08 16:16:05,413 INFO serviceName: DEFAULT_GROUP@@python-service {POS} {IP-DISABLED} invalid-now: 192.168.0.204:8081@None, region: unknown, msg: tcp:unable2connect:Connection refused
+
+2021-07-08 16:16:20,530 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: None, new ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:16:20,530 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:16:26,068 INFO serviceName: DEFAULT_GROUP@@python-service {POS} {IP-DISABLED} invalid-now: 192.168.0.204:8081@None, region: unknown, msg: tcp:unable2connect:Connection refused
+
+2021-07-08 16:17:05,270 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,
+
+2021-07-08 16:17:42,699 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,
+
+2021-07-08 16:17:44,745 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:17:44,748 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,192.168.0.204:8081_true,
+
+2021-07-08 16:17:51,340 INFO serviceName: DEFAULT_GROUP@@python-service {POS} {IP-DISABLED} invalid-now: 192.168.0.204:8081@DEFAULT, region: unknown, msg: tcp:unable2connect:Connection refused
+
+2021-07-08 16:18:22,413 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,192.168.0.204:8081_false,
+
+2021-07-08 16:18:23,977 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_false,192.168.0.204:8081_false,
+
+2021-07-08 16:18:36,525 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:18:36,525 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:18:39,187 INFO serviceName: DEFAULT_GROUP@@python-service {POS} {IP-DISABLED} invalid-now: 192.168.0.204:8081@DEFAULT, region: unknown, msg: tcp:unable2connect:Connection refused
+
+2021-07-08 16:19:54,447 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: None, new ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:19:54,448 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,192.168.0.204:8081_false,
+
+2021-07-08 16:20:11,430 INFO {POS} {IP-DISABLED} valid: 192.168.0.204:8081@None@DEFAULT_GROUP@@python-service, region: unknown, msg: client timeout after 15000, last beat: 1625732394444
+
+2021-07-08 16:20:34,899 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: None, new ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:20:34,899 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:20:37,048 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:20:37,048 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,192.168.0.204:8081_true,
+
+2021-07-08 16:20:54,861 INFO {POS} {IP-DISABLED} valid: 192.168.0.204:8081@None@DEFAULT_GROUP@@python-service, region: unknown, msg: client timeout after 15000, last beat: 1625732434881
+
+2021-07-08 16:21:09,872 INFO DEFAULT_GROUP@@python-service {SYNC} {IP-DEAD} cluster: None, dead ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:21:09,875 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:22:14,833 INFO {POS} {IP-DISABLED} valid: 192.168.0.204:8081@DEFAULT@DEFAULT_GROUP@@python-service, region: unknown, msg: client timeout after 15000, last beat: 1625732517493
+
+2021-07-08 16:23:12,883 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-NEW} cluster: None, new ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:23:12,884 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:23:15,000 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:23:15,001 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 192.168.0.204:8081_true,192.168.0.204:8081_true,
+
+2021-07-08 16:23:27,886 INFO {POS} {IP-DISABLED} valid: 192.168.0.204:8081@None@DEFAULT_GROUP@@python-service-1, region: unknown, msg: client timeout after 15000, last beat: 1625732592872
+
+2021-07-08 16:23:47,874 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-DEAD} cluster: None, dead ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:23:47,884 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:26:41,744 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-NEW} cluster: None, new ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:26:41,744 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:26:43,830 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:26:43,831 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 192.168.0.204:8081_true,192.168.0.204:8081_true,
+
+2021-07-08 16:26:56,746 INFO {POS} {IP-DISABLED} valid: 192.168.0.204:8081@None@DEFAULT_GROUP@@python-service-1, region: unknown, msg: client timeout after 15000, last beat: 1625732801740
+
+2021-07-08 16:27:16,730 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-DEAD} cluster: None, dead ips size: 1, content: [192.168.0.204:8081:unknown:None_1.0_true_false_None]
+
+2021-07-08 16:27:16,730 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:27:21,724 INFO {POS} {IP-DISABLED} valid: 192.168.0.204:8081@DEFAULT@DEFAULT_GROUP@@python-service-1, region: unknown, msg: client timeout after 15000, last beat: 1625732824399
+
+2021-07-08 16:27:36,746 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-07-08 16:27:36,746 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 
+
+2021-07-08 16:27:49,649 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:27:49,649 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:36:12,098 INFO {POS} {IP-DISABLED} valid: 192.168.0.204:8081@DEFAULT@DEFAULT_GROUP@@python-service-1, region: unknown, msg: client timeout after 15000, last beat: 1625733051403
+
+2021-07-08 16:36:12,124 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-07-08 16:36:12,124 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 
+
+2021-07-08 16:44:18,346 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-07-08 16:44:18,348 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:54:58,419 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 192.168.0.204:8081_true,
+
+2021-07-08 16:58:21,350 INFO {POS} {IP-DISABLED} valid: 192.168.0.204:8081@DEFAULT@DEFAULT_GROUP@@python-service-1, region: unknown, msg: client timeout after 15000, last beat: 1625734684208
+
+2021-07-08 16:58:36,370 INFO DEFAULT_GROUP@@python-service-1 {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.0.204:8081:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-07-08 16:58:36,370 INFO [IP-UPDATED] namespace: python-test, service: DEFAULT_GROUP@@python-service-1, ips: 
 
