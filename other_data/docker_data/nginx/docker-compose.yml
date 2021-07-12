@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    privileged: true
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./nginx_home/data:/data
+      - ./nginx_home/etc:/etc/nginx/conf.d
+      - ./nginx_home/log:/var/log/nginx
+      - ./nginx_home/www:/usr/share/nginx/html
+      # - /etc/letsencrypt:/etc/letsencrypt
+    ports:
+      - 8888:80
