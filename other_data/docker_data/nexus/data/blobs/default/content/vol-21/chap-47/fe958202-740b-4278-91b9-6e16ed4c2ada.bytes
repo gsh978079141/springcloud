@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.gsh.springcloud</groupId>
+  <artifactId>gateway-api</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20210714063624</lastUpdated>
+  </versioning>
+</metadata>

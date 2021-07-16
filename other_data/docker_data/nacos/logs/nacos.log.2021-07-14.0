@@ -1,0 +1,316 @@
+2021-07-14 14:00:24,952 INFO Starting Nacos v1.4.2 on 37c0baa86b4d with PID 30 (/home/nacos/target/nacos-server.jar started by root in /home/nacos)
+
+2021-07-14 14:00:25,060 INFO The following profiles are active: standalone
+
+2021-07-14 14:00:28,122 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@18e36d14' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2021-07-14 14:00:28,134 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2021-07-14 14:00:28,641 INFO Tomcat initialized with port(s): 8848 (http)
+
+2021-07-14 14:00:28,727 INFO Starting service [Tomcat]
+
+2021-07-14 14:00:28,728 INFO Starting Servlet engine: [Apache Tomcat/9.0.38]
+
+2021-07-14 14:00:29,155 INFO At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+
+2021-07-14 14:00:29,220 INFO Initializing Spring embedded WebApplicationContext
+
+2021-07-14 14:00:29,221 INFO Root WebApplicationContext: initialization completed in 4096 ms
+
+2021-07-14 14:00:30,047 INFO HikariPool-1 - Starting...
+
+2021-07-14 14:00:30,476 INFO HikariPool-1 - Start completed.
+
+2021-07-14 14:00:30,885 INFO Nacos-related cluster resource initialization
+
+2021-07-14 14:00:30,913 INFO The cluster resource is initialized
+
+2021-07-14 14:00:31,871 INFO Reflections took 70 ms to scan 1 urls, producing 4 keys and 6 values 
+
+2021-07-14 14:00:31,920 INFO Reflections took 7 ms to scan 1 urls, producing 6 keys and 26 values 
+
+2021-07-14 14:00:31,972 INFO Reflections took 9 ms to scan 1 urls, producing 3 keys and 15 values 
+
+2021-07-14 14:00:31,990 INFO Reflections took 3 ms to scan 1 urls, producing 2 keys and 12 values 
+
+2021-07-14 14:00:33,391 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2021-07-14 14:00:33,597 INFO Adding welcome page: class path resource [static/index.html]
+
+2021-07-14 14:00:34,437 INFO Creating filter chain: Ant [pattern='/**'], []
+
+2021-07-14 14:00:34,628 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d411036, org.springframework.security.web.context.SecurityContextPersistenceFilter@74f7d1d2, org.springframework.security.web.header.HeaderWriterFilter@7fe083b1, org.springframework.security.web.csrf.CsrfFilter@8ab78bc, org.springframework.security.web.authentication.logout.LogoutFilter@2db2dd9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ca17ab0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35293c05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7adbd080, org.springframework.security.web.session.SessionManagementFilter@486be205, org.springframework.security.web.access.ExceptionTranslationFilter@16afbd92]
+
+2021-07-14 14:00:35,036 INFO Initializing ExecutorService 'taskScheduler'
+
+2021-07-14 14:00:35,069 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2021-07-14 14:00:35,230 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2021-07-14 14:00:35,237 INFO Started Nacos in 12.102 seconds (JVM running for 12.695)
+
+2021-07-14 14:00:35,238 INFO Nacos started successfully in stand alone mode. use external storage
+
+2021-07-14 14:01:22,573 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+2021-07-14 14:01:22,574 INFO Initializing Servlet 'dispatcherServlet'
+
+2021-07-14 14:01:22,589 INFO Completed initialization in 14 ms
+
+2021-07-14 14:10:32,253 INFO [capacityManagement] start correct usage
+
+2021-07-14 14:10:32,269 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 14:10:32,805 WARN clearConfigHistory start
+
+2021-07-14 14:20:32,270 INFO [capacityManagement] start correct usage
+
+2021-07-14 14:20:32,278 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 14:20:32,988 WARN clearConfigHistory start
+
+2021-07-14 14:30:32,280 INFO [capacityManagement] start correct usage
+
+2021-07-14 14:30:32,294 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 14:30:32,998 WARN clearConfigHistory start
+
+2021-07-14 14:40:32,294 INFO [capacityManagement] start correct usage
+
+2021-07-14 14:40:32,304 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 14:40:33,012 WARN clearConfigHistory start
+
+2021-07-14 14:50:32,305 INFO [capacityManagement] start correct usage
+
+2021-07-14 14:50:32,317 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 14:50:33,024 WARN clearConfigHistory start
+
+2021-07-14 15:00:32,318 INFO [capacityManagement] start correct usage
+
+2021-07-14 15:00:32,332 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 15:00:33,032 WARN clearConfigHistory start
+
+2021-07-14 15:10:32,333 INFO [capacityManagement] start correct usage
+
+2021-07-14 15:10:32,347 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 15:10:33,040 WARN clearConfigHistory start
+
+2021-07-14 15:20:32,347 INFO [capacityManagement] start correct usage
+
+2021-07-14 15:20:32,357 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 15:20:33,054 WARN clearConfigHistory start
+
+2021-07-14 15:30:32,358 INFO [capacityManagement] start correct usage
+
+2021-07-14 15:30:32,370 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 15:30:33,064 WARN clearConfigHistory start
+
+2021-07-14 15:40:32,370 INFO [capacityManagement] start correct usage
+
+2021-07-14 15:40:32,386 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 15:40:33,073 WARN clearConfigHistory start
+
+2021-07-14 15:50:32,387 INFO [capacityManagement] start correct usage
+
+2021-07-14 15:50:32,400 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 15:50:33,084 WARN clearConfigHistory start
+
+2021-07-14 16:00:32,400 INFO [capacityManagement] start correct usage
+
+2021-07-14 16:00:32,428 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 16:00:33,095 WARN clearConfigHistory start
+
+2021-07-14 16:10:32,429 INFO [capacityManagement] start correct usage
+
+2021-07-14 16:10:32,441 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 16:10:33,107 WARN clearConfigHistory start
+
+2021-07-14 16:20:32,442 INFO [capacityManagement] start correct usage
+
+2021-07-14 16:20:32,454 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 16:20:33,121 WARN clearConfigHistory start
+
+2021-07-14 16:30:32,455 INFO [capacityManagement] start correct usage
+
+2021-07-14 16:30:32,472 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 16:30:33,132 WARN clearConfigHistory start
+
+2021-07-14 16:40:32,473 INFO [capacityManagement] start correct usage
+
+2021-07-14 16:40:32,480 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 16:40:33,142 WARN clearConfigHistory start
+
+2021-07-14 16:50:32,480 INFO [capacityManagement] start correct usage
+
+2021-07-14 16:50:32,490 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 16:50:33,153 WARN clearConfigHistory start
+
+2021-07-14 17:00:32,491 INFO [capacityManagement] start correct usage
+
+2021-07-14 17:00:32,503 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 17:00:33,163 WARN clearConfigHistory start
+
+2021-07-14 17:10:32,504 INFO [capacityManagement] start correct usage
+
+2021-07-14 17:10:32,515 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 17:10:33,171 WARN clearConfigHistory start
+
+2021-07-14 17:20:32,515 INFO [capacityManagement] start correct usage
+
+2021-07-14 17:20:32,523 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 17:20:33,182 WARN clearConfigHistory start
+
+2021-07-14 17:30:32,524 INFO [capacityManagement] start correct usage
+
+2021-07-14 17:30:32,542 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 17:30:33,194 WARN clearConfigHistory start
+
+2021-07-14 17:40:32,542 INFO [capacityManagement] start correct usage
+
+2021-07-14 17:40:32,551 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 17:40:33,209 WARN clearConfigHistory start
+
+2021-07-14 17:50:32,552 INFO [capacityManagement] start correct usage
+
+2021-07-14 17:50:32,563 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 17:50:33,220 WARN clearConfigHistory start
+
+2021-07-14 18:00:32,564 INFO [capacityManagement] start correct usage
+
+2021-07-14 18:00:32,572 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 18:00:33,232 WARN clearConfigHistory start
+
+2021-07-14 18:21:37,932 INFO [capacityManagement] start correct usage
+
+2021-07-14 18:21:38,167 WARN clearConfigHistory start
+
+2021-07-14 18:21:38,176 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m37s183ms148µs500ns).
+
+2021-07-14 18:21:38,198 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@70b32a67 (Communications link failure
+
+The last packet successfully received from the server was 1,105,913 milliseconds ago. The last packet sent successfully to the server was 1,105,915 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-14 18:21:38,198 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2c8f3c56 (Communications link failure
+
+The last packet successfully received from the server was 1,418,821 milliseconds ago. The last packet sent successfully to the server was 1,418,822 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-14 18:21:41,661 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 18:31:41,631 WARN clearConfigHistory start
+
+2021-07-14 18:31:41,662 INFO [capacityManagement] start correct usage
+
+2021-07-14 18:31:41,667 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 19:30:48,365 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m36s762ms908µs400ns).
+
+2021-07-14 19:30:48,390 INFO [capacityManagement] start correct usage
+
+2021-07-14 19:30:48,565 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@74586632 (Communications link failure
+
+The last packet successfully received from the server was 3,036,199 milliseconds ago. The last packet sent successfully to the server was 3,036,201 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-14 19:30:48,573 WARN clearConfigHistory start
+
+2021-07-14 19:30:48,542 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e5159c6 (Communications link failure
+
+The last packet successfully received from the server was 3,036,128 milliseconds ago. The last packet sent successfully to the server was 3,036,130 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-14 19:30:48,929 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-14 20:30:59,944 INFO [capacityManagement] start correct usage
+
+2021-07-14 21:30:45,261 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5a4f9b42 (Communications link failure
+
+The last packet successfully received from the server was 3,585,229 milliseconds ago. The last packet sent successfully to the server was 7,196,067 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-14 20:30:59,980 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h11s626ms228µs300ns).
+
+2021-07-14 21:30:45,657 WARN HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@6312fb88 marked as broken because of SQLSTATE(08S01), ErrorCode(0)
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 7,196,398 milliseconds ago. The last packet sent successfully to the server was 7,196,412 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:678)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:617)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:783)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:809)
+	at com.alibaba.nacos.config.server.service.repository.extrnal.ExternalStoragePersistServiceImpl.findConfigHistoryCountByTime(ExternalStoragePersistServiceImpl.java:542)
+	at com.alibaba.nacos.config.server.service.dump.DumpService.lambda$dumpOperate$3(DumpService.java:153)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 7,196,398 milliseconds ago. The last packet sent successfully to the server was 7,196,412 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:569)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:624)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:940)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	... 19 common frames omitted
+Caused by: java.net.SocketException: Broken pipe (Write failed)
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:55)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:50)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:560)
+	... 23 common frames omitted
+2021-07-14 22:30:46,216 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h59m46s235ms364µs).
+
+2021-07-14 22:30:46,236 ERROR clearConfigHistory error : org.springframework.dao.RecoverableDataAccessException: PreparedStatementCallback; SQL [SELECT COUNT(*) FROM his_config_info WHERE gmt_modified < ?]; Communications link failure
+
+The last packet successfully received from the server was 7,196,398 milliseconds ago. The last packet sent successfully to the server was 7,196,412 milliseconds ago.; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 7,196,398 milliseconds ago. The last packet sent successfully to the server was 7,196,412 milliseconds ago.
+
+2021-07-14 23:30:36,315 WARN clearConfigHistory start
+
+2021-07-14 23:30:36,315 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59m50s99ms401µs900ns).
+

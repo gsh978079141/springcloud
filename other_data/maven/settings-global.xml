@@ -5,7 +5,7 @@
             <id>gsh-nexus</id>
             <mirrorOf>*</mirrorOf>
             <!--      <url>http://nexus.gshyun.com/repository/maven-public/</url>-->
-            <url>http://192.168.0.107:8081/repository/maven-public/</url>
+            <url>http://192.168.0.114:8081/repository/maven-public/</url>
         </mirror>
     </mirrors>
 
@@ -30,7 +30,7 @@
             <repositories>
                 <repository>
                     <id>central</id>
-                    <url>http://192.168.0.107:8081/repository/maven-public/</url>
+                    <url>http://192.168.0.114:8081/repository/maven-public/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -43,7 +43,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
-                    <url>http://192.168.0.107:8081/repository/maven-public/</url>
+                    <url>http://192.168.0.114:8081/repository/maven-public/</url>
                     <!--          <url>http://central</url>-->
                     <releases>
                         <enabled>true</enabled>

@@ -54,6 +54,7 @@
     <version.testcontainers>1.15.2</version.testcontainers>
     <version.hutool>5.5.1</version.hutool>
     <version.hystrix-core>1.5.18</version.hystrix-core>
+    <version.hibernate-validator>6.1.7.Final</version.hibernate-validator>
     <!--    其他模块依赖-->
     <version.common-lib>1.0-SNAPSHOT</version.common-lib>
     <version.service-base>1.0-SNAPSHOT</version.service-base>
@@ -469,6 +470,12 @@
         <version>${version.aliyun.oss}</version>
       </dependency>
       <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>${version.hibernate-validator}</version>
+      </dependency>
+
+      <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
         <version>${version.commons.io}</version>
@@ -508,12 +515,12 @@
             <id>gsh-releases</id>
             <name>gsh-releases</name>
             <!--      <url>http://nexus.gshyun.com/repository/gsh-releases/</url>-->
-            <url>http://192.168.0.107:8081/repository/gsh-releases/</url>
+            <url>http://192.168.0.114:8081/repository/gsh-releases/</url>
         </repository>
         <snapshotRepository>
             <id>gsh-snapshots</id>
             <name>gsh-snapshots</name>
-            <url>http://192.168.0.107:8081/repository/gsh-snapshots/</url>
+            <url>http://192.168.0.114:8081/repository/gsh-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>

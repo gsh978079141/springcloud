@@ -12,4 +12,6 @@ public interface UserService extends IService<User> {
    */
   void login(User user);
 
+  void test();
+
 }

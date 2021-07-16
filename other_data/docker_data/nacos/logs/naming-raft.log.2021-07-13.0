@@ -1,0 +1,56 @@
+2021-07-08 16:01:01,775 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:01:05,580 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service, value: Service{name='DEFAULT_GROUP@@python-service', protectThreshold=0.0, appName='null', groupName='DEFAULT_GROUP', metadata={}}
+
+2021-07-08 16:01:05,770 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:10:39,220 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:10:40,553 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:10:40,574 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service, value: Service{name='DEFAULT_GROUP@@python-service', protectThreshold=0.0, appName='null', groupName='DEFAULT_GROUP', metadata={}}
+
+2021-07-08 16:10:40,580 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:10:43,184 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:10:44,794 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:10:44,804 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service, value: Service{name='DEFAULT_GROUP@@python-service', protectThreshold=0.0, appName='null', groupName='DEFAULT_GROUP', metadata={}}
+
+2021-07-08 16:10:44,805 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:16:12,404 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:16:20,502 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:16:20,517 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service, value: Service{name='DEFAULT_GROUP@@python-service', protectThreshold=0.0, appName='null', groupName='DEFAULT_GROUP', metadata={}}
+
+2021-07-08 16:16:20,517 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:18:35,038 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:18:36,501 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:18:36,505 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service, value: Service{name='DEFAULT_GROUP@@python-service', protectThreshold=0.0, appName='null', groupName='DEFAULT_GROUP', metadata={}}
+
+2021-07-08 16:18:36,505 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:20:24,920 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:20:34,884 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:22:26,365 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service
+
+2021-07-08 16:23:12,877 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service-1
+
+2021-07-08 16:26:29,059 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service-1
+
+2021-07-08 16:26:41,741 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service-1
+
+2021-07-08 16:27:39,287 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service-1
+
+2021-07-08 16:27:49,646 INFO add listener: com.alibaba.nacos.naming.iplist.python-test##DEFAULT_GROUP@@python-service-1
+
+2021-07-08 17:00:52,345 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.python-test##DEFAULT_GROUP@@python-service-1
+

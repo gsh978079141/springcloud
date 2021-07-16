@@ -4,8 +4,8 @@
    ,--,:  : |                                           Nacos 1.4.2
 ,`--.'`|  ' :                       ,---.               Running in stand alone mode, All function modules
 |   :  :  | |                      '   ,'\   .--.--.    Port: 8848
-:   |   \ | :  ,--.--.     ,---.  /   /   | /  /    '   Pid: 22
-|   : '  '; | /       \   /     \.   ; ,. :|  :  /`./   Console: http://172.26.0.2:8848/nacos/index.html
+:   |   \ | :  ,--.--.     ,---.  /   /   | /  /    '   Pid: 30
+|   : '  '; | /       \   /     \.   ; ,. :|  :  /`./   Console: http://172.19.0.2:8848/nacos/index.html
 '   ' ;.    ;.--.  .-. | /    / ''   | |: :|  :  ;_
 |   | | \   | \__\/: . ..    ' / '   | .; : \  \    `.      https://nacos.io
 '   : |  ; .' ," .--.; |'   ; :__|   :    |  `----.   \
@@ -14,31 +14,47 @@
 ;   |.'     |  ,     .-./\   \  /            `--'---'
 '---'        `--`---'     `----'
 
-2021-07-07 17:31:40,852 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7d898981' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-14 14:00:28,122 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@18e36d14' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
-2021-07-07 17:31:40,873 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-14 14:00:28,134 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
-2021-07-07 17:31:42,084 INFO Tomcat initialized with port(s): 8848 (http)
+2021-07-14 14:00:28,641 INFO Tomcat initialized with port(s): 8848 (http)
 
-2021-07-07 17:31:43,763 INFO Root WebApplicationContext: initialization completed in 14922 ms
+2021-07-14 14:00:29,221 INFO Root WebApplicationContext: initialization completed in 4096 ms
 
-2021-07-07 17:31:54,927 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-14 14:00:33,391 INFO Initializing ExecutorService 'applicationTaskExecutor'
 
-2021-07-07 17:31:55,477 INFO Adding welcome page: class path resource [static/index.html]
+2021-07-14 14:00:33,597 INFO Adding welcome page: class path resource [static/index.html]
 
-2021-07-07 17:31:59,762 INFO Creating filter chain: Ant [pattern='/**'], []
+2021-07-14 14:00:34,437 INFO Creating filter chain: Ant [pattern='/**'], []
 
-2021-07-07 17:32:00,047 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a021cb9, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d6bc158, org.springframework.security.web.header.HeaderWriterFilter@13006998, org.springframework.security.web.csrf.CsrfFilter@4d411036, org.springframework.security.web.authentication.logout.LogoutFilter@263f04ca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10027fc9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fff25f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51768776, org.springframework.security.web.session.SessionManagementFilter@352c308, org.springframework.security.web.access.ExceptionTranslationFilter@41beb473]
+2021-07-14 14:00:34,628 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d411036, org.springframework.security.web.context.SecurityContextPersistenceFilter@74f7d1d2, org.springframework.security.web.header.HeaderWriterFilter@7fe083b1, org.springframework.security.web.csrf.CsrfFilter@8ab78bc, org.springframework.security.web.authentication.logout.LogoutFilter@2db2dd9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ca17ab0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35293c05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7adbd080, org.springframework.security.web.session.SessionManagementFilter@486be205, org.springframework.security.web.access.ExceptionTranslationFilter@16afbd92]
 
-2021-07-07 17:32:01,118 INFO Initializing ExecutorService 'taskScheduler'
+2021-07-14 14:00:35,036 INFO Initializing ExecutorService 'taskScheduler'
 
-2021-07-07 17:32:01,189 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-07-14 14:00:35,069 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
 
-2021-07-07 17:32:01,587 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+2021-07-14 14:00:35,230 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
 
-2021-07-07 17:32:01,621 INFO Nacos started successfully in stand alone mode. use external storage
+2021-07-14 14:00:35,238 INFO Nacos started successfully in stand alone mode. use external storage
 
-2021-07-07 17:33:03,237 INFO Initializing Servlet 'dispatcherServlet'
+2021-07-14 14:01:22,574 INFO Initializing Servlet 'dispatcherServlet'
 
-2021-07-07 17:33:03,298 INFO Completed initialization in 57 ms
+2021-07-14 14:01:22,589 INFO Completed initialization in 14 ms
+
+2021-07-15 10:14:14,417 WARN [ThreadPoolManager] Start destroying ThreadPool
+
+2021-07-15 10:14:14,430 WARN [WatchFileCenter] start close
+
+2021-07-15 10:14:14,433 WARN [NotifyCenter] Start destroying Publisher
+
+2021-07-15 10:14:14,464 INFO Shutting down ExecutorService 'taskScheduler'
+
+2021-07-15 10:14:14,747 WARN [WatchFileCenter] start to shutdown this watcher which is watch : /home/nacos/conf
+
+2021-07-15 10:14:14,748 WARN [NotifyCenter] Destruction of the end
+
+2021-07-15 10:14:14,749 WARN [WatchFileCenter] already closed
+
+2021-07-15 10:14:14,761 INFO Shutting down ExecutorService 'applicationTaskExecutor'
 

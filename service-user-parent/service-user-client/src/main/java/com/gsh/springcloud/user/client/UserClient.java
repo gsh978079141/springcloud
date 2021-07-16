@@ -1,5 +1,6 @@
 package com.gsh.springcloud.user.client;
 
+import com.gsh.springcloud.user.fallback.UserClientFallback;
 import com.gsh.springcloud.user.request.UserReq;
 import com.gsh.springcloud.user.response.UserResp;
 import io.swagger.annotations.Api;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(tags = "UserAPI", value = "用户管理API")
 //@FeignClient(url = "${feign.url.service-user:http://127.0.0.1:7003}", path = "/users", name = "userClient")
-@FeignClient(name = "service-user", path = "/user/users")
+@FeignClient(name = "service-user", path = "/user/users",fallback = UserClientFallback.class)
 public interface UserClient {
 
   @ApiOperation("测试 登录发放优惠卷")
@@ -39,5 +40,11 @@ public interface UserClient {
   @ApiOperation("头部传参")
   @GetMapping("/user/getHeader")
   String getHeader(@RequestHeader("token") String token);
+
+  @ApiOperation("sentinel 测试")
+  @GetMapping("/user/test")
+  void test();
+
+
 
 }

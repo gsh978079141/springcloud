@@ -2,6 +2,11 @@ server:
   port: 17003
   servlet:
     context-path: /user
+#开启 Feign 对 Sentinel 的支持
+feign:
+  sentinel:
+    enabled: true
+
 
 spring:
   application:
@@ -11,6 +16,10 @@ spring:
   main:
     allow-bean-definition-overriding: true
   cloud:
+    # 熔断限流
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8088
     alibaba:
       seata:
         tx-service-group: ${spring.application.name}_group

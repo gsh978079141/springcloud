@@ -1,0 +1,270 @@
+2021-07-12 02:10:51,928 WARN HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@17b5ebad marked as broken because of SQLSTATE(08S01), ErrorCode(0)
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,026 milliseconds ago. The last packet sent successfully to the server was 3,034 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)
+	at com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.executeQuery(HikariProxyStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:439)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:376)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:452)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:462)
+	at com.alibaba.nacos.config.server.service.datasource.ExternalDataSourceServiceImpl$CheckDbHealthTask.run(ExternalDataSourceServiceImpl.java:246)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,026 milliseconds ago. The last packet sent successfully to the server was 3,034 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor101.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:538)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:702)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:641)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:940)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:886)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1168)
+	... 14 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:532)
+	... 20 common frames omitted
+2021-07-12 02:10:52,089 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@18a5cf00 (Communications link failure
+
+The last packet successfully received from the server was 13,249 milliseconds ago. The last packet sent successfully to the server was 13,253 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 02:10:52,119 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2075b73a (Communications link failure
+
+The last packet successfully received from the server was 12,534,562 milliseconds ago. The last packet sent successfully to the server was 12,534,567 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 02:18:33,077 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22d4aad6 (Communications link failure
+
+The last packet successfully received from the server was 10,107 milliseconds ago. The last packet sent successfully to the server was 10,122 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 02:18:33,094 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b2cbc08 (Communications link failure
+
+The last packet successfully received from the server was 10,259 milliseconds ago. The last packet sent successfully to the server was 10,264 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 02:18:33,106 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@30c70a08 (Communications link failure
+
+The last packet successfully received from the server was 10,169 milliseconds ago. The last packet sent successfully to the server was 10,174 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 02:19:16,414 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2fbab84d (Communications link failure
+
+The last packet successfully received from the server was 41,179 milliseconds ago. The last packet sent successfully to the server was 41,184 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 02:19:19,177 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5402e48e (Communications link failure
+
+The last packet successfully received from the server was 12,781 milliseconds ago. The last packet sent successfully to the server was 12,786 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 02:25:26,188 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c7f9348 (Communications link failure
+
+The last packet successfully received from the server was 9,266 milliseconds ago. The last packet sent successfully to the server was 9,273 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 02:25:26,203 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@172efd03 (Communications link failure
+
+The last packet successfully received from the server was 367,666 milliseconds ago. The last packet sent successfully to the server was 367,669 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 04:06:29,918 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@170b9d31 (Communications link failure
+
+The last packet successfully received from the server was 6,356 milliseconds ago. The last packet sent successfully to the server was 6,361 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 04:06:29,938 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2678060f (Communications link failure
+
+The last packet successfully received from the server was 6,059,339 milliseconds ago. The last packet sent successfully to the server was 6,059,342 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-12 08:42:12,292 INFO [capacityManagement] start correct usage
+
+2021-07-12 08:42:12,328 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 08:42:14,378 WARN clearConfigHistory start
+
+2021-07-12 08:52:11,646 INFO [capacityManagement] start correct usage
+
+2021-07-12 08:52:11,678 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 08:52:13,735 WARN clearConfigHistory start
+
+2021-07-12 09:02:11,027 INFO [capacityManagement] start correct usage
+
+2021-07-12 09:02:11,055 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 09:02:13,117 WARN clearConfigHistory start
+
+2021-07-12 09:12:10,393 INFO [capacityManagement] start correct usage
+
+2021-07-12 09:12:10,420 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 09:12:12,471 WARN clearConfigHistory start
+
+2021-07-12 09:22:09,754 INFO [capacityManagement] start correct usage
+
+2021-07-12 09:22:09,782 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 09:22:11,820 WARN clearConfigHistory start
+
+2021-07-12 09:32:09,122 INFO [capacityManagement] start correct usage
+
+2021-07-12 09:32:09,163 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 09:32:11,184 WARN clearConfigHistory start
+
+2021-07-12 09:42:08,504 INFO [capacityManagement] start correct usage
+
+2021-07-12 09:42:08,531 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 09:42:10,583 WARN clearConfigHistory start
+
+2021-07-12 09:52:07,860 INFO [capacityManagement] start correct usage
+
+2021-07-12 09:52:07,982 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 09:52:09,935 WARN clearConfigHistory start
+
+2021-07-12 10:02:07,317 INFO [capacityManagement] start correct usage
+
+2021-07-12 10:02:07,343 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 10:02:09,279 WARN clearConfigHistory start
+
+2021-07-12 10:14:55,365 INFO [capacityManagement] start correct usage
+
+2021-07-12 10:14:55,400 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 10:14:57,369 WARN clearConfigHistory start
+
+2021-07-12 10:24:54,730 INFO [capacityManagement] start correct usage
+
+2021-07-12 10:24:54,758 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 10:24:56,721 WARN clearConfigHistory start
+
+2021-07-12 10:34:54,097 INFO [capacityManagement] start correct usage
+
+2021-07-12 10:34:54,132 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 10:34:56,080 WARN clearConfigHistory start
+
+2021-07-12 10:44:53,469 INFO [capacityManagement] start correct usage
+
+2021-07-12 10:44:53,503 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 10:44:55,437 WARN clearConfigHistory start
+
+2021-07-12 10:54:52,839 INFO [capacityManagement] start correct usage
+
+2021-07-12 10:54:52,873 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 10:54:54,802 WARN clearConfigHistory start
+
+2021-07-12 11:04:52,204 INFO [capacityManagement] start correct usage
+
+2021-07-12 11:04:52,234 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 11:04:54,158 WARN clearConfigHistory start
+
+2021-07-12 11:14:51,563 INFO [capacityManagement] start correct usage
+
+2021-07-12 11:14:51,589 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 11:14:53,507 WARN clearConfigHistory start
+
+2021-07-12 11:53:38,327 INFO [capacityManagement] start correct usage
+
+2021-07-12 11:53:38,357 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 11:53:40,268 WARN clearConfigHistory start
+
+2021-07-12 12:36:10,644 INFO [capacityManagement] start correct usage
+
+2021-07-12 12:36:10,680 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 12:36:12,574 WARN clearConfigHistory start
+
+2021-07-12 12:46:10,009 INFO [capacityManagement] start correct usage
+
+2021-07-12 12:46:10,056 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 12:46:11,923 WARN clearConfigHistory start
+
+2021-07-12 12:56:09,404 INFO [capacityManagement] start correct usage
+
+2021-07-12 12:56:09,434 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 12:56:11,280 WARN clearConfigHistory start
+
+2021-07-12 13:06:08,762 INFO [capacityManagement] start correct usage
+
+2021-07-12 13:06:08,795 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 13:06:10,619 WARN clearConfigHistory start
+
+2021-07-12 13:16:08,135 INFO [capacityManagement] start correct usage
+
+2021-07-12 13:16:08,173 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 13:16:09,994 WARN clearConfigHistory start
+
+2021-07-12 13:26:07,510 INFO [capacityManagement] start correct usage
+
+2021-07-12 13:26:07,548 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 13:26:09,379 WARN clearConfigHistory start
+
+2021-07-12 13:36:06,877 INFO [capacityManagement] start correct usage
+
+2021-07-12 13:36:06,906 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 13:36:08,750 WARN clearConfigHistory start
+
+2021-07-12 13:52:36,248 INFO [capacityManagement] start correct usage
+
+2021-07-12 13:52:36,293 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 13:52:38,126 WARN clearConfigHistory start
+
+2021-07-12 14:02:35,622 INFO [capacityManagement] start correct usage
+
+2021-07-12 14:02:35,656 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 14:02:37,492 WARN clearConfigHistory start
+
+2021-07-12 14:15:19,963 INFO [capacityManagement] start correct usage
+
+2021-07-12 14:15:19,985 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 14:15:21,809 WARN clearConfigHistory start
+
+2021-07-12 14:25:19,314 INFO [capacityManagement] start correct usage
+
+2021-07-12 14:25:19,370 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-07-12 14:25:21,172 WARN clearConfigHistory start
+

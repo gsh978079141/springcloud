@@ -68,5 +68,10 @@ public class UserControllerTest implements UserClient {
     return null;
   }
 
+  @Override
+  public void test() {
+    userService.test();
+  }
+
 
 }

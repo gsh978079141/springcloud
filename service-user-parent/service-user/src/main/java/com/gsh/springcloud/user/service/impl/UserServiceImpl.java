@@ -2,15 +2,12 @@ package com.gsh.springcloud.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.gsh.springcloud.message.client.MessageClient;
 import com.gsh.springcloud.message.request.MessageReq;
 import com.gsh.springcloud.user.domain.entity.User;
 import com.gsh.springcloud.user.domain.mapper.UserMapper;
 import com.gsh.springcloud.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /**
  * @program: springcloud
@@ -22,8 +19,8 @@ import javax.annotation.Resource;
 @Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
-  @Resource
-  private MessageClient messageClient;
+//  @Resource
+//  private MessageClient messageClient;
 
 //  @StreamListener(value = Queues.REGISTER_ISSUE_COUPONS, condition = "headers['index']=='1'")
 //  public void receiveByHeader(Message msg) {
@@ -45,15 +42,28 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 //    System.out.println("receive by HeaderAndMsg by StreamListener. content: " + msg);
 //  }
 
-  @Override
-  public void login(User user) {
-    log.info(user.getUserName() + "正在登录,\n*****************开始加积分");
-    user = this.getOne(new QueryWrapper<>(user));
-    MessageReq messageReq = new MessageReq();
-    messageReq.setUserId(user.getId());
-    messageReq.setIntegral(user.getIntegral() + 100);
-    messageClient.userLoginAddIntegralSend(messageReq);
-    log.info("*****************登录成功，加积分成功");
-  }
+    @Override
+//  @SentinelResource(value = "login", fallback = "defaultFallback",fallbackClass = SentineExceptionUtil.class,
+//          exceptionsToIgnore = {IllegalStateException.class})
+    public void login(User user) {
+        log.info(user.getUserName() + "正在登录,\n*****************开始加积分");
+        user = this.getOne(new QueryWrapper<>(user));
+        MessageReq messageReq = new MessageReq();
+        messageReq.setUserId(user.getId());
+        messageReq.setIntegral(user.getIntegral() + 100);
+//    messageClient.userLoginAddIntegralSend(messageReq);
+        log.info("*****************登录成功，加积分成功");
+    }
+
+    //  @SentinelResource(value = "test", blockHandler = "exceptionHandler", blockHandlerClass = {
+//          SentineExceptionUtil.class})
+    public void test() {
+        try {
+            Thread.sleep(20000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        log.info("*****************test");
+    }
 
 }

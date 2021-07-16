@@ -1,54 +1,15 @@
-2021-05-27 10:00:35.032 ERROR --- [nnectionPool-Create-1163619825] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://192.168.112.88:3306/seata?useUnicode=true, errorCode 0, state 08S01
+2021-07-15 00:30:37.296 ERROR --- [           RetryCommitting_1_1] c.a.druid.pool.DruidPooledStatement      : CommunicationsException, druid version 1.1.23, jdbcUrl : jdbc:mysql://192.168.0.114:3306/seata?useUnicode=true, testWhileIdle true, idle millis 3545533, minIdle 5, poolingCount 0, timeBetweenEvictionRunsMillis 120000, lastValidIdleMillis 3545533, driver com.mysql.jdbc.Driver, exceptionSorter com.alibaba.druid.pool.vendor.MySqlExceptionSorter
+2021-07-15 00:30:37.298 ERROR --- [           AsyncCommitting_1_1] c.a.druid.pool.DruidPooledStatement      : CommunicationsException, druid version 1.1.23, jdbcUrl : jdbc:mysql://192.168.0.114:3306/seata?useUnicode=true, testWhileIdle true, idle millis 3545535, minIdle 5, poolingCount 0, timeBetweenEvictionRunsMillis 120000, lastValidIdleMillis 3545535, driver com.mysql.jdbc.Driver, exceptionSorter com.alibaba.druid.pool.vendor.MySqlExceptionSorter
+2021-07-15 00:30:37.301 ERROR --- [          RetryRollbacking_1_1] c.a.druid.pool.DruidPooledStatement      : CommunicationsException, druid version 1.1.23, jdbcUrl : jdbc:mysql://192.168.0.114:3306/seata?useUnicode=true, testWhileIdle true, idle millis 3545538, minIdle 5, poolingCount 0, timeBetweenEvictionRunsMillis 120000, lastValidIdleMillis 3545538, driver com.mysql.jdbc.Driver, exceptionSorter com.alibaba.druid.pool.vendor.MySqlExceptionSorter
+2021-07-15 00:30:37.301 ERROR --- [            TxTimeoutCheck_1_1] c.a.druid.pool.DruidPooledStatement      : CommunicationsException, druid version 1.1.23, jdbcUrl : jdbc:mysql://192.168.0.114:3306/seata?useUnicode=true, testWhileIdle true, idle millis 3545538, minIdle 5, poolingCount 0, timeBetweenEvictionRunsMillis 120000, lastValidIdleMillis 3545538, driver com.mysql.jdbc.Driver, exceptionSorter com.alibaba.druid.pool.vendor.MySqlExceptionSorter
+2021-07-15 00:34:32.507 ERROR --- [           RetryCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : discard connection
 ==>
 com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
 
-The last packet successfully received from the server was 28,554 milliseconds ago.  The last packet sent successfully to the server was 28,554 milliseconds ago.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_275]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_275]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_275]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_275]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2531) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2489) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1446) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3834) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3274) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2283) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_275]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_275]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_275]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_275]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1644) ~[druid-1.1.23.jar:1.1.23]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1710) ~[druid-1.1.23.jar:1.1.23]
-	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2774) ~[druid-1.1.23.jar:1.1.23]
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
-	... 23 common frames omitted
-<==
-
-2021-05-27 10:00:35.050 ERROR --- [           RetryCommitting_1_1] c.a.druid.pool.DruidPooledStatement      : CommunicationsException, druid version 1.1.23, jdbcUrl : jdbc:mysql://192.168.112.88:3306/seata?useUnicode=true, testWhileIdle true, idle millis 24655, minIdle 5, poolingCount 0, timeBetweenEvictionRunsMillis 120000, lastValidIdleMillis 24655, driver com.mysql.jdbc.Driver, exceptionSorter com.alibaba.druid.pool.vendor.MySqlExceptionSorter
-2021-05-28 01:01:28.006 ERROR --- [           RetryCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : discard connection
-==>
-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet successfully received from the server was 24,633 milliseconds ago.  The last packet sent successfully to the server was 434 milliseconds ago.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_275]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_275]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_275]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_275]
+The last packet successfully received from the server was 3,545,500 milliseconds ago.  The last packet sent successfully to the server was 3,545,500 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
 	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
 	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
@@ -67,14 +28,134 @@ The last packet successfully received from the server was 24,633 milliseconds ag
 	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:171) [classes/:na]
 	at io.seata.server.coordinator.DefaultCoordinator.handleRetryCommitting(DefaultCoordinator.java:312) [classes/:na]
 	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$6(DefaultCoordinator.java:416) [classes/:na]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_275]
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_275]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_275]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_275]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_275]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_275]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_275]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.513 ERROR --- [           AsyncCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : discard connection
+==>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,500 milliseconds ago.  The last packet sent successfully to the server was 3,545,500 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:169) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.handleAsyncCommitting(DefaultCoordinator.java:350) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$7(DefaultCoordinator.java:429) [classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.519 ERROR --- [          RetryRollbacking_1_1] com.alibaba.druid.pool.DruidDataSource   : discard connection
+==>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,534 milliseconds ago.  The last packet sent successfully to the server was 3,545,534 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:173) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.handleRetryRollbacking(DefaultCoordinator.java:276) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$5(DefaultCoordinator.java:403) [classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.522 ERROR --- [            TxTimeoutCheck_1_1] com.alibaba.druid.pool.DruidDataSource   : discard connection
+==>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,533 milliseconds ago.  The last packet sent successfully to the server was 3,545,533 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:177) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.timeoutCheck(DefaultCoordinator.java:226) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$8(DefaultCoordinator.java:442) [classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
 Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
 	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
 	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]

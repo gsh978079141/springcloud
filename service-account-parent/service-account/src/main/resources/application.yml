@@ -65,7 +65,7 @@ security:
 
 swagger:
   api:
-    title: 深兰AI数字教育平台-账号管理服务API文档
+    title: GSH-Yun平台-账号管理服务API文档
     description: 账号管理服务
     version: '3.0'
     contact:

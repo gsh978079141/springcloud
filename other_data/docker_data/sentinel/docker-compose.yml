@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  sentinel:
+    restart: always
+    image: sentinel-1.8.2
+    container_name: sentinel
+    ports:
+      - 8088:8088

@@ -1,6 +1,418 @@
-2021-05-31 07:00:13.312  INFO --- [                          main] io.seata.server.Server                   : The server is running in container.
-2021-05-31 07:00:13.438  INFO --- [                          main] io.seata.config.FileConfiguration        : The file name of the operation is file:/seata-server/my_config/registry
-2021-05-31 07:00:13.463  INFO --- [                          main] io.seata.config.FileConfiguration        : The configuration file used is /seata-server/my_config/registry.conf
-2021-05-31 08:15:42.575  INFO --- [                          main] io.seata.server.Server                   : The server is running in container.
-2021-05-31 08:15:42.690  INFO --- [                          main] io.seata.config.FileConfiguration        : The file name of the operation is file:/seata-server/my_config/registry
-2021-05-31 08:15:42.724  INFO --- [                          main] io.seata.config.FileConfiguration        : The configuration file used is /seata-server/my_config/registry.conf
+2021-07-15 00:30:37.296 ERROR --- [           RetryCommitting_1_1] c.a.druid.pool.DruidPooledStatement      : CommunicationsException, druid version 1.1.23, jdbcUrl : jdbc:mysql://192.168.0.114:3306/seata?useUnicode=true, testWhileIdle true, idle millis 3545533, minIdle 5, poolingCount 0, timeBetweenEvictionRunsMillis 120000, lastValidIdleMillis 3545533, driver com.mysql.jdbc.Driver, exceptionSorter com.alibaba.druid.pool.vendor.MySqlExceptionSorter
+2021-07-15 00:30:37.301 ERROR --- [            TxTimeoutCheck_1_1] c.a.druid.pool.DruidPooledStatement      : CommunicationsException, druid version 1.1.23, jdbcUrl : jdbc:mysql://192.168.0.114:3306/seata?useUnicode=true, testWhileIdle true, idle millis 3545538, minIdle 5, poolingCount 0, timeBetweenEvictionRunsMillis 120000, lastValidIdleMillis 3545538, driver com.mysql.jdbc.Driver, exceptionSorter com.alibaba.druid.pool.vendor.MySqlExceptionSorter
+2021-07-15 00:30:37.301 ERROR --- [          RetryRollbacking_1_1] c.a.druid.pool.DruidPooledStatement      : CommunicationsException, druid version 1.1.23, jdbcUrl : jdbc:mysql://192.168.0.114:3306/seata?useUnicode=true, testWhileIdle true, idle millis 3545538, minIdle 5, poolingCount 0, timeBetweenEvictionRunsMillis 120000, lastValidIdleMillis 3545538, driver com.mysql.jdbc.Driver, exceptionSorter com.alibaba.druid.pool.vendor.MySqlExceptionSorter
+2021-07-15 00:30:37.298 ERROR --- [           AsyncCommitting_1_1] c.a.druid.pool.DruidPooledStatement      : CommunicationsException, druid version 1.1.23, jdbcUrl : jdbc:mysql://192.168.0.114:3306/seata?useUnicode=true, testWhileIdle true, idle millis 3545535, minIdle 5, poolingCount 0, timeBetweenEvictionRunsMillis 120000, lastValidIdleMillis 3545535, driver com.mysql.jdbc.Driver, exceptionSorter com.alibaba.druid.pool.vendor.MySqlExceptionSorter
+2021-07-15 00:34:32.507 ERROR --- [           RetryCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : discard connection
+==>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,500 milliseconds ago.  The last packet sent successfully to the server was 3,545,500 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:171) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.handleRetryCommitting(DefaultCoordinator.java:312) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$6(DefaultCoordinator.java:416) [classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.513 ERROR --- [           AsyncCommitting_1_1] com.alibaba.druid.pool.DruidDataSource   : discard connection
+==>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,500 milliseconds ago.  The last packet sent successfully to the server was 3,545,500 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:169) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.handleAsyncCommitting(DefaultCoordinator.java:350) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$7(DefaultCoordinator.java:429) [classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.519 ERROR --- [          RetryRollbacking_1_1] com.alibaba.druid.pool.DruidDataSource   : discard connection
+==>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,534 milliseconds ago.  The last packet sent successfully to the server was 3,545,534 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:173) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.handleRetryRollbacking(DefaultCoordinator.java:276) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$5(DefaultCoordinator.java:403) [classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.522 ERROR --- [            TxTimeoutCheck_1_1] com.alibaba.druid.pool.DruidDataSource   : discard connection
+==>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,533 milliseconds ago.  The last packet sent successfully to the server was 3,545,533 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) [classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) [classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:177) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.timeoutCheck(DefaultCoordinator.java:226) [classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$8(DefaultCoordinator.java:442) [classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.524  INFO --- [           RetryCommitting_1_1] i.s.s.coordinator.DefaultCoordinator     : Exception retry committing ... 
+==>
+io.seata.common.exception.DataAccessException: Communications link failure
+
+The last packet successfully received from the server was 3,545,500 milliseconds ago.  The last packet sent successfully to the server was 3,545,500 milliseconds ago.
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:182) ~[classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) ~[classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) ~[classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) ~[classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:171) ~[classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.handleRetryCommitting(DefaultCoordinator.java:312) ~[classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$6(DefaultCoordinator.java:416) ~[classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,500 milliseconds ago.  The last packet sent successfully to the server was 3,545,500 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) ~[classes/:na]
+	... 14 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.530  INFO --- [          RetryRollbacking_1_1] i.s.s.coordinator.DefaultCoordinator     : Exception retry rollbacking ... 
+==>
+io.seata.common.exception.DataAccessException: Communications link failure
+
+The last packet successfully received from the server was 3,545,534 milliseconds ago.  The last packet sent successfully to the server was 3,545,534 milliseconds ago.
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:182) ~[classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) ~[classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) ~[classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) ~[classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:173) ~[classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.handleRetryRollbacking(DefaultCoordinator.java:276) ~[classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$5(DefaultCoordinator.java:403) ~[classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,534 milliseconds ago.  The last packet sent successfully to the server was 3,545,534 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) ~[classes/:na]
+	... 14 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.528  INFO --- [           AsyncCommitting_1_1] i.s.s.coordinator.DefaultCoordinator     : Exception async committing ... 
+==>
+io.seata.common.exception.DataAccessException: Communications link failure
+
+The last packet successfully received from the server was 3,545,500 milliseconds ago.  The last packet sent successfully to the server was 3,545,500 milliseconds ago.
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:182) ~[classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) ~[classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) ~[classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) ~[classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:169) ~[classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.handleAsyncCommitting(DefaultCoordinator.java:350) ~[classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$7(DefaultCoordinator.java:429) ~[classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,500 milliseconds ago.  The last packet sent successfully to the server was 3,545,500 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) ~[classes/:na]
+	... 14 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 00:34:32.552  INFO --- [            TxTimeoutCheck_1_1] i.s.s.coordinator.DefaultCoordinator     : Exception timeout checking ... 
+==>
+io.seata.common.exception.DataAccessException: Communications link failure
+
+The last packet successfully received from the server was 3,545,533 milliseconds ago.  The last packet sent successfully to the server was 3,545,533 milliseconds ago.
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:182) ~[classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:182) ~[classes/:na]
+	at io.seata.server.storage.db.store.DataBaseTransactionStoreManager.readSession(DataBaseTransactionStoreManager.java:212) ~[classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.findGlobalSessions(DataBaseSessionManager.java:188) ~[classes/:na]
+	at io.seata.server.storage.db.session.DataBaseSessionManager.allSessions(DataBaseSessionManager.java:177) ~[classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.timeoutCheck(DefaultCoordinator.java:226) ~[classes/:na]
+	at io.seata.server.coordinator.DefaultCoordinator.lambda$init$8(DefaultCoordinator.java:442) ~[classes/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_212]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_212]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_212]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,545,533 milliseconds ago.  The last packet sent successfully to the server was 3,545,533 milliseconds ago.
+	at sun.reflect.GeneratedConstructorAccessor9.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_212]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_212]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3422) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3322) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3762) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227) ~[druid-1.1.23.jar:1.1.23]
+	at io.seata.server.storage.db.store.LogStoreDataBaseDAO.queryGlobalTransactionDO(LogStoreDataBaseDAO.java:176) ~[classes/:na]
+	... 14 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3332) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 23 common frames omitted
+<==
+
+2021-07-15 01:28:43.408  INFO --- [   ServerHandlerThread_1_5_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='jdbc:mysql://127.0.0.1:3306/springcloud', applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x142e9c5f, L:/172.22.0.2:8091 - R:/172.22.0.1:33654],client version:1.4.2
+2021-07-15 01:29:35.416  INFO --- [  NettyServerNIOWorker_1_10_16] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x8fba9048, L:/172.22.0.2:8091 - R:/172.22.0.1:33690],client version:1.4.2
+2021-07-15 01:30:58.575  INFO --- [   NettyServerNIOWorker_1_9_16] i.s.c.r.n.AbstractNettyRemotingServer    : channel:[id: 0x142e9c5f, L:/172.22.0.2:8091 - R:/172.22.0.1:33654] read idle.
+2021-07-15 01:30:58.577  INFO --- [   NettyServerNIOWorker_1_9_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33654 to server channel inactive.
+2021-07-15 01:30:58.577  INFO --- [   NettyServerNIOWorker_1_9_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x142e9c5f, L:/172.22.0.2:8091 - R:/172.22.0.1:33654]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33654', channel=[id: 0x142e9c5f, L:/172.22.0.2:8091 - R:/172.22.0.1:33654], resourceSets=[]}
+2021-07-15 01:30:58.578  INFO --- [   NettyServerNIOWorker_1_9_16] i.s.c.r.n.AbstractNettyRemotingServer    : closeChannelHandlerContext channel:[id: 0x142e9c5f, L:/172.22.0.2:8091 - R:/172.22.0.1:33654]
+2021-07-15 01:30:58.578  INFO --- [   NettyServerNIOWorker_1_9_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33654 to server channel inactive.
+2021-07-15 01:30:58.579  INFO --- [   NettyServerNIOWorker_1_9_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x142e9c5f, L:/172.22.0.2:8091 ! R:/172.22.0.1:33654]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33654', channel=[id: 0x142e9c5f, L:/172.22.0.2:8091 ! R:/172.22.0.1:33654], resourceSets=[]}
+2021-07-15 01:31:00.497  INFO --- [  NettyServerNIOWorker_1_10_16] i.s.c.r.n.AbstractNettyRemotingServer    : channel:[id: 0x8fba9048, L:/172.22.0.2:8091 - R:/172.22.0.1:33690] read idle.
+2021-07-15 01:31:00.498  INFO --- [  NettyServerNIOWorker_1_10_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33690 to server channel inactive.
+2021-07-15 01:31:00.498  INFO --- [  NettyServerNIOWorker_1_10_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x8fba9048, L:/172.22.0.2:8091 - R:/172.22.0.1:33690]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33690', channel=[id: 0x8fba9048, L:/172.22.0.2:8091 - R:/172.22.0.1:33690], resourceSets=null}
+2021-07-15 01:31:00.498  INFO --- [  NettyServerNIOWorker_1_10_16] i.s.c.r.n.AbstractNettyRemotingServer    : closeChannelHandlerContext channel:[id: 0x8fba9048, L:/172.22.0.2:8091 - R:/172.22.0.1:33690]
+2021-07-15 01:31:00.499  INFO --- [  NettyServerNIOWorker_1_10_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33690 to server channel inactive.
+2021-07-15 01:31:00.499  INFO --- [  NettyServerNIOWorker_1_10_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x8fba9048, L:/172.22.0.2:8091 ! R:/172.22.0.1:33690]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33690', channel=[id: 0x8fba9048, L:/172.22.0.2:8091 ! R:/172.22.0.1:33690], resourceSets=null}
+2021-07-15 01:32:35.411  INFO --- [  NettyServerNIOWorker_1_11_16] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x10091e56, L:/172.22.0.2:8091 - R:/172.22.0.1:33796],client version:1.4.2
+2021-07-15 01:32:35.485  INFO --- [   ServerHandlerThread_1_6_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='jdbc:mysql://127.0.0.1:3306/springcloud', applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x474b3d14, L:/172.22.0.2:8091 - R:/172.22.0.1:33800],client version:1.4.2
+2021-07-15 01:34:30.436  INFO --- [  NettyServerNIOWorker_1_11_16] i.s.c.r.n.AbstractNettyRemotingServer    : channel:[id: 0x10091e56, L:/172.22.0.2:8091 - R:/172.22.0.1:33796] read idle.
+2021-07-15 01:34:30.437  INFO --- [  NettyServerNIOWorker_1_11_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33796 to server channel inactive.
+2021-07-15 01:34:30.438  INFO --- [  NettyServerNIOWorker_1_11_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x10091e56, L:/172.22.0.2:8091 - R:/172.22.0.1:33796]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33796', channel=[id: 0x10091e56, L:/172.22.0.2:8091 - R:/172.22.0.1:33796], resourceSets=null}
+2021-07-15 01:34:30.439  INFO --- [  NettyServerNIOWorker_1_11_16] i.s.c.r.n.AbstractNettyRemotingServer    : closeChannelHandlerContext channel:[id: 0x10091e56, L:/172.22.0.2:8091 - R:/172.22.0.1:33796]
+2021-07-15 01:34:30.439  INFO --- [  NettyServerNIOWorker_1_11_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33796 to server channel inactive.
+2021-07-15 01:34:30.440  INFO --- [  NettyServerNIOWorker_1_11_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x10091e56, L:/172.22.0.2:8091 ! R:/172.22.0.1:33796]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33796', channel=[id: 0x10091e56, L:/172.22.0.2:8091 ! R:/172.22.0.1:33796], resourceSets=null}
+2021-07-15 01:34:30.508  INFO --- [  NettyServerNIOWorker_1_12_16] i.s.c.r.n.AbstractNettyRemotingServer    : channel:[id: 0x474b3d14, L:/172.22.0.2:8091 - R:/172.22.0.1:33800] read idle.
+2021-07-15 01:34:30.509  INFO --- [  NettyServerNIOWorker_1_12_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33800 to server channel inactive.
+2021-07-15 01:34:30.510  INFO --- [  NettyServerNIOWorker_1_12_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x474b3d14, L:/172.22.0.2:8091 - R:/172.22.0.1:33800]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33800', channel=[id: 0x474b3d14, L:/172.22.0.2:8091 - R:/172.22.0.1:33800], resourceSets=[]}
+2021-07-15 01:34:30.511  INFO --- [  NettyServerNIOWorker_1_12_16] i.s.c.r.n.AbstractNettyRemotingServer    : closeChannelHandlerContext channel:[id: 0x474b3d14, L:/172.22.0.2:8091 - R:/172.22.0.1:33800]
+2021-07-15 01:34:30.512  INFO --- [  NettyServerNIOWorker_1_12_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33800 to server channel inactive.
+2021-07-15 01:34:30.513  INFO --- [  NettyServerNIOWorker_1_12_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x474b3d14, L:/172.22.0.2:8091 ! R:/172.22.0.1:33800]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33800', channel=[id: 0x474b3d14, L:/172.22.0.2:8091 ! R:/172.22.0.1:33800], resourceSets=[]}
+2021-07-15 01:35:15.425  INFO --- [  NettyServerNIOWorker_1_13_16] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x9fd2dce3, L:/172.22.0.2:8091 - R:/172.22.0.1:33998],client version:1.4.2
+2021-07-15 01:35:15.485  INFO --- [   ServerHandlerThread_1_7_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='jdbc:mysql://127.0.0.1:3306/springcloud', applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0xc8625c19, L:/172.22.0.2:8091 - R:/172.22.0.1:34002],client version:1.4.2
+2021-07-15 01:36:40.437  INFO --- [  NettyServerNIOWorker_1_13_16] i.s.c.r.n.AbstractNettyRemotingServer    : channel:[id: 0x9fd2dce3, L:/172.22.0.2:8091 - R:/172.22.0.1:33998] read idle.
+2021-07-15 01:36:40.438  INFO --- [  NettyServerNIOWorker_1_13_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33998 to server channel inactive.
+2021-07-15 01:36:40.439  INFO --- [  NettyServerNIOWorker_1_13_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x9fd2dce3, L:/172.22.0.2:8091 - R:/172.22.0.1:33998]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33998', channel=[id: 0x9fd2dce3, L:/172.22.0.2:8091 - R:/172.22.0.1:33998], resourceSets=null}
+2021-07-15 01:36:40.440  INFO --- [  NettyServerNIOWorker_1_13_16] i.s.c.r.n.AbstractNettyRemotingServer    : closeChannelHandlerContext channel:[id: 0x9fd2dce3, L:/172.22.0.2:8091 - R:/172.22.0.1:33998]
+2021-07-15 01:36:40.441  INFO --- [  NettyServerNIOWorker_1_13_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:33998 to server channel inactive.
+2021-07-15 01:36:40.441  INFO --- [  NettyServerNIOWorker_1_13_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x9fd2dce3, L:/172.22.0.2:8091 ! R:/172.22.0.1:33998]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:33998', channel=[id: 0x9fd2dce3, L:/172.22.0.2:8091 ! R:/172.22.0.1:33998], resourceSets=null}
+2021-07-15 01:36:40.504  INFO --- [  NettyServerNIOWorker_1_14_16] i.s.c.r.n.AbstractNettyRemotingServer    : channel:[id: 0xc8625c19, L:/172.22.0.2:8091 - R:/172.22.0.1:34002] read idle.
+2021-07-15 01:36:40.506  INFO --- [  NettyServerNIOWorker_1_14_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34002 to server channel inactive.
+2021-07-15 01:36:40.506  INFO --- [  NettyServerNIOWorker_1_14_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xc8625c19, L:/172.22.0.2:8091 - R:/172.22.0.1:34002]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34002', channel=[id: 0xc8625c19, L:/172.22.0.2:8091 - R:/172.22.0.1:34002], resourceSets=[]}
+2021-07-15 01:36:40.507  INFO --- [  NettyServerNIOWorker_1_14_16] i.s.c.r.n.AbstractNettyRemotingServer    : closeChannelHandlerContext channel:[id: 0xc8625c19, L:/172.22.0.2:8091 - R:/172.22.0.1:34002]
+2021-07-15 01:36:40.507  INFO --- [  NettyServerNIOWorker_1_14_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34002 to server channel inactive.
+2021-07-15 01:36:40.507  INFO --- [  NettyServerNIOWorker_1_14_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xc8625c19, L:/172.22.0.2:8091 ! R:/172.22.0.1:34002]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34002', channel=[id: 0xc8625c19, L:/172.22.0.2:8091 ! R:/172.22.0.1:34002], resourceSets=[]}
+2021-07-15 01:37:09.562  INFO --- [  NettyServerNIOWorker_1_15_16] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x35837ad2, L:/172.22.0.2:8091 - R:/172.22.0.1:34098],client version:1.4.2
+2021-07-15 01:37:09.563  INFO --- [   ServerHandlerThread_1_8_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='jdbc:mysql://127.0.0.1:3306/springcloud', applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x7b3b171f, L:/172.22.0.2:8091 - R:/172.22.0.1:34100],client version:1.4.2
+2021-07-15 01:41:17.851  INFO --- [  NettyServerNIOWorker_1_15_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34098 to server channel inactive.
+2021-07-15 01:41:17.852  INFO --- [  NettyServerNIOWorker_1_15_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x35837ad2, L:/172.22.0.2:8091 ! R:/172.22.0.1:34098]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34098', channel=[id: 0x35837ad2, L:/172.22.0.2:8091 ! R:/172.22.0.1:34098], resourceSets=null}
+2021-07-15 01:41:17.852  INFO --- [  NettyServerNIOWorker_1_16_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34100 to server channel inactive.
+2021-07-15 01:41:17.853  INFO --- [  NettyServerNIOWorker_1_16_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x7b3b171f, L:/172.22.0.2:8091 ! R:/172.22.0.1:34100]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34100', channel=[id: 0x7b3b171f, L:/172.22.0.2:8091 ! R:/172.22.0.1:34100], resourceSets=[]}
+2021-07-15 01:41:34.862  INFO --- [   ServerHandlerThread_1_9_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='jdbc:mysql://127.0.0.1:3306/springcloud', applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x9f35d94a, L:/172.22.0.2:8091 - R:/172.22.0.1:34324],client version:1.4.2
+2021-07-15 01:42:31.859  INFO --- [   NettyServerNIOWorker_1_2_16] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0xc5328d97, L:/172.22.0.2:8091 - R:/172.22.0.1:34392],client version:1.4.2
+2021-07-15 01:45:26.911  INFO --- [   NettyServerNIOWorker_1_2_16] i.s.c.r.n.AbstractNettyRemotingServer    : channel:[id: 0xc5328d97, L:/172.22.0.2:8091 - R:/172.22.0.1:34392] read idle.
+2021-07-15 01:45:26.913  INFO --- [   NettyServerNIOWorker_1_2_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34392 to server channel inactive.
+2021-07-15 01:45:26.915  INFO --- [   NettyServerNIOWorker_1_2_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xc5328d97, L:/172.22.0.2:8091 - R:/172.22.0.1:34392]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34392', channel=[id: 0xc5328d97, L:/172.22.0.2:8091 - R:/172.22.0.1:34392], resourceSets=null}
+2021-07-15 01:45:26.916  INFO --- [   NettyServerNIOWorker_1_2_16] i.s.c.r.n.AbstractNettyRemotingServer    : closeChannelHandlerContext channel:[id: 0xc5328d97, L:/172.22.0.2:8091 - R:/172.22.0.1:34392]
+2021-07-15 01:45:26.917  INFO --- [   NettyServerNIOWorker_1_2_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34392 to server channel inactive.
+2021-07-15 01:45:26.917  INFO --- [   NettyServerNIOWorker_1_2_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xc5328d97, L:/172.22.0.2:8091 ! R:/172.22.0.1:34392]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34392', channel=[id: 0xc5328d97, L:/172.22.0.2:8091 ! R:/172.22.0.1:34392], resourceSets=null}
+2021-07-15 01:45:29.940  INFO --- [   NettyServerNIOWorker_1_1_16] i.s.c.r.n.AbstractNettyRemotingServer    : channel:[id: 0x9f35d94a, L:/172.22.0.2:8091 - R:/172.22.0.1:34324] read idle.
+2021-07-15 01:45:29.942  INFO --- [   NettyServerNIOWorker_1_1_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34324 to server channel inactive.
+2021-07-15 01:45:29.943  INFO --- [   NettyServerNIOWorker_1_1_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x9f35d94a, L:/172.22.0.2:8091 - R:/172.22.0.1:34324]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34324', channel=[id: 0x9f35d94a, L:/172.22.0.2:8091 - R:/172.22.0.1:34324], resourceSets=[]}
+2021-07-15 01:45:29.943  INFO --- [   NettyServerNIOWorker_1_1_16] i.s.c.r.n.AbstractNettyRemotingServer    : closeChannelHandlerContext channel:[id: 0x9f35d94a, L:/172.22.0.2:8091 - R:/172.22.0.1:34324]
+2021-07-15 01:45:29.944  INFO --- [   NettyServerNIOWorker_1_1_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34324 to server channel inactive.
+2021-07-15 01:45:29.945  INFO --- [   NettyServerNIOWorker_1_1_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x9f35d94a, L:/172.22.0.2:8091 ! R:/172.22.0.1:34324]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34324', channel=[id: 0x9f35d94a, L:/172.22.0.2:8091 ! R:/172.22.0.1:34324], resourceSets=[]}
+2021-07-15 01:45:31.856  INFO --- [   NettyServerNIOWorker_1_3_16] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0xe9e98501, L:/172.22.0.2:8091 - R:/172.22.0.1:34570],client version:1.4.2
+2021-07-15 01:45:31.902  INFO --- [  ServerHandlerThread_1_10_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='jdbc:mysql://127.0.0.1:3306/springcloud', applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x57a438bd, L:/172.22.0.2:8091 - R:/172.22.0.1:34574],client version:1.4.2
+2021-07-15 01:57:14.028  INFO --- [   NettyServerNIOWorker_1_3_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34570 to server channel inactive.
+2021-07-15 01:57:14.029  INFO --- [   NettyServerNIOWorker_1_3_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xe9e98501, L:/172.22.0.2:8091 ! R:/172.22.0.1:34570]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34570', channel=[id: 0xe9e98501, L:/172.22.0.2:8091 ! R:/172.22.0.1:34570], resourceSets=null}
+2021-07-15 01:57:14.029  INFO --- [   NettyServerNIOWorker_1_4_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:34574 to server channel inactive.
+2021-07-15 01:57:14.030  INFO --- [   NettyServerNIOWorker_1_4_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x57a438bd, L:/172.22.0.2:8091 ! R:/172.22.0.1:34574]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:34574', channel=[id: 0x57a438bd, L:/172.22.0.2:8091 ! R:/172.22.0.1:34574], resourceSets=[]}
+2021-07-15 01:57:35.978  INFO --- [  ServerHandlerThread_1_11_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='jdbc:mysql://127.0.0.1:3306/springcloud', applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0x77a91fa0, L:/172.22.0.2:8091 - R:/172.22.0.1:35192],client version:1.4.2
+2021-07-15 01:58:33.047  INFO --- [   NettyServerNIOWorker_1_6_16] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='service-user', transactionServiceGroup='service-user_group'},channel:[id: 0xc4d6e80a, L:/172.22.0.2:8091 - R:/172.22.0.1:35252],client version:1.4.2
+2021-07-15 02:14:13.831  INFO --- [   NettyServerNIOWorker_1_5_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:35192 to server channel inactive.
+2021-07-15 02:14:13.831  INFO --- [   NettyServerNIOWorker_1_6_16] i.s.c.r.n.AbstractNettyRemotingServer    : 172.22.0.1:35252 to server channel inactive.
+2021-07-15 02:14:13.837  INFO --- [   NettyServerNIOWorker_1_5_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x77a91fa0, L:/172.22.0.2:8091 ! R:/172.22.0.1:35192]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:35192', channel=[id: 0x77a91fa0, L:/172.22.0.2:8091 ! R:/172.22.0.1:35192], resourceSets=[]}
+2021-07-15 02:14:13.843  INFO --- [   NettyServerNIOWorker_1_6_16] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xc4d6e80a, L:/172.22.0.2:8091 ! R:/172.22.0.1:35252]context:RpcContext{applicationId='service-user', transactionServiceGroup='service-user_group', clientId='service-user:172.22.0.1:35252', channel=[id: 0xc4d6e80a, L:/172.22.0.2:8091 ! R:/172.22.0.1:35252], resourceSets=null}

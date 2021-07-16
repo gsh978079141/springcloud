@@ -1,18 +1,25 @@
-2021-07-12 02:10:51,928 WARN HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@17b5ebad marked as broken because of SQLSTATE(08S01), ErrorCode(0)
+2021-07-15 00:31:00,719 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h24s404ms464µs).
+
+2021-07-15 00:31:00,690 WARN HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@8b140a5 marked as broken because of SQLSTATE(08S01), ErrorCode(0)
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-The last packet successfully received from the server was 3,026 milliseconds ago. The last packet sent successfully to the server was 3,034 milliseconds ago.
+The last packet successfully received from the server was 3,623,986 milliseconds ago. The last packet sent successfully to the server was 3,624,014 milliseconds ago.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1200)
-	at com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.executeQuery(HikariProxyStatement.java)
-	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:439)
-	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:376)
-	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:452)
-	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:462)
-	at com.alibaba.nacos.config.server.service.datasource.ExternalDataSourceServiceImpl$CheckDbHealthTask.run(ExternalDataSourceServiceImpl.java:246)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:678)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:617)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:783)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:809)
+	at com.alibaba.nacos.config.server.service.repository.extrnal.ExternalStoragePersistServiceImpl.findConfigHistoryCountByTime(ExternalStoragePersistServiceImpl.java:542)
+	at com.alibaba.nacos.config.server.service.dump.DumpService.lambda$dumpOperate$3(DumpService.java:153)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
 	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
@@ -22,8 +29,9 @@ The last packet successfully received from the server was 3,026 milliseconds ago
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-The last packet successfully received from the server was 3,026 milliseconds ago. The last packet sent successfully to the server was 3,034 milliseconds ago.
-	at sun.reflect.GeneratedConstructorAccessor101.newInstance(Unknown Source)
+The last packet successfully received from the server was 3,623,986 milliseconds ago. The last packet sent successfully to the server was 3,624,014 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
@@ -34,10 +42,9 @@ The last packet successfully received from the server was 3,026 milliseconds ago
 	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:702)
 	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:641)
 	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:940)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:886)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1168)
-	... 14 common frames omitted
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	... 19 common frames omitted
 Caused by: java.net.SocketTimeoutException: Read timed out
 	at java.net.SocketInputStream.socketRead0(Native Method)
 	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
@@ -55,216 +62,319 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
 	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
 	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:532)
-	... 20 common frames omitted
-2021-07-12 02:10:52,089 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@18a5cf00 (Communications link failure
-
-The last packet successfully received from the server was 13,249 milliseconds ago. The last packet sent successfully to the server was 13,253 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 02:10:52,119 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2075b73a (Communications link failure
-
-The last packet successfully received from the server was 12,534,562 milliseconds ago. The last packet sent successfully to the server was 12,534,567 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 02:18:33,077 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@22d4aad6 (Communications link failure
-
-The last packet successfully received from the server was 10,107 milliseconds ago. The last packet sent successfully to the server was 10,122 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 02:18:33,094 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b2cbc08 (Communications link failure
-
-The last packet successfully received from the server was 10,259 milliseconds ago. The last packet sent successfully to the server was 10,264 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 02:18:33,106 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@30c70a08 (Communications link failure
-
-The last packet successfully received from the server was 10,169 milliseconds ago. The last packet sent successfully to the server was 10,174 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 02:19:16,414 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2fbab84d (Communications link failure
-
-The last packet successfully received from the server was 41,179 milliseconds ago. The last packet sent successfully to the server was 41,184 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 02:19:19,177 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5402e48e (Communications link failure
-
-The last packet successfully received from the server was 12,781 milliseconds ago. The last packet sent successfully to the server was 12,786 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 02:25:26,188 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c7f9348 (Communications link failure
-
-The last packet successfully received from the server was 9,266 milliseconds ago. The last packet sent successfully to the server was 9,273 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 02:25:26,203 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@172efd03 (Communications link failure
-
-The last packet successfully received from the server was 367,666 milliseconds ago. The last packet sent successfully to the server was 367,669 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 04:06:29,918 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@170b9d31 (Communications link failure
-
-The last packet successfully received from the server was 6,356 milliseconds ago. The last packet sent successfully to the server was 6,361 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 04:06:29,938 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2678060f (Communications link failure
-
-The last packet successfully received from the server was 6,059,339 milliseconds ago. The last packet sent successfully to the server was 6,059,342 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-
-2021-07-12 08:42:12,292 INFO [capacityManagement] start correct usage
-
-2021-07-12 08:42:12,328 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 08:42:14,378 WARN clearConfigHistory start
-
-2021-07-12 08:52:11,646 INFO [capacityManagement] start correct usage
-
-2021-07-12 08:52:11,678 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 08:52:13,735 WARN clearConfigHistory start
-
-2021-07-12 09:02:11,027 INFO [capacityManagement] start correct usage
-
-2021-07-12 09:02:11,055 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 09:02:13,117 WARN clearConfigHistory start
-
-2021-07-12 09:12:10,393 INFO [capacityManagement] start correct usage
-
-2021-07-12 09:12:10,420 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 09:12:12,471 WARN clearConfigHistory start
-
-2021-07-12 09:22:09,754 INFO [capacityManagement] start correct usage
-
-2021-07-12 09:22:09,782 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 09:22:11,820 WARN clearConfigHistory start
-
-2021-07-12 09:32:09,122 INFO [capacityManagement] start correct usage
-
-2021-07-12 09:32:09,163 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 09:32:11,184 WARN clearConfigHistory start
-
-2021-07-12 09:42:08,504 INFO [capacityManagement] start correct usage
-
-2021-07-12 09:42:08,531 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 09:42:10,583 WARN clearConfigHistory start
-
-2021-07-12 09:52:07,860 INFO [capacityManagement] start correct usage
-
-2021-07-12 09:52:07,982 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 09:52:09,935 WARN clearConfigHistory start
-
-2021-07-12 10:02:07,317 INFO [capacityManagement] start correct usage
-
-2021-07-12 10:02:07,343 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 10:02:09,279 WARN clearConfigHistory start
-
-2021-07-12 10:14:55,365 INFO [capacityManagement] start correct usage
-
-2021-07-12 10:14:55,400 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 10:14:57,369 WARN clearConfigHistory start
-
-2021-07-12 10:24:54,730 INFO [capacityManagement] start correct usage
-
-2021-07-12 10:24:54,758 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 10:24:56,721 WARN clearConfigHistory start
-
-2021-07-12 10:34:54,097 INFO [capacityManagement] start correct usage
-
-2021-07-12 10:34:54,132 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 10:34:56,080 WARN clearConfigHistory start
-
-2021-07-12 10:44:53,469 INFO [capacityManagement] start correct usage
-
-2021-07-12 10:44:53,503 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 10:44:55,437 WARN clearConfigHistory start
-
-2021-07-12 10:54:52,839 INFO [capacityManagement] start correct usage
-
-2021-07-12 10:54:52,873 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 10:54:54,802 WARN clearConfigHistory start
-
-2021-07-12 11:04:52,204 INFO [capacityManagement] start correct usage
-
-2021-07-12 11:04:52,234 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 11:04:54,158 WARN clearConfigHistory start
-
-2021-07-12 11:14:51,563 INFO [capacityManagement] start correct usage
-
-2021-07-12 11:14:51,589 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 11:14:53,507 WARN clearConfigHistory start
-
-2021-07-12 11:53:38,327 INFO [capacityManagement] start correct usage
-
-2021-07-12 11:53:38,357 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 11:53:40,268 WARN clearConfigHistory start
-
-2021-07-12 12:36:10,644 INFO [capacityManagement] start correct usage
-
-2021-07-12 12:36:10,680 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 12:36:12,574 WARN clearConfigHistory start
-
-2021-07-12 12:46:10,009 INFO [capacityManagement] start correct usage
-
-2021-07-12 12:46:10,056 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 12:46:11,923 WARN clearConfigHistory start
-
-2021-07-12 12:56:09,404 INFO [capacityManagement] start correct usage
-
-2021-07-12 12:56:09,434 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 12:56:11,280 WARN clearConfigHistory start
-
-2021-07-12 13:06:08,762 INFO [capacityManagement] start correct usage
-
-2021-07-12 13:06:08,795 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 13:06:10,619 WARN clearConfigHistory start
-
-2021-07-12 13:16:08,135 INFO [capacityManagement] start correct usage
-
-2021-07-12 13:16:08,173 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 13:16:09,994 WARN clearConfigHistory start
-
-2021-07-12 13:26:07,510 INFO [capacityManagement] start correct usage
-
-2021-07-12 13:26:07,548 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 13:26:09,379 WARN clearConfigHistory start
-
-2021-07-12 13:36:06,877 INFO [capacityManagement] start correct usage
-
-2021-07-12 13:36:06,906 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 13:36:08,750 WARN clearConfigHistory start
-
-2021-07-12 13:52:36,248 INFO [capacityManagement] start correct usage
-
-2021-07-12 13:52:36,293 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 13:52:38,126 WARN clearConfigHistory start
-
-2021-07-12 14:02:35,622 INFO [capacityManagement] start correct usage
-
-2021-07-12 14:02:35,656 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 14:02:37,492 WARN clearConfigHistory start
-
-2021-07-12 14:15:19,963 INFO [capacityManagement] start correct usage
-
-2021-07-12 14:15:19,985 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 14:15:21,809 WARN clearConfigHistory start
-
-2021-07-12 14:25:19,314 INFO [capacityManagement] start correct usage
-
-2021-07-12 14:25:19,370 INFO [capacityManagement] end correct usage, cost: 0s
-
-2021-07-12 14:25:21,172 WARN clearConfigHistory start
+	... 24 common frames omitted
+2021-07-15 02:30:53,694 ERROR clearConfigHistory error : org.springframework.dao.RecoverableDataAccessException: PreparedStatementCallback; SQL [SELECT COUNT(*) FROM his_config_info WHERE gmt_modified < ?]; Communications link failure
+
+The last packet successfully received from the server was 3,623,986 milliseconds ago. The last packet sent successfully to the server was 3,624,014 milliseconds ago.; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3,623,986 milliseconds ago. The last packet sent successfully to the server was 3,624,014 milliseconds ago.
+
+2021-07-15 03:30:47,009 WARN clearConfigHistory start
+
+2021-07-15 03:30:47,036 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h59m46s316ms558µs100ns).
+
+2021-07-15 03:30:47,314 ERROR CONSOLE
+
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 3594233ms.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:612)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:783)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:804)
+	at com.alibaba.nacos.config.server.service.repository.extrnal.ExternalStoragePaginationHelperImpl.fetchPage(ExternalStoragePaginationHelperImpl.java:66)
+	at com.alibaba.nacos.config.server.service.repository.extrnal.ExternalStoragePaginationHelperImpl.fetchPage(ExternalStoragePaginationHelperImpl.java:56)
+	at com.alibaba.nacos.config.server.auth.ExternalRolePersistServiceImpl.getRolesByUserName(ExternalRolePersistServiceImpl.java:101)
+	at com.alibaba.nacos.console.security.nacos.roles.NacosRoleServiceImpl.getRolesFromDatabase(NacosRoleServiceImpl.java:169)
+	at com.alibaba.nacos.console.security.nacos.roles.NacosRoleServiceImpl.getRoles(NacosRoleServiceImpl.java:160)
+	at com.alibaba.nacos.console.security.nacos.NacosAuthManager.login(NacosAuthManager.java:85)
+	at com.alibaba.nacos.console.controller.UserController.login(UserController.java:208)
+	at sun.reflect.GeneratedMethodAccessor163.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.nacos.core.auth.AuthFilter.doFilter(AuthFilter.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:209)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 3594233ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:689)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:196)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:161)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	... 88 common frames omitted
+2021-07-15 04:31:02,160 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h15s123ms375µs700ns).
+
+2021-07-15 04:31:02,278 ERROR clearConfigHistory error : org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 3614964ms.
+
+2021-07-15 04:36:00,359 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m58s200ms24µs572ns).
+
+2021-07-15 05:30:59,264 WARN clearConfigHistory start
+
+2021-07-15 06:30:58,225 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h54m57s865ms346µs28ns).
+
+2021-07-15 06:30:58,318 ERROR clearConfigHistory error : org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 3598910ms.
+
+2021-07-15 07:31:00,079 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1s854ms195µs100ns).
+
+2021-07-15 07:31:00,484 WARN clearConfigHistory start
+
+2021-07-15 07:31:03,811 WARN HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@78ee3214 marked as broken because of SQLSTATE(null), ErrorCode(0)
+
+com.mysql.cj.jdbc.exceptions.MySQLTimeoutException: Statement cancelled due to timeout or client request
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+	at com.mysql.cj.jdbc.StatementImpl.checkCancelTimeout(StatementImpl.java:2191)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:1022)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:886)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1168)
+	at com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.executeQuery(HikariProxyStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:439)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:376)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:452)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:462)
+	at com.alibaba.nacos.config.server.service.datasource.ExternalDataSourceServiceImpl$CheckDbHealthTask.run(ExternalDataSourceServiceImpl.java:246)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-07-15 07:31:03,869 WARN HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@4a3dbdcd marked as broken because of SQLSTATE(null), ErrorCode(0)
+
+com.mysql.cj.jdbc.exceptions.MySQLTimeoutException: Statement cancelled due to timeout or client request
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+	at com.mysql.cj.jdbc.StatementImpl.checkCancelTimeout(StatementImpl.java:2191)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:1022)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:678)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:617)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:783)
+	at com.alibaba.nacos.config.server.auth.ExternalUserPersistServiceImpl.findUserByUsername(ExternalUserPersistServiceImpl.java:113)
+	at com.alibaba.nacos.console.security.nacos.users.NacosUserDetailsServiceImpl.loadUserByUsername(NacosUserDetailsServiceImpl.java:75)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:514)
+	at com.alibaba.nacos.console.security.nacos.NacosAuthManager.resolveTokenFromUser(NacosAuthManager.java:132)
+	at com.alibaba.nacos.console.security.nacos.NacosAuthManager.resolveToken(NacosAuthManager.java:121)
+	at com.alibaba.nacos.console.security.nacos.NacosAuthManager.login(NacosAuthManager.java:65)
+	at com.alibaba.nacos.console.controller.UserController.login(UserController.java:208)
+	at sun.reflect.GeneratedMethodAccessor163.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.nacos.core.auth.AuthFilter.doFilter(AuthFilter.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:209)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-07-15 08:30:37,068 WARN clearConfigHistory start
+
+2021-07-15 08:30:37,094 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59m37s15ms125µs300ns).
+
+2021-07-15 08:30:37,292 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2e2f0537 (Communications link failure
+
+The last packet successfully received from the server was 3,557,951 milliseconds ago. The last packet sent successfully to the server was 3,557,953 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-15 08:30:41,598 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@61671683 (Communications link failure
+
+The last packet successfully received from the server was 3,577,251 milliseconds ago. The last packet sent successfully to the server was 3,577,255 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-15 08:30:37,324 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@570de15 (Communications link failure
+
+The last packet successfully received from the server was 3,552,987 milliseconds ago. The last packet sent successfully to the server was 3,552,989 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
+
+2021-07-15 08:34:31,929 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m54s834ms924µs500ns).
+
+2021-07-15 08:34:31,939 ERROR clearConfigHistory error : org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 230466ms.
+
+2021-07-15 08:44:32,045 WARN clearConfigHistory start
+
+2021-07-15 08:54:32,052 WARN clearConfigHistory start
+
+2021-07-15 09:04:32,069 WARN clearConfigHistory start
+
+2021-07-15 09:14:32,075 WARN clearConfigHistory start
+
+2021-07-15 09:24:32,083 WARN clearConfigHistory start
+
+2021-07-15 09:34:32,099 WARN clearConfigHistory start
+
+2021-07-15 09:44:32,113 WARN clearConfigHistory start
+
+2021-07-15 09:54:32,120 WARN clearConfigHistory start
+
+2021-07-15 10:04:32,129 WARN clearConfigHistory start
+
+2021-07-15 10:14:14,415 WARN [HttpClientBeanHolder] Start destroying common HttpClient
+
+2021-07-15 10:14:14,424 WARN [ConfigServer-HttpClientManager] Start destroying NacosRestTemplate
+
+2021-07-15 10:14:14,417 WARN [ThreadPoolManager] Start destroying ThreadPool
+
+2021-07-15 10:14:14,430 WARN [WatchFileCenter] start close
+
+2021-07-15 10:14:14,433 WARN [NotifyCenter] Start destroying Publisher
+
+2021-07-15 10:14:14,745 WARN [HttpClientBeanHolder] Destruction of the end
+
+2021-07-15 10:14:14,464 INFO Shutting down ExecutorService 'taskScheduler'
+
+2021-07-15 10:14:14,748 WARN [ConfigServer-HttpClientManager] Destruction of the end
+
+2021-07-15 10:14:14,747 WARN [WatchFileCenter] start to shutdown this watcher which is watch : /home/nacos/conf
+
+2021-07-15 10:14:14,748 WARN [NotifyCenter] Destruction of the end
+
+2021-07-15 10:14:14,749 WARN [WatchFileCenter] already closed
+
+2021-07-15 10:14:14,761 INFO Shutting down ExecutorService 'applicationTaskExecutor'
 

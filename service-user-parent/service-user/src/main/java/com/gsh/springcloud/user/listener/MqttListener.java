@@ -28,4 +28,13 @@ public class MqttListener {
         //处理业务代码
         log.info("subscribe！:{}", JSON.toJSONString(message));
     }
+
+    //  @MyMqttListener(topic = "${mqtt.topic.test-topic}")
+    @MyMqttListener(topic = "vision-iot/gsh/*")
+    public void testReg(MqttMessage message) {
+        //处理业务代码
+        log.info("test！:{}", JSON.toJSONString(message));
+    }
+
+
 }

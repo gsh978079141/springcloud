@@ -30,7 +30,7 @@ spring:
 swagger:
   enabled: true
   api:
-    title: 深兰AI数字教育平台API文档
+    title: GSH-Yun平台API文档
     description: 边缘端通用业务处理服务
     version: '1.0'
     contact:
