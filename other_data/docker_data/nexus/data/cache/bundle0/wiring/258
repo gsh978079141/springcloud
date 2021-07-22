@@ -11,7 +11,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.collect)(version>=
 osgi.wiring.package; (&(osgi.wiring.package=javax.inject)(version>=1.0.0))
 8; version=1.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository)(version>=3.32.0))
 262; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view.payloads)(version>=3.32.0))

@@ -55,7 +55,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.collect)(version>=
 osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.runtime.typehandling)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.datatype.joda.cfg)(version>=2.11.0))
 126; version=2.11.4
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content)(version>=3.32.0))
@@ -75,7 +75,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.reflection)(vers
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.purge)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.32.0))
-261; version=3.32.0
+263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.apache.commons.compress.archivers)(version>=1.20.0))
 260; version=1.20.0
 osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.11.0))
@@ -99,7 +99,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.datatype.joda.
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.hash)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.32.0))
-263; version=3.32.0
+261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.store)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.rest)(version>=3.32.0))

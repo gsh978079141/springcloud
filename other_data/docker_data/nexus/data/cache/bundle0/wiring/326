@@ -59,7 +59,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.databind.deser
 osgi.wiring.package; (&(osgi.wiring.package=org.elasticsearch.search.sort)(version>=3.32.0))
 268; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.32.0))
-261; version=3.32.0
+263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.node)(version>=3.32.0))
@@ -83,7 +83,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.attrib
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.mime)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.32.0))
-263; version=3.32.0
+261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.text)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view.matchers.token)(version>=3.32.0))
@@ -177,7 +177,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.runtime.typehand
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.search.query)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.repair)(version>=3.32.0))

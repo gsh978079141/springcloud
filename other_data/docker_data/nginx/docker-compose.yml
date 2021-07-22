@@ -4,13 +4,12 @@ services:
     image: nginx:latest
     container_name: nginx
     privileged: true
+    # user: root
     environment:
       - TZ=Asia/Shanghai
     volumes:
-      - ./nginx_home/data:/data
-      - ./nginx_home/etc:/etc/nginx/conf.d
+      - ./nginx_home/conf:/etc/nginx/conf.d
       - ./nginx_home/log:/var/log/nginx
-      - ./nginx_home/www:/usr/share/nginx/html
-      # - /etc/letsencrypt:/etc/letsencrypt
+    #   - ./nginx_home/www:/usr/share/nginx/html
     ports:
-      - 8888:80
+      - 8088:80

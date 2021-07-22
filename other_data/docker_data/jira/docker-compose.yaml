@@ -4,12 +4,12 @@ services:
   # jira8.13服务
   jira-v8-13:
     container_name: jira-v8-13
-    # image: atlassian/jira-software:8.13-ubuntu
-    image: myjira:v1
+    image: atlassian/jira-software:8.13-ubuntu
+    # image: myjira:v1
     restart: always
-    #    environment:
-    #      - MYSQL_ROOT_PASSWORD=123
-    #      - TZ=Asia/Shanghai
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+      - TZ=Asia/Shanghai
     deploy:
       resources:
         limits:

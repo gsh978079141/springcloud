@@ -1,45 +1,16 @@
-2021/07/12 09:09:34 [emerg] 1#1: open() "/etc/nginx/nginx.conf" failed (2: No such file or directory)
-2021/07/12 09:19:29 [notice] 1#1: using the "epoll" event method
-2021/07/12 09:19:29 [notice] 1#1: nginx/1.21.0
-2021/07/12 09:19:29 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
-2021/07/12 09:19:29 [notice] 1#1: OS: Linux 5.10.25-linuxkit
-2021/07/12 09:19:29 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2021/07/12 09:19:29 [notice] 1#1: start worker processes
-2021/07/12 09:19:29 [notice] 1#1: start worker process 25
-2021/07/12 09:19:29 [notice] 1#1: start worker process 26
-2021/07/12 09:19:29 [notice] 1#1: start worker process 27
-2021/07/12 09:27:13 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
-2021/07/12 09:27:13 [notice] 26#26: gracefully shutting down
-2021/07/12 09:27:13 [notice] 25#25: gracefully shutting down
-2021/07/12 09:27:13 [notice] 25#25: exiting
-2021/07/12 09:27:13 [notice] 27#27: gracefully shutting down
-2021/07/12 09:27:13 [notice] 27#27: exiting
-2021/07/12 09:27:13 [notice] 26#26: exiting
-2021/07/12 09:27:13 [notice] 25#25: exit
-2021/07/12 09:27:13 [notice] 27#27: exit
-2021/07/12 09:27:13 [notice] 26#26: exit
-2021/07/12 09:27:13 [notice] 1#1: signal 17 (SIGCHLD) received from 25
-2021/07/12 09:27:13 [notice] 1#1: worker process 25 exited with code 0
-2021/07/12 09:27:13 [notice] 1#1: signal 17 (SIGCHLD) received from 27
-2021/07/12 09:27:13 [notice] 1#1: worker process 27 exited with code 0
-2021/07/12 09:27:13 [notice] 1#1: signal 29 (SIGIO) received
-2021/07/12 09:27:13 [notice] 1#1: signal 29 (SIGIO) received
-2021/07/12 09:27:13 [notice] 1#1: signal 17 (SIGCHLD) received from 26
-2021/07/12 09:27:13 [notice] 1#1: worker process 26 exited with code 0
-2021/07/12 09:27:13 [notice] 1#1: exit
-2021/07/12 17:27:27 [notice] 1#1: using the "epoll" event method
-2021/07/12 17:27:27 [notice] 1#1: nginx/1.21.0
-2021/07/12 17:27:27 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
-2021/07/12 17:27:27 [notice] 1#1: OS: Linux 5.10.25-linuxkit
-2021/07/12 17:27:27 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2021/07/12 17:27:27 [notice] 1#1: start worker processes
-2021/07/12 17:27:27 [notice] 1#1: start worker process 24
-2021/07/12 17:27:27 [notice] 1#1: start worker process 25
-2021/07/12 17:27:27 [notice] 1#1: start worker process 26
-2021/07/12 17:28:23 [error] 25#25: *1 "/opt/dist/index.html" is not found (2: No such file or directory), client: 192.168.112.1, server: 192.168.31.202, request: "GET / HTTP/1.1", host: "192.168.0.107:8888"
-2021/07/12 17:28:23 [error] 25#25: *1 open() "/opt/dist/favicon.ico" failed (2: No such file or directory), client: 192.168.112.1, server: 192.168.31.202, request: "GET /favicon.ico HTTP/1.1", host: "192.168.0.107:8888", referrer: "http://192.168.0.107:8888/"
-2021/07/12 17:28:26 [error] 25#25: *1 "/opt/dist/index.html" is not found (2: No such file or directory), client: 192.168.112.1, server: 192.168.31.202, request: "GET / HTTP/1.1", host: "192.168.0.107:8888"
-2021/07/12 17:28:27 [error] 25#25: *1 "/opt/dist/index.html" is not found (2: No such file or directory), client: 192.168.112.1, server: 192.168.31.202, request: "GET / HTTP/1.1", host: "192.168.0.107:8888"
-2021/07/12 17:28:34 [error] 25#25: *1 "/opt/dist/index.html" is not found (2: No such file or directory), client: 192.168.112.1, server: 192.168.31.202, request: "GET / HTTP/1.1", host: "192.168.0.107:8888"
-2021/07/12 17:30:08 [notice] 25#25: signal 15 (SIGTERM) received, exiting
-2021/07/12 17:30:08 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2021/07/22 07:32:46 [notice] 1#1: using the "epoll" event method
+2021/07/22 07:32:46 [notice] 1#1: nginx/1.21.1
+2021/07/22 07:32:46 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/07/22 07:32:46 [notice] 1#1: OS: Linux 5.4.72-microsoft-standard-WSL2
+2021/07/22 07:32:46 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/07/22 07:32:46 [notice] 1#1: start worker processes
+2021/07/22 07:32:46 [notice] 1#1: start worker process 24
+2021/07/22 07:32:46 [notice] 1#1: start worker process 25
+2021/07/22 07:32:46 [notice] 1#1: start worker process 26
+2021/07/22 07:32:46 [notice] 1#1: start worker process 27
+2021/07/22 07:32:46 [notice] 1#1: start worker process 28
+2021/07/22 07:32:46 [notice] 1#1: start worker process 29
+2021/07/22 07:32:46 [notice] 1#1: start worker process 30
+2021/07/22 07:32:46 [notice] 1#1: start worker process 31
+2021/07/22 07:43:24 [error] 24#24: *5 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.31.0.1, server: nacos.gshyun.mynatapp.cc, request: "GET /v1/cs/configs?dataId=&group=&appName=&config_tags=&pageNo=1&pageSize=10&tenant=&search=accurate&accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6MTYyNjkyNzE4OH0.w_EWTjz12uE_LdUx8gIaZ-uj2k_okYVCau357QGJBNI HTTP/1.1", upstream: "http://192.168.0.114:8848/nacos/v1/cs/configs?dataId=&group=&appName=&config_tags=&pageNo=1&pageSize=10&tenant=&search=accurate&accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6MTYyNjkyNzE4OH0.w_EWTjz12uE_LdUx8gIaZ-uj2k_okYVCau357QGJBNI", host: "nacos.gshyun.mynatapp.cc", referrer: "http://nacos.gshyun.mynatapp.cc/"
+2021/07/22 08:07:32 [error] 24#24: *264 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.31.0.1, server: nexus.gshyun.mynatapp.cc, request: "POST /service/extdirect/poll/rapture_State_get HTTP/1.1", upstream: "http://192.168.0.114:8081/service/extdirect/poll/rapture_State_get", host: "nexus.gshyun.mynatapp.cc", referrer: "http://nexus.gshyun.mynatapp.cc/"

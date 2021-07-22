@@ -47,7 +47,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.collect)(version>=
 osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.runtime.typehandling)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=javax.validation.constraints)(version>=2.0.0))
 79; version=2.0.2
 osgi.wiring.package; (&(osgi.wiring.package=javax.annotation)(version>=1.2.0))
@@ -75,7 +75,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.attrib
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.hash)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.32.0))
-263; version=3.32.0
+261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view.matchers.token)(version>=3.32.0))
 265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=groovy.lang)(version>=2.4.0))

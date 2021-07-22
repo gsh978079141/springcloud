@@ -49,7 +49,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.apache.commons.compress.compress
 osgi.wiring.package; (osgi.wiring.package=javax.xml.stream)
 0; version=1.2.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.32.0))
-261; version=3.32.0
+263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.apache.shiro.authz.annotation)(version>=1.7.0))
@@ -63,7 +63,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.attributes)(version>=3.32.0))
 261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.32.0))
-263; version=3.32.0
+261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.text)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view.matchers.token)(version>=3.32.0))
@@ -139,7 +139,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.collect)(version>=
 osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.runtime.typehandling)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=javax.validation.constraints)(version>=2.0.0))

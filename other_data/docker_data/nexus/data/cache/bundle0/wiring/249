@@ -51,7 +51,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=org.eclipse.aether.util.version)(version>=1.1.0))
 107; version=1.1.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.32.0))
-261; version=3.32.0
+263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (osgi.wiring.package=org.eclipse.sisu)
@@ -71,7 +71,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.orient.core.co
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.mime)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.32.0))
-263; version=3.32.0
+261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.text)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.apache.maven.index.reader)(version>=5.1.0))
@@ -177,11 +177,11 @@ osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.common.concur.
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.search.query)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.importtask)(version>=3.32.0))
-261; version=3.32.0
+263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.security)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=javax.validation.constraints)(version>=2.0.0))

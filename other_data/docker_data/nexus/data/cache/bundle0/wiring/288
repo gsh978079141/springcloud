@@ -181,7 +181,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.runtime.typehand
 osgi.wiring.package; (osgi.wiring.package=com.sonatype.insight.scan.model.io)
 292; version=0.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (osgi.wiring.package=org.apache.http.entity)

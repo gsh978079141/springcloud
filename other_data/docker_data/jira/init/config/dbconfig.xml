@@ -6,7 +6,7 @@
   <database-type>mysql</database-type>
   <schema-name>jira</schema-name>
   <jdbc-datasource>
-    <url>jdbc:mysql://address=(protocol=tcp)(host=192.168.112.88)(port=3306)/jira?useUnicode=true&amp;characterEncoding=UTF8&amp;sessionVariables=default_storage_engine=InnoDB</url>
+    <url>jdbc:mysql://address=(protocol=tcp)(host=192.168.0.114)(port=3306)/jira?useUnicode=true&amp;characterEncoding=UTF8&amp;sessionVariables=default_storage_engine=InnoDB</url>
     <driver-class>com.mysql.jdbc.Driver</driver-class>
     <username>root</username>
     <password>123</password>

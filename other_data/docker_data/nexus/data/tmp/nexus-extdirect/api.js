@@ -135,13 +135,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'promoteToGroup',
-        len: 1,
+        name: 'readNames',
+        len: 0,
         formHandler: false
       },
       {
-        name: 'readNames',
-        len: 0,
+        name: 'promoteToGroup',
+        len: 1,
         formHandler: false
       },
       {
@@ -219,12 +219,12 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'syncStatus',
+        name: 'stopWaiting',
         len: 0,
         formHandler: false
       },
       {
-        name: 'stopWaiting',
+        name: 'syncStatus',
         len: 0,
         formHandler: false
       },

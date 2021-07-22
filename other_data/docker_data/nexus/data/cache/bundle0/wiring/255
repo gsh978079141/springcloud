@@ -73,7 +73,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.collect)(version>=
 osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.runtime.typehandling)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (osgi.wiring.package=org.apache.http.client.config)
@@ -123,7 +123,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.hash)(vers
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.mime)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.32.0))
-263; version=3.32.0
+261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.store)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.orient.core.query)(version>=2.2.0))

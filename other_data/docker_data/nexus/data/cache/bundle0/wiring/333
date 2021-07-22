@@ -65,7 +65,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.script)(version>=
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.security.authc)(version>=3.32.0))
 133; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (osgi.wiring.package=org.apache.http.entity)
 81; version=0.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.capability.condition)(version>=3.32.0))

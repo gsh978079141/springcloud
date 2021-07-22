@@ -63,7 +63,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.collect)(version>=
 osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.runtime.typehandling)(version>=2.4.0))
 123; version=2.4.17
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=javax.validation.constraints)(version>=2.0.0))
 79; version=2.0.2
 osgi.wiring.package; (&(osgi.wiring.package=javax.annotation)(version>=1.2.0))
@@ -83,7 +83,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.purge)
 osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.orient.core.metadata)(version>=2.2.0))
 224; version=2.2.36
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.32.0))
-261; version=3.32.0
+263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.11.0))
 153; version=2.11.4
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(version>=3.32.0))
@@ -103,7 +103,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.codehaus.groovy.transform)(versi
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.hash)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.32.0))
-263; version=3.32.0
+261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.yaml.snakeyaml.reader)(version>=1.28.0))
 215; version=1.28.0
 osgi.wiring.package; (&(osgi.wiring.package=org.snakeyaml.engine.v2.api)(version>=2.1.0))

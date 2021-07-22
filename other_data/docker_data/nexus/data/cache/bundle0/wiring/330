@@ -47,7 +47,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (osgi.wiring.package=javax.xml.stream)
 0; version=1.2.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.32.0))
-261; version=3.32.0
+263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (osgi.wiring.package=org.xml.sax.helpers)
@@ -65,7 +65,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.attrib
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.mime)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.32.0))
-263; version=3.32.0
+261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.text)(version>=3.32.0))
 106; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view.matchers.token)(version>=3.32.0))
@@ -149,7 +149,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.collect)(version>=
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.search.query)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (osgi.wiring.package=org.apache.http.entity)
 81; version=0.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content)(version>=3.32.0))

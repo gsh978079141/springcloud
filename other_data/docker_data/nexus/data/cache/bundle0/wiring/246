@@ -65,7 +65,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.collect)(version>=
 osgi.wiring.package; (osgi.wiring.package=org.bouncycastle.util.io)
 0; version=1.67.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.32.0))
-261; version=3.32.0
+265; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=javax.validation.constraints)(version>=2.0.0))
@@ -89,7 +89,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.browse
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.purge)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.32.0))
-261; version=3.32.0
+263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.apache.commons.compress.archivers)(version>=1.20.0))
 260; version=1.20.0
 osgi.wiring.package; (&(osgi.wiring.package=com.fasterxml.jackson.annotation)(version>=2.11.0))
@@ -115,7 +115,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.hash)(vers
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.mime)(version>=3.32.0))
 263; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.32.0))
-263; version=3.32.0
+261; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.store)(version>=3.32.0))
 277; version=3.32.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.text)(version>=3.32.0))
